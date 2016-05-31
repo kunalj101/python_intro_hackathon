@@ -153,7 +153,7 @@ addition = 1 + 2
 
 
 # Print a message
-print "Welcome to joint course from Analytics Vidhya and DataCamp"
+print("Welcome to joint course from Analytics Vidhya and DataCamp")
 
 # Now write a code to Print "Hello World!"
 
@@ -168,10 +168,10 @@ addition = 1 + 2
 addition2 = 3 + 4
 
 # Print a message
-print "Welcome to joint course from Analytics Vidhya and DataCamp"
+print("Welcome to joint course from Analytics Vidhya and DataCamp")
 
 # Now write a code to Print "Hello World!"
-print "Hello World!"
+print("Hello World!")
 ```
 
 *** =sct
