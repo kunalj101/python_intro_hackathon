@@ -1,6 +1,6 @@
 ---
-title       : Insert the chapter title here
-description : Insert the chapter description here
+title       : Introduction to Python for Data Analysis
+description : This chapter will get you started with Python for Data Analysis. We will cover the basics of the language you will need and an overview of the Python ecosystem.
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
