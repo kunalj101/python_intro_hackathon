@@ -9,6 +9,7 @@ attachments :
 ## Why learn Python for data analysis?
 
 Python has gathered a lot of interest recently as a choice of language for data analysis. Here are some reasons which go in favour of learning Python:
+
 * Open Source – free to install
 * Awesome online community
 * Easy to learn
@@ -27,7 +28,7 @@ Which of the following is not a reason to learn Python for Data Analysis?
 Have a look at the text. Do you see your answer?
 
 *** =pre_exercise_code
-```{python}
+
 
 
 *** =sct
