@@ -45,7 +45,7 @@ msg_success = "Exactly! Since Python is an interpretted language, the computatio
 test_mc(2, [msg_bad, msg_bad, msg_bad, msg_success]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:db5fe12eff
 ## Python 2.7 vs. Python 3.5?
 
 You will come across this question soon after you start using Python. Both the ecosystems have their pros and cons.
