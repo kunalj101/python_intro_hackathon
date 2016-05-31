@@ -143,13 +143,12 @@ Let us get our handy dirty. We will use Python to do some simple programming!
 *** =pre_exercise_code
 ```{python}
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-
+```
 
 *** =sample_code
 ```{python}
 # Add 1 & 2 and assign it to addition
 addition = 1 + 2
-
 # Now write a code to add 3 & 4 and assign to addition2
 
 
@@ -157,6 +156,7 @@ addition = 1 + 2
 print "Welcome to joint course from Analytics Vidhya and DataCamp"
 
 # Now write a code to Print "Hello World!"
+
 ```
 
 
@@ -164,7 +164,6 @@ print "Welcome to joint course from Analytics Vidhya and DataCamp"
 ```{python}
 # Add 1 & 2 and assign it to addition
 addition = 1 + 2
-
 # Now write a code to add 3 & 4 and assign to addition2
 addition2 = 3 + 4
 
