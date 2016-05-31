@@ -42,7 +42,7 @@ msg_success = "Exactly! Since Python is an interpretted language, the computatio
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(2, [msg_bad, msg_bad, msg_bad, msg_success]) 
+test_mc(2, [msg_bad, msg_success, msg_bad, msg_bad]) 
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:db5fe12eff
@@ -86,7 +86,7 @@ msg_success = "Python 2.7 has much higher compatibility with third party librari
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg_bad, msg_bad, msg_bad, msg_success]) 
+test_mc(1, [msg_success, msg_bad]) 
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
@@ -116,12 +116,13 @@ Have a look at the text. Do you see your answer?
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad = "You should install a Python instance locally"
+msg_bad = "You should install a Python instance locally before going forward"
 msg_success = "Great! You are all set to go ahead"
+msg_help = "Drop me a line at kunal.jain@analyticsvidhya.com"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg_bad, msg_bad, msg_bad, msg_success]) 
+test_mc(1, [msg_success, msg_bad, msg_help]) 
 ```
 
