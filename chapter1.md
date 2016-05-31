@@ -89,7 +89,7 @@ msg_success = "Python 2.7 has much higher compatibility with third party librari
 test_mc(1, [msg_success, msg_bad]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:2f83694db6
 ## How to install Python?
 
 While DataCamp provides an awesome interface to get you started, you will need to run local instance of Python for any serious Data Science work. The simplest way would be to download <a href="https://www.continuum.io/downloads"> Anaconda</a>. It consists of most of the libraries you would need and removes any version conflicts.
