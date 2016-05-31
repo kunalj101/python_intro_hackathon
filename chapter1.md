@@ -149,10 +149,13 @@ Let us get our handy dirty. We will use Python to do some simple programming!
 ```{python}
 # Add 1 & 2 and assign it to addition
 addition = 1 + 2
+
 # Now write a code to add 3 & 4 and assign to addition2
+
 
 # Print a message
 print "Welcome to joint course from Analytics Vidhya and DataCamp"
+
 # Now write a code to Print "Hello World!"
 ```
 
@@ -161,11 +164,13 @@ print "Welcome to joint course from Analytics Vidhya and DataCamp"
 ```{python}
 # Add 1 & 2 and assign it to addition
 addition = 1 + 2
+
 # Now write a code to add 3 & 4 and assign to addition2
 addition2 = 3 + 4
 
 # Print a message
 print "Welcome to joint course from Analytics Vidhya and DataCamp"
+
 # Now write a code to Print "Hello World!"
 print "Hello World!"
 ```
