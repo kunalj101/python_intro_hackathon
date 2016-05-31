@@ -126,3 +126,60 @@ msg_help = "Drop me a line at kunal.jain@analyticsvidhya.com"
 test_mc(1, [msg_success, msg_bad, msg_help]) 
 ```
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+## Run a few simple programs in Python
+
+Let us get our handy dirty. We will use Python to do some simple programming!
+
+*** =instructions
+- The first line just adds 2 numbers (3 & 4). Write a simple program to add number 3 and number 4
+- The second line prints "Hello World!" on the console
+
+
+*** =hint
+- Think how would you write simple addition.
+- Remember that the message to be printed should be enclosed in " "
+
+*** =pre_exercise_code
+```{python}
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+
+*** =sample_code
+```{python}
+# Add 1 & 2 and assign it to addition
+addition = 1 + 2
+# Now write a code to add 3 & 4 and assign to addition2
+
+# Print a message
+print "Welcome to joint course from Analytics Vidhya and DataCamp"
+# Now write a code to Print "Hello World!"
+```
+
+
+*** =solution
+```{python}
+# Add 1 & 2 and assign it to addition
+addition = 1 + 2
+# Now write a code to add 3 & 4 and assign to addition2
+addition2 = 3 + 4
+
+# Print a message
+print "Welcome to joint course from Analytics Vidhya and DataCamp"
+# Now write a code to Print "Hello World!"
+print "Hello World!"
+```
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Check if the student typed 3 + 4
+test_object("addition2")
+
+# Check if the student printed "Hello World!"
+test_output_contains("Hello World!", pattern = False)
+success_msg("Great work!")
+```
