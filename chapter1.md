@@ -4,103 +4,47 @@ description : This chapter will get you started with Python for Data Analysis. W
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:VideoExercise lang:python xp:50 skills:1 key:c55198c91d
-## Analyze movie ratings
-
-*** =video_link
-//player.vimeo.com/video/154783078
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
-## A really bad movie
+## Why learn Python for data analysis?
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
+Python has gathered a lot of interest recently as a choice of language for data analysis. Here are some reasons which go in favour of learning Python:
+* Open Source – free to install
+* Awesome online community
+* Easy to learn
+* Can become a common language for data science and production of web based analytics products
+
+Which of the following is not a reason to learn Python for Data Analysis?
+
 
 *** =instructions
-- Long movies, clearly
-- Short movies, clearly
-- Long movies, but the correlation seems weak
-- Short movies, but the correlation seems weak
+- Python is easy to learn
+- Python is interpreted language, hence the computation times can be high compared to compiler based languages in some cases.
+- Python has good libraries for data science
+- It is production ready language (from web & softare perspective)
 
 *** =hint
-Have a look at the plot. Do you see a trend in the dots?
+Have a look at the text. Do you see your answer?
 
 *** =pre_exercise_code
-```{r}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+```{python}
 
-# 1. Pre-load packages, so that users don't have to do this manually.
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# 2. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-plt.scatter(movies.runtime, movies.rating)
-plt.show()
-```
 
 *** =sct
-```{r}
+```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
 msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
+msg_success = "Exactly! Since Python is an interpretted language, the computation times can be on the higher side."
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success]) 
+test_mc(1, [msg_bad, msg_bad, msg_bad, msg_success]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:f0e6a8e8a5
-## A really bad movie
-
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
-
-*** =instructions
-- Long movies, clearly
-- Short movies, clearly
-- Long movies, but the correlation seems weak
-- Short movies, but the correlation seems weak
-
-*** =hint
-Have a look at the plot. Do you see a trend in the dots?
-
-*** =pre_exercise_code
-```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-
-# 1. Pre-load packages, so that users don't have to do this manually.
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# 2. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-plt.scatter(movies.runtime, movies.rating)
-plt.show()
-```
-
-*** =sct
-```{python}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the
-# pythonwhat Python package
-
-msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
-
-# Use test_mc() to grade multiple choice exercises.
-# Pass the correct option (option 4 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
-```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Plot the movies yourself
