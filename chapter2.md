@@ -36,7 +36,7 @@ squares_list = [0, 1, 4, 9, 16, 25]
 odd_numbers=
 
 # Print first element of squares_list
-print squares_list[0]
+print (squares_list[0])
 
 # Write a code to store fouth element of squares_list in variable fourth_value
 fourth_value=
@@ -55,13 +55,13 @@ squares_list = [0, 1, 4, 9, 16, 25]
 odd_numbers = [1, 3, 5, 7, 9]
 
 # Print first element of squares_list
-print squares_list[0]
+print (squares_list[0])
 
 # Write a code to store fouth element of squares_list in variable fourth_value
 fourth_value=squares_list[3]
 
 # Print second to fourth elements of squares_list
-print squares_list[1:3]
+print (squares_list[1:3])
 ```
 
 *** =sct
