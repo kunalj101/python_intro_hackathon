@@ -367,4 +367,101 @@ test_mc(3, [msg_bad, msg_bad, msg_success])
 ```
 
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:c7f91e389f
+## Why conditional statement is required?
 
+Conditional statements, these are used to execute code fragments based on a condition. The most commonly used construct is if-else, with following syntax:
+
+```{python}
+
+if [condition]:
+  __execution if true__
+else:
+  __execution if false__ 
+```
+
+*** =instructions
+
+- The colon (:) is significant and required. 
+- The line after the colon must be indented. It is standard in Python to use four spaces for indenting.
+- All lines indented the same amount after the colon will be executed whenever the BOOLEAN_EXPRESSION is true.
+
+
+*** =hint
+
+- Use <, >, <=, >=, == and != for comparison
+- Use len(list) to return  length of string
+
+
+*** =pre_exercise_code
+
+```{python}
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+```
+
+*** =sample_code
+
+```{python}
+# Create a two integer variables a and b
+a=3
+b=4
+
+# if a is greater than b print a-b else a+b
+if a > b:
+    print (a-b)
+else:
+    print (a+b)
+
+# Create a list of squared numbers
+squares_list = [0, 1, 4, 9, 16, 25]
+
+# Store the length of string in str_len
+
+
+# if str_len is less than 5 then print "Less than 5" else "Greater than 5"
+
+
+```
+
+*** =solution
+
+```{python}
+# Create a two integer variables a and b
+a=3
+b=4
+
+# if a is greater than b print a-b else a+b
+if a > b:
+    print (a-b)
+else:
+    print (a+b)
+
+# Create a list of squared numbers
+squares_list = [0, 1, 4, 9, 16, 25]
+
+# Store the length of string in str_len
+str_len = len(squares_list)
+
+# if str_len is less than 5 then print "Less than 5" else "Greater than 5"
+if str_len < 5:
+    print ("Less than 5")
+else:
+    print ("Greater than 5")
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Check length of strings
+test_object("str_len")
+
+# Check last seven characters
+test_output_contains("Greater than 5", pattern = False)
+
+success_msg("Great work!")
+```
