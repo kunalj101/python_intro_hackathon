@@ -4,16 +4,11 @@ description : In this chapter, we will take you through the libraries we commonl
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:VideoExercise lang:python xp:50 skills:1 key:c55198c91d
-## Analyze movie ratings
-
-*** =video_link
-//player.vimeo.com/video/154783078
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
-## A really bad movie
+## Create a list
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
+List is one of the most versatile data structure in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
 
 *** =instructions
 - Long movies, clearly
