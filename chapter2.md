@@ -112,7 +112,7 @@ Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple
 
 ```{python}
 # Create a string str
-str = "Introduction with strings"
+str1 = "Introduction with strings"
 
 # Now store the length of string in varible str_len 
 str_len =
@@ -131,10 +131,10 @@ str3 =
 ```{python}
 
 # Create a string str
-str = "Introduction with strings"
+str1 = "Introduction with strings"
 
 # Now store the length of string in varible str_len 
-str_len=len(str)
+str_len=len(str1)
 
 # Print last seven characters of strings str
 print (str[18:25])
