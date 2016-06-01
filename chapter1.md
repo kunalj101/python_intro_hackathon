@@ -15,7 +15,7 @@ Python has gathered a lot of interest recently as a choice of language for data 
 * Easy to learn
 * Can become a common language for data science and production of web based analytics products
 
-Which of the following is not a reason to learn Python for Data Analysis?
+####Which of the following is not a reason to learn Python for Data Analysis?
 
 
 *** =instructions
@@ -25,7 +25,7 @@ Which of the following is not a reason to learn Python for Data Analysis?
 - It is production ready language (from web & softare perspective)
 
 *** =hint
-Have a look at the text. Do you see your answer?
+Have a look at the text above. Do you see your answer?
 
 *** =pre_exercise_code
 
