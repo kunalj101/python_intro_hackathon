@@ -5,8 +5,8 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Create a list
 
+## Create a list
 List is one of the most versatile data structure in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
 
 *** =instructions
@@ -80,87 +80,6 @@ test_object("fourth_value")
 test_output_contains("[1, 4]", pattern = False)
 success_msg("Great work!")
 ```
-
-## Create a String
-
-Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in tripe quotes ( ”’ ) can span over multiple lines and are used frequently in docstrings (Python’s way of documenting functions). \ is used as an escape character. Please note that Python strings are immutable, so you can not change part of strings.
-
-*** =instructions
-- Strings can be simply defined by single ('), double (") or triple (''') quotation.
-- Strings characters can be accessed using index number (similar like list)
-- Strings can be concatenated with other strings
-
-
-
-*** =hint
-- Use str[2] to select the third element of string str. 
-- Use len(str) to return the length of string
-- Use str1 + str2 to return the concatenated result of both strings str1 and str2
-
-
-
-*** =pre_exercise_code
-```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-```
-
-*** =sample_code
-
-```{python}
-# Create a string str
-str = "Introduction with strings"
-
-# Now store the length of string in varible str_len 
-str_len =
-
-# Print last seven characters of strings str
-
-
-str1 = "I am doing a course Introduction to Hackathon using "
-str2 = "Python"
-
-# Write a code to store concatenated string of str1 and str2 into variable str3
-str3 =
-```
-
-*** =solution
-```{python}
-
-# Create a string str
-str = "Introduction with strings"
-
-# Now store the length of string in varible str_len 
-str_len=len(str)
-
-# Print last seven characters of strings str
-print (str[18:25])
-
-str1 = "I am doing a course "Introduction to Hackathon using "
-str2 = "Python"
-
-# Write a code to store concatenated string of str1 and str2 into variable str3
-str3= str1 + str2
-```
-
-*** =sct
-```{python}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
-# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
-
-# Check length of strings
-test_object("str_len")
-
-# Check last seven characters
-test_output_contains("strings", pattern = False)
-
-# Check concatenated strings"
-test_object("str3")
-success_msg("Great work!")
-```
-
-
-
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:92d2fb80bf
 ## A really bad movie
