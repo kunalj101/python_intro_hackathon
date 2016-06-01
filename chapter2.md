@@ -265,7 +265,7 @@ Dictionary is an unordered set of key: value pairs, with the requirement that th
 ```{python}
 
 # Create a dictionary
-dict = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
+dict1 = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
 
 # Update the value of Age to 18
 
@@ -273,7 +273,7 @@ dict = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
 # Print the value of Age
 
 
-# Return all the values of dictionary dict
+# Return all the keys of dictionary dict1
 
 
 ```
@@ -283,16 +283,16 @@ dict = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
 ```{python}
 
 # Create a dictionary
-dict = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
+dict1 = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
 
 # Update the value of Age to 18
-dict['Age'] = 18
+dict1['Age'] = 18
 
 # Print the value of Age
-print (dict['Age'])
+print (dict1['Age'])
 
 # Print all the keys of dictionary dict
-print (dict.values())
+print (dict1.values())
 
 ```
 
