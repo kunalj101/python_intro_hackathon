@@ -119,7 +119,6 @@ str_len =
 
 # Print last seven characters of strings str
 
-
 str1 = "I am doing a course Introduction to Hackathon using "
 str2 = "Python"
 
