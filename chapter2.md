@@ -307,7 +307,7 @@ print (dict1.values())
 test_output_contains("18", pattern = False)
 
 # Check keys of dictionary
-test_output_contains("dict_values(['Max', 18, 'Cricket'])", pattern = True)
+test_output_contains("dict_values(['Max', 18, 'Cricket'])", pattern = False)
 
 success_msg("Great work!")
 ```
