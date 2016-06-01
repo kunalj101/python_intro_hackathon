@@ -215,7 +215,7 @@ print (tup[2])
 
 tup2=('AV')
 # Print tup2 six times
-print tup2*6
+print (tup2*6)
 
 ```
 
