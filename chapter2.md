@@ -337,7 +337,7 @@ Following are a list of libraries, you will need for any scientific computations
 
 #### Which of the following is a valid import statement for below code?
 ```{python}
-print (factorial(5)
+print (factorial(5))
 ```
 
 *** =instructions
@@ -363,7 +363,7 @@ msg_success = "Good Job!"
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(3, [msg_bad, msg_bad, msg_success]) 
+test_mc(2, [msg_bad, msg_success, msg_bad]) 
 ```
 
 
