@@ -20,6 +20,7 @@ List is one of the most versatile data structure in Python. A list can simply be
 - Use AV[1:3] to select second to fourth elements of a list AV.
 
 
+
 *** =pre_exercise_code
 ```{python}
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
