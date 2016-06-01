@@ -213,6 +213,7 @@ tup1 = ('physics', 'chemistry', 1997, 2000)
 # print the third element of tuple tup1 
 print (tup1[2])
 
+
 tup2=('AV')
 # Print tup2 six times
 print (tup2*6)
