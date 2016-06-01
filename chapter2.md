@@ -237,6 +237,81 @@ success_msg("Great work!")
 ```
 
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:95a8a66393
+## Create Dictionary
+
+Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: {}.
+
+*** =instructions
+
+- To access dictionary elements, you can use the familiar square brackets along with the key to obtain its value
+- Dictionary can be updated by adding a new entry or a key-value pair, modifying or deleting an existing entry
+
+*** =hint
+
+- Use dict['Keys'] = new_value to update the existing value
+- Use dict.keys() to access all keys of dictionary dict
+- Use dict.values() to access all values of dictionary dict
+
+
+*** =pre_exercise_code
+
+```{python}
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+```
+
+*** =sample_code
+
+```{python}
+
+# Create a dictionary
+dict = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
+
+# Update the value of Age to 18
+
+
+# Print the value of Age
+
+
+# Return all the values of dictionary dict
+
+
+```
+
+*** =solution
+
+```{python}
+
+# Create a dictionary
+dict = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
+
+# Update the value of Age to 18
+dict['Age'] = 18
+
+# Print the value of Age
+print (dict['Age'])
+
+# Print all the keys of dictionary dict
+print (dict.values())
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Check value of Age
+test_output_contains("18", pattern = False)
+
+# Check keys of dictionary
+test_output_contains("['Age', 'Name', 'Sports']", pattern = False)
+
+success_msg("Great work!")
+```
+
 
 
 
