@@ -137,7 +137,7 @@ str1 = "Introduction with strings"
 str_len=len(str1)
 
 # Print last seven characters of strings str
-print (str[18:25])
+print (str1[18:25])
 
 str1 = "I am doing a course "Introduction to Hackathon using "
 str2 = "Python"
