@@ -467,7 +467,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:50c9218dac
+--- type:NormalExercise lang:python xp:100 skills:1 key:c1b7c2fd5c
 ## How iterative statement does help?
 
 Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making errors is something that computers do well and people do poorly.Repeated execution of a set of statements is called iteration.
