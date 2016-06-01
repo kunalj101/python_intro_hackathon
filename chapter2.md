@@ -486,6 +486,7 @@ for i in [Python Iterable]:
 
 - The colon (:) is significant and required. 
 - The line after the colon must be indented. It is standard in Python to use four spaces for indenting.
+- - For loops iterate over a given sequence
 
 
 
@@ -493,7 +494,7 @@ for i in [Python Iterable]:
 
 - Use <, >, <=, >=, == and != for comparison
 - Use len(list) to return  length of string
-
+- % operator helps to return remainder e.g. 4 % 3 would be 1
 
 *** =pre_exercise_code
 
@@ -504,51 +505,31 @@ for i in [Python Iterable]:
 *** =sample_code
 
 ```{python}
-# Create a two integer variables a and b
-a=3
-b=4
-
-# if a is greater than b print a-b else a+b
-if a > b:
-    print (a-b)
-else:
-    print (a+b)
-
-# Create a list of squared numbers
-squares_list = [0, 1, 4, 9, 16, 25]
-
-# Store the length of string in str_len
-
-
-# if str_len is less than 5 then print "Less than 5" else "Greater than 5"
-
+# Create a list with first five numbers
+ls=[]
+for x in range(5):
+    ls.append(x)
+    
+sum=0
+# Store sum all even numbers of the list ls in sum
 
 ```
 
 *** =solution
 
 ```{python}
-# Create a two integer variables a and b
-a=3
-b=4
+# Create a list with first five numbers
+ls=[]
+for x in range(5):
+    ls.append(x)
+    
+sum=0
+# Store sum all even numbers of the list ls in sum
 
-# if a is greater than b print a-b else a+b
-if a > b:
-    print (a-b)
-else:
-    print (a+b)
-
-# Create a list of squared numbers
-squares_list = [0, 1, 4, 9, 16, 25]
-
-# Store the length of string in str_len
-str_len = len(squares_list)
-
-# if str_len is less than 5 then print "Less than 5" else "Greater than 5"
-if str_len < 5:
-    print ("Less than 5")
-else:
-    print ("Greater than 5")
+for x in ls:
+    if x%2==0:
+        sum += x
+print sum
 
 ```
 
@@ -560,10 +541,7 @@ else:
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check length of strings
-test_object("str_len")
-
-# Check last seven characters
-test_output_contains("Greater than 5", pattern = False)
+test_object("sum")
 
 success_msg("Great work!")
 ```
