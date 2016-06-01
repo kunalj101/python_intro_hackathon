@@ -139,7 +139,7 @@ str_len=len(str1)
 # Print last seven characters of strings str
 print (str1[18:25])
 
-str1 = "I am doing a course "Introduction to Hackathon using "
+str1 = "I am doing a course Introduction to Hackathon using "
 str2 = "Python"
 
 # Write a code to store concatenated string of str1 and str2 into variable str3
