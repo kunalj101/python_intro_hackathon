@@ -166,7 +166,7 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:95a8a66393
-## Create Tuples
+## Create a Tuple
 
 A tuple is represented by a number of values separated by commas. Tuples are immutable and the output is surrounded by parentheses so that nested tuples are processed correctly. Additionally, even though tuples are immutable, they can hold mutable data if needed.
 
@@ -238,7 +238,7 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:377e9324f2
-## Create Dictionary
+## Create a Dictionary
 
 Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: {}.
 
@@ -312,8 +312,59 @@ test_output_contains("dict_keys(['Name', 'Age', 'Sports'])", pattern = False)
 success_msg("Great work!")
 ```
 
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+## Why python libraries are useful?
+
+Lets take one step ahead in our journey to learn Python by getting acquainted with some useful libraries. The first step is obviously to learn to import them into our environment. There are several ways of doing so in Python:
+
+```{python}
+import math as m
+from math import *
+```
+
+In the first manner, we have defined an alias m to library math. We can now use various functions from math library (e.g. factorial) by referencing it using the alias m.factorial().
+
+In the second manner, you have imported the entire name space in math i.e. you can directly use factorial() without referring to math.
+
+Following are a list of libraries, you will need for any scientific computations and data analysis:
+  - <a href="http://www.numpy.org/"> Numpy </a>
+  - <a href="https://www.scipy.org/"> Scipy </a>
+  - <a href="http://pandas.pydata.org/pandas-docs/stable/"> Pandas </a>
+  - <a href="http://matplotlib.org/"> Matplotlib </a>
+  - <a href="http://scikit-learn.org/"> Scikit Learn </a>
 
 
+
+#### Which of the following is a valid import statement for below code?
+```{python}
+print (factorial(5)
+```
+
+*** =instructions
+- import math
+- from math import factorial
+- import math.factorial
+
+*** =hint
+Python's from statement lets you import specific attributes from a module into the current namespace.
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad = "Read about importing libraries in python"
+msg_success = "Good Job!"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(3, [msg_bad, msg_bad, msg_success]) 
+```
 
 
 
