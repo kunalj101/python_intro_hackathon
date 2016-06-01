@@ -11,16 +11,17 @@ attachments :
 List is one of the most versatile data structure in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
 
 ```{python}
+
 # Create a list if squared numbers
 squares_lis = [0, 1, 4, 9, 16, 25]
+
 # Store detail of a cricter in a list
+
 Name=" Sachin Ramesh Tendulkar"
 Total_Test_Runs=15921
 Total_ODI_Runs=18426
 sachin_list = ["Sachine has scored", Total_Test_Runs, "runs in test matches and ", Total_ODI_Runs, "runs in ODI."]
 
-# Now write a code to Print "Hello World!"
-print("Hello World!")
 ```
 
 *** =instructions
