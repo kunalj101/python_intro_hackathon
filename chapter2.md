@@ -19,8 +19,8 @@ squares_lis = [0, 1, 4, 9, 16, 25]
 
 Name=" Sachin Ramesh Tendulkar"
 Total_Test_Runs=15921
-Total_ODI_Runs=18426
-sachin_list = ["Sachine has scored", Total_Test_Runs, "runs in test matches and ", Total_ODI_Runs, "runs in ODI."]
+
+sachin_list = ["Sachine has scored", Total_Test_Runs, "runs in test matches."]
 
 ```
 
