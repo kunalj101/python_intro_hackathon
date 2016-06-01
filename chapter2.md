@@ -367,7 +367,7 @@ test_mc(3, [msg_bad, msg_bad, msg_success])
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:c7f91e389f
+--- type:NormalExercise lang:python xp:100 skills:1 key:50c9218dac
 ## Why conditional statement is required?
 
 Conditional statements, these are used to execute code fragments based on a condition. The most commonly used construct is if-else, with following syntax:
