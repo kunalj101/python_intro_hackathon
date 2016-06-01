@@ -237,7 +237,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:95a8a66393
+--- type:NormalExercise lang:python xp:100 skills:1 key:377e9324f2
 ## Create Dictionary
 
 Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: {}.
