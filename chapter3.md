@@ -34,10 +34,10 @@ Let's start with loading in the training and testing set into your python enviro
 # Import library pandas
 import pandas as pd
 
-# Import train file
+# Import training file
 train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
 
-# Import test file
+# Import testing file
 test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
 
 ```
@@ -46,12 +46,13 @@ test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NY
 
 ```{python}
 
+# import library pandas
 import pandas as pd
 
 # Import training data as train
 train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
 
-# Import test data as train
+# Import testing data as test
 test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
 
 # Print top 5 observation of training dataset
@@ -74,7 +75,7 @@ import pandas as pd
 # Import training data as train
 train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
 
-# Import test data as train
+# Import testing data as test
 test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
 
 # Print top 5 observation of test dataset
@@ -89,6 +90,7 @@ test_col = len(test.columns())
 ```
 
 *** =sct
+
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
