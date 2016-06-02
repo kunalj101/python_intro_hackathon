@@ -35,10 +35,10 @@ Let's start with loading in the training and testing set into your python enviro
 import pandas as pd
 
 # Import training file
-train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
 # Import testing file
-test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
 ```
 
@@ -50,10 +50,10 @@ test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NY
 import pandas as pd
 
 # Import training data as train
-train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
 # Import testing data as test
-test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
 # Print top 5 observation of training dataset
 
@@ -73,10 +73,10 @@ test_col =
 import pandas as pd
 
 # Import training data as train
-train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
 # Import testing data as test
-test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
 # Print top 5 observation of test dataset
 print (train.head(5))
@@ -111,23 +111,31 @@ success_msg("Great work!")
 
 ## Understanding Data?
 
-We should invest more time on data exploartion to understand the data. To start with, you can look at the follow the following steps:
-- Identify the type of variables
-- Data set has missing values or not
-- Distribution analysis
-- Finding relationship between variables
+You can look at summary of numerical fields by using describe() function. Describe() function would provide count, mean, standard deviation (std), min, quartiles and max in its output.
+
+```{python}
+
+describe(dataframe)
+
+```
+For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution to understand whether they make sense or not. The frequency table can be printed by following command:
+
+```{python}
+
+df[column_name].value_counts()
+
+```
 
 *** =instructions
-- 
-- You can use train_url to load training dataset in train (dataframe)
-- You can use test_url to load training dataset in test (dataframe)
-- train.head(n) helps to look at top n observation
-- train.tail(n) helps to look at bottom n observation
+
+- Pass dataframe to describe() function 
+- We can also look at unique values of non-numeric values using df[column_name].value_counts()
 
 
 *** =hint
-- Use len(dataframe) to return the total observations in the dataframe 
-- Use len(dataframe.columns) to return the total available columns in the dataframe
+- Store the output of describe(train) in a dataframe df 
+- Use df['ApplicantIncome'][2] to access standard deviation of Applicant Income
+- Use df['PropertyArea']['Semiurban'] to access number of residents in semiurban area
 
 
 *** =pre_exercise_code
@@ -140,10 +148,10 @@ We should invest more time on data exploartion to understand the data. To start 
 import pandas as pd
 
 # Import training file
-train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
 # Import testing file
-test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
 ```
 
@@ -155,19 +163,27 @@ test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NY
 import pandas as pd
 
 # Import training data as train
-train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
 # Import testing data as test
-test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
-# Print top 5 observation of training dataset
+# Look at the summary of numerical variables for train data set
+df= train.describe()
+print (df)
 
+# Store and print the standard deviation of ApplicantIncome in variable std_income
+std_income = 
+print("Standard Deviation of Applicant Income is %d", std_income)
 
-# Store total number of observation in training dataset
-train_length =
+# Print the unique values and their frequency of variable Property_Area
+df1=train['Property_Area'].value_counts()
+print df1
 
-# Store total number of columns in testing data set
-test_col = 
+# Store the number of residents of semi urban area in semiurban_count
+semiurban_count=
+print("%d residents are from semi urban area", semiurban_count)
+
 
 ```
 
@@ -177,20 +193,29 @@ test_col =
 
 import pandas as pd
 
+import pandas as pd
+
 # Import training data as train
-train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
 # Import testing data as test
-test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
-# Print top 5 observation of test dataset
-print (train.head(5))
+# Look at the summary of numerical variables for train data set
+df = train.describe()
+print (df)
 
-# Store total number of observation in training dataset
-train_length = len(train)
+# Store and print the standard deviation of ApplicantIncome in variable std_income
+std_income = df['ApplicantIncome'][2]
+print("Standard Deviation of Applicant Income is %d", std_income)
 
-# Store total number of columns in testing data set
-test_col = len(test.columns())
+# Print the unique values and their frequency of variable Property_Area
+df1=train['Property_Area'].value_counts()
+print df1
+
+# Store the number of residents of semi urban area in semiurban_count
+semiurban_count = df1['Semiurban']
+print("%d residents are from semi urban area", semiurban_count)
 
 ```
 
@@ -205,10 +230,10 @@ test_col = len(test.columns())
 
 
 # Test for total observation in training dataset
-test_object("train_length")
+test_object("std_income")
 
 # Test for total columns in testing dataset
-test_object("test_col")
+test_object("semiurban_count")
 
 success_msg("Great work!")
 ```
