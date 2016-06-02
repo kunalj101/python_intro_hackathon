@@ -35,10 +35,10 @@ Let's start with loading in the training and testing set into your python enviro
 import pandas as pd
 
 # Import train file
-train = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/train_file/train_u6lujuX_CVtuZ9i.csv")
+train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
 
 # Import test file
-test = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/test_file/test_Y3wMUE5_7gLdaTN.csv")
+test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
 
 ```
 
@@ -49,10 +49,10 @@ test = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem
 import pandas as pd
 
 # Import training data as train
-train = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/train_file/train_u6lujuX_CVtuZ9i.csv")
+train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
 
 # Import test data as train
-test = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/test_file/test_Y3wMUE5_7gLdaTN.csv")
+test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
 
 # Print top 5 observation of training dataset
 
@@ -72,10 +72,10 @@ test_col =
 import pandas as pd
 
 # Import training data as train
-train = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/train_file/train_u6lujuX_CVtuZ9i.csv")
+train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
 
 # Import test data as train
-test = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/test_file/test_Y3wMUE5_7gLdaTN.csv")
+test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
 
 # Print top 5 observation of test dataset
 print (train.head(5))
