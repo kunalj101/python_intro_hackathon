@@ -178,7 +178,6 @@ train['TotalIncome'] =
 # Perform log transformation of TotalIncome to make it closer to normal
 train['TotalIncome_log']=
 
-
 ```
 
 *** =solution
@@ -212,3 +211,137 @@ train['TotalIncome_log'] = np.log(train['TotalIncome'])
 success_msg("Great work!")
 ```
 
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:2607b0ce32
+## Data preparation for building a predictive model?
+
+In Python, Scikit-Learn (sklearn) is the most commonly used library for model building. I encourage you to get a refresher on sklearn through this <a href="http://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/">article</a>. It has gathered a lot of interest recently as a choice of language for data analysis. There are few pre-requisite for scikit learn library:
+
+* Treat missing values
+* All inputs must be numeric
+ 
+To convert all non-numeric variables to number, following code will help:
+
+```{python}
+
+from sklearn.preprocessing import LabelEncoder
+var_mod = ['Gender','Married','Dependents','Education','Self_Employed','Property_Area','Loan_Status']
+le = LabelEncoder()
+for i in var_mod:
+    train[i] = le.fit_transform(train[i])
+
+```
+
+*** =instructions
+- Impute missing values of categorical variables with higher frequent categories of variable
+- Impute missing values of continuous variables with mean
+- Convert all non-numeric variables to numbers
+
+
+*** =hint
+- df['TotalIncome'] = df['ApplicantIncome'] + df['CoapplicantIncome']
+- df['TotalIncome_log'] = np.log(df['TotalIncome'])
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+# Training and Testing data set is loaded in variable train and test dataframe respectively
+
+# Impute missing values for Gender
+
+
+# Impute missing values for Married
+
+
+# Impute missing values for Dependents
+
+
+# Impute missing values for Loan_Amount
+
+
+# Impute missing values for Credit_History
+
+
+# Convert all non-numeric values to number
+
+
+```
+
+*** =solution
+
+```{python}
+
+# Training and Testing data set is loaded in variable train and test dataframe respectively
+
+# Impute missing values for Gender
+train['Gender'].fillna('Male',inplace=True)
+
+# Impute missing values for Married
+train['Married'].fillna('Yes',inplace=True)
+
+# Impute missing values for Dependents
+train['Dependents'].fillna('0',inplace=True)
+
+# Impute missing values for Loan_Amount
+train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
+
+# Impute missing values for Credit_History
+train['Credit_History'].fillna(1.0,inplace=True)
+
+# Convert all non-numeric values to number
+var_mod = ['Gender','Married','Dependents','Education','Self_Employed','Property_Area','Loan_Status']
+le = LabelEncoder()
+for i in var_mod:
+    train[i] = le.fit_transform(train[i])
+
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Impute missing values for Gender
+
+
+# Impute missing values for Married
+
+
+# Impute missing values for Dependents
+
+
+# Impute missing values for Loan_Amount
+
+
+# Impute missing values for Credit_History
+
+
+# Convert all non-numeric values to number
+
+
+success_msg("Great work!")
+```
