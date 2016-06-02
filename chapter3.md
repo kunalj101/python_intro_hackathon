@@ -193,8 +193,6 @@ print("%d residents are from semi urban area" %semiurban_count)
 
 import pandas as pd
 
-import pandas as pd
-
 # Import training data as train
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
@@ -215,7 +213,7 @@ print (df1)
 
 # Store the number of residents of semi urban area in semiurban_count
 semiurban_count = df1['Semiurban']
-print("%d residents are from semi urban area", %semiurban_count)
+print("%d residents are from semi urban area" %semiurban_count)
 
 ```
 
