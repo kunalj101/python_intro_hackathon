@@ -237,7 +237,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:36c3190b26
+--- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
 ## Understanding distribution of nmerical variables?
 
 Now that we are familiar with basic data characteristics, let us study distribution of various variables. Let us start with numeric variables – namely ApplicantIncome.
