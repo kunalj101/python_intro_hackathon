@@ -270,9 +270,7 @@ train.boxplot(column='ApplicantIncome', by='Gender')
 ```
 
 *** =hint
-- Store the output of describe(train) in a dataframe df 
-- Use df['ApplicantIncome'][2] to access standard deviation of Applicant Income
-- Use df['PropertyArea']['Semiurban'] to access number of residents in semiurban area
+- train['LoanAmount'].hist()
 
 
 *** =pre_exercise_code
@@ -282,8 +280,8 @@ train.boxplot(column='ApplicantIncome', by='Gender')
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
-%matplotlib inline
 import pandas as pd
+%matplotlib inline
 
 # Import training file
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
@@ -335,5 +333,118 @@ train.boxplot(column='LoanAmount', by ='Gender' )
 
 success_msg("Great work!")
 ```
+
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
+## Understanding distribution of categorical variables?
+
+We understand distributions for ApplicantIncome and LoanIncome, let us understand categorical variables in more details. For instance, let us look at the chances of getting a loan based on credit history.
+
+Lets see that Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
+
+```{python}
+
+pd.crosstab( train ['Gender'], train ["Loan_Status"], margins=True)
+
+```
+Next, we can also look at proportions can be more intuitive in making some quick insights. We can do this using the apply function. You can read more about cross tab and apply functions <a href="http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/"> here</a>. 
+
+
+```{python}
+
+def percentageConvert(ser):
+  return ser/float(ser[-1])
+
+pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percentageConvert, axis=1)
+
+```
+
+*** =instructions
+
+- use train['Loan_Status'].value_counts() to look at the frequency distribution
+- Use cross tab to do bi-variate analysis of two categorical variables
+
+
+*** =hint
+- pd.crosstab(test ["Credit_History"], test ["Loan_Status"], margins=True).apply(percentageConvert, axis=1)
+- train['Loan_Status'].value_counts()['Y'] will return the loan approval rate
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+# Assumed training and testing dataset are loaded in train and test dataframe respectively
+# Loan approval rates in absolute numbers
+loan_approval = 
+
+# Two-way comparison: Credit History and Loan Status
+
+
+def percentageConvert(ser):
+  return ser/float(ser[-1])
+
+# Two-way comparison: Loan approval rate for customers having Credit_History (1)
+df=pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True).apply(percentageConvert, axis=1)
+loan_approval_with_Credit_1 =
+
+```
+
+*** =solution
+
+```{python}
+
+# Assumed training and testing dataset are loaded in train and test dataframe respectively
+# Loan approval rates in absolute numbers
+loan_approval = train['Loan_Status'].value_counts()['Y']
+
+# Two-way comparison: Credit_History and Loan_Status
+pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
+
+def percentageConvert(ser):
+  return ser/float(ser[-1])
+
+# Two-way comparison: Loan approval rate for customers having Credit_History (1)
+df=pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True).apply(percentageConvert, axis=1)
+loan_approval_with_Credit_1= df['Y'][1]
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Test for loan approval rate
+test_object("loan_approval")
+
+# Test for two way comparison Credit_History and Loan_Status
+
+
+# Test for loan approval rate
+test_object("loan_approval_with_Credit_1")
+
+success_msg("Great work!")
+```
+
 
 
