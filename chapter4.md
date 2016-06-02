@@ -204,7 +204,7 @@ train['TotalIncome_log'] = np.log(train['TotalIncome'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
-test_object("train['TotalIncome']")
+#test_object("train['TotalIncome']")
 
 # Perform log transformation of TotalIncome to make it closer to normal
 
