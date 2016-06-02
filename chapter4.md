@@ -173,7 +173,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 # Training and Testing data set is loaded in variable train and test dataframe respectively
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
-TotalIncome = 
+train['TotalIncome'] = 
 
 # Perform log transformation of TotalIncome to make it closer to normal
 train['TotalIncome_log']=
@@ -188,7 +188,7 @@ train['TotalIncome_log']=
 # Training and Testing data set is loaded in variable train and test dataframe respectively
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
-TotalIncome = train['ApplicantIncome'] + train['CoapplicantIncome']
+train['TotalIncome'] = train['ApplicantIncome'] + train['CoapplicantIncome']
 
 # Perform log transformation of TotalIncome to make it closer to normal
 train['TotalIncome_log'] = np.log(train['TotalIncome'])
