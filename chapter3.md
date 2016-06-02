@@ -115,7 +115,7 @@ You can look at summary of numerical fields by using describe() function. Descri
 
 ```{python}
 
-describe(dataframe)
+describe(dataframe) 
 
 ```
 For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution to understand whether they make sense or not. The frequency table can be printed by following command:
