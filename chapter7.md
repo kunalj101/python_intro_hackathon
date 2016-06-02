@@ -24,6 +24,7 @@ Have a look at the plot that showed up in the viewer to the right. Which type of
 *** =hint
 Have a look at the plot. Do you see a trend in the dots?
 
+
 *** =pre_exercise_code
 ```{r}
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
