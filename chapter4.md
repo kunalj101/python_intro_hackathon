@@ -225,8 +225,11 @@ To convert all non-numeric variables to number, following code will help:
 ```{python}
 
 from sklearn.preprocessing import LabelEncoder
-var_mod = ['Gender','Married','Dependents','Education','Self_Employed','Property_Area','Loan_Status']
+
+var_mod = ['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area', 'Loan_Status']
+
 le = LabelEncoder()
+
 for i in var_mod:
     train[i] = le.fit_transform(train[i])
 
