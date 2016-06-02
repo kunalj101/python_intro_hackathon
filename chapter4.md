@@ -132,7 +132,7 @@ train ['LoanAmount_log'] = np.log(train['LoanAmount'])
 train ['LoanAmount_log'].hist(bins=20)
 
 ```
-<img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/01/7.-loan-log.png">
+<center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/01/7.-loan-log.png"></center>
 
 
 Imputing missing values in all the variables is important because most of the models don’t work with missing data and even if they do, imputing them helps more often than not. So, let us check the number of nulls / NaNs in the dataset for all variables.
