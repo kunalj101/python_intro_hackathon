@@ -122,7 +122,7 @@ success_msg("Great work!")
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:2607b0ce32
 
-## Treat extreme values in distribution of LoanAmount and ApplicantIncome?
+## Treat extreme values of LoanAmount and ApplicantIncome?
 
 Let’s analyze LoanAmount first. Since the extreme values are practically possible, i.e. some people might apply for high value loans due to specific needs. So instead of treating them as outliers, let’s try a log transformation to nullify their effect:
 
