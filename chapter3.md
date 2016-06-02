@@ -5,64 +5,83 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Create a list
+## Who is eligible for loan?
 
-List is one of the most versatile data structure in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
+Dream Housing Finance company deals in all home loans. They have presence across all urban, semi urban and rural areas. Customer first apply for home loan after that company validates the customer eligibility for loan. Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form.  
+
+Let's start with loading in the training and testing set into your python environment. You will use the training set to build your model, and the test set to validate it. The data is stored on the web as CSV files; their URLs are already available as character strings in the sample code. You can load this data with the pandas.read_csv() function, it converts the data set to python dataframe. Python dataframe likes a spreadsheet or SQL table.
+
 
 *** =instructions
-- Individual elements of a list can be accessed by writting an index number in square bracket. First index of list starts with 0 (zero) not 1.
-- A range of element can be accessed by having start index and end index
+- After importing the library "Pandas" (import pandas as pd), you read the dataset using function pd.read_csv()
+- You can use train_url to load training dataset in train (dataframe)
+- You can use test_url to load training dataset in test (dataframe)
+- train.head(n) helps to look at top n observation
+- train.tail(n) helps to look at bottom n observation
 
 
 *** =hint
-- Use AV[0] to select the first element of a list AV. 
-- Use AV[-1] to select the last element of a list AV. 
-- Use AV[1:3] to select second to fourth elements of a list AV.
+- Use len(dataframe) to return the total observations in the dataframe 
+- Use len(dataframe.columns) to return the total available columns in the dataframe
 
 
 
 *** =pre_exercise_code
 ```{python}
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+
+# Import train file
+train = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/train_file/train_u6lujuX_CVtuZ9i.csv"
+
+# Import test file
+test = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/test_file/test_Y3wMUE5_7gLdaTN.csv"
 ```
 
 *** =sample_code
 
 ```{python}
+import pandas as pd
 
-# Create a list of squared numbers
-squares_list = [0, 1, 4, 9, 16, 25]
+# Import training data as train
+train = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/train_file/train_u6lujuX_CVtuZ9i.csv"
 
-# Now write a code to create list of odd numbers and store it into a variable odd_numbers
-odd_numbers=
+# Import test data as train
+test = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/test_file/test_Y3wMUE5_7gLdaTN.csv"
 
-# Print first element of squares_list
-print (squares_list[0])
+# Print top 5 observation of training dataset
 
-# Write a code to store fouth element of squares_list in variable fourth_value
-fourth_value=
 
-# Print second to fourth elements of squares_list
+# Store total number of observation in training dataset
+train_length =
+
+# Store total number of columns in testing data set
+test_col = 
 
 ```
 
 *** =solution
 ```{python}
 
-# Create a list of squared numbers
-squares_list = [0, 1, 4, 9, 16, 25]
+import pandas as pd
 
-# Now write a code to create list of first five odd numbers and store it into a variable odd_numbers
-odd_numbers = [1, 3, 5, 7, 9]
+# Import training data as train
+train = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/train_file/train_u6lujuX_CVtuZ9i.csv"
 
-# Print first element of squares_list
-print (squares_list[0])
+# Import test data as train
+test = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/test_file/test_Y3wMUE5_7gLdaTN.csv"
 
-# Write a code to store fouth element of squares_list in variable fourth_value
-fourth_value=squares_list[3]
+# Print top 5 observation of test dataset
+print (train.head(5))
 
-# Print second to fourth elements of squares_list
-print (squares_list[1:3])
+# Store total number of observation in training dataset
+train_length = len(train)
+
+# Store total number of columns in testing data set
+test_col = len(test.columns())
+
 ```
 
 *** =sct
@@ -71,14 +90,15 @@ print (squares_list[1:3])
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Check list odd_numbers
-test_object("odd_numbers")
+# Test for evaluating top 5 heading of dataframe
 
-# Check fourth value of squares_list
-test_object("fourth_value")
 
-# Check second to fourth elements"
-test_output_contains("[1, 4]", pattern = False)
+# Test for total observation in training dataset
+test_object("train_length")
+
+# Test for total columns in testing dataset
+test_object("test_col")
+
 success_msg("Great work!")
 ```
 
