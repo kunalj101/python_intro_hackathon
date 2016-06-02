@@ -239,8 +239,8 @@ for i in var_mod:
 
 
 *** =hint
-- df['TotalIncome'] = df['ApplicantIncome'] + df['CoapplicantIncome']
-- df['TotalIncome_log'] = np.log(df['TotalIncome'])
+- Use similar expression like train['Gender'].fillna('Male',inplace=True) for categorial variable
+- Use similar expressin like train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True) for continuous
 
 
 *** =pre_exercise_code
