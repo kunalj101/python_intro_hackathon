@@ -362,7 +362,7 @@ pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percent
 
 *** =instructions
 
-- use train['Loan_Status'].value_counts() to look at the frequency distribution
+- use train['Loan_Status'].value_counts() to look at the frequency distribution 
 - Use cross tab to do bi-variate analysis of two categorical variables
 
 
