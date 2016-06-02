@@ -85,6 +85,111 @@ print (train.head(5))
 train_length = len(train)
 
 # Store total number of columns in testing data set
+test_col = len(test.columns)
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Test for evaluating top 5 heading of dataframe
+
+
+# Test for total observation in training dataset
+test_object("train_length")
+
+# Test for total columns in testing dataset
+test_object("test_col")
+
+success_msg("Great work!")
+```
+
+
+## Understanding Data?
+
+We should invest more time on data exploartion to understand the data. To start with, you can look at the follow the following steps:
+- Identify the type of variables
+- Data set has missing values or not
+- Distribution analysis
+- Finding relationship between variables
+
+*** =instructions
+- 
+- You can use train_url to load training dataset in train (dataframe)
+- You can use test_url to load training dataset in test (dataframe)
+- train.head(n) helps to look at top n observation
+- train.tail(n) helps to look at bottom n observation
+
+
+*** =hint
+- Use len(dataframe) to return the total observations in the dataframe 
+- Use len(dataframe.columns) to return the total available columns in the dataframe
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+
+# Import training file
+train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+# import library pandas
+import pandas as pd
+
+# Import training data as train
+train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
+
+# Import testing data as test
+test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
+
+# Print top 5 observation of training dataset
+
+
+# Store total number of observation in training dataset
+train_length =
+
+# Store total number of columns in testing data set
+test_col = 
+
+```
+
+*** =solution
+
+```{python}
+
+import pandas as pd
+
+# Import training data as train
+train = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/train.csv")
+
+# Import testing data as test
+test = pd.read_csv("https://drive.google.com/folderview?id=0BxdtQGPPnMfjUWpsY3NYQy1JV3c&usp=sharing/test.csv")
+
+# Print top 5 observation of test dataset
+print (train.head(5))
+
+# Store total number of observation in training dataset
+train_length = len(train)
+
+# Store total number of columns in testing data set
 test_col = len(test.columns())
 
 ```
