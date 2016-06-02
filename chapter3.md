@@ -28,6 +28,7 @@ Let's start with loading in the training and testing set into your python enviro
 
 *** =pre_exercise_code
 ```{python}
+
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
@@ -38,11 +39,13 @@ train = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-proble
 
 # Import test file
 test = pd.read_csv("http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/media/test_file/test_Y3wMUE5_7gLdaTN.csv"
+
 ```
 
 *** =sample_code
 
 ```{python}
+
 import pandas as pd
 
 # Import training data as train
@@ -63,6 +66,7 @@ test_col =
 ```
 
 *** =solution
+
 ```{python}
 
 import pandas as pd
