@@ -336,7 +336,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
+--- type:NormalExercise lang:python xp:100 skills:1 key:708e937aea
 ## Understanding distribution of categorical variables?
 
 We understand distributions for ApplicantIncome and LoanIncome, let us understand categorical variables in more details. For instance, let us look at the chances of getting a loan based on credit history.
