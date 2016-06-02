@@ -108,7 +108,7 @@ test_object("test_col")
 success_msg("Great work!")
 ```
 
-
+--- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Understanding Data?
 
 You can look at summary of numerical fields by using describe() function. Describe() function would provide count, mean, standard deviation (std), min, quartiles and max in its output.
