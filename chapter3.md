@@ -174,7 +174,7 @@ print (df)
 
 # Store and print the standard deviation of ApplicantIncome in variable std_income
 std_income = 
-print("Standard Deviation of Applicant Income is %d", std_income)
+print("Standard Deviation of Applicant Income is %d" %std_income)
 
 # Print the unique values and their frequency of variable Property_Area
 df1=train['Property_Area'].value_counts()
@@ -182,7 +182,7 @@ print (df1)
 
 # Store the number of residents of semi urban area in semiurban_count
 semiurban_count=
-print("%d residents are from semi urban area", semiurban_count)
+print("%d residents are from semi urban area" %semiurban_count)
 
 
 ```
@@ -207,7 +207,7 @@ print (df)
 
 # Store and print the standard deviation of ApplicantIncome in variable std_income
 std_income = df['ApplicantIncome'][2]
-print("Standard Deviation of Applicant Income is %d", std_income)
+print("Standard Deviation of Applicant Income is %d" %std_income)
 
 # Print the unique values and their frequency of variable Property_Area
 df1=train['Property_Area'].value_counts()
@@ -215,7 +215,7 @@ print (df1)
 
 # Store the number of residents of semi urban area in semiurban_count
 semiurban_count = df1['Semiurban']
-print("%d residents are from semi urban area", semiurban_count)
+print("%d residents are from semi urban area", %semiurban_count)
 
 ```
 
