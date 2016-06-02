@@ -238,7 +238,7 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
-## Understanding distribution of nmerical variables?
+## Understanding distribution of numerical variables?
 
 Now that we are familiar with basic data characteristics, let us study distribution of various variables. Let us start with numeric variables – namely ApplicantIncome.
 
@@ -269,8 +269,6 @@ train.boxplot(column='ApplicantIncome', by='Gender')
 
 ```
 
-
-
 *** =hint
 - Store the output of describe(train) in a dataframe df 
 - Use df['ApplicantIncome'][2] to access standard deviation of Applicant Income
@@ -284,6 +282,7 @@ train.boxplot(column='ApplicantIncome', by='Gender')
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
+%matplotlib inline
 import pandas as pd
 
 # Import training file
@@ -298,31 +297,12 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
-# import library pandas
-import pandas as pd
+# Assumed training and testing dataset are loaded in train and test dataframe respectively
+# Plot histogram for variable LoanAmount
 
-# Import training data as train
-train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
-# Import testing data as test
-test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
-
-# Look at the summary of numerical variables for train data set
-df= train.describe()
-print (df)
-
-# Store and print the standard deviation of ApplicantIncome in variable std_income
-std_income = 
-print("Standard Deviation of Applicant Income is %d" %std_income)
-
-# Print the unique values and their frequency of variable Property_Area
-df1=train['Property_Area'].value_counts()
-print (df1)
-
-# Store the number of residents of semi urban area in semiurban_count
-semiurban_count=
-print("%d residents are from semi urban area" %semiurban_count)
-
+# Plot a box plot for variable LoanAmount by variable Gender of training data set
+train.boxplot(column='LoanAmount', by = )
 
 ```
 
@@ -330,29 +310,13 @@ print("%d residents are from semi urban area" %semiurban_count)
 
 ```{python}
 
-import pandas as pd
 
-# Import training data as train
-train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+# Assumed training and testing dataset are loaded in train and test dataframe respectively
+# Plot histogram for variable LoanAmount
+train['LoanAmount'].hist()
 
-# Import testing data as test
-test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
-
-# Look at the summary of numerical variables for train data set
-df = train.describe()
-print (df)
-
-# Store and print the standard deviation of ApplicantIncome in variable std_income
-std_income = df['ApplicantIncome'][2]
-print("Standard Deviation of Applicant Income is %d" %std_income)
-
-# Print the unique values and their frequency of variable Property_Area
-df1=train['Property_Area'].value_counts()
-print (df1)
-
-# Store the number of residents of semi urban area in semiurban_count
-semiurban_count = df1['Semiurban']
-print("%d residents are from semi urban area" %semiurban_count)
+# Plot a box plot for variable LoanAmount by variable Gender of training data set
+train.boxplot(column='LoanAmount', by ='Gender' )
 
 ```
 
@@ -363,14 +327,11 @@ print("%d residents are from semi urban area" %semiurban_count)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for evaluating top 5 heading of dataframe
+# Test for evaluating histogram
 
 
-# Test for total observation in training dataset
-test_object("std_income")
+# Test for evaluating box plot
 
-# Test for total columns in testing dataset
-test_object("semiurban_count")
 
 success_msg("Great work!")
 ```
