@@ -295,7 +295,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
-# Assumed training and testing dataset are loaded in train and test dataframe respectively
+# Training and Testing dataset are loaded in train and test dataframe respectively
 # Plot histogram for variable LoanAmount
 
 
