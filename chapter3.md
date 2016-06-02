@@ -25,8 +25,8 @@ Let's start with loading in the training and testing set into your python enviro
 - Use len(dataframe.columns) to return the total available columns in the dataframe
 
 
-
 *** =pre_exercise_code
+
 ```{python}
 
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
