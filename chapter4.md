@@ -128,6 +128,7 @@ Let’s analyze LoanAmount first. Since the extreme values are practically possi
 
 ```{python}
 
+import numpy as np
 train ['LoanAmount_log'] = np.log(train['LoanAmount'])
 train ['LoanAmount_log'].hist(bins=20)
 
@@ -135,40 +136,16 @@ train ['LoanAmount_log'].hist(bins=20)
 <center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/01/7.-loan-log.png"></center>
 
 
-Imputing missing values in all the variables is important because most of the models don’t work with missing data and even if they do, imputing them helps more often than not. So, let us check the number of nulls / NaNs in the dataset for all variables.
-
-```{python}
-
-train.apply(lambda x: sum(x.isnull()),axis=0) 
-
-```
-
-Read more about lambda <a href="http://www.python-course.eu/lambda.php">here</a>.
-
-### Imputing missing values
-There are numerous ways to fill the missing values of loan amount – the simplest being replacement by mean for continuous variables, which can be done by following code:
-
-```{python}
-
-train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
-
-```
-And for categorical variables, we look at the frquency table and impute with value has higher frequency because there is a high probability of success. For example, if you look at distribution of Self_Employed 500 out of 582 which is ~86% of total values falls under category "No". Here we will replace missing values of Self_Employed with "No".
-
-```{python}
-
-df['Self_Employed'].fillna('No',inplace=True)
-
-```
+Now the distribution looks much closer to normal and effect of extreme values has been significantly subsided.
 
 *** =instructions
-- Use train.apply(lambda x: sum(x.isnull()),axis=0) with comparison operator to check variable has missing value or not
-- Look at frequency distribution of Gender to identify more frequent category
+- Combine both ApplicantIncome and CoapplicantIncome as TotalIncome
+- Take log transformation of TotalIncome to deal with extreme values
 
 
 *** =hint
-- Use sum(train.apply(lambda x: sum(x.isnull()),axis=0) > 0) to check count of variable having missing values 
-- Use median() inplace of mean() in expression train['Loan_Amount_Term'].fillna(train['Loan_Amount_Term'].median(), inplace=True) to impute with median
+- df['TotalIncome'] = df['ApplicantIncome'] + df['CoapplicantIncome']
+- df['TotalIncome_log'] = np.log(df['TotalIncome'])
 
 
 *** =pre_exercise_code
@@ -179,6 +156,7 @@ df['Self_Employed'].fillna('No',inplace=True)
 
 # Import library pandas
 import pandas as pd
+import numpy as np
 
 # Import training file
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
@@ -194,16 +172,12 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 # Training and Testing data set is loaded in variable train and test dataframe respectively
 
-# Number of variables with missing values
-variables_missing_value = 
+# Add both ApplicantIncome and CoapplicantIncome to TotalIncome
+TotalIncome = 
 
+# Perform log transformation of TotalIncome to make it closer to normal
+train['TotalIncome_log']=
 
-# Impute missing value of Loan_Amount_Term with median
-
-
-# Impute missing value of Gender with more frequent category
-
- 
 
 ```
 
@@ -213,15 +187,12 @@ variables_missing_value =
 
 # Training and Testing data set is loaded in variable train and test dataframe respectively
 
-# Number of variables with missing values
-variables_missing_value = sum(train.apply(lambda x: sum(x.isnull()),axis=0) > 0)
+# Add both ApplicantIncome and CoapplicantIncome to TotalIncome
+TotalIncome = train['ApplicantIncome'] + train['CoapplicantIncome']
 
+# Perform log transformation of TotalIncome to make it closer to normal
+train['TotalIncome_log'] = np.log(train['TotalIncome'])
 
-# Impute missing value of Loan_Amount_Term with median
-train['Loan_Amount_Term'].fillna(train['Loan_Amount_Term'].median(), inplace=True)
-
-# Impute missing value of Gender with more frequent category
-train['Self_Employed'].fillna('No',inplace=True)
 
 ```
 
@@ -232,13 +203,10 @@ train['Self_Employed'].fillna('No',inplace=True)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Number of variables with missing values
-test_object("variables_missing_value")
+# Add both ApplicantIncome and CoapplicantIncome to TotalIncome
+test_object("TotalIncome")
 
-# Impute missing value of Loan_Amount_Term with median
-
-
-# Impute missing value of Gender with more frequent category
+# Perform log transformation of TotalIncome to make it closer to normal
 
 
 success_msg("Great work!")
