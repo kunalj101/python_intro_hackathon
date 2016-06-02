@@ -120,7 +120,7 @@ test_object("variables_missing_value")
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+--- type:NormalExercise lang:python xp:100 skills:1 key:2607b0ce32
 
 ## Treat extreme values in distribution of LoanAmount and ApplicantIncome?
 
