@@ -38,13 +38,13 @@ df['Self_Employed'].fillna('No',inplace=True)
 ```
 
 *** =instructions
-- Use train.apply(lambda x: sum(x.isnull()),axis=0) with comparison operator to check variable has missing values
+- Use train.apply(lambda x: sum(x.isnull()),axis=0) with comparison operator to check variable has missing value or not
 - Look at frequency distribution of Gender to identify more frequent category
 
 
 *** =hint
-- Use len(dataframe) to return the total observations in the dataframe 
-- Use len(dataframe.columns) to return the total available columns in the dataframe
+- Use sum(train.apply(lambda x: sum(x.isnull()),axis=0) > 0) to check count of variable having missing values 
+- Use median() inplace of mean() in expression train['Loan_Amount_Term'].fillna(train['Loan_Amount_Term'].median(), inplace=True) to impute with median
 
 
 *** =pre_exercise_code
@@ -87,22 +87,17 @@ variables_missing_value =
 
 ```{python}
 
-import pandas as pd
+# Training and Testing data set is loaded in variable train and test dataframe respectively
 
-# Import training data as train
-train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+# Number of variables with missing values
+variables_missing_value = sum(train.apply(lambda x: sum(x.isnull()),axis=0) > 0)
 
-# Import testing data as test
-test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
-# Print top 5 observation of test dataset
-print (train.head(5))
+# Impute missing value of Loan_Amount_Term with median
+train['Loan_Amount_Term'].fillna(train['Loan_Amount_Term'].median(), inplace=True)
 
-# Store total number of observation in training dataset
-train_length = len(train)
-
-# Store total number of columns in testing data set
-test_col = len(test.columns)
+# Impute missing value of Gender with more frequent category
+train['Self_Employed'].fillna('No',inplace=True)
 
 ```
 
@@ -113,14 +108,14 @@ test_col = len(test.columns)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for evaluating top 5 heading of dataframe
+# Number of variables with missing values
+test_object("variables_missing_value")
+
+# Impute missing value of Loan_Amount_Term with median
 
 
-# Test for total observation in training dataset
-test_object("train_length")
+# Impute missing value of Gender with more frequent category
 
-# Test for total columns in testing dataset
-test_object("test_col")
 
 success_msg("Great work!")
 ```
