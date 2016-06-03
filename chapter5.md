@@ -170,10 +170,11 @@ Build a logistic regression model for two predictors variable "Credit_History" a
 
 ```{python}
   from sklearn.linear_model import LogisticRegression  
+  
   predictors = ['Credit_History','Education']
 ```
   
-* Converting preditors and outcome to numpy array
+* Converting predictors and outcome to numpy array
 
 ```{python}  
   x_train = train_modified[predictors].values
@@ -185,14 +186,15 @@ Build a logistic regression model for two predictors variable "Credit_History" a
 
 ```{python}    
   model = LogisticRegression()
+  
   model.fit(x_train, y_train)
-  model.score(x_train, y_train)
 ```  
 
 * Predicting class and converting to original labels
 
 ```{python}      
   predicted= model.predict(x_test)
+  
   #Remember number = LabelEncoder()
   predicted = number.inverse_transform(predicted)
 ```    
@@ -201,6 +203,7 @@ Build a logistic regression model for two predictors variable "Credit_History" a
 
   ```{python}      
   test_modified['Loan_Status']=predicted
+  
   test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 
 ```
