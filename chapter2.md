@@ -299,7 +299,7 @@ dict1['Age'] = 18
 print (dict1['Age'])
 
 # Print all the keys of dictionary dict
-print (dict1.values())
+print (dict1.keys())
 
 ```
 
