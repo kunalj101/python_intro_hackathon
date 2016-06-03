@@ -345,7 +345,7 @@ test_object("predicted")
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:f4c3fbee79
+--- type:NormalExercise lang:python xp:100 skills:1 key:0f04d6b3e1
 
 ## Performing prediction using Decision Tree
 
