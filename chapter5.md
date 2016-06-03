@@ -149,7 +149,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+--- type:NormalExercise lang:python xp:100 skills:1 key:f4c3fbee79
 ## Performing prediction using Logistic Regression
 
 Logistic Regression is a classification algorithm. It is used to predict a binary outcome (1 / 0, Yes / No, True / False) given a set of independent variables, read more about <a href="http://www.analyticsvidhya.com/blog/2015/11/beginners-guide-on-logistic-regression-in-r/"> Logistic Regression </a>.
