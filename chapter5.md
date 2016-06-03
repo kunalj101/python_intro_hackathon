@@ -720,3 +720,46 @@ test_object("predicted")
 
 success_msg("Great work!")
 ```
+
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+## Selecting important variables for model building
+
+One of benefits of Random forest which excites me most is, the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the dimensionality reduction methods. Further, the model outputs Importance of variable, which can be a very handy feature. 
+
+```{python}
+featimp = pd.Series(model.feature_importances_, index=predictors).sort_values(ascending=False)
+print featimp
+```
+
+
+
+####Run above feature importance command and identify Which variable has the highest impact on the model??
+
+
+*** =instructions
+- LoanAmount
+- Dependents
+- Gender
+- Education
+
+*** =hint
+Run feature importance command
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad = "That is not correct!"
+msg_success = "You got it right!"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(1, [msg_success, msg_bad, msg_bad, msg_bad]) 
+```
