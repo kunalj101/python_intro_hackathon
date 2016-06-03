@@ -744,7 +744,7 @@ model = RandomForestClassifier()
 
 ```
 
-Run above feature importance command and identify Which variable has the highest impact on the model??
+Run feature importance command and identify Which variable has the highest impact on the model??
 
 
 *** =instructions
