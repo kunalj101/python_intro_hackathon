@@ -286,8 +286,8 @@ y_train = train_modified['Loan_Status'].values
 x_test = test_modified[predictors].values
 
 # Model Building
-model = 
-model.fit(___, ___)
+model = _________
+model.fit(x_train, y_train)
 
 # Predict class and converting to original labels
 predicted= model.predict(____)
@@ -305,15 +305,25 @@ test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 # Import module for Logistic regression
 from sklearn.linear_model import LogisticRegression
 
-# Import module for Decision Tree
-from sklearn.tree import DecisionTreeClassifier
+# Select three predictors Credit_History, Education and Gender
+features =['Credit_History','Education','Gender']
 
-# Import module for Random Forest
-from sklearn.ensemble import RandomForestClassifier
+# Converting predictors and outcome to numpy array
+x_train = train_modified[predictors].values
+y_train = train_modified['Loan_Status'].values
+x_test = test_modified[predictors].values
 
-# Number of observations in train_modified and test_modified
-train_modified_count = len(train_modified)
-test_modified_count = len(test_modified)
+# Model Building
+model = LogisticRegression()
+model.fit(x_train, y_test)
+
+# Predict class and converting to original labels
+predicted= model.predict(x_test)
+predicted = number.inverse_transform(predicted)
+
+# Storing prediction to test data set and sumit solution to datahack
+test_modified['Loan_Status']=predicted
+test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 
 ```
 
@@ -324,13 +334,14 @@ test_modified_count = len(test_modified)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for import library
+# Test for predictor selection
+test_object("features")
 
+# Test for model
+test_object("model")
 
-# Test number of observations in train_modiefied and test_modiefied
-test_object("train_modified_count")
-test_object("test_modified_count")
-
+# Test for prediction
+test_object("predicted")
 
 success_msg("Great work!")
 ```
