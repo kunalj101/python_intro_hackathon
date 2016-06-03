@@ -121,7 +121,7 @@ from sklearn.tree import DecisionTreeClassifier
 # Import module for Random Forest
 from sklearn.ensemble import RandomForestClassifier
 
-# Number of observations in train_modiefied and test_modiefied
+# Number of observations in train_modified and test_modified
 train_modified_count = len(train_modified)
 test_modified_count = len(test_modified)
 
