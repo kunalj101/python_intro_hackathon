@@ -168,34 +168,40 @@ Build a logistic regression model for two predictors variable "Credit_History" a
 
 ```{python}
   # Logistic Rgression
+  
   from sklearn.linear_model import LogisticRegression  
   
   # Selecting Predictors
+  
   predictors = ['Credit_History','Education']
   
   # converting to numpy array
+  
   x_train = train_modified[predictors].values
   y_train = train_modified['Loan_Status'].values
   x_test = test_modified[predictors].values
   
   # model building
+  
   model = LogisticRegression()
-
-  # Train the model using the training sets and check score
   model.fit(x_train, y_train)
   model.score(x_train, y_train)
 
   # Predicting class
+  
   predicted= model.predict(x_test)
 
   # Encoding number to original categorical class
   # Remember number = LabelEncoder()
+  
   predicted = number.inverse_transform(predicted)
   
   # Storing prediction to test data set
+  
   test_modified['Loan_Status']=predicted
   
   # Submit solution to Datahack.analyticsvidhya.com
+  
   test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 
 ```
