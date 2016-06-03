@@ -242,6 +242,10 @@ success_msg("Great work!")
 
 Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: {}.
 
+dict = {'Name':'Kunal', 'Company':'Analytics Vidhya'}
+
+In dictonary dict, Name and Company are dictionary where as "Kunal" and "Analytics Vidhya" are values.
+
 *** =instructions
 
 - To access dictionary elements, you can use the familiar square brackets along with the key to obtain its value
