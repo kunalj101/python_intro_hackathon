@@ -487,8 +487,8 @@ test_modified.to_csv("Submission2.csv", columns=['Loan_ID','Loan_Status'])
 *** =solution
 
 ```{python}
-# Import module for Logistic regression
-from sklearn.linear_model import LogisticRegression
+# Import module for Decision Tree
+from sklearn.tree import DecisionTreeClassifier
 
 # Select three predictors Credit_History, Education and Gender
 predictors =['Credit_History','Education','Gender']
@@ -499,7 +499,7 @@ y_train = train_modified['Loan_Status'].values
 x_test = test_modified[predictors].values
 
 # Model Building
-model = LogisticRegression()
+model = DecisionTreeClassifier()
 model.fit(x_train, y_train)
 
 # Predict class and converting to original labels
