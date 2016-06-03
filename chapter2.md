@@ -314,7 +314,7 @@ print (dict1.keys())
 test_output_contains("18", pattern = False)
 
 # Check keys of dictionary
-#test_output_contains("dict_keys(['Age', 'Sports', 'Name'])", pattern = False)
+test_output_contains("dict_keys(['Age', 'Sports', 'Name'])", pattern = False)
 
 success_msg("Great work!")
 ```
@@ -326,6 +326,7 @@ Lets take one step ahead in our journey to learn Python by getting acquainted wi
 
 ```{python}
 import math as m
+
 from math import *
 ```
 
@@ -389,6 +390,7 @@ else:
 
 *** =instructions
 
+- Store the length of 
 - The colon (:) is significant and required. 
 - The line after the colon must be indented. It is standard in Python to use four spaces for indenting.
 - All lines indented the same amount after the colon will be executed whenever the BOOLEAN_EXPRESSION is true.
@@ -422,10 +424,10 @@ else:
 # Create a list of squared numbers
 squares_list = [0, 1, 4, 9, 16, 25]
 
-# Store the length of string in str_len
+# Store the length of squares_list in square_len
 
 
-# if str_len is less than 5 then print "Less than 5" else "Greater than 5"
+# if square_len is less than 5 then print "Less than 5" else "Greater than 5"
 
 
 ```
@@ -446,11 +448,11 @@ else:
 # Create a list of squared numbers
 squares_list = [0, 1, 4, 9, 16, 25]
 
-# Store the length of string in str_len
-str_len = len(squares_list)
+# Store the length of squares_list in square_len
+square_len = len(squares_list)
 
-# if str_len is less than 5 then print "Less than 5" else "Greater than 5"
-if str_len < 5:
+# if square_len is less than 5 then print "Less than 5" else "Greater than 5"
+if square_len < 5:
     print ("Less than 5")
 else:
     print ("Greater than 5")
@@ -465,7 +467,7 @@ else:
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check length of strings
-test_object("str_len")
+test_object("square_len")
 
 # Check last seven characters
 test_output_contains("Greater than 5", pattern = False)
