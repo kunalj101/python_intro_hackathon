@@ -15,7 +15,7 @@ Imputing missing values in all the variables is important because most of the mo
 
 ```{python}
 
-train.apply(lambda x: sum(x.isnull()),axis=0) 
+train.isnull().sum()
 
 ```
 
