@@ -802,7 +802,8 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 from sklearn.ensemble import RandomForestClassifier
 
 # Select three predictors Credit_History, LoanAmount and Log_TotalIncome 
-predictors =['Credit_History','LoanAmount','Log_TotalIncome']
+predictors=['ApplicantIncome', 'CoapplicantIncome', 'Credit_History','Dependents', 'Education', 'Gender', 'LoanAmount',
+            'Loan_Amount_Term', 'Married', 'Property_Area', 'Self_Employed', 'TotalIncome','Log_TotalIncome']
 
 # Converting predictors and outcome to numpy array
 x_train = train_modified[predictors].values
