@@ -199,7 +199,7 @@ Build a logistic regression model for two predictors variable "Credit_History" a
   predicted = number.inverse_transform(predicted)
 ```    
 
-* Storing prediction to test data set and sumit solution to datahack
+* Storing prediction to test data set and sumit solution to <a href="datahack.analyticsvidhya.com">datahack</a>
 
   ```{python}      
   test_modified['Loan_Status']=predicted
@@ -210,14 +210,13 @@ Build a logistic regression model for two predictors variable "Credit_History" a
 
 
 *** =instructions
-- Import sklearn library and required model for model building
-- Dataframes train_modified and test_modified are available in the enviorment
+- Store input variable in list "predictors"
+- Create a pbject of logistic regression
+- Train model on training data set and perform predition on test data
 
 
 *** =hint
-- Write statement from sklearn.tree import DecisionTreeClassifier to import Decision tree
-- Use len(train_modified) to return the length
-
+- Use predictors =['Credit_History','Education','Gender'] as predictor variable
 
 *** =pre_exercise_code
 
