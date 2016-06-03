@@ -16,9 +16,14 @@ In this challengs "Loan Prediction", we need to classify customer in Loan status
 * Import required library (In python, we mostly use sklearn), this is a classification challenge so we will import module of classification algorithms
 
 ```{python}
-    from sklearn.linear_model import LogisticRegression #Logistic Rgression 
-    from sklearn.tree import DecisionTreeClassifier #Decision Tree
-    from sklearn.ensemble import RandomForestClassifier #Random Forest
+  #Logistic Rgression
+  from sklearn.linear_model import LogisticRegression  
+  
+  #Decision Tree
+  from sklearn.tree import DecisionTreeClassifier 
+  
+  #Random Forest
+  from sklearn.ensemble import RandomForestClassifier 
 ```
 
 * Convert categorical variables to numeric array because sklearn requires all inputs in numeric array
