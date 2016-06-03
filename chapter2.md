@@ -280,7 +280,7 @@ dict1 = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
 # Print the value of Age
 
 
-# Return all the keys of dictionary dict1
+# Print all the keys of dictionary dict1
 
 
 ```
