@@ -278,7 +278,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 from sklearn.linear_model import LogisticRegression
 
 # Select three predictors Credit_History, Education and Gender
-features =[____,_____,_____]
+predictors =[____,_____,_____]
 
 # Converting predictors and outcome to numpy array
 x_train = train_modified[predictors].values
@@ -306,7 +306,7 @@ test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 from sklearn.linear_model import LogisticRegression
 
 # Select three predictors Credit_History, Education and Gender
-features =['Credit_History','Education','Gender']
+predictors =['Credit_History','Education','Gender']
 
 # Converting predictors and outcome to numpy array
 x_train = train_modified[predictors].values
