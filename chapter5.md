@@ -9,7 +9,13 @@ attachments :
 
 Till now, we have looked at the data exploartion, cleaning, feature engineering and pre processing steps of model building. Now, we will look at the methods of building a model. 
 
-In this challengs "Loan Prediction", we need to identify customer whose loan status 
+In this challengs "Loan Prediction", we need to classify customer in Loan status "Y" or "N" category based on available information about customer. Before jumping into model building steps, we need to follow below steps:
+- Impute missing values of the data set
+- Import required library (In python, we mostly use sklearn), this is a classification challenge so we will import module of classification algorithms
+    * Logistic Rgression: from sklearn.linear_model import LogisticRegression
+    * Decision Tree: from sklearn.tree import DecisionTreeClassifier
+    * Random Forest: from sklearn.ensemble import RandomForestClassifier
+- Convert categorical variables to numeric array because sklearn requires all inputs in numeric array
 
 
 *** =instructions
