@@ -734,10 +734,17 @@ featimp = pd.Series(model.feature_importances_, index=predictors).sort_values(as
 print (featimp)
 
 ```
+I have selected all the features available in the train data set and model it using random forest:
 
+```{python}
+predictors=['ApplicantIncome', 'CoapplicantIncome', 'Credit_History','Dependents', 'Education', 'Gender', 'LoanAmount',
+            'Loan_Amount_Term', 'Married', 'Property_Area', 'Self_Employed', 'TotalIncome','Log_TotalIncome']
 
+model = RandomForestClassifier()
 
-####Run above feature importance command and identify Which variable has the highest impact on the model??
+```
+
+Run above feature importance command and identify Which variable has the highest impact on the model??
 
 
 *** =instructions
