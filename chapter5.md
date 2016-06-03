@@ -337,7 +337,7 @@ test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 test_object("predictors")
 
 # Test for model
-test_object("model")
+#test_object("model")
 
 # Test for prediction
 test_object("predicted")
@@ -523,7 +523,7 @@ test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 test_object("predictors")
 
 # Test for model
-test_object("model")
+#test_object("model")
 
 # Test for prediction
 test_object("predicted")
@@ -713,7 +713,7 @@ test_modified.to_csv("Submission3.csv", columns=['Loan_ID','Loan_Status'])
 test_object("predictors")
 
 # Test for model
-test_object("model")
+#test_object("model")
 
 # Test for prediction
 test_object("predicted")
