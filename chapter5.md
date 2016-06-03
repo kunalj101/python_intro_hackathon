@@ -12,20 +12,22 @@ Till now, we have looked at the data exploartion, cleaning, feature engineering 
 In this challengs "Loan Prediction", we need to classify customer in Loan status "Y" or "N" category based on available information about customer. Before jumping into model building steps, we need to follow below steps:
 - Impute missing values of the data set
 - Import required library (In python, we mostly use sklearn), this is a classification challenge so we will import module of classification algorithms
-    * Logistic Rgression: from sklearn.linear_model import LogisticRegression
-    * Decision Tree: from sklearn.tree import DecisionTreeClassifier
-    * Random Forest: from sklearn.ensemble import RandomForestClassifier
+```{python}
+    * from sklearn.linear_model import LogisticRegression #Logistic Rgression 
+    * from sklearn.tree import DecisionTreeClassifier #Decision Tree
+    * from sklearn.ensemble import RandomForestClassifier #Random Forest
+```
 - Convert categorical variables to numeric array because sklearn requires all inputs in numeric array
 
 
 *** =instructions
-- Use train.apply(lambda x: sum(x.isnull()),axis=0) with comparison operator to check variable has missing value or not
-- Look at frequency distribution of Gender to identify more frequent category
+- Import sklearn library and required model for model building
+- Dataframes train_modified and test_modified are available in the enviorment
 
 
 *** =hint
-- Use sum(train.apply(lambda x: sum(x.isnull()),axis=0) > 0) to check count of variable having missing values 
-- Use median() inplace of mean() in expression train['Loan_Amount_Term'].fillna(train['Loan_Amount_Term'].median(), inplace=True) to impute with median
+- Write statement from sklearn.tree import DecisionTreeClassifier to import Decision tree
+- Use len(train_modified) to return the length
 
 
 *** =pre_exercise_code
