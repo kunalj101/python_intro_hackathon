@@ -277,15 +277,25 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 # Import module for Logistic regression
 from sklearn.linear_model import LogisticRegression
 
-# Import module for Decision Tree
-from sklearn.tree import _________
+# Select three predictors Credit_History, Education and Gender
+features =[____,_____,_____]
 
-# Import module for Random Forest
-from _________ import RandomForestClassifier
+# Converting predictors and outcome to numpy array
+x_train = train_modified[predictors].values
+y_train = train_modified['Loan_Status'].values
+x_test = test_modified[predictors].values
 
-# Number of observations in the dataframes train_modiefied and test_modiefied
-train_modified_count = 
-test_modified_count = 
+# Model Building
+model = 
+model.fit(___, ___)
+
+# Predict class and converting to original labels
+predicted= model.predict(____)
+predicted = number.inverse_transform(predicted)
+
+# Storing prediction to test data set and sumit solution to datahack
+test_modified['Loan_Status']=predicted
+test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 
 ```
 
