@@ -33,17 +33,51 @@ In this challengs "Loan Prediction", we need to classify customer in Loan status
 *** =pre_exercise_code
 
 ```{python}
-
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-
-# Import library pandas
 import pandas as pd
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
 
-# Import training file
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
-
-# Import testing file
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+#Combining both train and test dataset
+
+train['Type']='Train' #Create a flag for Train and Test Data set
+test['Type']='Test'
+fullData = pd.concat([train,test],axis=0)
+
+#Identify categorical and continuous variables
+
+ID_col = ['Loan_ID']
+target_col = ["Loan_Status"]
+cat_cols = ['Credit_History','Dependents','Gender','Married','Education','Property_Area','Self_Employed']
+
+other_col=['Type'] #Test and Train Data set identifier
+num_cols= list(set(list(fullData.columns))-set(cat_cols)-set(ID_col)-set(target_col)-set(other_col))
+
+#Imputing Missing values with mean for continuous variable
+fullData[num_cols] = fullData[num_cols].fillna(fullData[num_cols].mean(),inplace=True)
+
+
+#Imputing Missing values with mode for categorical variables
+cat_imput=pd.Series(fullData[cat_cols].mode().values[0])
+cat_imput.index=cat_cols
+fullData[cat_cols] = fullData[cat_cols].fillna(cat_imput,inplace=True)
+
+#Create a new column as Total Income
+
+fullData['TotalIncome']=fullData['ApplicantIncome']+fullData['CoapplicantIncome']
+
+#Take a log of TotalIncome + 1, adding 1 to deal with zeros of TotalIncome it it exists
+fullData['Log_TotalIncome']=np.log(fullData['TotalIncome'])
+
+#create label encoders for categorical features
+for var in cat_cols:
+    number = LabelEncoder()
+    fullData[var] = number.fit_transform(fullData[var].astype('str'))
+
+train_modified=fullData[fullData['Type']=='Train']
+test_modified=fullData[fullData['Type']=='Test']
 
 ```
 
@@ -51,36 +85,36 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
-# Training and Testing data set is loaded in variable train and test dataframe respectively
+# Import module for Logistic regression
+from sklearn.linear_model import LogisticRegression
 
-# Number of variables with missing values
-variables_missing_value = 
+# Import module for Decision Tree
+from sklearn.tree import _________
 
+# Import module for Random Forest
+from _________ import RandomForestClassifier
 
-# Impute missing value of Loan_Amount_Term with median
-
-
-# Impute missing value of Gender with more frequent category
-
- 
+# Number of observations in train_modiefied and test_modiefied
+train_modified_count = 
+train_modified_count = 
 
 ```
 
 *** =solution
 
 ```{python}
+# Import module for Logistic regression
+from sklearn.linear_model import LogisticRegression
 
-# Training and Testing data set is loaded in variable train and test dataframe respectively
+# Import module for Decision Tree
+from sklearn.tree import DecisionTreeClassifier
 
-# Number of variables with missing values
-variables_missing_value = sum(train.apply(lambda x: sum(x.isnull()),axis=0) > 0)
+# Import module for Random Forest
+from sklearn.ensemble import RandomForestClassifier
 
-
-# Impute missing value of Loan_Amount_Term with median
-train['Loan_Amount_Term'].fillna(train['Loan_Amount_Term'].median(), inplace=True)
-
-# Impute missing value of Gender with more frequent category
-train['Self_Employed'].fillna('No',inplace=True)
+# Number of observations in train_modiefied and test_modiefied
+train_modified_count = len(train_modified)
+train_modified_count = len(test_modified)
 
 ```
 
@@ -91,13 +125,12 @@ train['Self_Employed'].fillna('No',inplace=True)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Number of variables with missing values
-test_object("variables_missing_value")
-
-# Impute missing value of Loan_Amount_Term with median
+# Test for import library
 
 
-# Impute missing value of Gender with more frequent category
+# Test number of observations in train_modiefied and test_modiefied
+test_object("train_modified_count")
+test_object("test_modified_count")
 
 
 success_msg("Great work!")
