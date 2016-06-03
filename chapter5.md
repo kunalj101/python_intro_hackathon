@@ -166,42 +166,37 @@ We can easily make some intuitive hypothesis to set the ball rolling. The chance
 
 Build a logistic regression model for two predictors variable "Credit_History" and "Education"
 
+* Importing libraries and feature selection
 ```{python}
-  # Logistic Rgression
-  
   from sklearn.linear_model import LogisticRegression  
   
-  # Selecting Predictors
-  
   predictors = ['Credit_History','Education']
+```
   
-  # converting to numpy array
-  
+* Converting preditors and outcome to numpy array
+```{python}  
   x_train = train_modified[predictors].values
   y_train = train_modified['Loan_Status'].values
   x_test = test_modified[predictors].values
-  
-  # model building
-  
+```  
+
+* Model Building
+```{python}    
   model = LogisticRegression()
   model.fit(x_train, y_train)
   model.score(x_train, y_train)
+```  
 
-  # Predicting class
-  
+* Predicting class and converting to original labels
+```{python}      
   predicted= model.predict(x_test)
-
-  # Encoding number to original categorical class
   # Remember number = LabelEncoder()
-  
   predicted = number.inverse_transform(predicted)
-  
-  # Storing prediction to test data set
-  
+```    
+
+* Storing prediction to test data set and sumit solution to datahack
+  ```{python}      
   test_modified['Loan_Status']=predicted
-  
-  # Submit solution to Datahack.analyticsvidhya.com
-  
   test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 
 ```
