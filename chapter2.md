@@ -32,7 +32,7 @@ List is one of the most versatile data structure in Python. A list can simply be
 # Create a list of squared numbers
 squares_list = [0, 1, 4, 9, 16, 25]
 
-# Now write a code to create list of odd numbers and store it into a variable odd_numbers
+# Now write a code to create list of first five odd numbers and store it into a variable odd_numbers
 odd_numbers=
 
 # Print first element of squares_list
