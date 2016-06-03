@@ -390,9 +390,7 @@ else:
 
 *** =instructions
 
-- Store the length of 
-- The colon (:) is significant and required. 
-- The line after the colon must be indented. It is standard in Python to use four spaces for indenting.
+- Store the length of squares_list to square_len
 - All lines indented the same amount after the colon will be executed whenever the BOOLEAN_EXPRESSION is true.
 
 
