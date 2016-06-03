@@ -728,8 +728,11 @@ success_msg("Great work!")
 One of benefits of Random forest which excites me most is, the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the dimensionality reduction methods. Further, the model outputs Importance of variable, which can be a very handy feature. 
 
 ```{python}
+
 featimp = pd.Series(model.feature_importances_, index=predictors).sort_values(ascending=False)
+
 print featimp
+
 ```
 
 
