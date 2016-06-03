@@ -314,7 +314,7 @@ x_test = test_modified[predictors].values
 
 # Model Building
 model = LogisticRegression()
-model.fit(x_train, y_test)
+model.fit(x_train, y_train)
 
 # Predict class and converting to original labels
 predicted= model.predict(x_test)
