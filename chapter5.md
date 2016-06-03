@@ -334,7 +334,7 @@ test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("features")
+test_object("predictors")
 
 # Test for model
 test_object("model")
@@ -520,7 +520,7 @@ test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("features")
+test_object("predictors")
 
 # Test for model
 test_object("model")
@@ -710,7 +710,7 @@ test_modified.to_csv("Submission3.csv", columns=['Loan_ID','Loan_Status'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("features")
+test_object("predictors")
 
 # Test for model
 test_object("model")
