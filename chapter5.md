@@ -87,6 +87,7 @@ for var in cat_cols:
 
 train_modified=fullData[fullData['Type']=='Train']
 test_modified=fullData[fullData['Type']=='Test']
+train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status"].astype('str'))
 
 ```
 
@@ -148,26 +149,54 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:b069e7be4d
+--- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Performing prediction using Logistic Regression
 
 Logistic Regression is a classification algorithm. It is used to predict a binary outcome (1 / 0, Yes / No, True / False) given a set of independent variables, read more about <a href="http://www.analyticsvidhya.com/blog/2015/11/beginners-guide-on-logistic-regression-in-r/"> Logistic Regression </a>.
 
-In this challengs "Loan Prediction", we need to classify customer in Loan status "Y" or "N" category based on available information about customer. Before jumping into model building steps, we need to follow below steps:
+Let’s make our first Logistic Regression model. One way would be to take all the variables into the model but this might result in overfitting (don’t worry if you’re unaware of this terminology yet). In simple words, taking all variables might result in the model understanding complex relations specific to the data and will not generalize well.
 
-* Impute missing values of the data set
+We can easily make some intuitive hypothesis to set the ball rolling. The chances of getting a loan will be higher for:
 
-* Import required library (In python, we mostly use sklearn), this is a classification challenge so we will import module of classification algorithms
+* Applicants having a credit history
+* Applicants with higher applicant and co-applicant incomes
+* Applicants with higher education level
+* Properties in urban areas with high growth perspectives
+
+Build a logistic regression model for two predictors variable "Credit_History" and "Education"
 
 ```{python}
-  #Logistic Rgression
+  # Logistic Rgression
   from sklearn.linear_model import LogisticRegression  
   
-  #Decision Tree
-  from sklearn.tree import DecisionTreeClassifier 
+  # Selecting Predictors
+  predictors = ['Credit_History','Education']
   
-  #Random Forest
-  from sklearn.ensemble import RandomForestClassifier 
+  # converting to numpy array
+  x_train = train_modified[predictors].values
+  y_train = train_modified['Loan_Status'].values
+  x_test = test_modified[predictors].values
+  
+  # model building
+  model = LogisticRegression()
+
+  # Train the model using the training sets and check score
+  model.fit(x_train, y_train)
+  model.score(x_train, y_train)
+
+  # Predicting class
+  predicted= model.predict(x_test)
+
+  # Encoding number to original categorical class
+  # Remember number = LabelEncoder()
+  predicted = number.inverse_transform(predicted)
+  
+  # Storing prediction to test data set
+  test_modified['Loan_Status']=predicted
+  
+  # Submit solution to Datahack.analyticsvidhya.com
+  test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
+
 ```
 
 * Convert categorical variables to numeric array because sklearn requires all inputs in numeric array
@@ -231,7 +260,7 @@ for var in cat_cols:
 
 train_modified=fullData[fullData['Type']=='Train']
 test_modified=fullData[fullData['Type']=='Test']
-
+train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status"].astype('str'))
 ```
 
 *** =sample_code
