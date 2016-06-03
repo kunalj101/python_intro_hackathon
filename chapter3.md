@@ -111,7 +111,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:36c3190b26
 ## Understanding Data?
 
-You can look at summary of numerical fields by using describe() function. Describe() function would provide count, mean, standard deviation (std), min, quartiles and max in its output.
+You can look at summary of numerical fields by using describe() function. It provides count, mean, standard deviation (std), min, quartiles and max in its output.
 
 ```{python}
 
