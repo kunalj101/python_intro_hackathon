@@ -19,8 +19,6 @@ train.isnull().sum()
 
 ```
 
-Read more about lambda <a href="http://www.python-course.eu/lambda.php">here</a>.
-
 ### Imputing missing values
 There are numerous ways to fill the missing values of loan amount – the simplest being replacement by mean for continuous variables, which can be done by following code:
 
