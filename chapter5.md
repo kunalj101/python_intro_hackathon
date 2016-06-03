@@ -460,7 +460,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 ```{python}
 
 # Import module for Decision Tree Classifiers
-from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
 
 # Select three predictors Credit_History, Education and Gender
 predictors =[____,_____,_____]
