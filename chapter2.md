@@ -81,19 +81,29 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:c7f91e389f
 ## Create a String
 
-Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines and are used frequently in docstrings (Python’s way of documenting functions). \ is used as an escape character. Please note that Python strings are immutable, so you can not change part of strings.
+Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Please note that Python strings are immutable, so you can not change part of strings.
+
+```{python}
+String =" Strings elements can also be accessed using index number like list"
+
+print (String[0:8])
+
+#Above print command display Strings on screen.
+
+```
+
 
 *** =instructions
 
-- Strings can be simply defined by single ('), double (") or triple (''') quotation.
+- len function returns the lenght of string
 - Strings characters can be accessed using index number (similar like list)
-- Strings can be concatenated with other strings
+- Strings can be concatenated with other strings using '+' operator
 
 
 
 *** =hint
 
-- Use str[2] to select the third element of string str. 
+- Use str[2] to select the third element of string str 
 - Use len(str) to return the length of string
 - Use str1 + str2 to return the concatenated result of both strings str1 and str2
 
@@ -116,11 +126,13 @@ str_len =
 
 # Print last seven characters of strings str
 
+
 str1 = "I am doing a course Introduction to Hackathon using "
 str2 = "Python"
 
 # Write a code to store concatenated string of str1 and str2 into variable str3
 str3 =
+
 ```
 
 *** =solution
