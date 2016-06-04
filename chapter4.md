@@ -124,7 +124,16 @@ success_msg("Great work!")
 
 ## Treat extreme values of LoanAmount and ApplicantIncome?
 
-Let’s analyze LoanAmount first. Since the extreme values are practically possible, i.e. some people might apply for high value loans due to specific needs. So instead of treating them as outliers, let’s try a log transformation to nullify their effect:
+Let’s analyze LoanAmount first. Since the extreme values are practically possible, i.e. some people might apply for high value loans due to specific needs. 
+
+```{python}
+
+train ['LoanAmount'].hist(bins=20)
+
+```
+<center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/06/Capture_LoanAmount.png"></center>
+
+So instead of treating them as outliers, let’s try a log transformation to nullify their effect:
 
 ```{python}
 
