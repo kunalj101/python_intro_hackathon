@@ -424,7 +424,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:c1b7c2fd5c
 ## How iterative statement does help?
 
-Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making errors is something that computers do well and people do poorly.Repeated execution of a set of statements is called iteration.
+Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making errors is something that computers do well. Repeated execution of a set of statements is called iteration.
 
 Like most languages, Python also has a FOR-loop which is the most widely used method for iteration. It has a simple syntax:
 
@@ -434,13 +434,12 @@ for i in [Python Iterable]:
   expression(i)
 
 ```
-“Python Iterable” can be a list, tuple or other advanced data structures which we will explore in later sections. Let’s take a look at a simple example, determining the factorial of a number.
+“Python Iterable” can be a list or other advanced data structures which we will explore in later sections. Let’s take a look at a simple example, determining the factorial of a number.
 
 *** =instructions
 
-- The colon (:) is significant and required. 
-- The line after the colon must be indented. It is standard in Python to use four spaces for indenting.
-- - For loops iterate over a given sequence
+- Use list.append(<element>) to append values in a list
+- Iterate over list to access each element of list
 
 
 
@@ -466,6 +465,10 @@ for x in range(5):
     
 sum=0
 # Store sum all even numbers of the list ls in sum
+
+for x in ls: 
+    if ______: 
+        sum += x
 
 ```
 
