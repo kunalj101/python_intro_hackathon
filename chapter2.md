@@ -12,9 +12,16 @@ List is one of the most versatile data structure in Python. A list can simply be
 ```{python}
 Country =['INDIA','USA','GERMANY','UK','AUSTRALIA']
 
-Temparature =[44, 28, 20, 18, 25, 45, 67]
+Temperature =[44, 28, 20, 18, 25, 45, 67]
 ```
-Above, we have created two lists, one for Country names and other one for temarature.
+Above, we have created two lists, one for Country names and other one for temarature. Individual elements of list can be accessed by index number of element (index number starts with zero "0").
+
+```{python}
+print (Country[0])
+
+#Above statement will print INDIA
+
+```
 
 *** =instructions
 - Individual elements of a list can be accessed by writting an index number in square bracket. First index of list starts with 0 (zero) not 1.
