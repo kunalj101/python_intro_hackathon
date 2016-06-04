@@ -235,12 +235,9 @@ To convert all non-numeric variables to number, following code will help:
 
 from sklearn.preprocessing import LabelEncoder
 
-var_mod = ['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area', 'Loan_Status']
-
 le = LabelEncoder()
 
-for i in var_mod:
-    train[i] = le.fit_transform(train[i])
+train['Gender'] = le.fit_transform(train['Gender'])
 
 ```
 
@@ -278,25 +275,19 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
+from sklearn.preprocessing import LabelEncoder
+
 # Training and Testing data set is loaded in variable train and test dataframe respectively
 
 # Impute missing values for Gender
-
-
-# Impute missing values for Married
-
-
-# Impute missing values for Dependents
-
+train['Gender'].fillna('_____',inplace=True)
 
 # Impute missing values for Loan_Amount
+train['LoanAmount'].fillna(train['LoanAmount'].______(), inplace=True)
 
-
-# Impute missing values for Credit_History
-
-
-# Convert all non-numeric values to number
-
+# Perform label encoding for Property_Area
+le = LabelEncoder()
+train['Property_Area'] = le.________(train['Property_Area'])
 
 ```
 
@@ -309,23 +300,12 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 # Impute missing values for Gender
 train['Gender'].fillna('Male',inplace=True)
 
-# Impute missing values for Married
-train['Married'].fillna('Yes',inplace=True)
-
-# Impute missing values for Dependents
-train['Dependents'].fillna('0',inplace=True)
-
 # Impute missing values for Loan_Amount
 train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
 
-# Impute missing values for Credit_History
-train['Credit_History'].fillna(1.0,inplace=True)
-
-# Convert all non-numeric values to number
-var_mod = ['Gender','Married','Dependents','Education','Self_Employed','Property_Area','Loan_Status']
+# Perform label encoding for Property_Area
 le = LabelEncoder()
-for i in var_mod:
-    train[i] = le.fit_transform(train[i])
+train['Property_Area'] = le.fit_transform(train['Property_Area'])
 
 
 ```
@@ -340,19 +320,10 @@ for i in var_mod:
 # Impute missing values for Gender
 
 
-# Impute missing values for Married
-
-
-# Impute missing values for Dependents
-
-
 # Impute missing values for Loan_Amount
 
 
-# Impute missing values for Credit_History
-
-
-# Convert all non-numeric values to number
+# Perform label encoding for Property_Area
 
 
 success_msg("Great work!")
