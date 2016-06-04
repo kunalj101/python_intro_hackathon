@@ -9,7 +9,7 @@ attachments :
 
 There are missing values in some variables. We should estimate those values wisely depending on the amount of missing values and the expected importance of variables.
 
-### Identifying missing values
+#### Identifying missing values
 
 Imputing missing values in all the variables is important because most of the models don’t work with missing data and even if they do, imputing them helps more often than not. So, let us check the number of nulls / NaNs in the dataset for all variables.
 
@@ -19,7 +19,7 @@ train.isnull().sum()
 
 ```
 
-### Imputing missing values
+#### Imputing missing values
 There are numerous ways to fill the missing values of loan amount – the simplest being replacement by mean for continuous variables, which can be done by following code:
 
 ```{python}
