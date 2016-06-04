@@ -334,7 +334,7 @@ else:
 *** =instructions
 
 - Store the length of squares_list to square_len
-- All lines indented the same amount after the colon will be executed whenever the BOOLEAN_EXPRESSION is true.
+- Use the if statement to perform one action if one thing is true,or any other actions, if something else is true
 
 
 *** =hint
@@ -366,9 +366,13 @@ else:
 squares_list = [0, 1, 4, 9, 16, 25]
 
 # Store the length of squares_list in square_len
-
+square_len = 
 
 # if square_len is less than 5 then print "Less than 5" else "Greater than 5"
+if square_len < ___:
+    print ("__________")
+else:
+    print ("__________")
 
 
 ```
