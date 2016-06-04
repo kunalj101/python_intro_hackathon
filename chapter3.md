@@ -202,7 +202,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
 ## Understanding distribution of numerical variables?
 
-Now that we are familiar with basic data characteristics, let us study distribution of various variables. Let us start with numeric variables – namely ApplicantIncome.
+Now that we are familiar with basic data characteristics, let us study distribution of numerical variables. Let us start with numeric variable "ApplicantIncome".
 
 Lets start by plotting the histogram of ApplicantIncome using the following commands:
 
@@ -222,8 +222,8 @@ train.boxplot(column='ApplicantIncome')
 
 *** =instructions
 
-- Import %matplotlib inline to have the charts in ipython notebook
-- You can also create box plot for ApplicantIncome by categorical variable using following command
+- Use hist() with train['LoanAmount'] to plot histogram
+- Use "by" argument with box plot to generate by categories of a categorical variables
 
 ```{python}
 
@@ -233,6 +233,7 @@ train.boxplot(column='ApplicantIncome', by='Gender')
 
 *** =hint
 - train['LoanAmount'].hist()
+- train.boxplot(column='LoanAmount', by = 'Gender' )
 
 
 *** =pre_exercise_code
@@ -259,10 +260,10 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 # Training and Testing dataset are loaded in train and test dataframe respectively
 # Plot histogram for variable LoanAmount
-
+train['LoanAmount']._____
 
 # Plot a box plot for variable LoanAmount by variable Gender of training data set
-train.boxplot(column='LoanAmount', by = )
+train.boxplot(column='LoanAmount', by = ____)
 
 ```
 
