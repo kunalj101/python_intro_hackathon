@@ -719,7 +719,7 @@ test_object("predictors")
 #test_object("model")
 
 # Test for prediction
-test_object("predicted")
+#test_object("predicted")
 
 success_msg("Great work!")
 ```
