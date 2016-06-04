@@ -33,7 +33,7 @@ Before jumping into model building steps, we need to follow below steps:
 
 *** =instructions
 - Import sklearn library and required model for model building
-- Dataframes train_modified and test_modified are available in the enviorment
+- Dataframes train_modified and test_modified are available in the enviorment after missing values imputation and label encoding for all categorical independent variables
 
 
 *** =hint
