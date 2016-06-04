@@ -96,7 +96,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 *** =sample_code
 
 ```{python}
-
+#train_modified and test_modified already loaded in the workspace
 # Import module for Logistic regression
 from sklearn.linear_model import LogisticRegression
 
@@ -275,6 +275,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 
 ```{python}
 
+#train_modified and test_modified already loaded in the workspace
 # Import module for Logistic regression
 from sklearn.linear_model import LogisticRegression
 
@@ -460,7 +461,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 *** =sample_code
 
 ```{python}
-
+#train_modified and test_modified already loaded in the workspace
 # Import module for Decision Tree Classifiers
 from sklearn.tree import DecisionTreeClassifier
 
@@ -650,7 +651,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 *** =sample_code
 
 ```{python}
-
+#train_modified and test_modified already loaded in the workspace
 # Import module for Random Forest Classifiers
 from sklearn.ensemble import RandomForestClassifier
 
