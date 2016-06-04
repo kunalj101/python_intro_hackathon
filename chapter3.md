@@ -109,11 +109,11 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:36c3190b26
 ## Understanding Data?
 
-You can look at summary of numerical fields by using describe() function. It provides count, mean, standard deviation (std), min, quartiles and max in its output.
+You can look at summary of numerical fields by using dataframe.describe(). It provides count, mean, standard deviation (std), min, quartiles and max in its output.
 
 ```{python}
 
-describe(dataframe) 
+dataframe.describe() 
 
 ```
 For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by following command:
@@ -126,14 +126,13 @@ df[column_name].value_counts()
 
 *** =instructions
 
-- Pass dataframe to describe() function 
+- Use dataframe.describe() function 
 - We can also look at unique values of non-numeric values using df[column_name].value_counts()
 
 
 *** =hint
-- Store the output of describe(train) in a dataframe df 
-- Use df['ApplicantIncome'][2] to access standard deviation of Applicant Income
-- Use df['PropertyArea']['Semiurban'] to access number of residents in semiurban area
+- Store the output of train.describe() in a dataframe df
+- Use df['PropertyArea'].value_counts() to look at frequency distribution
 
 
 *** =pre_exercise_code
