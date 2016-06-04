@@ -192,7 +192,7 @@ Build a logistic regression model for two predictors variable "Credit_History" a
   model.fit(x_train, y_train)
 ```  
 
-* Predicting class and converting to original labels
+* Predicting class and converting to original labels "Y" / "N"
 
 ```{python}      
   predicted= model.predict(x_test)
@@ -379,7 +379,7 @@ model = DecisionTreeClassifier()
 model.fit(x_train, y_train)
 ```  
 
-* Predicting class and converting to original labels
+* Predicting class and converting to original labels "Y" / "N"
 
 ```{python}      
   predicted = model.predict(x_test)
@@ -569,7 +569,7 @@ model = RandomForestClassifier()
 model.fit(x_train, y_train)
 ```  
 
-* Predicting class and converting to original labels
+* Predicting class and converting to original labels "Y" / "N"
 
 ```{python}      
   predicted = model.predict(x_test)
