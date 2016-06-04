@@ -116,7 +116,7 @@ You can look at summary of numerical fields by using describe() function. It pro
 describe(dataframe) 
 
 ```
-For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution to understand whether they make sense or not. The frequency table can be printed by following command:
+For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by following command:
 
 ```{python}
 
@@ -157,31 +157,15 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
-# import library pandas
-import pandas as pd
-
-# Import training data as train
-train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
-
-# Import testing data as test
-test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+#Training and Testing data set are loaded in train and test dataframe respectively
 
 # Look at the summary of numerical variables for train data set
-df= train.describe()
+df= train.________()
 print (df)
 
-# Store and print the standard deviation of ApplicantIncome in variable std_income
-std_income = 
-print("Standard Deviation of Applicant Income is %d" %std_income)
-
 # Print the unique values and their frequency of variable Property_Area
-df1=train['Property_Area'].value_counts()
+df1=train['Property_Area'].________()
 print (df1)
-
-# Store the number of residents of semi urban area in semiurban_count
-semiurban_count=
-print("%d residents are from semi urban area" %semiurban_count)
-
 
 ```
 
@@ -189,29 +173,13 @@ print("%d residents are from semi urban area" %semiurban_count)
 
 ```{python}
 
-import pandas as pd
-
-# Import training data as train
-train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
-
-# Import testing data as test
-test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
-
 # Look at the summary of numerical variables for train data set
 df = train.describe()
 print (df)
 
-# Store and print the standard deviation of ApplicantIncome in variable std_income
-std_income = df['ApplicantIncome'][2]
-print("Standard Deviation of Applicant Income is %d" %std_income)
-
 # Print the unique values and their frequency of variable Property_Area
 df1=train['Property_Area'].value_counts()
 print (df1)
-
-# Store the number of residents of semi urban area in semiurban_count
-semiurban_count = df1['Semiurban']
-print("%d residents are from semi urban area" %semiurban_count)
 
 ```
 
@@ -222,14 +190,11 @@ print("%d residents are from semi urban area" %semiurban_count)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for evaluating top 5 heading of dataframe
+# Test for describe
+test_object("df")
 
-
-# Test for total observation in training dataset
-test_object("std_income")
-
-# Test for total columns in testing dataset
-test_object("semiurban_count")
+# Test for value_counts
+test_object("df1")
 
 success_msg("Great work!")
 ```
