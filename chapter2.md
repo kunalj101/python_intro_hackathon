@@ -277,11 +277,11 @@ In the first manner, we have defined an alias m to library math. We can now use 
 In the second manner, you have imported the entire name space in math i.e. you can directly use factorial() without referring to math.
 
 Following are a list of libraries, you will need for any scientific computations and data analysis:
-  * <a href="http://www.numpy.org/"> Numpy </a>
-  * <a href="https://www.scipy.org/"> Scipy </a>
-  * <a href="http://pandas.pydata.org/pandas-docs/stable/"> Pandas </a>
-  * <a href="http://matplotlib.org/"> Matplotlib </a>
-  * <a href="http://scikit-learn.org/"> Scikit Learn </a>
+* <a href="http://www.numpy.org/"> Numpy </a>
+* <a href="https://www.scipy.org/"> Scipy </a>
+* <a href="http://pandas.pydata.org/pandas-docs/stable/"> Pandas </a>
+* <a href="http://matplotlib.org/"> Matplotlib </a>
+* <a href="http://scikit-learn.org/"> Scikit Learn </a>
 
 
 
