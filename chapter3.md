@@ -302,9 +302,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:708e937aea
 ## Understanding distribution of categorical variables?
 
-We understand distributions for ApplicantIncome and LoanIncome, let us understand categorical variables in more details. For instance, let us look at the chances of getting a loan based on credit history.
-
-Lets see that Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
+We understand distributions for ApplicantIncome and LoanIncome, now understand categorical variables in more details. For instance, lets see that Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
 
 ```{python}
 
@@ -330,7 +328,7 @@ pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percent
 
 
 *** =hint
-- pd.crosstab(test ["Credit_History"], test ["Loan_Status"], margins=True).apply(percentageConvert, axis=1)
+- pd.crosstab(train["Credit_History"], train["Loan_Status"], margins=True).apply(percentageConvert, axis=1)
 - train['Loan_Status'].value_counts()['Y'] will return the loan approval rate
 
 
