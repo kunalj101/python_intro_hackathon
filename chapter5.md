@@ -106,7 +106,7 @@ from sklearn.tree import _________
 # Import module for Random Forest
 from _________ import RandomForestClassifier
 
-# Number of observations in the dataframes train_modiefied and test_modiefied
+# Number of observations in the dataframes train_modified and test_modified
 train_modified_count = 
 test_modified_count = 
 
