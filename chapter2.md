@@ -23,7 +23,7 @@ Above, we have created two lists, one for Country names and other one for temara
 
 *** =hint
 - Use AV[0] to select the first element of a list AV. 
-- Use AV[1:3] to select second to third elements of a list AV.
+- Use AV[1:3] to select second to third element of a list AV.
 
 
 *** =pre_exercise_code
