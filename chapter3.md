@@ -13,11 +13,9 @@ Let's start with loading in the training and testing set into your python enviro
 
 
 *** =instructions
-- After importing the library "Pandas" (import pandas as pd), you read the dataset using function pd.read_csv()
-- You can use train_url to load training dataset in train (dataframe)
-- You can use test_url to load training dataset in test (dataframe)
+- Import the library "Pandas" (import pandas as pd), 
+- Read the dataset using pd.read_csv()
 - train.head(n) helps to look at top n observation
-- train.tail(n) helps to look at bottom n observation
 
 
 *** =hint
