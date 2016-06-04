@@ -743,7 +743,6 @@ I have selected all the features available in the train data set and model it us
 predictors=['ApplicantIncome', 'CoapplicantIncome', 'Credit_History','Dependents', 'Education', 'Gender', 'LoanAmount',
             'Loan_Amount_Term', 'Married', 'Property_Area', 'Self_Employed', 'TotalIncome','Log_TotalIncome']
 
-model = RandomForestClassifier()
 
 ```
 
