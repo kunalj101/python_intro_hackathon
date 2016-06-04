@@ -179,11 +179,17 @@ success_msg("Great work!")
 Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: {}.
 
 ```{python}
-dict = {'Name':'Kunal', 'Company':'Analytics Vidhya'}
+DICT = {'Name':'Kunal', 'Company':'Analytics Vidhya'}
+
+#Dictionary elements can be accessed by "keys"
+
+print (DICT['Name'])
+
+#Above print statement will print Kunal
+
 ```
 
-
-In dictonary dict, Name and Company are dictionary where as "Kunal" and "Analytics Vidhya" are values.
+In dictonary "DICT", Name and Company are dictionary keys where as "Kunal" and "Analytics Vidhya" are values.
 
 *** =instructions
 
