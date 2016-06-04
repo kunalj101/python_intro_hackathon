@@ -9,6 +9,13 @@ attachments :
 
 List is one of the most versatile data structure in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
 
+```{python}
+Country =['INDIA','USA','GERMANY','UK','AUSTRALIA']
+
+Temparature =[44, 28, 20, 18, 25, 45, 67]
+```
+Above, we have created two lists, one for Country names and other one for temarature.
+
 *** =instructions
 - Individual elements of a list can be accessed by writting an index number in square bracket. First index of list starts with 0 (zero) not 1.
 - A range of element can be accessed by having start index and end index
