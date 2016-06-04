@@ -9,7 +9,9 @@ attachments :
 
 Till now, we have looked at the data exploartion, cleaning, feature engineering and pre processing steps of model building. Now, we will look at the methods of building a model. 
 
-In this challengs "Loan Prediction", we need to classify customer in Loan status "Y" or "N" category based on available information about customer. Before jumping into model building steps, we need to follow below steps:
+In this challenge "Loan Prediction", we need to classify customer in Loan status "Y" or "N" category based on available information about customer. 
+
+Before jumping into model building steps, we need to follow below steps:
 
 * Impute missing values of the data set
 
