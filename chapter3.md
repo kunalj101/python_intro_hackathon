@@ -333,6 +333,7 @@ pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percent
 
 
 
+
 *** =pre_exercise_code
 
 ```{python}
