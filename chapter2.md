@@ -73,9 +73,6 @@ print (squares_list[1:4])
 # Test for list of odd_numbers
 test_object("odd_numbers")
 
-# Test for first element of square list
-test_output_contains("0", pattern = False)
-
 # Check second to fourth elements"
 test_output_contains("[1, 4, 9]", pattern = False)
 success_msg("Great work!")
