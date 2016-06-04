@@ -38,12 +38,13 @@ df['Self_Employed'].fillna('No',inplace=True)
 ```
 
 *** =instructions
-- Use train.apply(lambda x: sum(x.isnull()),axis=0) with comparison operator to check variable has missing value or not
-- Look at frequency distribution of Gender to identify more frequent category
+- Use train.isnull().sum() with comparison operator to check variable has missing value or not
+- Missing values of numerical variables can be imputed using median also
+- Look at frequency distribution of Self_Employed to identify more frequent category
 
 
 *** =hint
-- Use sum(train.apply(lambda x: sum(x.isnull()),axis=0) > 0) to check count of variable having missing values 
+- Use sum( train.isnull().sum()) > 0) to check count of variable having missing values 
 - Use median() inplace of mean() in expression train['Loan_Amount_Term'].fillna(train['Loan_Amount_Term'].median(), inplace=True) to impute with median
 
 
