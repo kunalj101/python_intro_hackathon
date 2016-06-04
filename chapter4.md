@@ -26,7 +26,9 @@ There are numerous ways to fill the missing values of loan amount – the simple
 
 train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
 
+
 ```
+
 And for categorical variables, we look at the frquency table and impute with value has higher frequency because there is a high probability of success. For example, if you look at distribution of Self_Employed 500 out of 582 which is ~86% of total values falls under category "No". Here we will replace missing values of Self_Employed with "No".
 
 ```{python}
@@ -66,16 +68,15 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
-# Training and Testing data set is loaded in variable train and test dataframe respectively
-
 # Number of variables with missing values
-variables_missing_value = 
+variables_missing_value = sum( train._____().sum() > 0 )
 
 
 # Impute missing value of Loan_Amount_Term with median
+train['Loan_Amount_Term'].fillna(train['Loan_Amount_Term'].______(), inplace=True)
 
-
-# Impute missing value of Gender with more frequent category
+# Impute missing value of Self_Employed with more frequent category
+train['Self_Employed']._____('No',inplace=True)
 
  
 
@@ -88,13 +89,13 @@ variables_missing_value =
 # Training and Testing data set is loaded in variable train and test dataframe respectively
 
 # Number of variables with missing values
-variables_missing_value = sum(train.apply(lambda x: sum(x.isnull()),axis=0) > 0)
+variables_missing_value = sum( train.isnull().sum() > 0 )
 
 
 # Impute missing value of Loan_Amount_Term with median
 train['Loan_Amount_Term'].fillna(train['Loan_Amount_Term'].median(), inplace=True)
 
-# Impute missing value of Gender with more frequent category
+# Impute missing value of Self_Employed with more frequent category
 train['Self_Employed'].fillna('No',inplace=True)
 
 ```
@@ -112,7 +113,7 @@ test_object("variables_missing_value")
 # Impute missing value of Loan_Amount_Term with median
 
 
-# Impute missing value of Gender with more frequent category
+# Impute missing value of Self_Employed with more frequent category
 
 
 success_msg("Great work!")
