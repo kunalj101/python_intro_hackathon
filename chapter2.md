@@ -14,11 +14,15 @@ Country =['INDIA','USA','GERMANY','UK','AUSTRALIA']
 
 Temperature =[44, 28, 20, 18, 25, 45, 67]
 ```
-Above, we have created two lists, one for Country names and other one for temarature. 
+We just created two lists, one for Country names and other one for temperature. 
 
-*** =instructions
+####Accessing individual elements of a list
 - Individual elements of a list can be accessed by writting an index number in square bracket. First index of list starts with 0 (zero) not 1.
 - A range of element can be accessed by having start index and end index but it does not return the value available at end index,
+
+*** =instructions
+- Create a list of first five odd numbers and store it in a variable odd_numbers.
+- Print second to fourth element [1, 4, 9] from squares_list,
 
 
 *** =hint
