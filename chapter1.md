@@ -1,6 +1,6 @@
 ---
 title       : Introduction to Python for Data Analysis
-description : This chapter will get you started with Python for Data Analysis. We will cover the basics of the language you will need and an overview of the Python ecosystem.
+description : This chapter will get you started with Python for Data Analysis. We will cover the reasons to learn Data Science using Python, provide an overview of the Python ecosystem and get you to write your first code in Python!
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
@@ -8,10 +8,10 @@ attachments :
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
 ## Why learn Python for data analysis?
 
-Python has gathered a lot of interest recently as a choice of language for data analysis. Here are some reasons which go in favour of learning Python:
+Python (an interpreted language) has gathered a lot of interest recently as a choice of language for data analysis. Here are some reasons which go in favour of learning Python:
 
-* Open Source – free to install
-* Awesome online community
+* Open Source – free to install and use
+* Awesome online community - latest algorithms come to Python in a matter of days
 * Easy to learn
 * Can become a common language for data science and production of web based analytics products
 
@@ -19,13 +19,13 @@ Python has gathered a lot of interest recently as a choice of language for data 
 
 
 *** =instructions
-- Python is easy to learn
+- Python is easy to learn.
 - Python is interpreted language, hence the computation times can be high compared to compiler based languages in some cases.
-- Python has good libraries for data science
-- It is production ready language (from web & softare perspective)
+- Python has good libraries for data science.
+- It is production ready language (from web & softare perspective).
 
 *** =hint
-Have a look at the text above. Do you see your answer?
+Interpreted languages are typically easier to learni, but take longer computational time than compiler based languages. 
 
 *** =pre_exercise_code
 
@@ -36,13 +36,13 @@ Have a look at the text above. Do you see your answer?
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad = "That is not correct!"
-msg_success = "Exactly! Since Python is an interpretted language, the computation times can be on the higher side."
+msg_bad1 = "That is a good reason to learn Python! Think again"
+msg_success = "Exactly! Since Python is an interpretted language, the computation times can be on the higher side compared to other compiler based language."
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(2, [msg_bad, msg_success, msg_bad, msg_bad]) 
+test_mc(2, [msg_bad1, msg_success, msg_bad1, msg_bad1]) 
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:db5fe12eff
@@ -69,7 +69,7 @@ You will come across this question soon after you start using Python. Both the e
 - Should work on both
 
 *** =hint
-Have a look at the text. Do you see your answer?
+If you need several third party tools, you should look for a version which has higher community support and integrations.
 
 *** =pre_exercise_code
 
@@ -80,20 +80,21 @@ Have a look at the text. Do you see your answer?
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad = "That is not correct!"
+msg_bad1 = "Python 3.5 is newer and has lesser third party packages"
 msg_success = "Python 2.7 has much higher compatibility with third party libraries."
+msg_bad2 = "Think again! One of them is better than the other in this scenario"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg_success, msg_bad]) 
+test_mc(1, [msg_success, msg_bad1, msg_bad2]) 
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:2f83694db6
 ## How to install Python?
 
 While DataCamp provides an awesome interface to get you started, you will need to run local instance of Python for any serious Data Science work. The simplest way would be to download <a href="https://www.continuum.io/downloads"> Anaconda</a>. It consists of most of the libraries you would need and removes any version conflicts.
-I strongly recommend this for beginners.
+I strongly recommend this for beginners. For this course, we will be using Python 3.x
 
 
 ####Have you installed a local instance of Python on your machine?
@@ -105,7 +106,7 @@ I strongly recommend this for beginners.
 - I need some help
 
 *** =hint
-Have a look at the text. Do you see your answer?
+Download <a href="https://www.continuum.io/downloads"> Anaconda</a>
 
 *** =pre_exercise_code
 
@@ -129,11 +130,11 @@ test_mc(1, [msg_success, msg_bad, msg_help])
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Run a few simple programs in Python
 
-Let us get our handy dirty. We will use Python to do some simple programming!
+Time to get our hands dirty now. We will use Python to run some simple programs!
 
 *** =instructions
-- The first line just adds 2 numbers (3 & 4). Write a simple program to add number 3 and number 4
-- The second line prints "Hello World!" on the console
+- The first line just adds 2 numbers (1 & 2). Write a simple program to add number 3 and number 4 and assign it to a variable addition2
+- Print "Hello World!" on the console
 
 
 *** =hint
