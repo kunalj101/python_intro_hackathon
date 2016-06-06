@@ -1,14 +1,8 @@
 ---
-title       : Introduction to Python for Data Analysis
-description : This chapter will get you started with Python for Data Analysis. We will cover the basics of the language you will need and an overview of the Python ecosystem.
+title       : Expert advice to imporove model performance
+description : This chapter will help to understand the approach of data science experts, "How they do approach a problem ?", "How to select a right algorithm ?", "How to combine outputs of multiple algorithms ?" and "How to select the right value of model parameter also known as parameter tuning ?".
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
-
---- type:VideoExercise lang:python xp:50 skills:1 key:c55198c91d
-## Analyze movie ratings
-
-*** =video_link
-//player.vimeo.com/video/154783078
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
 ## A really bad movie
