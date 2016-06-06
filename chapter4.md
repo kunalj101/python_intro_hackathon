@@ -38,8 +38,8 @@ df['Self_Employed'].fillna('No',inplace=True)
 ```
 
 *** =instructions
-- Use train.isnull().sum() with comparison operator to check variable has missing value or not
-- Missing values of numerical variables can be imputed using median also
+- Check output of train.isnull().sum() is > 0 or not and apply sum over it to return number of variable(s) having missing values 
+- Use median() to impute with  median values of numeric variables
 - Look at frequency distribution of Self_Employed to identify more frequent category
 
 
@@ -148,7 +148,7 @@ train ['LoanAmount_log'].hist(bins=20)
 Now the distribution looks much closer to normal and effect of extreme values has been significantly subsided.
 
 *** =instructions
-- Combine both ApplicantIncome and CoapplicantIncome as TotalIncome
+- Add both ApplicantIncome and CoapplicantIncome as TotalIncome
 - Take log transformation of TotalIncome to deal with extreme values
 
 
@@ -244,7 +244,7 @@ train['Gender'] = le.fit_transform(train['Gender'])
 *** =instructions
 - Impute missing values of categorical variables with higher frequent categories of variable
 - Impute missing values of continuous variables with mean
-- Convert all non-numeric variables to numbers
+- Convert all non-numeric variables to numbers using LabelEncoder() 
 
 
 *** =hint
