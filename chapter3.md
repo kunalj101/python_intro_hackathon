@@ -13,14 +13,14 @@ Let's start with loading in the training and testing set into your python enviro
 
 
 *** =instructions
-- Import the library "Pandas" (import pandas as pd), 
-- Read the dataset using pd.read_csv()
 - train.head(n) helps to look at top n observation
+- len(DataFrame) returns the total number of observations
+- DataFrame.columns returns the total columns heading of the data set
 
 
 *** =hint
-- Use len(dataframe) to return the total observations in the dataframe 
-- Use len(dataframe.columns) to return the total available columns in the dataframe
+- Use len(dataframe) to return the total observations
+- Use len(dataframe.columns) to return the total available columns
 
 
 *** =pre_exercise_code
@@ -126,13 +126,13 @@ df[column_name].value_counts()
 
 *** =instructions
 
-- Use dataframe.describe() function 
-- We can also look at unique values of non-numeric values using df[column_name].value_counts()
+- Use dataframe.describe() to understand the distribution of numerical variables 
+- Look at unique values of non-numeric values using df[column_name].value_counts()
 
 
 *** =hint
-- Store the output of train.describe() in a dataframe df
-- Use df['PropertyArea'].value_counts() to look at frequency distribution
+- Store the output of train.describe() in a variable df
+- Use train['PropertyArea'].value_counts() to look at frequency distribution
 
 
 *** =pre_exercise_code
@@ -223,7 +223,7 @@ train.boxplot(column='ApplicantIncome')
 *** =instructions
 
 - Use hist() with train['LoanAmount'] to plot histogram
-- Use "by" argument with box plot to generate by categories of a categorical variables
+- Use by=categorical_variable argument with box plot to look at distribution by categories
 
 ```{python}
 
