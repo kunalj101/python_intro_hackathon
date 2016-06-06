@@ -32,12 +32,13 @@ Before jumping into model building steps, we need to follow below steps:
 
 
 *** =instructions
-- Import sklearn library and required model for model building
-- Dataframes train_modified and test_modified are available in the enviorment after missing values imputation and label encoding for all categorical independent variables
+- Import required library for decision tree and random forest
+- Use len() function with dataframes train_modified and test_modified, these two dataframes are available in the enviorment after missing values imputation and label encoding for all categorical variables
 
 
 *** =hint
-- Write statement from sklearn.tree import DecisionTreeClassifier to import Decision tree
+- Use from sklearn.tree import DecisionTreeClassifier
+- Use from sklearn.ensemble import RandomForestClassifier
 - Use len(train_modified) to return the length
 
 
@@ -214,7 +215,7 @@ Build a logistic regression model for two predictors variable "Credit_History" a
 *** =instructions
 - Store input variable in list "predictors"
 - Create a object of logistic regression
-- Train model on training data set and perform predition on test data
+- Train model on training data set (x_train, y_train) and perform predition on test data (x_test)
 
 
 *** =hint
@@ -400,8 +401,8 @@ model.fit(x_train, y_train)
 
 *** =instructions
 - Store input variable in list "predictors"
-- Create a object of Decision Tree Classifier
-- Train model on training data set and perform predition on test data
+- Create a object of logistic regression
+- Train model on training data set (x_train, y_train) and perform predition on test data (x_test)
 
 
 *** =hint
@@ -475,11 +476,11 @@ x_test = test_modified[predictors].values
 
 # Model Building
 model = _________
-model.fit(x_train, y_train)
+model.fit(______, ______)
 
 # Predict class and converting to original labels
-predicted= model.predict(____)
-predicted = number.inverse_transform(predicted)
+predicted= model.predict(x_test)
+predicted = number._________(predicted)
 
 # Storing prediction to test data set and sumit solution to datahack
 test_modified['Loan_Status']=predicted
