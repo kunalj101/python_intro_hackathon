@@ -330,7 +330,7 @@ pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percent
 
 *** =hint
 - train['Loan_Status'].value_counts()['Y'] will return the loan approval rate
-- df['N'][1] helps to return loan rejection ratio for customers having credit history
+
 
 
 
