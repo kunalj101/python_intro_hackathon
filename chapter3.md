@@ -223,7 +223,7 @@ train.boxplot(column='ApplicantIncome')
 *** =instructions
 
 - Use hist() with train['LoanAmount'] to plot histogram
-- Use by=categorical_variable argument with box plot to look at distribution by categories
+- Use by=categorical_variable with box plot to look at distribution by categories
 
 ```{python}
 
@@ -323,8 +323,9 @@ pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percent
 
 *** =instructions
 
-- Use value_counts() with train['Loan_Status'] to look at the frequency distribution 
-- Use cross tab to do bi-variate analysis of two categorical variables
+- Use value_counts() with train['LoanStatus'] to look at the frequency distribution
+- Use crosstab with Loan_Status and Credit_History to perform bi-variate analysis
+ 
 
 
 *** =hint
@@ -358,19 +359,12 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 # Training and Testing dataset are loaded in train and test dataframe respectively
 
 # Approved Loan in absolute numbers
-loan_approval = train['Loan_Status'].value_counts()['Y']
+loan_approval = train['Loan_Status'].________()['Y']
 
 # Two-way comparison: Credit History and Loan Status
 pd.________(train ["Credit_History"], train ["Loan_Status"], margins=True)
 
 
-def percentageConvert(ser):
-  return ser/float(ser[-1])
-
-# Two-way comparison: Loan approval rate for customers having Credit_History 1
-df=pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True).apply(percentageConvert, axis=1)
-
-loan_approval_with_Credit_1 = df['____'][1]
 
 ```
 
@@ -386,12 +380,6 @@ loan_approval = train['Loan_Status'].value_counts()['Y']
 # Two-way comparison: Credit_History and Loan_Status
 pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
 
-def percentageConvert(ser):
-  return ser/float(ser[-1])
-
-# Two-way comparison: Loan approval rate for customers having Credit_History (1)
-df=pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True).apply(percentageConvert, axis=1)
-loan_approval_with_Credit_1= df['Y'][1]
 ```
 
 *** =sct
@@ -401,11 +389,14 @@ loan_approval_with_Credit_1= df['Y'][1]
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
+# Test for Approved Loan in absolute numbers
+test_object("loan_approval")
+
+
 # Test for two way comparison Credit_History and Loan_Status
 
 
-# Test for loan approval rate
-test_object("loan_approval_with_Credit_1")
+
 
 success_msg("Great work!")
 
