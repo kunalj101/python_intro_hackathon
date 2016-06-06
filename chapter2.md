@@ -99,9 +99,9 @@ print (String[0:8])
 
 *** =instructions
 
-- len function returns the lenght of string
-- Strings characters can be accessed using index number (similar like list)
-- Strings can be concatenated with other strings using '+' operator
+- Use len() function to store the length of string
+- Use start and end index to access the required characters, e.g. str[0:3] to return first three charaters of string str
+- '+' operator is used to combine two strings
 
 
 
@@ -197,14 +197,13 @@ In dictonary "DICT", Name and Company are dictionary keys where as "Kunal" and "
 
 *** =instructions
 
-- To access dictionary elements, you can use the familiar square brackets along with the key to obtain its value
-- Dictionary can be updated by adding a new entry or a key-value pair, modifying or deleting an existing entry
+- Use dictinary['Key'] to access value(s) against given key and update it by assigning different value(s)
+- Use Dict.keys() to access all the keys of given dictionay Dict
+
 
 *** =hint
 
 - Use dict['Keys'] = new_value to update the existing value
-- Use dict.keys() to access all keys of dictionary dict
-- Use dict.values() to access all values of dictionary dict
 
 
 *** =pre_exercise_code
@@ -337,8 +336,8 @@ else:
 
 *** =instructions
 
-- Store the length of squares_list to square_len
-- Use the if statement to perform one action if one thing is true,or any other actions, if something else is true
+- Store the length of squares_list to square_len using function len()
+- Coparision operators <, >, <=, >=, == and != help to check condition is true or false
 
 
 *** =hint
@@ -442,16 +441,15 @@ for i in [Python Iterable]:
 
 *** =instructions
 
-- Use list.append(<element>) to append values in a list
-- Iterate over list to access each element of list
+- Iterate over all values of list using for loop
+- Use % modulus operator to return remainder e.g. 4%2 will result to 0 and 5%2 to 1
 
 
 
 *** =hint
 
-- Use <, >, <=, >=, == and != for comparison
-- Use len(list) to return  length of string
-- % operator helps to return remainder e.g. 4 % 3 would be 1
+- Write an expression x % 2 == 0 to check x is even or not
+
 
 *** =pre_exercise_code
 
