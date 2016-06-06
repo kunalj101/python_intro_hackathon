@@ -302,7 +302,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:708e937aea
 ## Understanding distribution of categorical variables?
 
-We understand distributions for ApplicantIncome and LoanIncome, now understand categorical variables in more details. For instance, lets see that Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
+We have looked at the distributions of ApplicantIncome and LoanIncome, now time for categorical variables in more details. For instance, lets see that Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
 
 ```{python}
 
