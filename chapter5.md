@@ -401,8 +401,9 @@ model.fit(x_train, y_train)
 
 *** =instructions
 - Store input variable in list "predictors"
-- Create a object of logistic regression
+- Create a object of Decisiontreeclassifier
 - Train model on training data set (x_train, y_train) and perform predition on test data (x_test)
+- Perform an inverse transformation of predicted class
 
 
 *** =hint
@@ -591,8 +592,10 @@ model.fit(x_train, y_train)
 
 *** =instructions
 - Store input variable in list "predictors"
+- Select the target variable
 - Create a object of Random Forest Classifier
 - Train model on training data set and perform prediction on test data
+- Export only two columns ("Loan_ID", "Loan_Status") of test data set
 
 
 *** =hint
@@ -661,7 +664,7 @@ predictors =[____,_____,_____]
 
 # Converting predictors and outcome to numpy array
 x_train = train_modified[predictors].values
-y_train = train_modified['Loan_Status'].values
+y_train = train_modified[________].values
 x_test = test_modified[predictors].values
 
 # Model Building
@@ -674,7 +677,7 @@ predicted = number.inverse_transform(predicted)
 
 # Storing prediction to test data set and sumit solution to datahack
 test_modified['Loan_Status']=predicted
-test_modified.to_csv("Submission3.csv", columns=['Loan_ID','Loan_Status'])
+test_modified.to_csv("Submission3.csv", ____________)
 
 ```
 
