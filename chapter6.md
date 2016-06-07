@@ -135,3 +135,45 @@ msg_success = "Yes! Creating a new feature out of existing ones is known as feat
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
 test_mc(1, [msg_success, msg_bad1]) 
 ```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:3c72c926e8
+## How to select the right value of model parameter?
+
+We know that machine learning algorithms are driven by parameters. These parameters majorly influence the outcome of learning process.
+
+The objective of parameter tuning is to find the optimum value for each parameter to improve the accuracy of the model. To tune these parameters, you must have a good understanding of their meaning and individual impact on model. You can repeat this process with a number of well performing models.
+
+For example: In random forest, we have various parameters like max_features, number_trees, random_state, oob_score and others. Intuitive optimization of these parameter values will result in better and more accurate models.
+
+#### Which of the following is not a parameter of random forest algorithm (in Scikit Learn)?
+
+
+*** =instructions
+- max_depth
+- max_leaf_node
+- learning rate
+- max_features
+
+
+*** =hint
+List of all parameters in random forest scikit learn algorithm:
+
+RandomForestClassifier(n_estimators=10, criterion='gini', max_depth=None,min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='auto', max_leaf_nodes=None,bootstrap=True, oob_score=False, n_jobs=1, random_state=None, verbose=0, warm_start=False,class_weight=None)
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Look at the hint to know more about parameters of random forest"
+msg_success = "Good Job!"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(3, [msg_bad1, msg_bad1, msg_success, msg_bad1]) 
+```
