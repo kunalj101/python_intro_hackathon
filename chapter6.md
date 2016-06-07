@@ -16,17 +16,16 @@ This practice usually helps in building better features later on, which are not 
 At this stage, you are expected to apply structured thinking to the problem i.e. a thinking process which takes into consideration all the possible aspects of a particular problem.
 
 
-####Which of the following is not a reason to learn Python for Data Analysis?
+####Which of the following has the right order of model building life cycle?
 
 
 *** =instructions
-- Python is easy to learn.
-- Python is interpreted language, hence the computation times can be high compared to compiler based languages in some cases.
-- Python has good libraries for data science.
-- It is production ready language (from web & softare perspective).
+- Data Collection --> Data Exploration --> Hypothesis Generation --> Model Building --> Prediction
+- Data Collection --> Hypothesis Generation --> Data Exploration --> Model Building --> Prediction
+- Hypothesis Generation --> Data Collection --> Data Exploration --> Model Building --> Prediction
 
 *** =hint
-Interpreted languages are typically easier to learni, but take longer computational time than compiler based languages. 
+Always perform hypothesis generation before data collection and exploration, it also helps you to collect right data
 
 *** =pre_exercise_code
 
@@ -43,5 +42,5 @@ msg_success = "Exactly! Since Python is an interpretted language, the computatio
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(2, [msg_bad1, msg_success, msg_bad1, msg_bad1]) 
+test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
 ```
