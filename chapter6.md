@@ -192,7 +192,7 @@ It is always a better idea to apply ensemble methods to improve the accuracy of 
 * They are generally more complex than traditional methods 
 * The traditional methods give you a good base level from which you can improve and draw from to create your ensembles.
 
-#### Taking average of all the predictions by different base models is an example of ensemble model?
+#### Taking average of predictions (given by different models) is an example of ensemble model?
 
 
 *** =instructions
