@@ -36,8 +36,8 @@ Always perform hypothesis generation before data collection and exploration, it 
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "That is a good reason to learn Python! Think again"
-msg_success = "Exactly! Since Python is an interpretted language, the computation times can be on the higher side compared to other compiler based language."
+msg_bad1 = "Think again!"
+msg_success = "Exactly! we always do Hypothesis generation before data collection and exploration"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
