@@ -178,7 +178,7 @@ msg_success = "Good Job!"
 test_mc(3, [msg_bad1, msg_bad1, msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:a93345ad36
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:63b7c07abc
 ## Use ensemble methods to combine output of more than one models?
 
 This is the most common approach found majorly in winning solutions of Data science competitions. This technique simply combines the result of multiple weak models and produce better results. This can be achieved through many ways:
