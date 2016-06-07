@@ -177,3 +177,49 @@ msg_success = "Good Job!"
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
 test_mc(3, [msg_bad1, msg_bad1, msg_success, msg_bad1]) 
 ```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:a93345ad36
+## Use ensemble methods to combine output of more than one models?
+
+This is the most common approach found majorly in winning solutions of Data science competitions. This technique simply combines the result of multiple weak models and produce better results. This can be achieved through many ways:
+
+* Bagging (Bootstrap Aggregating)
+* Boosting
+
+To know more about these methods, you can refer article <a href="http://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/> "“Introduction to ensemble learning“ </a>.
+
+It is always a better idea to apply ensemble methods to improve the accuracy of your model. There are two good reasons for this: 
+* They are generally more complex than traditional methods 
+* The traditional methods give you a good base level from which you can improve and draw from to create your ensembles.
+
+#### Taking average of all the predictions by different base models is an example of ensemble model?
+
+
+*** =instructions
+- TRUE
+- FALSE
+
+*** =hint
+We can combine output of different base models by:
+- Taking average of all predictions
+- Using maximum vote techniques
+
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Read more about ensemble methods"
+msg_success = "Good Job!"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(1, [msg_success, msg_bad1]) 
+```
+
