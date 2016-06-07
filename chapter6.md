@@ -45,6 +45,7 @@ msg_success = "Exactly! we always do Hypothesis generation before data collectio
 test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
 ```
 
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
 ## Feature Engineering
 
 This step helps to extract more information from existing data. New information is extracted in terms of new features. These features may have a higher ability to explain the variance in the training data. Thus, giving improved model accuracy.
