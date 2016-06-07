@@ -232,6 +232,7 @@ Here Cross-Validation helps to find the right answer of this question. Cross Val
 
 #### Common methods used for Cross Validation ?
 
+
 ##### The Validation set Approach:
 In this approach, we reserve 50% of dataset for validation and rest 50% for model training. A major disadvantage of this approach is that we train a model on 50% of the data set only, it may be possible that we are leaving some interesting information about data i.e. higher bias.
 
@@ -268,7 +269,7 @@ Always remember, lower value of K is more biased and hence undesirable. On the o
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "Read more about ensemble methods"
+msg_bad1 = "Try again! Read more about Cross Validation"
 msg_success = "Good Job!"
 
 # Use test_mc() to grade multiple choice exercises. 
