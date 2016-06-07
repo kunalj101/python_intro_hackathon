@@ -133,5 +133,5 @@ msg_success = "Yes! Creating a new feature out of existing ones is known as feat
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(2, [msg_bad1, msg_success, msg_bad1]) 
+test_mc(1, [msg_success, msg_bad1]) 
 ```
