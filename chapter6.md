@@ -136,7 +136,7 @@ msg_success = "Yes! Creating a new feature out of existing ones is known as feat
 test_mc(1, [msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:3c72c926e8
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:a93345ad36
 ## How to select the right value of model parameter?
 
 We know that machine learning algorithms are driven by parameters. These parameters majorly influence the outcome of learning process.
