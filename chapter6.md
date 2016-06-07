@@ -96,7 +96,7 @@ msg_success = "Yes! Creating a new feature out of existing ones is known as feat
 test_mc(2, [msg_bad1, msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:01167ddb1f
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:3c72c926e8
 ## Feature Selection
 
 Feature Selection is a process of finding out the best subset of attributes which better explains the relationship of independent variables with target variable.
