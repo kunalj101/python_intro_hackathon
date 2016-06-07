@@ -58,12 +58,13 @@ Feature engineering is highly influenced by hypotheses generation. Good hypothes
 ##### Feature Transformation: 
 
 There are various scenarios where feature transformation is required:
-* Changing the scale of a variable from original scale to scale between zero and one. This is known as data normalization. For example: If a data set has 1st variable in meter, 2nd in centi-meter and 3rd in kilo-meter, in such case, before applying any algorithm, we must normalize these variable in same scale
+* Changing the scale of a variable from original scale to scale between zero and one.
 * Some algorithms works well with normally distributed data. Therefore, we must remove skewness of variable(s). There are methods like log, square root or inverse of the values to remove skewness
+* Binning of numerical variables
 
 ##### Feature Creation: 
 
-Deriving new variable(s ) from existing variables is known as feature creation. It helps to unleash the hidden relationship of a data set. Let’s say, we want to predict the number of transactions in a store based on transaction dates. Here transaction dates may not have direct correlation with number of transaction, but if we look at the day of a week, it may have a higher correlation. In this case, the information about day of a week is hidden. We need to extract it to make the model better.
+Deriving new variable(s) from existing variables is known as feature creation. It helps to unleash the hidden relationship of a data set. Let’s say, we want to predict the number of transactions in a store based on transaction dates. Here transaction dates may not have direct correlation with number of transaction, but if we look at the day of a week, it may have a higher correlation. In this case, the information about day of a week is hidden. We need to extract it to make the model better.
 
 #### Creating a variable based on mathematical computation of existing three variables is a method of?
 
