@@ -76,7 +76,47 @@ Deriving new variable(s) from existing variables is known as feature creation. I
 
 
 *** =hint
-Always perform hypothesis generation before data collection and exploration, it also helps you to collect right data
+Creating a new variable from existing data set is known as feature creation
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Think again!"
+msg_success = "Yes! Creating a new feature out of existing ones is known as feature creation"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(2, [msg_bad1, msg_success, msg_bad1]) 
+```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:01167ddb1f
+## Feature Selection
+
+Feature Selection is a process of finding out the best subset of attributes which better explains the relationship of independent variables with target variable.
+
+You can select the useful features based on various metrics like:
+
+* Domain Knowledge: Based on domain experience, we select feature(s) which may have higher impact on target variable.
+* Visualization: As the name suggests, it helps to visualize the relationship between variables, which makes your variable selection process easier.
+* Statistical Parameters: We also consider the p-values, information values and other statistical metrics to select right features.
+
+#### Variable importance table of random forest classifier can act as feature selection tool?
+
+
+*** =instructions
+- TRUE
+- FALSE
+
+
+*** =hint
+Variable importance table shows the importance of each variable with respect to target variable
 
 *** =pre_exercise_code
 
