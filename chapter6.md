@@ -186,7 +186,7 @@ This is the most common approach found majorly in winning solutions of Data scie
 * Bagging (Bootstrap Aggregating)
 * Boosting
 
-To know more about these methods, you can refer article <a href="http://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/> "“Introduction to ensemble learning“ </a>.
+To know more about these methods, you can refer article <a href="http://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/"> “Introduction to ensemble learning“ </a>.
 
 It is always a better idea to apply ensemble methods to improve the accuracy of your model. There are two good reasons for this: 
 * They are generally more complex than traditional methods 
