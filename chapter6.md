@@ -231,12 +231,12 @@ Till here, we have seen methods which can improve the accuracy of a model. But, 
 Here Cross-Validation helps to find the right answer of this question. Cross Validationsays, try to leave a sample on which you do not train the model and test the model on this sample before finalizing the model. This method helps us to achieve more generalized relationships. To know more about this cross validation method, you should refer article <a href="http://www.analyticsvidhya.com/blog/2015/11/improve-model-performance-cross-validation-in-python-r/"> “Improve model performance using cross validation“ </a>.
 
 ##### Common methods used for Cross Validation ?
-###### The Validation set Approach:
-In this approach, we reserve 50% of dataset for validation and rest 50% for model training.
+##### The Validation set Approach:
+In this approach, we reserve 50% of dataset for validation and rest 50% for model training. A major disadvantage of this approach is that we train a model on 50% of the data set only, it may be possible that we are leaving some interesting information about data i.e. higher bias.
 
 ###### Leave one out cross validation (LOOCV)
 
-In this approach, we reserve only one data-point of the available data set. And, train model on the rest of data set. This process iterates for each data point. 
+In this approach, we reserve only one data-point of the available data set. And, train model on the rest of data set. This process iterates for each data point. This approach leads to higher variation in testing model effectiveness because we test against one data point. So, our estimation gets highly influenced by that one data point. If the data point turns out to be an outlier, it can lead to higher variation.
 
 ###### K-fold cross validation
 
