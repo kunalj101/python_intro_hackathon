@@ -44,3 +44,52 @@ msg_success = "Exactly! we always do Hypothesis generation before data collectio
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
 test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
 ```
+
+## Feature Engineering
+
+This step helps to extract more information from existing data. New information is extracted in terms of new features. These features may have a higher ability to explain the variance in the training data. Thus, giving improved model accuracy.
+
+Feature engineering is highly influenced by hypotheses generation. Good hypothesis results into good feature. That’s why, experts always suggest to invest quality time in hypothesis generation. Feature engineering process can be divided into two steps:
+
+* Feature Transformation
+* Feature Creation
+
+#### Feature Transformation: 
+
+There are various scenarios where feature transformation is required:
+* Changing the scale of a variable from original scale to scale between zero and one. This is known as data normalization. For example: If a data set has 1st variable in meter, 2nd in centi-meter and 3rd in kilo-meter, in such case, before applying any algorithm, we must normalize these variable in same scale
+* Some algorithms works well with normally distributed data. Therefore, we must remove skewness of variable(s). There are methods like log, square root or inverse of the values to remove skewness
+
+#### Feature Creation: 
+
+Deriving new variable(s ) from existing variables is known as feature creation. It helps to unleash the hidden relationship of a data set. Let’s say, we want to predict the number of transactions in a store based on transaction dates. Here transaction dates may not have direct correlation with number of transaction, but if we look at the day of a week, it may have a higher correlation. In this case, the information about day of a week is hidden. We need to extract it to make the model better.
+
+####Creating a variable based on mathematical computation of existing three variables is a method of?
+
+
+*** =instructions
+- Feture Transformation
+- Feature Creation
+- Feature Selection
+
+
+*** =hint
+Always perform hypothesis generation before data collection and exploration, it also helps you to collect right data
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Think again!"
+msg_success = "Yes! Creating a new feature out of existing ones is known as feature creation"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(2, [msg_bad1, msg_success, msg_bad1]) 
+```
