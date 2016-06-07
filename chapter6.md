@@ -223,3 +223,56 @@ msg_success = "Good Job!"
 test_mc(1, [msg_success, msg_bad1]) 
 ```
 
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:63b7c07abc
+## Cross validtion helps to improve your score on out of sample data set
+
+Till here, we have seen methods which can improve the accuracy of a model. But, it is not necessary that higher accuracy models always perform better (for unseen data points). Sometimes, the improvement in model’s accuracy can be due to over-fitting too.
+
+Here Cross-Validation helps to find the right answer of this question. Cross Validationsays, try to leave a sample on which you do not train the model and test the model on this sample before finalizing the model. This method helps us to achieve more generalized relationships. To know more about this cross validation method, you should refer article <a href="http://www.analyticsvidhya.com/blog/2015/11/improve-model-performance-cross-validation-in-python-r/"> “Improve model performance using cross validation“ </a>.
+
+##### Common methods used for Cross Validation ?
+###### The Validation set Approach:
+In this approach, we reserve 50% of dataset for validation and rest 50% for model training.
+
+###### Leave one out cross validation (LOOCV)
+
+In this approach, we reserve only one data-point of the available data set. And, train model on the rest of data set. This process iterates for each data point. 
+
+###### K-fold cross validation
+
+In this method, we follow below steps:
+* Randomly split your entire dataset into k”folds”.
+* For each k folds in your dataset, build your model on k – 1 folds of the data set. 
+* Then, test the model to check the effectiveness for kth fold and record the error you see on each of the predictions.
+* Repeat this until each of the k folds has served as the test set.
+
+The average of your k recorded errors is called the cross-validation error and will serve as your performance metric for the model.
+
+#### How to choose right value of k for K-fold cross validation?
+
+*** =instructions
+- Choose lower value of K
+- Choose a higher value of K
+- Use k=10
+
+*** =hint
+Always remember, lower value of K is more biased and hence undesirable. On the other hand, higher value of K is less biased, but can suffer from large variability. It is good to know that, smaller value of k always takes us towards validation set approach, where as higher value of k leads to LOOCV approach. Hence, it is often suggested to use k=10.
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Read more about ensemble methods"
+msg_success = "Good Job!"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
+```
+
