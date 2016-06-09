@@ -336,14 +336,14 @@ else:
 
 *** =instructions
 
-- Store the length of squares_list to square_len using function len()
-- Coparision operators <, >, <=, >=, == and != help to check condition is true or false
+- Store the length of `squares_list` to `square_len` using function `len()`
+- Coparision operators `<, >, <=, >=, ==` and `!=` help to check condition is true or false
 
 
 *** =hint
 
 - Use <, >, <=, >=, == and != for comparison
-- Use len(list) to return  length of string
+- Use `len(list)` to return  length of string
 
 
 *** =pre_exercise_code
