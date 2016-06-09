@@ -1,198 +1,280 @@
 ---
-title       : Introduction to Python for Data Analysis
-description : This chapter will get you started with Python for Data Analysis. We will cover the basics of the language you will need and an overview of the Python ecosystem.
+title       : Expert advice to imporove model performance
+description : This chapter will help to understand the approach of data science experts, "How they do approach a challenge ?", "How to select a right algorithm ?", "How to combine outputs of multiple algorithms ?" and "How to select the right value of model parameter also known as parameter tuning ?".
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:VideoExercise lang:python xp:50 skills:1 key:c55198c91d
-## Analyze movie ratings
-
-*** =video_link
-//player.vimeo.com/video/154783078
-
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
-## A really bad movie
+## How to approach a challenge?
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
+The model development cycle goes through various stages, starting from data collection to model building. Most of us admits that data exploration needs more attention to unleasehed the hidden story of data but before exploring the data to understand relationships (in variables), It’s always recommended to perform hypothesis generation. (To know more  about hypothesis generation, refer to <a href =" http://discuss.analyticsvidhya.com/t/why-and-when-is-hypothesis-generation-important/2109"> this link</a>). 
+
+It is important that you spend time thinking on the given problem and gaining the domain knowledge. So, how does it help?
+
+This practice usually helps in building better features later on, which are not biased by the data available in the data-set. This is a crucial step which usually improves a model’s accuracy.
+
+At this stage, you are expected to apply structured thinking to the problem i.e. a thinking process which takes into consideration all the possible aspects of a particular problem.
+
+
+####Which of the following has the right order of model building life cycle?
+
 
 *** =instructions
-- Long movies, clearly
-- Short movies, clearly
-- Long movies, but the correlation seems weak
-- Short movies, but the correlation seems weak
+- Data Collection --> Data Exploration --> Hypothesis Generation --> Model Building --> Prediction
+- Data Collection --> Hypothesis Generation --> Data Exploration --> Model Building --> Prediction
+- Hypothesis Generation --> Data Collection --> Data Exploration --> Model Building --> Prediction
 
 *** =hint
-Have a look at the plot. Do you see a trend in the dots?
+Always perform hypothesis generation before data collection and exploration, it also helps you to collect right data
 
 *** =pre_exercise_code
-```{r}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
-# 1. Pre-load packages, so that users don't have to do this manually.
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# 2. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-plt.scatter(movies.runtime, movies.rating)
-plt.show()
-```
 
 *** =sct
-```{r}
+```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
+msg_bad1 = "Think again!"
+msg_success = "Exactly! we always do Hypothesis generation before data collection and exploration"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success]) 
+test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:f0e6a8e8a5
-## A really bad movie
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:01167ddb1f
+## Feature Engineering
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
+This step helps to extract more information from existing data. New information is extracted in terms of new features. These features may have a higher ability to explain the variance in the training data. Thus, giving improved model accuracy.
+
+Feature engineering is highly influenced by hypotheses generation. Good hypothesis results into good feature. That’s why, experts always suggest to invest quality time in hypothesis generation. Feature engineering process can be divided into two steps:
+
+* Feature Transformation
+* Feature Creation
+
+##### Feature Transformation: 
+
+There are various scenarios where feature transformation is required:
+* Changing the scale of a variable from original scale to scale between zero and one.
+* Some algorithms works well with normally distributed data. Therefore, we must remove skewness of variable(s). There are methods like log, square root or inverse of the values to remove skewness
+* Binning of numerical variables
+
+##### Feature Creation: 
+
+Deriving new variable(s) from existing variables is known as feature creation. It helps to unleash the hidden relationship of a data set. Let’s say, we want to predict the number of transactions in a store based on transaction dates. Here transaction dates may not have direct correlation with number of transaction, but if we look at the day of a week, it may have a higher correlation. In this case, the information about day of a week is hidden. We need to extract it to make the model better.
+
+#### Creating a variable based on mathematical computation of existing three variables is a method of?
+
 
 *** =instructions
-- Long movies, clearly
-- Short movies, clearly
-- Long movies, but the correlation seems weak
-- Short movies, but the correlation seems weak
+- Feture Transformation
+- Feature Creation
+- Feature Selection
+
 
 *** =hint
-Have a look at the plot. Do you see a trend in the dots?
+Creating a new variable from existing data set is known as feature creation
 
 *** =pre_exercise_code
-```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
-# 1. Pre-load packages, so that users don't have to do this manually.
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# 2. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-plt.scatter(movies.runtime, movies.rating)
-plt.show()
-```
-
-*** =sct
-```{python}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the
-# pythonwhat Python package
-
-msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
-
-# Use test_mc() to grade multiple choice exercises.
-# Pass the correct option (option 4 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
-```
-
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Plot the movies yourself
-
-Do you remember the plot of the last exercise? Let's make an even cooler plot!
-
-A dataset of movies, `movies`, is available in the workspace.
-
-*** =instructions
-- The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
-- Import `pyplot` in the `matplotlib` package. Set an alias for this import: `plt`.
-- Use `plt.scatter()` to plot `movies.runtime` onto the x-axis, `movies.rating` onto the y-axis and use `ints` for the color of the dots. You should use the first and second positional argument, and the `c` keyword.
-- Show the plot using `plt.show()`.
-
-*** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
-
-*** =pre_exercise_code
-```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-
-# 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-import pandas as pd
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 2. Preload a package
-import numpy as np
-```
-
-*** =sample_code
-```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
-
-# Import matplotlib.pyplot
-
-
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-
-
-# Show the plot
-
-```
-
-*** =solution
-```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
-
-# Import matplotlib.pyplot
-import matplotlib.pyplot as plt
-
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-plt.scatter(movies.runtime, movies.rating, c=ints)
-
-# Show the plot
-plt.show()
-```
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
-# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+# pythonwhat Python package
 
-# Check if the student changed the np.unique() call
-# If it's not called, we know the student removed the call.
-# If it's called incorrectly, we know the student changed the call.
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
-# Check if the student removed the ints object
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
+msg_bad1 = "Think again!"
+msg_success = "Yes! Creating a new feature out of existing ones is known as feature creation"
 
-# Check if the student imported matplotlib.pyplot like the solution
-# Let automatic feedback message generation handle the feedback messages
-test_import("matplotlib.pyplot", same_as = True)
-
-# Check whether the student used the scatter() function correctly
-# If it's used, but incorrectly, tell them to check the instructions again
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
-
-# Check if the student called the show() function
-# Let automatic feedback message generation handle all feedback messages
-test_function("matplotlib.pyplot.show")
-
-success_msg("Great work!")
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(2, [msg_bad1, msg_success, msg_bad1]) 
 ```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:3c72c926e8
+## Feature Selection
+
+Feature Selection is a process of finding out the best subset of attributes which better explains the relationship of independent variables with target variable.
+
+You can select the useful features based on various metrics like:
+
+* Domain Knowledge: Based on domain experience, we select feature(s) which may have higher impact on target variable.
+* Visualization: As the name suggests, it helps to visualize the relationship between variables, which makes your variable selection process easier.
+* Statistical Parameters: We also consider the p-values, information values and other statistical metrics to select right features.
+
+#### Variable importance table of random forest classifier can act as feature selection tool?
+
+
+*** =instructions
+- TRUE
+- FALSE
+
+
+*** =hint
+Variable importance table shows the importance of each variable with respect to target variable
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Think again!"
+msg_success = "Yes! Creating a new feature out of existing ones is known as feature creation"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(1, [msg_success, msg_bad1]) 
+```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:a93345ad36
+## How to select the right value of model parameter?
+
+We know that machine learning algorithms are driven by parameters. These parameters majorly influence the outcome of learning process.
+
+The objective of parameter tuning is to find the optimum value for each parameter to improve the accuracy of the model. To tune these parameters, you must have a good understanding of their meaning and individual impact on model. You can repeat this process with a number of well performing models.
+
+For example: In random forest, we have various parameters like max_features, number_trees, random_state, oob_score and others. Intuitive optimization of these parameter values will result in better and more accurate models.
+
+#### Which of the following is not a parameter of random forest algorithm (in Scikit Learn)?
+
+
+*** =instructions
+- max_depth
+- max_leaf_node
+- learning rate
+- max_features
+
+
+*** =hint
+List of all parameters in random forest scikit learn algorithm:
+
+RandomForestClassifier(n_estimators=10, criterion='gini', max_depth=None,min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='auto', max_leaf_nodes=None,bootstrap=True, oob_score=False, n_jobs=1, random_state=None, verbose=0, warm_start=False,class_weight=None)
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Look at the hint to know more about parameters of random forest"
+msg_success = "Good Job!"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(3, [msg_bad1, msg_bad1, msg_success, msg_bad1]) 
+```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:63b7c07abc
+## Use ensemble methods to combine output of more than one models?
+
+This is the most common approach found majorly in winning solutions of Data science competitions. This technique simply combines the result of multiple weak models and produce better results. This can be achieved through many ways:
+
+* Bagging (Bootstrap Aggregating)
+* Boosting
+
+To know more about these methods, you can refer article <a href="http://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/"> “Introduction to ensemble learning“ </a>.
+
+It is always a better idea to apply ensemble methods to improve the accuracy of your model. There are two good reasons for this: 
+* They are generally more complex than traditional methods 
+* The traditional methods give you a good base level from which you can improve and draw from to create your ensembles.
+
+#### Taking average of predictions (given by different models) is an example of ensemble model?
+
+
+*** =instructions
+- TRUE
+- FALSE
+
+*** =hint
+We can combine output of different base models by:
+- Taking average of all predictions
+- Using maximum vote techniques
+
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Read more about ensemble methods"
+msg_success = "Good Job!"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(1, [msg_success, msg_bad1]) 
+```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:60de1e0b02
+## Cross validtion helps to improve your score on out of sample data set
+
+Till here, we have seen methods which can improve the accuracy of a model. But, it is not necessary that higher accuracy models always perform better (for unseen data points). Sometimes, the improvement in model’s accuracy can be due to over-fitting too.
+
+Here Cross-Validation helps to find the right answer of this question. Cross Validationsays, try to leave a sample on which you do not train the model and test the model on this sample before finalizing the model. This method helps us to achieve more generalized relationships. To know more about this cross validation method, you should refer article <a href="http://www.analyticsvidhya.com/blog/2015/11/improve-model-performance-cross-validation-in-python-r/"> “Improve model performance using cross validation“ </a>.
+
+#### Common methods used for Cross Validation ?
+
+
+##### The Validation set Approach:
+In this approach, we reserve 50% of dataset for validation and rest 50% for model training. A major disadvantage of this approach is that we train a model on 50% of the data set only, it may be possible that we are leaving some interesting information about data i.e. higher bias.
+
+##### Leave one out cross validation (LOOCV)
+
+In this approach, we reserve only one data-point of the available data set. And, train model on the rest of data set. This process iterates for each data point. This approach leads to higher variation in testing model effectiveness because we test against one data point. So, our estimation gets highly influenced by that one data point. If the data point turns out to be an outlier, it can lead to higher variation.
+
+##### K-fold cross validation
+
+In this method, we follow below steps:
+* Randomly split your entire dataset into k”folds”.
+* For each k folds in your dataset, build your model on k – 1 folds of the data set. 
+* Then, test the model to check the effectiveness for kth fold and record the error you see on each of the predictions.
+* Repeat this until each of the k folds has served as the test set.
+
+The average of your k recorded errors is called the cross-validation error and will serve as your performance metric for the model.
+
+#### How to choose right value of k for K-fold cross validation?
+
+*** =instructions
+- Choose lower value of K
+- Choose a higher value of K
+- Use k=10
+
+*** =hint
+Always remember, lower value of K is more biased and hence undesirable. On the other hand, higher value of K is less biased, but can suffer from large variability. It is good to know that, smaller value of k always takes us towards validation set approach, where as higher value of k leads to LOOCV approach. Hence, it is often suggested to use k=10.
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Try again! Read more about Cross Validation"
+msg_success = "Good Job!"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
+```
+

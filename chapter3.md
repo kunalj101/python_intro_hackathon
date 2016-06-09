@@ -4,195 +4,403 @@ description : We start with the first step of data analysis - the exploratory da
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:VideoExercise lang:python xp:50 skills:1 key:c55198c91d
-## Analyze movie ratings
-
-*** =video_link
-//player.vimeo.com/video/154783078
-
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
-## A really bad movie
-
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
-
-*** =instructions
-- Long movies, clearly
-- Short movies, clearly
-- Long movies, but the correlation seems weak
-- Short movies, but the correlation seems weak
-
-*** =hint
-Have a look at the plot. Do you see a trend in the dots?
-
-*** =pre_exercise_code
-```{r}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-
-# 1. Pre-load packages, so that users don't have to do this manually.
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# 2. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-plt.scatter(movies.runtime, movies.rating)
-plt.show()
-```
-
-*** =sct
-```{r}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
-# pythonwhat Python package
-
-msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
-
-# Use test_mc() to grade multiple choice exercises. 
-# Pass the correct option (Action, option 2 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success]) 
-```
-
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:f0e6a8e8a5
-## A really bad movie
-
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
-
-*** =instructions
-- Long movies, clearly
-- Short movies, clearly
-- Long movies, but the correlation seems weak
-- Short movies, but the correlation seems weak
-
-*** =hint
-Have a look at the plot. Do you see a trend in the dots?
-
-*** =pre_exercise_code
-```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
-
-# 1. Pre-load packages, so that users don't have to do this manually.
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# 2. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-# 3. Create a plot in the viewer, that students can check out while reading the exercise
-plt.scatter(movies.runtime, movies.rating)
-plt.show()
-```
-
-*** =sct
-```{python}
-# The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the
-# pythonwhat Python package
-
-msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
-
-# Use test_mc() to grade multiple choice exercises.
-# Pass the correct option (option 4 in the instructions) to correct.
-# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
-```
-
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Plot the movies yourself
+## Who is eligible for loan?
 
-Do you remember the plot of the last exercise? Let's make an even cooler plot!
+Dream Housing Finance company deals in all home loans. They have presence across all urban, semi urban and rural areas. Customer first apply for home loan after that company validates the customer eligibility for loan. Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form.  
 
-A dataset of movies, `movies`, is available in the workspace.
+Let's start with loading in the training and testing set into your python environment. You will use the training set to build your model, and the test set to validate it. The data is stored on the web as CSV files; their URLs are already available as character strings in the sample code. You can load this data with the pandas.read_csv() function, it converts the data set to python dataframe. Python dataframe likes a spreadsheet or SQL table.
+
 
 *** =instructions
-- The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
-- Import `pyplot` in the `matplotlib` package. Set an alias for this import: `plt`.
-- Use `plt.scatter()` to plot `movies.runtime` onto the x-axis, `movies.rating` onto the y-axis and use `ints` for the color of the dots. You should use the first and second positional argument, and the `c` keyword.
-- Show the plot using `plt.show()`.
+- train.head(n) helps to look at top n observation
+- len(DataFrame) returns the total number of observations
+- DataFrame.columns returns the total columns heading of the data set
+
 
 *** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
+- Use len(dataframe) to return the total observations
+- Use len(dataframe.columns) to return the total available columns
+
 
 *** =pre_exercise_code
+
 ```{python}
+
 # The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
 
-# 1. Preload a dataset. The code below will read the csv that is stored at the URL's location.
-# The movies variable will be available in the user's console.
+# Import library pandas
 import pandas as pd
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
-# 2. Preload a package
-import numpy as np
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
 ```
 
 *** =sample_code
+
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
 
-# Import matplotlib.pyplot
+# import library pandas
+import pandas as pd
+
+# Import training data as train
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing data as test
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+# Print top 5 observation of training dataset
 
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
+# Store total number of observation in training dataset
+train_length =
 
-
-# Show the plot
+# Store total number of columns in testing data set
+test_col = 
 
 ```
 
 *** =solution
+
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
 
-# Import matplotlib.pyplot
-import matplotlib.pyplot as plt
+import pandas as pd
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-plt.scatter(movies.runtime, movies.rating, c=ints)
+# Import training data as train
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
-# Show the plot
-plt.show()
+# Import testing data as test
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+# Print top 5 observation of test dataset
+print (train.head(5))
+
+# Store total number of observation in training dataset
+train_length = len(train)
+
+# Store total number of columns in testing data set
+test_col = len(test.columns)
+
 ```
 
 *** =sct
+
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Check if the student changed the np.unique() call
-# If it's not called, we know the student removed the call.
-# If it's called incorrectly, we know the student changed the call.
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
-# Check if the student removed the ints object
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
+# Test for evaluating top 5 heading of dataframe
 
-# Check if the student imported matplotlib.pyplot like the solution
-# Let automatic feedback message generation handle the feedback messages
-test_import("matplotlib.pyplot", same_as = True)
 
-# Check whether the student used the scatter() function correctly
-# If it's used, but incorrectly, tell them to check the instructions again
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
+# Test for total observation in training dataset
+test_object("train_length")
 
-# Check if the student called the show() function
-# Let automatic feedback message generation handle all feedback messages
-test_function("matplotlib.pyplot.show")
+# Test for total columns in testing dataset
+test_object("test_col")
 
 success_msg("Great work!")
 ```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:36c3190b26
+## Understanding Data?
+
+You can look at summary of numerical fields by using dataframe.describe(). It provides count, mean, standard deviation (std), min, quartiles and max in its output.
+
+```{python}
+
+dataframe.describe() 
+
+```
+For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by following command:
+
+```{python}
+
+df[column_name].value_counts()
+
+```
+
+*** =instructions
+
+- Use dataframe.describe() to understand the distribution of numerical variables 
+- Look at unique values of non-numeric values using df[column_name].value_counts()
+
+
+*** =hint
+- Store the output of train.describe() in a variable df
+- Use train['PropertyArea'].value_counts() to look at frequency distribution
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+#Training and Testing data set are loaded in train and test dataframe respectively
+
+# Look at the summary of numerical variables for train data set
+df= train.________()
+print (df)
+
+# Print the unique values and their frequency of variable Property_Area
+df1=train['Property_Area'].________()
+print (df1)
+
+```
+
+*** =solution
+
+```{python}
+
+# Look at the summary of numerical variables for train data set
+df = train.describe()
+print (df)
+
+# Print the unique values and their frequency of variable Property_Area
+df1=train['Property_Area'].value_counts()
+print (df1)
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Test for describe
+test_object("df")
+
+# Test for value_counts
+test_object("df1")
+
+success_msg("Great work!")
+```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
+## Understanding distribution of numerical variables?
+
+Now that we are familiar with basic data characteristics, let us study distribution of numerical variables. Let us start with numeric variable "ApplicantIncome".
+
+Lets start by plotting the histogram of ApplicantIncome using the following commands:
+
+```{python}
+
+train['ApplicantIncome'].hist(bins=50)
+
+```
+Next, we can also look at box plots to understand the distributions. Box plot for ApplicantIncome can be plotted by
+
+
+```{python}
+
+train.boxplot(column='ApplicantIncome')
+
+```
+
+*** =instructions
+
+- Use hist() with train['LoanAmount'] to plot histogram
+- Use by=categorical_variable with box plot to look at distribution by categories
+
+```{python}
+
+train.boxplot(column='ApplicantIncome', by='Gender')
+
+```
+
+*** =hint
+- train['LoanAmount'].hist()
+- train.boxplot(column='LoanAmount', by = 'Gender' )
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+%matplotlib inline
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+# Training and Testing dataset are loaded in train and test dataframe respectively
+# Plot histogram for variable LoanAmount
+train['LoanAmount']._____
+
+# Plot a box plot for variable LoanAmount by variable Gender of training data set
+train.boxplot(column='LoanAmount', by = ____)
+
+```
+
+*** =solution
+
+```{python}
+
+
+# Assumed training and testing dataset are loaded in train and test dataframe respectively
+# Plot histogram for variable LoanAmount
+train['LoanAmount'].hist()
+
+# Plot a box plot for variable LoanAmount by variable Gender of training data set
+train.boxplot(column='LoanAmount', by ='Gender' )
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Test for evaluating histogram
+
+
+# Test for evaluating box plot
+
+
+success_msg("Great work!")
+```
+
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:708e937aea
+## Understanding distribution of categorical variables?
+
+We have looked at the distributions of ApplicantIncome and LoanIncome, now time for categorical variables in more details. For instance, lets see that Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
+
+```{python}
+
+pd.crosstab( train ['Gender'], train ["Loan_Status"], margins=True)
+
+```
+Next, we can also look at proportions can be more intuitive in making some quick insights. We can do this using the apply function. You can read more about cross tab and apply functions <a href="http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/"> here</a>. 
+
+
+```{python}
+
+def percentageConvert(ser):
+  return ser/float(ser[-1])
+
+pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percentageConvert, axis=1)
+
+```
+
+*** =instructions
+
+- Use value_counts() with train['LoanStatus'] to look at the frequency distribution
+- Use crosstab with Loan_Status and Credit_History to perform bi-variate analysis
+ 
+
+
+*** =hint
+- train['Loan_Status'].value_counts()['Y'] will return the loan approval rate
+
+
+
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+# Training and Testing dataset are loaded in train and test dataframe respectively
+
+# Approved Loan in absolute numbers
+loan_approval = train['Loan_Status'].________()['Y']
+
+# Two-way comparison: Credit History and Loan Status
+pd.________(train ["Credit_History"], train ["Loan_Status"], margins=True)
+
+
+
+```
+
+*** =solution
+
+```{python}
+
+# Assumed training and testing dataset are loaded in train and test dataframe respectively
+
+# Approved Loan in absolute numbers
+loan_approval = train['Loan_Status'].value_counts()['Y']
+
+# Two-way comparison: Credit_History and Loan_Status
+pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Test for Approved Loan in absolute numbers
+test_object("loan_approval")
+
+
+# Test for two way comparison Credit_History and Loan_Status
+
+
+
+
+success_msg("Great work!")
+
+```
+
+
+
