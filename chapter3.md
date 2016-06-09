@@ -95,7 +95,7 @@ test_col = len(test.columns)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for evaluating top 5 heading of dataframe
-
+test_function("print", incorrect_msg = "Don't forget to print the first 5 observations of `train`!")
 
 # Test for total observation in training dataset
 test_object("train_length")
@@ -126,13 +126,13 @@ df[column_name].value_counts()
 
 *** =instructions
 
-- Use dataframe.describe() to understand the distribution of numerical variables 
-- Look at unique values of non-numeric values using df[column_name].value_counts()
+- Use `dataframe.describe()` to understand the distribution of numerical variables 
+- Look at unique values of non-numeric values using `df[column_name].value_counts()`
 
 
 *** =hint
-- Store the output of train.describe() in a variable df
-- Use train['PropertyArea'].value_counts() to look at frequency distribution
+- Store the output of `train.describe()` in a variable df
+- Use `train['PropertyArea'].value_counts()` to look at frequency distribution
 
 
 *** =pre_exercise_code
@@ -244,7 +244,6 @@ train.boxplot(column='ApplicantIncome', by='Gender')
 
 # Import library pandas
 import pandas as pd
-%matplotlib inline
 
 # Import training file
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
