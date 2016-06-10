@@ -176,13 +176,13 @@ train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
 ```
 
 *** =instructions
-Apply isnull().sum() with test dataset
+- Impute missing values with a specific value 168
+- Impute missing value with median
 
 
 
 *** =hint
-Use test.isnull().sum() to check number of missing values
-
+Use test['LoanAmount'].fillna(test['LoanAmount'].median(), inplace=True)
 
 
 *** =pre_exercise_code
