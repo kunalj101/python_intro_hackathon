@@ -105,12 +105,12 @@ This statement will return the columns names with number of observation having m
 <center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/06/Missing_Values.png"></center>
 
 *** =instructions
-- Apply isnull() to check the observation has null value or not 
-- Check number of missing values is greater then 0 or not
+Apply isnull().sum() with test dataset
+
 
 
 *** =hint
-Use train['Self_Employed'].isnull().sum() to check number of missing values
+Use test.isnull().sum() to check number of missing values
 
 
 
@@ -162,6 +162,83 @@ test_object("number_missing_values_test_data")
 
 success_msg("Great work!")
 ```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:4abbcb0b8d
+## Impute missing values of LoanAmount?
+
+There are multiple ways to fill the missing values of numerical variables, you can go with mean, median or estimate values based on other features of data set. Here to impute missing values of loan amount, we would go with imputing by mean value (Mean of available values of LoanAmount).
+
+```{python}
+
+train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
+
+
+```
+
+*** =instructions
+Apply isnull().sum() with test dataset
+
+
+
+*** =hint
+Use test.isnull().sum() to check number of missing values
+
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+# Check variables have missing values in test data set
+number_missing_values_test_data = _____.isnull()._____()
+
+```
+
+*** =solution
+
+```{python}
+
+# Check variables have missing values in test data set
+number_missing_values_test_data = test.isnull().sum()
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Check variables have missing values in test data set
+test_object("number_missing_values_test_data")
+
+
+success_msg("Great work!")
+```
+
+
+
+
+
 
 
 
