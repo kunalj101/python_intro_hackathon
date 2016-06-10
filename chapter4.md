@@ -89,7 +89,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+--- type:NormalExercise lang:python xp:100 skills:1 key:4abbcb0b8d
 ## How many variables have missing values?
 
 Till now, we have checked the variable has missing value or not? Next action is to check how many variables has missing value. One way of doing this check for each individual variable but it would not be easy if we have hundred of columns. This action can be performed simply by using isnull() on dataframe object.
