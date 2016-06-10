@@ -4,8 +4,6 @@ description : Pandas are the heart of data analysis in Python. This chapter get 
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
-There are missing values in some variables. We should estimate those values wisely depending on the amount of missing values and the expected importance of variables.
-
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Credit History has missing value or not ?
 
