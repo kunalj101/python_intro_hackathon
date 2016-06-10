@@ -15,7 +15,7 @@ train['Credit_History'].isnull().sum()
 
 ```
 
-* isnull() helps to check the observation has missing value or not (it returns a boolean value TRUE or FALSE)
+* isnull() helps to check the observation has missing value or not (It returns a boolean value TRUE or FALSE)
 * sum() used to return the number of records have missing values
 
 *** =instructions
@@ -89,13 +89,79 @@ success_msg("Great work!")
 
 
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+## How many variables have missing values?
+
+Till now, we have checked the variable has missing value or not? Next action is to check how many variables has missing value. One way of doing this check for each individual variable but it would not be easy if we have hundred of columns. This action can be performed simply by using isnull() on dataframe object.
+
+```{python}
+
+train.isnull().sum()
+
+```
+
+This statement will return the columns names with number of observation having missing (null) values.
+
+<center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/06/Missing_Values.png"></center>
+
+*** =instructions
+- Apply isnull() to check the observation has null value or not 
+- Check number of missing values is greater then 0 or not
+
+
+*** =hint
+Use train['Self_Employed'].isnull().sum() to check number of missing values
 
 
 
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+# Check variables have missing values in test data set
+number_missing_values_test_data = _____.isnull()._____()
+
+```
+
+*** =solution
+
+```{python}
+
+# Check variables have missing values in test data set
+number_missing_values_test_data = test.isnull().sum()
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Check variables have missing values in test data set
+test_object("number_missing_values_test_data")
 
 
-
-
+success_msg("Great work!")
+```
 
 
 
