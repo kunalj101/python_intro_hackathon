@@ -13,14 +13,13 @@ There are missing values in variables. We should first identify the variables ha
 
 train['Credit_History'].isnull().sum()
 
-#  isnull() helps to check the observation has missing value or not (it returns a boolean value TRUE or FALSE)
-# sum() used to return the number of records have missing values
-
 ```
 
+* isnull() helps to check the observation has missing value or not (it returns a boolean value TRUE or FALSE)
+* sum() used to return the number of records have missing values
 
 *** =instructions
-- isnull() helps to check the observation has null value or not 
+- Apply isnull() to check the observation has null value or not 
 - Check number of missing values is greater then 0 or not
 
 
