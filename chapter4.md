@@ -167,12 +167,11 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:fd3cdcb726
 ## Impute missing values of LoanAmount?
 
-There are multiple ways to fill the missing values of numerical variables, you can go with mean, median or estimate values based on other features of data set. Here to impute missing values of loan amount, we would go with imputing by mean value (Mean of available values of LoanAmount).
+There are multiple ways to fill the missing values of continuous variables, you can go with mean, median or estimate values based on other features of data set. Here to impute missing values of loan amount, we would go with imputing by mean value (Mean of available values of LoanAmount).
 
 ```{python}
 
 train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
-
 
 ```
 
@@ -207,8 +206,12 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
-# Check variables have missing values in test data set
-number_missing_values_test_data = _____.isnull()._____()
+# Impute missing value of LoanAmount with 168
+train['LoanAmount'].fillna(______, inplace=True)
+
+# Impute missing value of LoanAmount with median for test data set
+test['LoanAmount'].fillna(test['LoanAmount']._______, inplace=True)
+
 
 ```
 
@@ -216,8 +219,11 @@ number_missing_values_test_data = _____.isnull()._____()
 
 ```{python}
 
-# Check variables have missing values in test data set
-number_missing_values_test_data = test.isnull().sum()
+# Impute missing value of LoanAmount with 168
+train['LoanAmount'].fillna(168, inplace=True)
+
+# Impute missing value of LoanAmount with median for test data set
+test['LoanAmount'].fillna(test['LoanAmount'].median(), inplace=True)
 
 ```
 
@@ -228,17 +234,14 @@ number_missing_values_test_data = test.isnull().sum()
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Check variables have missing values in test data set
-test_object("number_missing_values_test_data")
+# Impute missing value of LoanAmount with 168
+test_object(“train['LoanAmount']”)
 
+# Impute missing value of LoanAmount with median for test data set
+test_object(“test['LoanAmount']”)
 
 success_msg("Great work!")
 ```
-
-
-
-
-
 
 
 
