@@ -4,6 +4,104 @@ description : Pandas are the heart of data analysis in Python. This chapter get 
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
+There are missing values in some variables. We should estimate those values wisely depending on the amount of missing values and the expected importance of variables.
+
+#### Credit History has missing value or not ?
+
+There are missing values in variables. We should first identify the variables have missing value then estimate those values wisely depending on the amount of missing values and the expected importance of variables. So, here our first task is to check the variable has missing values in the data set and how many observation has missing values.
+
+```{python}
+
+train['Credit_History'].isnull().sum()
+
+#  isnull() helps to check the observation has missing value or not (it returns a boolean value TRUE or FALSE)
+# sum() used to return the number of records have missing values
+
+```
+
+
+*** =instructions
+- isnull() helps to check the observation has null value or not 
+- Check number of missing values is greater then 0 or not
+
+
+*** =hint
+Use train['Self_Employed'].isnull().sum() to check number of missing values
+
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+# How many missing values in variable "Self_Employed" ?
+n_missing_value_Self_Employed = train['Self_Employed']._____.sum()
+
+# Variable Loan amount has missing values or not?
+LoanAmount_have_missing_value = train['LoanAmount'].isnull().sum() > ____
+
+
+```
+
+*** =solution
+
+```{python}
+
+# How many missing values in variable "Self_Employed" ?
+n_missing_value_Self_Employed = train['Self_Employed'].isnull().sum()
+
+# Variable Loan amount has missing values or not?
+LoanAmount_have_missing_value = train['LoanAmount'].isnull().sum() > 0
+
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# How many missing values in variable "Self_Employed" ?
+test_object("n_missing_value_Self_Employed")
+
+# Variable Loan amount has missing values or not?
+test_object("LoanAmount_have_missing_value")
+
+success_msg("Great work!")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Dealing with missing values
 
