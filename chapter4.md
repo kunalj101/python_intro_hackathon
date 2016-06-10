@@ -164,7 +164,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:4abbcb0b8d
+--- type:NormalExercise lang:python xp:100 skills:1 key:fd3cdcb726
 ## Impute missing values of LoanAmount?
 
 There are multiple ways to fill the missing values of numerical variables, you can go with mean, median or estimate values based on other features of data set. Here to impute missing values of loan amount, we would go with imputing by mean value (Mean of available values of LoanAmount).
