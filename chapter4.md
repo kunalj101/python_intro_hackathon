@@ -101,7 +101,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+--- type:NormalExercise lang:python xp:100 skills:1 key:c0f63b52d5
 ## Dealing with missing values
 
 There are missing values in some variables. We should estimate those values wisely depending on the amount of missing values and the expected importance of variables.
