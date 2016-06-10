@@ -6,6 +6,7 @@ attachments :
 
 There are missing values in some variables. We should estimate those values wisely depending on the amount of missing values and the expected importance of variables.
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 #### Credit History has missing value or not ?
 
 There are missing values in variables. We should first identify the variables have missing value then estimate those values wisely depending on the amount of missing values and the expected importance of variables. So, here our first task is to check the variable has missing values in the data set and how many observation has missing values.
