@@ -235,7 +235,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:fd3cdcb726
+--- type:NormalExercise lang:python xp:100 skills:1 key:ca19896cae
 ## Impute missing values of SelfEmployed?
 
 To impute missing values of Categorical variables, we look at the frquency table and impute with value has higher frequency because there is a high probability of success. For example, if you look at distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under category "No". Here we will replace missing values of SelfEmployed with "No".
