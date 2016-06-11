@@ -210,7 +210,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 train['LoanAmount'].fillna(______, inplace=True)
 
 # Impute missing value of LoanAmount with median for test data set
-#test['LoanAmount'].fillna(test['LoanAmount']._______, inplace=True)
+test['LoanAmount'].fillna(test['LoanAmount']._______, inplace=True)
 
 
 ```
@@ -223,7 +223,7 @@ train['LoanAmount'].fillna(______, inplace=True)
 train['LoanAmount'].fillna(168, inplace=True)
 
 # Impute missing value of LoanAmount with median for test data set
-#test['LoanAmount'].fillna(test['LoanAmount'].median(), inplace=True)
+test['LoanAmount'].fillna(test['LoanAmount'].median(), inplace=True)
 
 ```
 
@@ -235,10 +235,10 @@ train['LoanAmount'].fillna(168, inplace=True)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Impute missing value of LoanAmount with 168
-test_object(“train['LoanAmount']”)
+#test_object(“train['LoanAmount']”)
 
 # Impute missing value of LoanAmount with median for test data set
-test_object(“test['LoanAmount']”)
+#test_object(“test['LoanAmount']”)
 
 success_msg("Great work!")
 ```
