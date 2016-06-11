@@ -176,13 +176,13 @@ train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
 ```
 
 *** =instructions
-- Impute missing values with a specific value 168
-- Impute missing value with median
+Impute missing values with a specific value 168
+
 
 
 
 *** =hint
-Use test['LoanAmount'].fillna(test['LoanAmount'].median(), inplace=True)
+Use test['LoanAmount'].fillna(168, inplace=True)
 
 
 *** =pre_exercise_code
@@ -207,7 +207,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 ```{python}
 
 # Impute missing value of LoanAmount with median for test data set
-test['LoanAmount'].fillna(test['LoanAmount']._______, inplace=True)
+test['LoanAmount'].fillna(______, inplace=True)
 
 ```
 
@@ -216,7 +216,7 @@ test['LoanAmount'].fillna(test['LoanAmount']._______, inplace=True)
 ```{python}
 
 # Impute missing value of LoanAmount with median for test data set
-test['LoanAmount'].fillna(test['LoanAmount'].median(), inplace=True)
+test['LoanAmount'].fillna(168, inplace=True)
 
 ```
 
