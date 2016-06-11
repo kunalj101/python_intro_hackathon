@@ -210,7 +210,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 train['LoanAmount'].fillna(______, inplace=True)
 
 # Impute missing value of LoanAmount with median for test data set
-test['LoanAmount'].fillna(test['LoanAmount']._______, inplace=True)
+#test['LoanAmount'].fillna(test['LoanAmount']._______, inplace=True)
 
 
 ```
@@ -223,7 +223,7 @@ test['LoanAmount'].fillna(test['LoanAmount']._______, inplace=True)
 train['LoanAmount'].fillna(168, inplace=True)
 
 # Impute missing value of LoanAmount with median for test data set
-test['LoanAmount'].fillna(test['LoanAmount'].median(), inplace=True)
+#test['LoanAmount'].fillna(test['LoanAmount'].median(), inplace=True)
 
 ```
 
