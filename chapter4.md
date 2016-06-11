@@ -181,6 +181,7 @@ Impute missing values with a specific value 168
 
 
 
+
 *** =hint
 Use test['LoanAmount'].fillna(168, inplace=True)
 
@@ -232,6 +233,77 @@ test['LoanAmount'].fillna(168, inplace=True)
 
 success_msg("Great work!")
 ```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:fd3cdcb726
+## Impute missing values of SelfEmployed?
+
+To impute missing values of Categorical variables, we look at the frquency table and impute with value has higher frequency because there is a high probability of success. For example, if you look at distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under category "No". Here we will replace missing values of SelfEmployed with "No".
+
+```{python}
+
+train['Self_Employed'].fillna('No',inplace=True)
+
+```
+
+*** =instructions
+Impute missing values with "Male"
+
+*** =hint
+Use train['Gender'].fillna('Male',inplace=True)
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+# Impute missing value of Gender
+train['Gender'].fillna(_____,inplace=True)
+
+```
+
+*** =solution
+
+```{python}
+
+# Impute missing value of LoanAmount with median for test data set
+train['Gender'].fillna('Male',inplace=True)
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Impute missing value of LoanAmount with median for test data set
+#test_object(“test['Gender']”)
+
+success_msg("Great work!")
+```
+
+
+
+
 
 
 
