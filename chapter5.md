@@ -4,6 +4,114 @@ description : We build our predictive models and make submissions to the AV Data
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:2c1cf7aa90
+## Data preparation for building a predictive model?
+
+In Python, Scikit-Learn (sklearn) is the most commonly used library for model building. I encourage you to get a refresher on sklearn through this <a href="http://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/">article</a>. It has gathered a lot of interest recently as a choice of language for data analysis. There are few pre-requisite for scikit learn library:
+
+* Treat missing values
+* All inputs must be numeric
+ 
+To convert all non-numeric variables to number, following code will help:
+
+```{python}
+
+from sklearn.preprocessing import LabelEncoder
+
+le = LabelEncoder()
+
+train['Gender'] = le.fit_transform(train['Gender'])
+
+```
+
+*** =instructions
+- Impute missing values of categorical variables with higher frequent categories of variable
+- Impute missing values of continuous variables with mean
+- Convert all non-numeric variables to numbers using LabelEncoder() 
+
+
+*** =hint
+- Use similar expression like train['Gender'].fillna('Male',inplace=True) for categorial variable
+- Use similar expressin like train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True) for continuous
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+from sklearn.preprocessing import LabelEncoder
+
+# Training and Testing data set is loaded in variable train and test dataframe respectively
+
+# Impute missing values for Gender
+train['Gender'].fillna('_____',inplace=True)
+
+# Impute missing values for Loan_Amount
+train['LoanAmount'].fillna(train['LoanAmount'].______(), inplace=True)
+
+# Perform label encoding for Property_Area
+le = LabelEncoder()
+train['Property_Area'] = le.________(train['Property_Area'])
+
+```
+
+*** =solution
+
+```{python}
+
+# Training and Testing data set is loaded in variable train and test dataframe respectively
+
+# Impute missing values for Gender
+train['Gender'].fillna('Male',inplace=True)
+
+# Impute missing values for Loan_Amount
+train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
+
+# Perform label encoding for Property_Area
+le = LabelEncoder()
+train['Property_Area'] = le.fit_transform(train['Property_Area'])
+
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Impute missing values for Gender
+
+
+# Impute missing values for Loan_Amount
+
+
+# Perform label encoding for Property_Area
+
+
+success_msg("Great work!")
+```
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## First Step of Model Building
 
