@@ -247,10 +247,11 @@ train['Self_Employed'].fillna('No',inplace=True)
 ```
 
 *** =instructions
-Impute missing values with "Male"
+Impute missing values with more frequent category
 
 *** =hint
-Use train['Gender'].fillna('Male',inplace=True)
+- Male is more frequent in Gender
+- 1 is more frequent in Credit_History
 
 
 *** =pre_exercise_code
@@ -277,6 +278,10 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 # Impute missing value of Gender
 train['Gender'].fillna(_____,inplace=True)
 
+
+# Impute missing value of Credit_History
+train['Credit_History'].fillna(_____,inplace=True)
+
 ```
 
 *** =solution
@@ -285,6 +290,10 @@ train['Gender'].fillna(_____,inplace=True)
 
 # Impute missing value of LoanAmount with median for test data set
 train['Gender'].fillna('Male',inplace=True)
+
+# Impute missing value of Credit_History
+train['Credit_History'].fillna(1,inplace=True)
+
 
 ```
 
@@ -296,7 +305,11 @@ train['Gender'].fillna('Male',inplace=True)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Impute missing value of LoanAmount with median for test data set
-#test_object(“test['Gender']”)
+test_object(“test['Gender']”)
+
+# Impute missing value of Credit_History
+test_object(“test['Credit_History']”)
+
 
 success_msg("Great work!")
 ```
