@@ -406,7 +406,6 @@ To send a submission to DataHack you need to predict the loan approval rate for 
 Next, you need to make sure your output is in line with the submission requirements of DataHack: a csv file with exactly 367 entries and two columns: Loan_ID and Loan_Status. Then create a csv file using to_csv() method from Pandas.
 
 
-
 *** =instructions
 - Store input variable in list "predictors"
 - Use .predict() method for prediction
@@ -414,6 +413,7 @@ Next, you need to make sure your output is in line with the submission requireme
 
 *** =hint
 - Use predictors =['Credit_History','Education','Gender'] as predictor variable
+- Use model.predict(x_test) for prediction of test dataset
 
 *** =pre_exercise_code
 
@@ -478,8 +478,6 @@ y_train = train_modified['Loan_Status'].values
 # Model Building
 model = LogisticRegression()
 model.fit(x_train, y_train)
-
-
 ```
 
 *** =sample_code
@@ -495,7 +493,7 @@ predictors =[____,_____,_____]
 x_test = test_modified[predictors].values
 
 #Predict Output
-predicted= model.predict(x_test)
+predicted= model._____(x_test)
 
 #Reverse encoding for predicted outcome
 predicted = number.inverse_transform(predicted)
@@ -544,16 +542,10 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 test_object("predictors")
 
 # Test for model
-#test_object("predicted")
+test_object("predicted")
 
 success_msg("Great work!")
 ```
-
-
-
-
-
-
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:0f04d6b3e1
 
