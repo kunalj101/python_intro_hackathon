@@ -214,54 +214,33 @@ msg_success = "Great! Go ahead with modeling exercise"
 test_mc(4, [msg_bad1, msg_bad1, msg_bad1, msg_success ]) 
 ```
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:f4c3fbee79
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Import required libraries
+## Logistic Regression Introduction
 
-Now, we have performed all the pre processing steps with data, it's time to start with modeling exercise. As I discussed, we should Import required library (In python, we mostly use sklearn). This is a classification challenge so we will import module of classification algorithms
+Logistic Regression is a classification algorithm. It is used to predict a binary outcome (1 / 0, Yes / No, True / False) given a set of independent variables. To represent binary / categorical outcome, we use dummy variables. You can also think of logistic regression as a special case of linear regression when the outcome variable is categorical, where we are using log of odds as dependent variable. In simple words, it predicts the probability of occurrence of an event by fitting data to a logit function, read more about <a href="http://www.analyticsvidhya.com/blog/2015/11/beginners-guide-on-logistic-regression-in-r/"> Logistic Regression </a>. 
 
-```{python}
-  #Logistic Rgression
-  from sklearn.linear_model import LogisticRegression  
-  
-  #Decision Tree
-  from sklearn.tree import DecisionTreeClassifier 
-  
-  #Random Forest
-  from sklearn.ensemble import RandomForestClassifier 
-```
 
 *** =instructions
-Import required library for decision tree and random forest
-
+Create a object of LogisticRegression
 
 
 *** =hint
-- Use from sklearn.tree import DecisionTreeClassifier
-- Use from sklearn.ensemble import RandomForestClassifier
-
+You can use from sklearn.linear_model import LogisticRegression command
 
 *** =pre_exercise_code
 
 ```{python}
 from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
 
 ```
 
 *** =sample_code
 
 ```{python}
+
 # Import module for Logistic regression
-from sklearn.linear_model import LogisticRegression
-
-# Import module for Decision Tree
-from sklearn.tree import _________
-
-# Import module for Random Forest
-from _________ import RandomForestClassifier
-
+from sklearn.linear_model import ______ 
 
 ```
 
@@ -270,12 +249,6 @@ from _________ import RandomForestClassifier
 ```{python}
 # Import module for Logistic regression
 from sklearn.linear_model import LogisticRegression
-
-# Import module for Decision Tree
-from sklearn.tree import DecisionTreeClassifier
-
-# Import module for Random Forest
-from sklearn.ensemble import RandomForestClassifier
 
 ```
 
@@ -286,14 +259,24 @@ from sklearn.ensemble import RandomForestClassifier
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Import module for Decision Tree
-test_import("DecisionTreeClassifier", same_as = False)
-
-# Import module for Random Forest
-test_import("RandomForestClassifier", same_as = False)
+# Test for predictor selection
+test_import("LogisticRegression", same_as = False)
 
 success_msg("Great work!")
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
