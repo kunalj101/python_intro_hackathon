@@ -406,7 +406,6 @@ To send a submission to DataHack you need to predict the loan approval rate for 
 Next, you need to make sure your output is in line with the submission requirements of DataHack: a csv file with exactly 367 entries and two columns: Loan_ID and Loan_Status. Then create a csv file using to_csv() method from Pandas.
 
 
-```  
 
 *** =instructions
 - Store input variable in list "predictors"
