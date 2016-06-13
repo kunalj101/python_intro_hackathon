@@ -45,7 +45,7 @@ test_mc(2, [msg_bad1, msg_success])
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:2c1cf7aa90
-## Label Gender to numeric array
+## Label categories of Gender to number
 
 Library "Scikit Learn" only works with numeric array hence we need to label all the character variable into numeric array. For Example: Variable "Gender" has two labels "Male" and "Female", here our objective is to label "Male" and "Female" to number as 1 for "Male" and 0 for "Female".
 
