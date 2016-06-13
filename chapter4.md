@@ -247,7 +247,8 @@ train['Self_Employed'].fillna('No',inplace=True)
 ```
 
 *** =instructions
-Impute missing values with more frequent category
+- Impute missing values with more frequent category
+- Use value_counts() to check more frequent category of variable
 
 *** =hint
 - Male is more frequent in Gender
