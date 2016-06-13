@@ -551,7 +551,7 @@ success_msg("Great work!")
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:0f04d6b3e1
 
-## Introduction to Decision Treee
+## Decision Tree Introduction
 
 Decision tree is mostly used in classification problems. It works for both categorical and continuous input and output variables. In this technique, we split the population or sample into two or more homogeneous sets (or sub-populations) based on most significant splitter / differentiator in input variables, read more about <a href="http://www.analyticsvidhya.com/blog/2015/01/decision-tree-simplified/"> Decision Tree </a>.
 
@@ -773,7 +773,7 @@ success_msg("Great work!")
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:ff4ced6565
 
-## Introduction to Random Forest
+## Random Forest Introduction
 
 Random Forest is a versatile machine learning method capable of performing both regression and classification tasks. It also undertakes dimensional reduction methods, treats missing values, outlier values and other essential steps of data exploration, and does a fairly good job. It is a type of ensemble learning method, where a group of weak models combine to form a powerful model, read more about <a href="http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-challenges/"> Random Forest </a>.
 
