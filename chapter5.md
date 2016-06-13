@@ -174,7 +174,7 @@ msg_success = "Yes! We should always treat missing value"
 test_mc(1, [msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:ee5ed17633
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:bd9b384210
 ## Have you performed data preprocessing?
 
 As I discussed, you should perform some data pre processing steps for both train and test dataset before jumping into model building exercise:
