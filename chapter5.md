@@ -245,7 +245,8 @@ Import required library for decision tree and random forest
 
 ```{python}
 from sklearn.linear_model import LogisticRegression
-from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 ```
 
