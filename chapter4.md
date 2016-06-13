@@ -366,6 +366,7 @@ train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacam
 
 # Import testing file
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+train['TotalIncome'] = train['ApplicantIncome'] + train['CoapplicantIncome']
 
 ```
 
@@ -380,6 +381,7 @@ train['TotalIncome'] =
 
 # Perform log transformation of TotalIncome to make it closer to normal
 train['TotalIncome_log']=
+
 
 ```
 
