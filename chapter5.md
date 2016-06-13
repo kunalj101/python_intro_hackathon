@@ -286,9 +286,7 @@ success_msg("Great work!")
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:6eb60851bc
 
-## Performing prediction using Logistic Regression
-
-Logistic Regression is a classification algorithm. It is used to predict a binary outcome (1 / 0, Yes / No, True / False) given a set of independent variables, read more about <a href="http://www.analyticsvidhya.com/blog/2015/11/beginners-guide-on-logistic-regression-in-r/"> Logistic Regression </a>.
+## Build your first logistic regression model
 
 Let’s make our first Logistic Regression model. One way would be to take all the variables into the model but this might result in overfitting (don’t worry if you’re unaware of this terminology yet). In simple words, taking all variables might result in the model understanding complex relations specific to the data and will not generalize well.
 
@@ -299,55 +297,12 @@ We can easily make some intuitive hypothesis to set the ball rolling. The chance
 * Applicants with higher education level
 * Properties in urban areas with high growth perspectives
 
-Build a logistic regression model for two predictors variable "Credit_History" and "Education"
-
-* Importing libraries and feature selection
-
-```{python}
-  from sklearn.linear_model import LogisticRegression  
-  
-  predictors = ['Credit_History','Education']
-```
-  
-* Converting predictors and outcome to numpy array
-
-```{python}  
-  x_train = train_modified[predictors].values
-  y_train = train_modified['Loan_Status'].values
-  x_test = test_modified[predictors].values
-```  
-
-* Model Building
-
-```{python}    
-  model = LogisticRegression()
-  
-  model.fit(x_train, y_train)
-```  
-
-* Predicting class and converting to original labels "Y" / "N"
-
-```{python}      
-  predicted= model.predict(x_test)
-  
-  #Remember number = LabelEncoder()
-  predicted = number.inverse_transform(predicted)
-```    
-
-* Storing prediction to test data set and sumit solution to <a href="datahack.analyticsvidhya.com">datahack</a>
-
-  ```{python}      
-  test_modified['Loan_Status']=predicted
-  
-  test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
-
-```
 
 
 *** =instructions
 - Store input variable in list "predictors"
 - Create a object of logistic regression
-- Train model on training data set (x_train, y_train) and perform predition on test data (x_test)
+- Train model on training data set (x_train, y_train)
 
 
 *** =hint
@@ -409,7 +364,157 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 ```{python}
 
 #train_modified and test_modified already loaded in the workspace
+#Import module for Logistic regression
+from sklearn.linear_model import LogisticRegression
+
+# Select three predictors Credit_History, Education and Gender
+predictors =[____,_____,_____]
+
+# Converting predictors and outcome to numpy array
+x_train = train_modified[predictors].values
+y_train = train_modified['Loan_Status'].values
+
+# Model Building
+model = _________
+
+```
+
+*** =solution
+
+```{python}
 # Import module for Logistic regression
+from sklearn.linear_model import LogisticRegression
+
+# Select three predictors Credit_History, Education and Gender
+predictors =['Credit_History','Education','Gender']
+
+# Converting predictors and outcome to numpy array
+x_train = train_modified[predictors].values
+y_train = train_modified['Loan_Status'].values
+
+# Model Building
+model = LogisticRegression()
+model.fit(x_train, y_train)
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Test for predictor selection
+test_object("predictors")
+
+# Test for model
+#test_object("model")
+
+success_msg("Great work!")
+```
+
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:6eb60851bc
+
+## Prediction and submit to DataHack
+
+To send a submission to DataHack you need to predict the loan approval rate for the observations in the test set using ".predict()" method with logistic regression object (model). To extract the test features we will need to create a numpy array of input features of test data set in the same way as we did when training the model for training data.
+
+Next, you need to make sure your output is in line with the submission requirements of DataHack: a csv file with exactly 367 entries and two columns: Loan_ID and Loan_Status. Then create a csv file using to_csv() method from Pandas.
+
+* Creating test predictors
+
+```{python}  
+  predictors=['Credit_History','Education']
+  x_test = test_modified[predictors].values
+```  
+
+* Prediction and submitting to DataHack
+
+```{python}    
+#Predict Output
+predicted= model.predict(x_test)
+
+#Reverse encoding for predicted outcome
+predicted = number.inverse_transform(predicted)
+
+#Store it to test dataset
+test_modified['Loan_Status']=predicted
+
+#Output file to make submission
+test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
+  
+  
+```  
+
+*** =instructions
+- Store input variable in list "predictors"
+- Create a object of logistic regression
+- Train model on training data set (x_train, y_train)
+
+
+*** =hint
+- Use predictors =['Credit_History','Education','Gender'] as predictor variable
+
+*** =pre_exercise_code
+
+```{python}
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
+
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+#Combining both train and test dataset
+
+train['Type']='Train' #Create a flag for Train and Test Data set
+test['Type']='Test'
+fullData = pd.concat([train,test],axis=0)
+
+#Identify categorical and continuous variables
+
+ID_col = ['Loan_ID']
+target_col = ["Loan_Status"]
+cat_cols = ['Credit_History','Dependents','Gender','Married','Education','Property_Area','Self_Employed']
+
+other_col=['Type'] #Test and Train Data set identifier
+num_cols= list(set(list(fullData.columns))-set(cat_cols)-set(ID_col)-set(target_col)-set(other_col))
+
+#Imputing Missing values with mean for continuous variable
+fullData[num_cols] = fullData[num_cols].fillna(fullData[num_cols].mean(),inplace=True)
+
+
+#Imputing Missing values with mode for categorical variables
+cat_imput=pd.Series(fullData[cat_cols].mode().values[0])
+cat_imput.index=cat_cols
+fullData[cat_cols] = fullData[cat_cols].fillna(cat_imput,inplace=True)
+
+#Create a new column as Total Income
+
+fullData['TotalIncome']=fullData['ApplicantIncome']+fullData['CoapplicantIncome']
+
+#Take a log of TotalIncome + 1, adding 1 to deal with zeros of TotalIncome it it exists
+fullData['Log_TotalIncome']=np.log(fullData['TotalIncome'])
+
+#create label encoders for categorical features
+for var in cat_cols:
+    number = LabelEncoder()
+    fullData[var] = number.fit_transform(fullData[var].astype('str'))
+
+train_modified=fullData[fullData['Type']=='Train']
+test_modified=fullData[fullData['Type']=='Test']
+train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status"].astype('str'))
+```
+
+*** =sample_code
+
+```{python}
+
+#train_modified and test_modified already loaded in the workspace
+#Import module for Logistic regression
 from sklearn.linear_model import LogisticRegression
 
 # Select three predictors Credit_History, Education and Gender
@@ -422,15 +527,6 @@ x_test = test_modified[predictors].values
 
 # Model Building
 model = _________
-model.fit(x_train, y_train)
-
-# Predict class and converting to original labels
-predicted= model.predict(____)
-predicted = number.inverse_transform(predicted)
-
-# Storing prediction to test data set and sumit solution to datahack
-test_modified['Loan_Status']=predicted
-test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 
 ```
 
@@ -452,14 +548,6 @@ x_test = test_modified[predictors].values
 model = LogisticRegression()
 model.fit(x_train, y_train)
 
-# Predict class and converting to original labels
-predicted= model.predict(x_test)
-predicted = number.inverse_transform(predicted)
-
-# Storing prediction to test data set and sumit solution to datahack
-test_modified['Loan_Status']=predicted
-test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
-
 ```
 
 *** =sct
@@ -475,11 +563,24 @@ test_object("predictors")
 # Test for model
 #test_object("model")
 
-# Test for prediction
-test_object("predicted")
-
 success_msg("Great work!")
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:0f04d6b3e1
 
