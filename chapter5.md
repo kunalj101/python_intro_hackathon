@@ -882,7 +882,7 @@ success_msg("Great work!")
 ```
 
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:4621632d2a
 ## Selecting important variables for model building
 
 One of benefits of Random forest which excites me most is, the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the dimensionality reduction methods. Further, the model outputs Importance of variable, which can be a very handy feature. 
