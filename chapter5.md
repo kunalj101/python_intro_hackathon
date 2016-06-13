@@ -390,7 +390,7 @@ model.fit(x_train, y_train)
 test_object("predictors")
 
 # Test for model
-test_object("model")
+#test_object("model")
 
 success_msg("Great work!")
 ```
@@ -405,35 +405,12 @@ To send a submission to DataHack you need to predict the loan approval rate for 
 
 Next, you need to make sure your output is in line with the submission requirements of DataHack: a csv file with exactly 367 entries and two columns: Loan_ID and Loan_Status. Then create a csv file using to_csv() method from Pandas.
 
-* Creating test predictors
 
-```{python}  
-  predictors=['Credit_History','Education']
-  x_test = test_modified[predictors].values
-```  
-
-* Prediction and submitting to DataHack
-
-```{python}    
-#Predict Output
-predicted= model.predict(x_test)
-
-#Reverse encoding for predicted outcome
-predicted = number.inverse_transform(predicted)
-
-#Store it to test dataset
-test_modified['Loan_Status']=predicted
-
-#Output file to make submission
-test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
-  
-  
 ```  
 
 *** =instructions
 - Store input variable in list "predictors"
-- Create a object of logistic regression
-- Train model on training data set (x_train, y_train)
+- Use .predict() method for prediction
 
 
 *** =hint
@@ -488,32 +465,7 @@ for var in cat_cols:
 train_modified=fullData[fullData['Type']=='Train']
 test_modified=fullData[fullData['Type']=='Test']
 train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status"].astype('str'))
-```
 
-*** =sample_code
-
-```{python}
-
-#train_modified and test_modified already loaded in the workspace
-#Import module for Logistic regression
-from sklearn.linear_model import LogisticRegression
-
-# Select three predictors Credit_History, Education and Gender
-predictors =[____,_____,_____]
-
-# Converting predictors and outcome to numpy array
-x_train = train_modified[predictors].values
-y_train = train_modified['Loan_Status'].values
-x_test = test_modified[predictors].values
-
-# Model Building
-model = _________
-
-```
-
-*** =solution
-
-```{python}
 # Import module for Logistic regression
 from sklearn.linear_model import LogisticRegression
 
@@ -523,11 +475,62 @@ predictors =['Credit_History','Education','Gender']
 # Converting predictors and outcome to numpy array
 x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
-x_test = test_modified[predictors].values
 
 # Model Building
 model = LogisticRegression()
 model.fit(x_train, y_train)
+
+
+```
+
+*** =sample_code
+
+```{python}
+
+#test_modified already loaded in the workspace
+
+# Select three predictors Credit_History, Education and Gender
+predictors =[____,_____,_____]
+
+# Converting predictors and outcome to numpy array
+x_test = test_modified[predictors].values
+
+#Predict Output
+predicted= model.predict(x_test)
+
+#Reverse encoding for predicted outcome
+predicted = number.inverse_transform(predicted)
+
+#Store it to test dataset
+test_modified['Loan_Status']=predicted
+
+#Output file to make submission
+test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
+
+```
+
+*** =solution
+
+```{python}
+#test_modified already loaded in the workspace
+
+# Select three predictors Credit_History, Education and Gender
+predictors =['Credit_History','Education','Gender']
+
+# Converting predictors and outcome to numpy array
+x_test = test_modified[predictors].values
+
+#Predict Output
+predicted= model.predict(x_test)
+
+#Reverse encoding for predicted outcome
+predicted = number.inverse_transform(predicted)
+
+#Store it to test dataset
+test_modified['Loan_Status']=predicted
+
+#Output file to make submission
+test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 
 ```
 
@@ -542,20 +545,10 @@ model.fit(x_train, y_train)
 test_object("predictors")
 
 # Test for model
-#test_object("model")
+#test_object("predicted")
 
 success_msg("Great work!")
 ```
-
-
-
-
-
-
-
-
-
-
 
 
 
