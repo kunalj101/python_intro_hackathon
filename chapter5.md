@@ -11,7 +11,6 @@ In Python, Scikit-Learn (sklearn) is the most commonly used library for model bu
 
 * Treat missing values
 * Treat outlier/ exponential observation
-* Identify independent and dependent observation
 * All inputs must be numeric array ( Requirement of scikit learn library) 
 
 
@@ -42,6 +41,99 @@ msg_success = "Yes! We should always treat missing value"
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
 test_mc(2, [msg_bad1, msg_success]) 
 ```
+
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:2c1cf7aa90
+## Label Gender to numeric array
+
+Library "Scikit Learn" only works with numeric array hence we need to label all the character variable into numeric array. For Example: Variable "Gender" has two labels "Male" and "Female", here our objective is to label "Male" and "Female" to number as 1 for "Male" and 0 for "Female".
+
+"Scikit Learn" library has module "LabelEncoder" which helps to label charater labels into numbers so first import module "LabelEncoder".
+
+```{python}
+
+from sklearn.preprocessing import LabelEncoder
+
+number = LabelEncoder()
+
+train['Gender'] = le.fit_transform(train['Gender'])
+
+```
+
+*** =instructions
+- Import LabelEncoder 
+- Label categories of variable "Married" to number 
+
+
+*** =hint
+Use expression train['Married'] = number.fit_transform(train['Married'])
+
+
+*** =pre_exercise_code
+
+```{python}
+
+# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+
+# Import library pandas
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
+
+# Import training file
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+
+# Import testing file
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+```
+
+*** =sample_code
+
+```{python}
+
+#import module for label encoding
+from sklearn.preprocessing import ______
+
+#train and test dataset is already loaded in the enviornment
+# Perform label encoding for Married
+number = LabelEncoder()
+train['Married'] = number.________(train['Property_Area'])
+
+
+```
+
+*** =solution
+
+```{python}
+
+#import module for label encoding
+from sklearn.preprocessing import LabelEncoder
+
+#train and test dataset is already loaded in the enviornment
+# Perform label encoding for Married
+number = LabelEncoder()
+train['Married'] = number.fit_transform(train['Property_Area'])
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+#import module for label encoding
+test_import("LabelEncoder", same_as = False)
+
+# Perform label encoding for Married
+test_object(“train['Married']”)
+
+success_msg("Great work!")
+```
+
+
 
 
 
