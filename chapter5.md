@@ -175,7 +175,7 @@ test_mc(1, [msg_success, msg_bad1])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:bd9b384210
-## Have you performed data preprocessing?
+## Have you performed data preprocessing step?
 
 As I discussed, you should perform some data pre processing steps for both train and test dataset before jumping into model building exercise:
 * Missing value imputation
@@ -205,8 +205,8 @@ All steps are necessary anc could impact your model performance
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "Try again"
-msg_success = "Yes! We should always treat missing value"
+msg_bad1 = "You should first perform the pre processing steps"
+msg_success = "Great! Go ahead with modeling exercise"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
@@ -215,24 +215,10 @@ test_mc(4, [msg_bad1, msg_bad1, msg_bad1, msg_success ])
 ```
 
 
-
-
-
-
-
-
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## First Step of Model Building
+## Import required libraries
 
-Till now, we have looked at the data exploartion, cleaning, feature engineering and pre processing steps of model building. Now, we will look at the methods of building a model. 
-
-In this challenge "Loan Prediction", we need to classify customer in Loan status "Y" or "N" category based on available information about customer. 
-
-Before jumping into model building steps, we need to follow below steps:
-
-* Impute missing values of the data set
-
-* Import required library (In python, we mostly use sklearn), this is a classification challenge so we will import module of classification algorithms
+Now, we have performed all the pre processing steps with data, it's time to start with modeling exercise. As I discussed, we should Import required library (In python, we mostly use sklearn), this is a classification challenge so we will import module of classification algorithms
 
 ```{python}
   #Logistic Rgression
@@ -245,76 +231,25 @@ Before jumping into model building steps, we need to follow below steps:
   from sklearn.ensemble import RandomForestClassifier 
 ```
 
-* Convert categorical variables to numeric array because sklearn requires all inputs in numeric array
-
-
 *** =instructions
-- Import required library for decision tree and random forest
-- Use len() function with dataframes train_modified and test_modified, these two dataframes are available in the enviorment after missing values imputation and label encoding for all categorical variables
+Import required library for decision tree and random forest
+
 
 
 *** =hint
 - Use from sklearn.tree import DecisionTreeClassifier
 - Use from sklearn.ensemble import RandomForestClassifier
-- Use len(train_modified) to return the length
 
 
 *** =pre_exercise_code
 
 ```{python}
-import pandas as pd
-import numpy as np
-from sklearn.preprocessing import LabelEncoder
-
-train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
-test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
-
-#Combining both train and test dataset
-
-train['Type']='Train' #Create a flag for Train and Test Data set
-test['Type']='Test'
-fullData = pd.concat([train,test],axis=0)
-
-#Identify categorical and continuous variables
-
-ID_col = ['Loan_ID']
-target_col = ["Loan_Status"]
-cat_cols = ['Credit_History','Dependents','Gender','Married','Education','Property_Area','Self_Employed']
-
-other_col=['Type'] #Test and Train Data set identifier
-num_cols= list(set(list(fullData.columns))-set(cat_cols)-set(ID_col)-set(target_col)-set(other_col))
-
-#Imputing Missing values with mean for continuous variable
-fullData[num_cols] = fullData[num_cols].fillna(fullData[num_cols].mean(),inplace=True)
-
-
-#Imputing Missing values with mode for categorical variables
-cat_imput=pd.Series(fullData[cat_cols].mode().values[0])
-cat_imput.index=cat_cols
-fullData[cat_cols] = fullData[cat_cols].fillna(cat_imput,inplace=True)
-
-#Create a new column as Total Income
-
-fullData['TotalIncome']=fullData['ApplicantIncome']+fullData['CoapplicantIncome']
-
-#Take a log of TotalIncome + 1, adding 1 to deal with zeros of TotalIncome it it exists
-fullData['Log_TotalIncome']=np.log(fullData['TotalIncome'])
-
-#create label encoders for categorical features
-for var in cat_cols:
-    number = LabelEncoder()
-    fullData[var] = number.fit_transform(fullData[var].astype('str'))
-
-train_modified=fullData[fullData['Type']=='Train']
-test_modified=fullData[fullData['Type']=='Test']
-train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status"].astype('str'))
 
 ```
 
 *** =sample_code
 
 ```{python}
-#train_modified and test_modified already loaded in the workspace
 # Import module for Logistic regression
 from sklearn.linear_model import LogisticRegression
 
@@ -324,9 +259,6 @@ from sklearn.tree import _________
 # Import module for Random Forest
 from _________ import RandomForestClassifier
 
-# Number of observations in the dataframes train_modified and test_modified
-train_modified_count = 
-test_modified_count = 
 
 ```
 
@@ -342,10 +274,6 @@ from sklearn.tree import DecisionTreeClassifier
 # Import module for Random Forest
 from sklearn.ensemble import RandomForestClassifier
 
-# Number of observations in train_modified and test_modified
-train_modified_count = len(train_modified)
-test_modified_count = len(test_modified)
-
 ```
 
 *** =sct
@@ -355,13 +283,11 @@ test_modified_count = len(test_modified)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for import library
+# Import module for Decision Tree
+test_import("DecisionTreeClassifier", same_as = False)
 
-
-# Test number of observations in train_modiefied and test_modiefied
-test_object("train_modified_count")
-test_object("test_modified_count")
-
+# Import module for Random Forest
+test_import("RandomForestClassifier", same_as = False)
 
 success_msg("Great work!")
 ```
