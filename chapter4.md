@@ -393,7 +393,7 @@ train['TotalIncome_log']=
 train['TotalIncome'] = train['ApplicantIncome'] + train['CoapplicantIncome']
 
 # Perform log transformation of TotalIncome to make it closer to normal
-#train['TotalIncome_log'] = np.log(train['TotalIncome']+1)
+train['TotalIncome_log'] = np.log(train['TotalIncome']+1)
 
 
 ```
