@@ -608,7 +608,7 @@ success_msg("Great work!")
 
 Let’s make first Decision Tree model. Similar to Logistic regression, here we also first select the input features, train model and finally perform prediction on test data set.
 
-Ok, time for you to build your first logistics regression model! The pre processed train_modified and test_modifed data are available in your workspace.
+Ok, time for you to build your first Decision Tree model! The pre processed train_modified and test_modifed data are available in your workspace.
 
 
 *** =instructions
@@ -773,62 +773,78 @@ success_msg("Great work!")
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:ff4ced6565
 
-## Performing prediction using Random Forest
+## Introduction to Random Forest
 
 Random Forest is a versatile machine learning method capable of performing both regression and classification tasks. It also undertakes dimensional reduction methods, treats missing values, outlier values and other essential steps of data exploration, and does a fairly good job. It is a type of ensemble learning method, where a group of weak models combine to form a powerful model, read more about <a href="http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-challenges/"> Random Forest </a>.
 
-* Importing libraries and feature selection
+
+*** =instructions
+Create a object of DecisionTreeClassifier
+
+
+*** =hint
+You can use from sklearn.ensemble import RandomForestClassifier command
+
+*** =pre_exercise_code
 
 ```{python}
-  from sklearn.ensemble import RandomForestClassifier
-  
-  predictors=['Credit_History','LoanAmount','Gender']
+from sklearn.ensemble import RandomForestClassifier
 ```
-  
-* Converting predictors and outcome to numpy array
 
-```{python}  
-  x_train = train_modified[predictors].values
-  y_train = train_modified['Loan_Status'].values
-  x_test = test_modified[predictors].values
-```  
+*** =sample_code
 
-* Model Building
+```{python}
 
-```{python}    
-model = RandomForestClassifier()
-model.fit(x_train, y_train)
-```  
+# Import module for Random Forest Classifiers
+from sklearn.ensemble import ________
 
-* Predicting class and converting to original labels "Y" / "N"
-
-```{python}      
-  predicted = model.predict(x_test)
-  
-  #Remember number = LabelEncoder()
-  predicted = number.inverse_transform(predicted)
-```    
-
-* Storing prediction to test data set and submit solution to <a href="datahack.analyticsvidhya.com">datahack</a>
-
-  ```{python}      
-  test_modified['Loan_Status']=predicted
-  
-  test_modified.to_csv("Submission3.csv", columns=['Loan_ID','Loan_Status'])
 
 ```
+
+*** =solution
+
+```{python}
+# Import module for Random Forest classifier
+from sklearn.ensemble import RandomForestClassifier
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Test for predictor selection
+test_import("RandomForestClassifier", same_as = False)
+
+
+success_msg("Great work!")
+```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:dcf5c3e2c2
+
+## Train model and do prediction using Random Forest
+
+Let’s make first Random Forest model. Similar to Logistic regression and Decision Tree, here we also first select the input features, train model and finally perform prediction on test data set.
+
+Ok, time for you to build your first Random Forest model! The pre processed train_modified and test_modifed data are available in your workspace.
 
 
 *** =instructions
 - Store input variable in list "predictors"
-- Select the target variable
-- Create a object of Random Forest Classifier
-- Train model on training data set and perform prediction on test data
-- Export only two columns ("Loan_ID", "Loan_Status") of test data set
+- Create a object of RandomForestClassifier
+- Train model on training data set (x_train, y_train)
+- Use .predict() method for prediction
+- Use to_csv() to export csv file
 
 
 *** =hint
-- Use three predictors ['Credit_History','LoanAmount','Log_TotalIncome']
+- Use predictors =['Credit_History','Education','Gender'] as predictor variable
+- Use from sklearn.tree import RandomForestClassifier
+
 
 *** =pre_exercise_code
 
@@ -865,7 +881,6 @@ cat_imput.index=cat_cols
 fullData[cat_cols] = fullData[cat_cols].fillna(cat_imput,inplace=True)
 
 #Create a new column as Total Income
-
 fullData['TotalIncome']=fullData['ApplicantIncome']+fullData['CoapplicantIncome']
 
 #Take a log of TotalIncome + 1, adding 1 to deal with zeros of TotalIncome it it exists
@@ -884,57 +899,73 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 *** =sample_code
 
 ```{python}
-#train_modified and test_modified already loaded in the workspace
-# Import module for Random Forest Classifiers
-from sklearn.ensemble import RandomForestClassifier
 
-# Select three predictors Credit_History, LoanAmount and Log_TotalIncome 
+#train_modified and test_modified already loaded in the workspace
+#Import module for Random Forest
+from sklearn.ensemble import __________
+
+# Select three predictors Credit_History, Education and Gender
 predictors =[____,_____,_____]
 
 # Converting predictors and outcome to numpy array
 x_train = train_modified[predictors].values
-y_train = train_modified[________].values
-x_test = test_modified[predictors].values
+y_train = train_modified['Loan_Status'].values
 
 # Model Building
 model = _________
 model.fit(x_train, y_train)
 
-# Predict class and converting to original labels
-predicted= model.predict(____)
+# Converting predictors and outcome to numpy array
+x_test = test_modified[predictors].values
+
+#Predict Output
+predicted= model._____(x_test)
+
+#Reverse encoding for predicted outcome
 predicted = number.inverse_transform(predicted)
 
-# Storing prediction to test data set and sumit solution to datahack
+#Store it to test dataset
 test_modified['Loan_Status']=predicted
-test_modified.to_csv("Submission3.csv", ____________)
+
+#Output file to make submission
+test_modified._____("Submission1.csv",columns=['Loan_ID','Loan_Status'])
+
 
 ```
 
 *** =solution
 
 ```{python}
-# Import module for Random Forest classifier
+#train_modified and test_modified already loaded in the workspace
+#Import module for Random Forest 
 from sklearn.ensemble import RandomForestClassifier
 
-# Select three predictors Credit_History, LoanAmount and Log_TotalIncome 
-predictors =['Credit_History','LoanAmount','Log_TotalIncome']
+# Select three predictors Credit_History, Education and Gender
+predictors =['Credit_History','Education','Gender']
 
 # Converting predictors and outcome to numpy array
 x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
-x_test = test_modified[predictors].values
 
 # Model Building
-model = RandomForestClassifier()
+model = DecisionTreeClassifier()
 model.fit(x_train, y_train)
 
-# Predict class and converting to original labels
+# Converting predictors and outcome to numpy array
+x_test = test_modified[predictors].values
+
+#Predict Output
 predicted= model.predict(x_test)
+
+#Reverse encoding for predicted outcome
 predicted = number.inverse_transform(predicted)
 
-# Storing prediction to test data set and sumit solution to datahack
+#Store it to test dataset
 test_modified['Loan_Status']=predicted
-test_modified.to_csv("Submission3.csv", columns=['Loan_ID','Loan_Status'])
+
+#Output file to make submission
+test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
+
 
 ```
 
@@ -951,11 +982,22 @@ test_object("predictors")
 # Test for model
 #test_object("model")
 
-# Test for prediction
+# Test for predicted
 #test_object("predicted")
+
 
 success_msg("Great work!")
 ```
+
+
+
+
+
+
+
+
+
+
 
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:4621632d2a
