@@ -174,6 +174,50 @@ msg_success = "Yes! We should always treat missing value"
 test_mc(1, [msg_success, msg_bad1]) 
 ```
 
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:ee5ed17633
+## Have you performed data preprocessing?
+
+As I discussed, you should perform some data pre processing steps for both train and test dataset before jumping into model building exercise:
+* Missing value imputation
+* Outlier treatment
+* Label encoding for character variables
+* Algorithm selection
+
+
+####Which of th following steps have you performed till now with both train and test data set?
+
+
+*** =instructions
+- Impute missing values of all variables
+- Treat outlier and influential observations
+- Label encoding for character variables
+- All of the above
+
+*** =hint
+All steps are necessary anc could impact your model performance
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Try again"
+msg_success = "Yes! We should always treat missing value"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(4, [msg_bad1, msg_bad1, msg_bad1, msg_success ]) 
+```
+
+
+
+
+
 
 
 
