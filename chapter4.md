@@ -207,7 +207,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
-# Impute missing value of LoanAmount with median for test data set
+# Impute missing value of LoanAmount with 168 for test data set
 test['LoanAmount'].fillna(______, inplace=True)
 
 ```
@@ -216,7 +216,7 @@ test['LoanAmount'].fillna(______, inplace=True)
 
 ```{python}
 
-# Impute missing value of LoanAmount with median for test data set
+# Impute missing value of LoanAmount with 168 for test data set
 test['LoanAmount'].fillna(168, inplace=True)
 
 ```
@@ -228,7 +228,7 @@ test['LoanAmount'].fillna(168, inplace=True)
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Impute missing value of LoanAmount with median for test data set
+# Impute missing value of LoanAmount with 168 for test data set
 #test_object(“test['LoanAmount']”)
 
 success_msg("Great work!")
