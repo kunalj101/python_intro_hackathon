@@ -948,7 +948,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = DecisionTreeClassifier()
+model = RandomForestClassifier()
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
@@ -988,16 +988,6 @@ test_object("predictors")
 
 success_msg("Great work!")
 ```
-
-
-
-
-
-
-
-
-
-
 
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:4621632d2a
