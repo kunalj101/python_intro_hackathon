@@ -376,6 +376,7 @@ y_train = train_modified['Loan_Status'].values
 
 # Model Building
 model = _________
+model.fit(x_train, y_train)
 
 ```
 
