@@ -134,7 +134,7 @@ success_msg("Great work!")
 ```
 
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:ee5ed17633
 ## Selecting the right algorithm
 
 Basic principle behind selecting the right algorithm is look at the dependent variable (or target variable). In this challenge "Loan Prediction", we need to classify customer in Loan status "Y" or "N" category based on available information about customer. Here Dependent variable is categorical and our task is to classify the customer in two groups; eligible for loan amount and not eligible for loan amounts.
