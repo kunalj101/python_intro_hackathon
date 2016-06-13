@@ -824,7 +824,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:dcf5c3e2c2
+--- type:NormalExercise lang:python xp:100 skills:1 key:f0d1f62bb1
 
 ## Train model and do prediction using Random Forest
 
