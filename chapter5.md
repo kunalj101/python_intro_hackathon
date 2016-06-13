@@ -134,7 +134,45 @@ success_msg("Great work!")
 ```
 
 
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+## Selecting the right algorithm
 
+Basic principle behind selecting the right algorithm is look at the dependent variable (or target variable). In this challenge "Loan Prediction", we need to classify customer in Loan status "Y" or "N" category based on available information about customer. Here Dependent variable is categorical and our task is to classify the customer in two groups; eligible for loan amount and not eligible for loan amounts.
+
+This is a classification challenge so we will import module of classification algorithms of sklearn library, below are the few classification algorithms:
+* Logistic Regression
+* Decision Tree
+* Random Forest
+
+
+####Is this e-mail is spam or not? Is it a classification challenge or regression?
+
+
+*** =instructions
+- Classification
+- Regression
+
+*** =hint
+- Regression: When we model for continuous variables
+- Classification: When we model to classify in different categories
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Try again"
+msg_success = "Yes! We should always treat missing value"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(2, [msg_bad1, msg_success]) 
+```
 
 
 
