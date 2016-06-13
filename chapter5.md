@@ -128,7 +128,7 @@ train['Married'] = number.fit_transform(train['Property_Area'])
 test_import("LabelEncoder", same_as = False)
 
 # Perform label encoding for Married
-#test_object(“train['Married']”)
+test_object(“train['Married']”)
 
 success_msg("Great work!")
 ```
