@@ -57,7 +57,7 @@ from sklearn.preprocessing import LabelEncoder
 
 number = LabelEncoder()
 
-train['Gender'] = le.fit_transform(train['Gender'])
+train['Gender'] = number.fit_transform(train['Gender'])
 
 ```
 
