@@ -549,169 +549,39 @@ success_msg("Great work!")
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:0f04d6b3e1
 
-## Performing prediction using Decision Tree
+## Introduction to Decision Treee
 
 Decision tree is mostly used in classification problems. It works for both categorical and continuous input and output variables. In this technique, we split the population or sample into two or more homogeneous sets (or sub-populations) based on most significant splitter / differentiator in input variables, read more about <a href="http://www.analyticsvidhya.com/blog/2015/01/decision-tree-simplified/"> Decision Tree </a>.
 
-Build a Decision Tree model for two predictors variable "Credit_History" and "Education"
-
-* Importing libraries and feature selection
-
-```{python}
-  from sklearn.tree import DecisionTreeClassifier
-  
-  predictors = ['Credit_History','Education']
-```
-  
-* Converting predictors and outcome to numpy array
-
-```{python}  
-  x_train = train_modified[predictors].values
-  y_train = train_modified['Loan_Status'].values
-  x_test = test_modified[predictors].values
-```  
-
-* Model Building
-
-```{python}    
-model = DecisionTreeClassifier()
-model.fit(x_train, y_train)
-```  
-
-* Predicting class and converting to original labels "Y" / "N"
-
-```{python}      
-  predicted = model.predict(x_test)
-  
-  #Remember number = LabelEncoder()
-  predicted = number.inverse_transform(predicted)
-```    
-
-* Storing prediction to test data set and sumit solution to <a href="datahack.analyticsvidhya.com">datahack</a>
-
-  ```{python}      
-  test_modified['Loan_Status']=predicted
-  
-  test_modified.to_csv("Submission2.csv", columns=['Loan_ID','Loan_Status'])
-
-```
-
 
 *** =instructions
-- Store input variable in list "predictors"
-- Create a object of Decisiontreeclassifier
-- Train model on training data set (x_train, y_train) and perform predition on test data (x_test)
-- Perform an inverse transformation of predicted class
+Create a object of DecisionTreeClassifier
 
 
 *** =hint
-- Use predictors =['Credit_History','Loan_Amount_Term','Log_TotalIncome'] as predictor variable
+You can use from sklearn.tree import DecisionTreeClassifier command
 
 *** =pre_exercise_code
 
 ```{python}
-import pandas as pd
-import numpy as np
-from sklearn.preprocessing import LabelEncoder
+from sklearn.tree import DecisionTreeClassifier
 
-train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
-test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
-
-#Combining both train and test dataset
-
-train['Type']='Train' #Create a flag for Train and Test Data set
-test['Type']='Test'
-fullData = pd.concat([train,test],axis=0)
-
-#Identify categorical and continuous variables
-
-ID_col = ['Loan_ID']
-target_col = ["Loan_Status"]
-cat_cols = ['Credit_History','Dependents','Gender','Married','Education','Property_Area','Self_Employed']
-
-other_col=['Type'] #Test and Train Data set identifier
-num_cols= list(set(list(fullData.columns))-set(cat_cols)-set(ID_col)-set(target_col)-set(other_col))
-
-#Imputing Missing values with mean for continuous variable
-fullData[num_cols] = fullData[num_cols].fillna(fullData[num_cols].mean(),inplace=True)
-
-
-#Imputing Missing values with mode for categorical variables
-cat_imput=pd.Series(fullData[cat_cols].mode().values[0])
-cat_imput.index=cat_cols
-fullData[cat_cols] = fullData[cat_cols].fillna(cat_imput,inplace=True)
-
-#Create a new column as Total Income
-
-fullData['TotalIncome']=fullData['ApplicantIncome']+fullData['CoapplicantIncome']
-
-#Take a log of TotalIncome + 1, adding 1 to deal with zeros of TotalIncome it it exists
-fullData['Log_TotalIncome']=np.log(fullData['TotalIncome'])
-
-#create label encoders for categorical features
-for var in cat_cols:
-    number = LabelEncoder()
-    fullData[var] = number.fit_transform(fullData[var].astype('str'))
-
-train_modified=fullData[fullData['Type']=='Train']
-test_modified=fullData[fullData['Type']=='Test']
-train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status"].astype('str'))
 ```
 
 *** =sample_code
 
 ```{python}
-#train_modified and test_modified already loaded in the workspace
-# Import module for Decision Tree Classifiers
-from sklearn.tree import DecisionTreeClassifier
 
-# Select three predictors Credit_History, Education and Gender
-predictors =[____,_____,_____]
-
-# Converting predictors and outcome to numpy array
-x_train = train_modified[predictors].values
-y_train = train_modified['Loan_Status'].values
-x_test = test_modified[predictors].values
-
-# Model Building
-model = _________
-model.fit(______, ______)
-
-# Predict class and converting to original labels
-predicted= model.predict(x_test)
-predicted = number._________(predicted)
-
-# Storing prediction to test data set and sumit solution to datahack
-test_modified['Loan_Status']=predicted
-test_modified.to_csv("Submission2.csv", columns=['Loan_ID','Loan_Status'])
+# Import module for DecisionTreeClassifier
+from sklearn.tree import __________
 
 ```
 
 *** =solution
 
 ```{python}
-# Import module for Decision Tree
+# Import module for Logistic regression
 from sklearn.tree import DecisionTreeClassifier
-
-# Select three predictors Credit_History, Education and Gender
-predictors =['Credit_History','Education','Gender']
-
-# Converting predictors and outcome to numpy array
-x_train = train_modified[predictors].values
-y_train = train_modified['Loan_Status'].values
-x_test = test_modified[predictors].values
-
-# Model Building
-model = DecisionTreeClassifier()
-model.fit(x_train, y_train)
-
-# Predict class and converting to original labels
-predicted= model.predict(x_test)
-predicted = number.inverse_transform(predicted)
-
-# Storing prediction to test data set and sumit solution to datahack
-test_modified['Loan_Status']=predicted
-test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 
 ```
 
@@ -723,16 +593,11 @@ test_modified.to_csv("Submission1.csv", columns=['Loan_ID','Loan_Status'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("predictors")
-
-# Test for model
-#test_object("model")
-
-# Test for prediction
-test_object("predicted")
+test_import("DecisionTreeClassifier", same_as = False)
 
 success_msg("Great work!")
 ```
+
 
 
 
