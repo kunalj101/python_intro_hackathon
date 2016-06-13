@@ -280,6 +280,8 @@ We can easily make some intuitive hypothesis to set the ball rolling. The chance
 * Applicants with higher education level
 * Properties in urban areas with high growth perspectives
 
+Ok, time for you to build your first logistics regression model! The pre processed train_modified and test_modifed data are available in your workspace.
+
 *** =instructions
 - Store input variable in list "predictors"
 - Create a object of logistic regression
@@ -600,6 +602,170 @@ success_msg("Great work!")
 
 
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:6eb60851bc
+
+## Train model and do prediction using Decision Tree
+
+Let’s make first Decision Tree model. Similar to Logistic regression, here we also first select the input features, train model and finally perform prediction on test data set.
+
+Ok, time for you to build your first logistics regression model! The pre processed train_modified and test_modifed data are available in your workspace.
+
+
+*** =instructions
+- Store input variable in list "predictors"
+- Create a object of DecisionTreeClassifier
+- Train model on training data set (x_train, y_train)
+- Use .predict() method for prediction
+- Use to_csv() to export csv file
+
+
+*** =hint
+- Use predictors =['Credit_History','Education','Gender'] as predictor variable
+- Use from sklearn.tree import DecisionTreeClassifier
+
+
+*** =pre_exercise_code
+
+```{python}
+import pandas as pd
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
+
+train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
+test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
+
+#Combining both train and test dataset
+
+train['Type']='Train' #Create a flag for Train and Test Data set
+test['Type']='Test'
+fullData = pd.concat([train,test],axis=0)
+
+#Identify categorical and continuous variables
+
+ID_col = ['Loan_ID']
+target_col = ["Loan_Status"]
+cat_cols = ['Credit_History','Dependents','Gender','Married','Education','Property_Area','Self_Employed']
+
+other_col=['Type'] #Test and Train Data set identifier
+num_cols= list(set(list(fullData.columns))-set(cat_cols)-set(ID_col)-set(target_col)-set(other_col))
+
+#Imputing Missing values with mean for continuous variable
+fullData[num_cols] = fullData[num_cols].fillna(fullData[num_cols].mean(),inplace=True)
+
+
+#Imputing Missing values with mode for categorical variables
+cat_imput=pd.Series(fullData[cat_cols].mode().values[0])
+cat_imput.index=cat_cols
+fullData[cat_cols] = fullData[cat_cols].fillna(cat_imput,inplace=True)
+
+#Create a new column as Total Income
+fullData['TotalIncome']=fullData['ApplicantIncome']+fullData['CoapplicantIncome']
+
+#Take a log of TotalIncome + 1, adding 1 to deal with zeros of TotalIncome it it exists
+fullData['Log_TotalIncome']=np.log(fullData['TotalIncome'])
+
+#create label encoders for categorical features
+for var in cat_cols:
+    number = LabelEncoder()
+    fullData[var] = number.fit_transform(fullData[var].astype('str'))
+
+train_modified=fullData[fullData['Type']=='Train']
+test_modified=fullData[fullData['Type']=='Test']
+train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status"].astype('str'))
+```
+
+*** =sample_code
+
+```{python}
+
+#train_modified and test_modified already loaded in the workspace
+#Import module for Decision tree
+from sklearn.tree import __________
+
+# Select three predictors Credit_History, Education and Gender
+predictors =[____,_____,_____]
+
+# Converting predictors and outcome to numpy array
+x_train = train_modified[predictors].values
+y_train = train_modified['Loan_Status'].values
+
+# Model Building
+model = _________
+model.fit(x_train, y_train)
+
+# Converting predictors and outcome to numpy array
+x_test = test_modified[predictors].values
+
+#Predict Output
+predicted= model._____(x_test)
+
+#Reverse encoding for predicted outcome
+predicted = number.inverse_transform(predicted)
+
+#Store it to test dataset
+test_modified['Loan_Status']=predicted
+
+#Output file to make submission
+test_modified._____("Submission1.csv",columns=['Loan_ID','Loan_Status'])
+
+
+```
+
+*** =solution
+
+```{python}
+#train_modified and test_modified already loaded in the workspace
+#Import module for Decision tree
+from sklearn.tree import DecisionTreeClassifier
+
+# Select three predictors Credit_History, Education and Gender
+predictors =['Credit_History','Education','Gender']
+
+# Converting predictors and outcome to numpy array
+x_train = train_modified[predictors].values
+y_train = train_modified['Loan_Status'].values
+
+# Model Building
+model = DecisionTreeCalssifier()
+model.fit(x_train, y_train)
+
+# Converting predictors and outcome to numpy array
+x_test = test_modified[predictors].values
+
+#Predict Output
+predicted= model.predict(x_test)
+
+#Reverse encoding for predicted outcome
+predicted = number.inverse_transform(predicted)
+
+#Store it to test dataset
+test_modified['Loan_Status']=predicted
+
+#Output file to make submission
+test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
+
+
+```
+
+*** =sct
+
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Test for predictor selection
+test_object("predictors")
+
+# Test for model
+#test_object("model")
+
+# Test for predicted
+#test_object("predicted")
+
+
+success_msg("Great work!")
+```
 
 
 
