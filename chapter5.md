@@ -142,7 +142,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:2c1cf7aa90
+--- type:NormalExercise lang:python xp:100 skills:1 key:ab6390ab9a
 ## Data preparation for building a predictive model?
 
 In Python, Scikit-Learn (sklearn) is the most commonly used library for model building. I encourage you to get a refresher on sklearn through this <a href="http://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/">article</a>. It has gathered a lot of interest recently as a choice of language for data analysis. There are few pre-requisite for scikit learn library:
