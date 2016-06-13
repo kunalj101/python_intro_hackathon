@@ -244,6 +244,8 @@ Import required library for decision tree and random forest
 *** =pre_exercise_code
 
 ```{python}
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression
 
 ```
 
