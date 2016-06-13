@@ -53,8 +53,8 @@ train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacam
 # Import testing data as test
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
-# Store top 5 observation of training dataset in top5
-top5 =
+# Print top 5 observation of training dataset in top5
+
 
 # Store total number of observation in training dataset
 train_length =
@@ -76,8 +76,8 @@ train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacam
 # Import testing data as test
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
-# Store top 5 observation of test dataset
-top5 = train.head(5)
+# Print top 5 observation of test dataset
+print (train.head(5))
 
 # Store total number of observation in training dataset
 train_length = len(train)
@@ -96,10 +96,6 @@ test_col = len(test.columns)
 
 # Test for evaluating top 5 heading of dataframe
 test_function("print", incorrect_msg = "Don't forget to print the first 5 observations of `train`!")
-
-# Test for top 5 observations
-test_object("top5")
-
 
 # Test for total observation in training dataset
 test_object("train_length")
