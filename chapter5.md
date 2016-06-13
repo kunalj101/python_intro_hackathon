@@ -267,23 +267,6 @@ test_import("LogisticRegression", same_as = False)
 success_msg("Great work!")
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --- type:NormalExercise lang:python xp:100 skills:1 key:6eb60851bc
 
 ## Build your first logistic regression model
@@ -296,8 +279,6 @@ We can easily make some intuitive hypothesis to set the ball rolling. The chance
 * Applicants with higher applicant and co-applicant incomes
 * Applicants with higher education level
 * Properties in urban areas with high growth perspectives
-
-
 
 *** =instructions
 - Store input variable in list "predictors"
@@ -343,7 +324,6 @@ cat_imput.index=cat_cols
 fullData[cat_cols] = fullData[cat_cols].fillna(cat_imput,inplace=True)
 
 #Create a new column as Total Income
-
 fullData['TotalIncome']=fullData['ApplicantIncome']+fullData['CoapplicantIncome']
 
 #Take a log of TotalIncome + 1, adding 1 to deal with zeros of TotalIncome it it exists
@@ -410,7 +390,7 @@ model.fit(x_train, y_train)
 test_object("predictors")
 
 # Test for model
-#test_object("model")
+test_object("model")
 
 success_msg("Great work!")
 ```
