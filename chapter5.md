@@ -218,7 +218,7 @@ test_mc(4, [msg_bad1, msg_bad1, msg_bad1, msg_success ])
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Import required libraries
 
-Now, we have performed all the pre processing steps with data, it's time to start with modeling exercise. As I discussed, we should Import required library (In python, we mostly use sklearn), this is a classification challenge so we will import module of classification algorithms
+Now, we have performed all the pre processing steps with data, it's time to start with modeling exercise. As I discussed, we should Import required library (In python, we mostly use sklearn). This is a classification challenge so we will import module of classification algorithms
 
 ```{python}
   #Logistic Rgression
