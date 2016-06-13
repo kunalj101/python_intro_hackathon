@@ -726,7 +726,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = DecisionTreeCalssifier()
+model = DecisionTreeClassifier()
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
