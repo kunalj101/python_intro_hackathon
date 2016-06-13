@@ -4,6 +4,51 @@ description : We build our predictive models and make submissions to the AV Data
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+## First Step of Model Building
+
+In Python, Scikit-Learn (sklearn) is the most commonly used library for model building. I encourage you to get a refresher on sklearn through this <a href="http://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/">article</a>. It has gathered a lot of interest recently for model building. There are few pre-requisite before jumping into a model building exercise:
+
+* Treat missing values
+* Treat outlier/ exponential observation
+* Identify independent and dependent observation
+* All inputs must be numeric array ( Requirement of scikit learn library) 
+
+
+####We can build a model without treating missing values of data set
+
+
+*** =instructions
+- True
+- False
+
+*** =hint
+Missing value tratment is compulsary step of model building
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg_bad1 = "Try again"
+msg_success = "Yes! We should always treat missing value"
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(2, [msg_bad1, msg_success]) 
+```
+
+
+
+
+
+
+
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:2c1cf7aa90
 ## Data preparation for building a predictive model?
