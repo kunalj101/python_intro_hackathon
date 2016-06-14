@@ -119,7 +119,7 @@ Download <a href="https://www.continuum.io/downloads"> Anaconda</a>
 
 msg_bad = "You should install a Python instance locally before going forward"
 msg_success = "Great! You are all set to go ahead"
-msg_help = "Drop me a line at kunal.jain@analyticsvidhya.com"
+msg_help = "Drop us a line at help@analyticsvidhya.com"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
