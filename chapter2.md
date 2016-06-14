@@ -1,4 +1,4 @@
-
+---
 title       : Python Libraries and data structures
 description : In this chapter, we will take you through the libraries we commonly use in data analysis and introduce some of the most common data structures to you.
 attachments :
@@ -7,18 +7,18 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Create a list
 
-List is one of the most versatile data structure in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
+Lists are some of the most versatile data structures in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
 
 ```{python}
 Country =['INDIA','USA','GERMANY','UK','AUSTRALIA']
 
 Temperature =[44, 28, 20, 18, 25, 45, 67]
 ```
-We just created two lists, one for Country names and other one for temperature. 
+We just created two lists, one for Country names and another one for temperature. 
 
 ####Accessing individual elements of a list
-- Individual elements of a list can be accessed by writting an index number in square bracket. First index of list starts with 0 (zero) not 1.
-- A range of element can be accessed by having start index and end index but it does not return the value available at end index,
+- Individual elements of a list can be accessed by writing an index number in square bracket. The first index of a list starts with 0 (zero) not 1. For example, Country[0] can be used to access 'INDIA'
+- A range of element can be accessed by having start index and end index but it does not return the value available at end index. For example, Temperature[1:4] should return [28, 20, 18]
 
 *** =instructions
 - Create a list of first five odd numbers and store it in a variable odd_numbers.
@@ -27,12 +27,12 @@ We just created two lists, one for Country names and other one for temperature.
 
 *** =hint
 - Use AV[0] to select the first element of a list AV. 
-- Use AV[1:3] to select second to third element of a list AV.
+- Use AV[1:3] to select the second to the third element of a list AV.
 
 
 *** =pre_exercise_code
 ```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 ```
 
 *** =sample_code
@@ -100,7 +100,7 @@ print (String[0:8])
 *** =instructions
 
 - Use len() function to store the length of string
-- Use start and end index to access the required characters, e.g. str[0:3] to return first three charaters of string str
+- Use start and end index to access the required characters, e.g. str[0:3] to return first three characters of string str
 - '+' operator is used to combine two strings
 
 
@@ -116,7 +116,7 @@ print (String[0:8])
 *** =pre_exercise_code
 
 ```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 ```
 
 *** =sample_code
@@ -125,7 +125,7 @@ print (String[0:8])
 # Create a string str
 str1 = "Introduction with strings"
 
-# Now store the length of string in varible str_len 
+# Now store the length of string in variable str_len 
 str_len =
 
 # Print last seven characters of strings str
@@ -193,12 +193,12 @@ print (DICT['Name'])
 
 ```
 
-In dictonary "DICT", Name and Company are dictionary keys where as "Kunal" and "Analytics Vidhya" are values.
+In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "Analytics Vidhya" are values.
 
 *** =instructions
 
 - Use dictinary['Key'] to access value(s) against given key and update it by assigning different value(s)
-- Use Dict.keys() to access all the keys of given dictionay Dict
+- Use Dict.keys() to access all the keys of given dictionary Dict
 
 
 *** =hint
@@ -209,7 +209,7 @@ In dictonary "DICT", Name and Company are dictionary keys where as "Kunal" and "
 *** =pre_exercise_code
 
 ```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 ```
 
 *** =sample_code
@@ -267,7 +267,7 @@ success_msg("Great work!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
 ## Why python libraries are useful?
 
-Lets take one step ahead in our journey to learn Python by getting acquainted with some useful libraries. The first step is obviously to learn to import them into our environment. There are several ways of doing so in Python:
+Let's take one step ahead in our journey to learn Python by getting acquainted with some useful libraries. The first step is obviously to learn to import them into our environment. There are several ways of doing so in Python:
 
 ```{python}
 import math as m
@@ -324,7 +324,7 @@ test_mc(2, [msg_bad, msg_success, msg_bad])
 --- type:NormalExercise lang:python xp:100 skills:1 key:50c9218dac
 ## Why conditional statement is required?
 
-Conditional statements, these are used to execute code fragments based on a condition. The most commonly used construct is if-else, with following syntax:
+Conditional statements, these are used to execute code fragments based on a condition. The most commonly used construct is if-else, with the following syntax:
 
 ```{python}
 
@@ -349,7 +349,7 @@ else:
 *** =pre_exercise_code
 
 ```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 ```
 
 *** =sample_code
@@ -442,7 +442,7 @@ for i in [Python Iterable]:
 *** =instructions
 
 - Iterate over all values of list using for loop
-- Use % modulus operator to return remainder e.g. 4%2 will result to 0 and 5%2 to 1
+- Use % modulus operator to return remainder e.g. 4%2 will result in 0 and 5%2 to 1
 
 
 
@@ -454,7 +454,7 @@ for i in [Python Iterable]:
 *** =pre_exercise_code
 
 ```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 ```
 
 *** =sample_code
