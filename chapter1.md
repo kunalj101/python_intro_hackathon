@@ -139,7 +139,9 @@ Time to get our hands dirty now. We will use Python to run some simple programs!
 
 *** =hint
 - Think how would you write simple addition.
+- Make sure you assign the sum to the variable 'addition2'
 - Remember that the message to be printed should be enclosed in " "
+- Remember - Python is case sensitive. Check your cases and white spaces
 
 *** =pre_exercise_code
 ```{python}
