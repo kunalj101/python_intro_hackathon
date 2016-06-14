@@ -7,7 +7,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Credit History has missing value or not ?
 
-There are missing values in variables. We should first identify the variables have missing value then estimate those values wisely depending on the amount of missing values and the expected importance of variables. So, here our first task is to check the variable has missing values in the data set and how many observation has missing values.
+There are missing values in variables. We should first identify the variables have missing value then estimate those values wisely depending on the number of missing values and the expected importance of variables. So, here our first task is to check the variable has missing values in the dataset and how many observation has missing values.
 
 ```{python}
 
@@ -20,7 +20,7 @@ train['Credit_History'].isnull().sum()
 
 *** =instructions
 - Apply isnull() to check the observation has null value or not 
-- Check number of missing values is greater then 0 or not
+- Check number of missing values is greater than 0 or not
 
 
 *** =hint
@@ -32,7 +32,7 @@ Use train['Self_Employed'].isnull().sum() to check number of missing values
 
 ```{python}
 
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
 import pandas as pd
@@ -92,7 +92,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:4abbcb0b8d
 ## How many variables have missing values?
 
-Till now, we have checked the variable has missing value or not? Next action is to check how many variables has missing value. One way of doing this check for each individual variable but it would not be easy if we have hundred of columns. This action can be performed simply by using isnull() on dataframe object.
+Till now, we have checked the variable has missing value or not? Next action is to check how many variables have missing values. One way of doing this check would be to evaluate each individual variable. This would not be easy if we have hundred of columns. This action can be performed simply by using isnull() on dataframe object.
 
 ```{python}
 
@@ -100,7 +100,7 @@ train.isnull().sum()
 
 ```
 
-This statement will return the columns names with number of observation having missing (null) values.
+This statement will return the column names with the number of observation that have missing (null) values.
 
 <center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/06/Missing_Values.png"></center>
 
@@ -118,7 +118,7 @@ Use test.isnull().sum() to check number of missing values
 
 ```{python}
 
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
 import pandas as pd
@@ -167,7 +167,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:fd3cdcb726
 ## Impute missing values of LoanAmount?
 
-There are multiple ways to fill the missing values of continuous variables, you can go with mean, median or estimate values based on other features of data set. Here to impute missing values of loan amount, we would go with imputing by mean value (Mean of available values of LoanAmount).
+There are multiple ways to fill the missing values of continuous variables, you can go with mean, median or estimate values based on other features of the data set. Here, to impute missing values of the loan amount, we would go with imputing by mean value (Mean of available values of LoanAmount).
 
 ```{python}
 
@@ -190,7 +190,7 @@ Use test['LoanAmount'].fillna(168, inplace=True)
 
 ```{python}
 
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
 import pandas as pd
@@ -238,7 +238,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:ca19896cae
 ## Impute missing values of SelfEmployed?
 
-To impute missing values of Categorical variables, we look at the frquency table and impute with value has higher frequency because there is a high probability of success. For example, if you look at distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under category "No". Here we will replace missing values of SelfEmployed with "No".
+To impute missing values of Categorical variables, we look at the frequency table and impute with value has higher frequency because there is a high probability of success. For example, if you look at the distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under the category "No". Here we will replace missing values of SelfEmployed with "No".
 
 ```{python}
 
@@ -259,7 +259,7 @@ train['Self_Employed'].fillna('No',inplace=True)
 
 ```{python}
 
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
 import pandas as pd
@@ -318,7 +318,7 @@ success_msg("Great work!")
 
 ## Treat extreme values of LoanAmount and ApplicantIncome?
 
-Let’s analyze LoanAmount first. Since the extreme values are practically possible, i.e. some people might apply for high value loans due to specific needs. 
+Let’s analyze LoanAmount first. Since the extreme values are practically possible, i.e. some people might apply for high-value loans due to specific needs. 
 
 ```{python}
 
@@ -355,7 +355,7 @@ Now the distribution looks much closer to normal and effect of extreme values ha
 
 ```{python}
 
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
 import pandas as pd
@@ -389,7 +389,7 @@ train['TotalIncome_log']=
 
 ```{python}
 
-# Training and Testing data set is loaded in variable train and test dataframe respectively
+# Training and Testing dataset is loaded in variable train and test dataframe respectively
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
 train['TotalIncome'] = train['ApplicantIncome'] + train['CoapplicantIncome']
