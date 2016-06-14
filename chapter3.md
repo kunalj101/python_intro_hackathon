@@ -1,3 +1,4 @@
+
 ---
 title       : Exploratory analysis in Python using Pandas
 description : We start with the first step of data analysis - the exploratory data analysis.
@@ -7,7 +8,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Who is eligible for loan?
 
-Dream Housing Finance company deals in all home loans. They have presence across all urban, semi urban and rural areas. Customer first apply for home loan after that company validates the customer eligibility for loan. Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form.  
+Dream Housing Finance company deals in all home loans. They have a presence across all urban, semi-urban and rural areas. Customers first apply for a home loan after that company validates the customer's eligibility. The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling online application form.  
 
 Let's start with loading in the training and testing set into your python environment. You will use the training set to build your model, and the test set to validate it. The data is stored on the web as CSV files; their URLs are already available as character strings in the sample code. You can load this data with the pandas.read_csv() function, it converts the data set to python dataframe. Python dataframe likes a spreadsheet or SQL table.
 
@@ -27,7 +28,7 @@ Let's start with loading in the training and testing set into your python enviro
 
 ```{python}
 
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
 import pandas as pd
@@ -109,14 +110,14 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:36c3190b26
 ## Understanding Data?
 
-You can look at summary of numerical fields by using dataframe.describe(). It provides count, mean, standard deviation (std), min, quartiles and max in its output.
+You can look at a summary of numerical fields by using dataframe.describe(). It provides the count, mean, standard deviation (std), min, quartiles and max in its output.
 
 ```{python}
 
 dataframe.describe() 
 
 ```
-For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by following command:
+For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by the following command:
 
 ```{python}
 
@@ -139,7 +140,7 @@ df[column_name].value_counts()
 
 ```{python}
 
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
 import pandas as pd
@@ -202,9 +203,9 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
 ## Understanding distribution of numerical variables?
 
-Now that we are familiar with basic data characteristics, let us study distribution of numerical variables. Let us start with numeric variable "ApplicantIncome".
+Now that we are familiar with basic data characteristics, let us study the distribution of numerical variables. Let us start with numeric variable "ApplicantIncome".
 
-Lets start by plotting the histogram of ApplicantIncome using the following commands:
+Let's start by plotting the histogram of ApplicantIncome using the following commands:
 
 ```{python}
 
@@ -240,7 +241,7 @@ train.boxplot(column='ApplicantIncome', by='Gender')
 
 ```{python}
 
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
 import pandas as pd
@@ -338,7 +339,7 @@ pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percent
 
 ```{python}
 
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 
 # Import library pandas
 import pandas as pd
@@ -392,7 +393,7 @@ pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
 test_object("loan_approval")
 
 
-# Test for two way comparison Credit_History and Loan_Status
+# Test for two-way comparison Credit_History and Loan_Status
 
 
 
@@ -400,6 +401,3 @@ test_object("loan_approval")
 success_msg("Great work!")
 
 ```
-
-
-
