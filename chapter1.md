@@ -13,7 +13,7 @@ Python (an interpreted language) has gathered a lot of interest recently as a ch
 * Open Source – free to install and use
 * Awesome online community - latest algorithms come to Python in a matter of days
 * Easy to learn
-* Can become a common language for data science and production of web based analytics products
+* Can become a common language for data science and production of web-based analytics products
 
 ####Which of the following is not a reason to learn Python for Data Analysis?
 
@@ -22,10 +22,10 @@ Python (an interpreted language) has gathered a lot of interest recently as a ch
 - Python is easy to learn.
 - Python is interpreted language, hence the computation times can be high compared to compiler based languages in some cases.
 - Python has good libraries for data science.
-- It is production ready language (from web & softare perspective).
+- It is production ready language (from web & software perspective).
 
 *** =hint
-Interpreted languages are typically easier to learni, but take longer computational time than compiler based languages. 
+Interpreted languages are typically easier to learn, but take longer computational time than compiler based languages. 
 
 *** =pre_exercise_code
 
@@ -37,7 +37,7 @@ Interpreted languages are typically easier to learni, but take longer computatio
 # pythonwhat Python package
 
 msg_bad1 = "That is a good reason to learn Python! Think again"
-msg_success = "Exactly! Since Python is an interpretted language, the computation times can be on the higher side compared to other compiler based language."
+msg_success = "Exactly! Since Python is an interpreted language, the computation times can be on the higher side compared to other compiler based language."
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
@@ -93,7 +93,7 @@ test_mc(1, [msg_success, msg_bad1, msg_bad2])
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:2f83694db6
 ## How to install Python?
 
-While DataCamp provides an awesome interface to get you started, you will need to run local instance of Python for any serious Data Science work. The simplest way would be to download <a href="https://www.continuum.io/downloads"> Anaconda</a>. It consists of most of the libraries you would need and removes any version conflicts.
+While DataCamp provides an awesome interface to get you started, you will need to run a local instance of Python for any serious Data Science work. The simplest way would be to download <a href="https://www.continuum.io/downloads"> Anaconda</a>. It consists of most of the libraries you would need and removes any version conflicts.
 I strongly recommend this for beginners. For this course, we will be using Python 3.x
 
 
@@ -145,7 +145,7 @@ Time to get our hands dirty now. We will use Python to run some simple programs!
 
 *** =pre_exercise_code
 ```{python}
-# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
 ```
 
 *** =sample_code
@@ -156,7 +156,7 @@ addition = 1 + 2
 
 
 # Print a message
-print("Welcome to joint course from Analytics Vidhya and DataCamp")
+print("Welcome to the joint course from Analytics Vidhya and DataCamp")
 
 # Now write a code to Print "Hello World!"
 
@@ -171,7 +171,7 @@ addition = 1 + 2
 addition2 = 3 + 4
 
 # Print a message
-print("Welcome to joint course from Analytics Vidhya and DataCamp")
+print("Welcome to the joint course from Analytics Vidhya and DataCamp")
 
 # Now write a code to Print "Hello World!"
 print("Hello World!")
