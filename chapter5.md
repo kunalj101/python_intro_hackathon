@@ -47,9 +47,9 @@ test_mc(2, [msg_bad1, msg_success])
 --- type:NormalExercise lang:python xp:100 skills:1 key:2c1cf7aa90
 ## Label categories of Gender to number
 
-Library "Scikit Learn" only works with numeric array hence we need to label all the character variable into numeric array. For Example: Variable "Gender" has two labels "Male" and "Female", here our objective is to label "Male" and "Female" to number as 1 for "Male" and 0 for "Female".
+Library "Scikit Learn" only works with numeric array hence, we need to label all the character variable into a numeric array. For example Variable "Gender" has two labels "Male" and "Female", here our objective is to label "Male" and "Female" to number as 1 for "Male" and 0 for "Female".
 
-"Scikit Learn" library has module "LabelEncoder" which helps to label charater labels into numbers so first import module "LabelEncoder".
+"Scikit Learn" library has a module called "LabelEncoder" which helps to label character labels into numbers so first import module "LabelEncoder".
 
 ```{python}
 
@@ -137,7 +137,7 @@ success_msg("Great work!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:ee5ed17633
 ## Selecting the right algorithm
 
-Basic principle behind selecting the right algorithm is look at the dependent variable (or target variable). In this challenge "Loan Prediction", we need to classify customer in Loan status "Y" or "N" category based on available information about customer. Here Dependent variable is categorical and our task is to classify the customer in two groups; eligible for loan amount and not eligible for loan amounts.
+The basic principle behind selecting the right algorithm is to look at the dependent variable (or target variable). In this challenge "Loan Prediction", we need to classify a customer's Loan status as "Y" or "N" based on the available information about the customer. Here the dependent variable is categorical and our task is to classify the customer in two groups; eligible for the loan amount and not eligible for the loan amounts.
 
 This is a classification challenge so we will import module of classification algorithms of sklearn library, below are the few classification algorithms:
 * Logistic Regression
@@ -218,13 +218,13 @@ test_mc(4, [msg_bad1, msg_bad1, msg_bad1, msg_success ])
 
 ## Logistic Regression Introduction
 
-Logistic Regression is a classification algorithm. It is used to predict a binary outcome (1 / 0, Yes / No, True / False) given a set of independent variables. To represent binary / categorical outcome, we use dummy variables. You can also think of logistic regression as a special case of linear regression when the outcome variable is categorical, where we are using log of odds as dependent variable. 
+Logistic Regression is a classification algorithm. It is used to predict a binary outcome (1 / 0, Yes / No, True / False) given a set of independent variables. To represent binary / categorical outcome, we use dummy variables. You can also think of logistic regression as a special case of linear regression when the outcome variable is categorical, where we are using log of odds as the dependent variable. 
 
 In simple words, it predicts the probability of occurrence of an event by fitting data to a logit function, read more about <a href="http://www.analyticsvidhya.com/blog/2015/11/beginners-guide-on-logistic-regression-in-r/"> Logistic Regression </a>. 
 
 
 *** =instructions
-Create a object of LogisticRegression
+Create an object of LogisticRegression
 
 
 *** =hint
@@ -284,7 +284,7 @@ Ok, time for you to build your first logistics regression model! The pre process
 
 *** =instructions
 - Store input variable in list "predictors"
-- Create a object of logistic regression
+- Create an object of logistic regression
 - Train model on training data set (x_train, y_train)
 
 
@@ -553,7 +553,7 @@ success_msg("Great work!")
 
 ## Decision Tree Introduction
 
-Decision tree is mostly used in classification problems. It works for both categorical and continuous input and output variables. In this technique, we split the population or sample into two or more homogeneous sets (or sub-populations) based on most significant splitter / differentiator in input variables, read more about <a href="http://www.analyticsvidhya.com/blog/2015/01/decision-tree-simplified/"> Decision Tree </a>.
+Decision trees are mostly used in classification problems. It works for both categorical and continuous input and output variables. In this technique, we split the population or sample into two or more homogeneous sets (or sub-populations) based on most significant splitter / differentiator in input variables, read more about <a href="http://www.analyticsvidhya.com/blog/2015/01/decision-tree-simplified/"> Decision Tree </a>.
 
 
 *** =instructions
@@ -993,7 +993,7 @@ success_msg("Great work!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:4621632d2a
 ## Selecting important variables for model building
 
-One of benefits of Random forest which excites me most is, the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the dimensionality reduction methods. Further, the model outputs Importance of variable, which can be a very handy feature. 
+One of the benefits of Random forest is the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the dimensionality reduction methods. Further, the model outputs the importance of the variables, which can be a very handy feature. 
 
 ```{python}
 

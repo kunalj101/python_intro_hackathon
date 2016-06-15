@@ -1,6 +1,6 @@
 ---
 title       : Data Munging in Python using Pandas
-description : Pandas are the heart of data analysis in Python. This chapter get you started with Data Munging in Python using Pandas
+description : Pandas is at the heart of data analysis in Python. This chapter gets you started with Data Munging in Python using Pandas
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
@@ -374,7 +374,7 @@ train['TotalIncome'] = train['ApplicantIncome'] + train['CoapplicantIncome']
 
 ```{python}
 
-# Training and Testing data set is loaded in variable train and test dataframe respectively
+# Training and Testing datasets are loaded in variable train and test dataframe respectively
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
 train['TotalIncome'] = 
@@ -389,7 +389,7 @@ train['TotalIncome_log']=
 
 ```{python}
 
-# Training and Testing dataset is loaded in variable train and test dataframe respectively
+# Training and Testing datasets are loaded in variable train and test dataframe respectively
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
 train['TotalIncome'] = train['ApplicantIncome'] + train['CoapplicantIncome']

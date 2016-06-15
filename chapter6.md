@@ -1,5 +1,5 @@
 ---
-title       : Expert advice to imporove model performance
+title       : Expert advice to improve model performance
 description : This chapter will help to understand the approach of data science experts, "How they do approach a challenge ?", "How to select a right algorithm ?", "How to combine outputs of multiple algorithms ?" and "How to select the right value of model parameter also known as parameter tuning ?".
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
@@ -7,11 +7,11 @@ attachments :
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
 ## How to approach a challenge?
 
-The model development cycle goes through various stages, starting from data collection to model building. Most of us admits that data exploration needs more attention to unleasehed the hidden story of data but before exploring the data to understand relationships (in variables), It’s always recommended to perform hypothesis generation. (To know more  about hypothesis generation, refer to <a href =" http://discuss.analyticsvidhya.com/t/why-and-when-is-hypothesis-generation-important/2109"> this link</a>). 
+The model development cycle goes through various stages, starting from data collection to model building. Most of us admit that data exploration needs more attention to unleashing the hidden story of data but before exploring the data to understand relationships (in variables), It’s always recommended to perform hypothesis generation. (To know more  about hypothesis generation, refer to <a href =" http://discuss.analyticsvidhya.com/t/why-and-when-is-hypothesis-generation-important/2109"> this link</a>). 
 
-It is important that you spend time thinking on the given problem and gaining the domain knowledge. So, how does it help?
+It is important that you spend time thinking about the given problem and gaining the domain knowledge. So, how does it help?
 
-This practice usually helps in building better features later on, which are not biased by the data available in the data-set. This is a crucial step which usually improves a model’s accuracy.
+This practice usually helps in building better features later on, which are not biased by the data available in the dataset. This is a crucial step which usually improves a model’s accuracy.
 
 At this stage, you are expected to apply structured thinking to the problem i.e. a thinking process which takes into consideration all the possible aspects of a particular problem.
 
@@ -50,7 +50,7 @@ test_mc(3, [msg_bad1, msg_bad1, msg_success])
 
 This step helps to extract more information from existing data. New information is extracted in terms of new features. These features may have a higher ability to explain the variance in the training data. Thus, giving improved model accuracy.
 
-Feature engineering is highly influenced by hypotheses generation. Good hypothesis results into good feature. That’s why, experts always suggest to invest quality time in hypothesis generation. Feature engineering process can be divided into two steps:
+Feature engineering is highly influenced by hypotheses generation. A good hypothesis results in a good feature. That’s why experts always suggest investing quality time in hypothesis generation. Feature engineering process can be divided into two steps:
 
 * Feature Transformation
 * Feature Creation
@@ -64,13 +64,13 @@ There are various scenarios where feature transformation is required:
 
 ##### Feature Creation: 
 
-Deriving new variable(s) from existing variables is known as feature creation. It helps to unleash the hidden relationship of a data set. Let’s say, we want to predict the number of transactions in a store based on transaction dates. Here transaction dates may not have direct correlation with number of transaction, but if we look at the day of a week, it may have a higher correlation. In this case, the information about day of a week is hidden. We need to extract it to make the model better.
+Deriving new variable(s) from existing variables is known as feature creation. It helps to unleash the hidden relationship of a data set. Let’s say, we want to predict the number of transactions in a store based on transaction dates. Here transaction dates may not have a direct correlation with the number of transaction, but if we look at the day of a week, it may have a higher correlation. In this case, the information about the day of the week is hidden. We need to extract it to make the model better.
 
-#### Creating a variable based on mathematical computation of existing three variables is a method of?
+#### Creating a variable based on a mathematical computation on three existing variables is a method of?
 
 
 *** =instructions
-- Feture Transformation
+- Feature Transformation
 - Feature Creation
 - Feature Selection
 
@@ -103,9 +103,9 @@ Feature Selection is a process of finding out the best subset of attributes whic
 
 You can select the useful features based on various metrics like:
 
-* Domain Knowledge: Based on domain experience, we select feature(s) which may have higher impact on target variable.
+* Domain Knowledge: Based on domain experience, we select feature(s) which may have a higher impact on target variable.
 * Visualization: As the name suggests, it helps to visualize the relationship between variables, which makes your variable selection process easier.
-* Statistical Parameters: We also consider the p-values, information values and other statistical metrics to select right features.
+* Statistical Parameters: We also consider the p-values, information values, and other statistical metrics to select right features.
 
 #### Variable importance table of random forest classifier can act as feature selection tool?
 
@@ -139,11 +139,11 @@ test_mc(1, [msg_success, msg_bad1])
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:a93345ad36
 ## How to select the right value of model parameter?
 
-We know that machine learning algorithms are driven by parameters. These parameters majorly influence the outcome of learning process.
+We know that machine learning algorithms are driven by parameters. These parameters majorly influence the outcome of the learning process.
 
-The objective of parameter tuning is to find the optimum value for each parameter to improve the accuracy of the model. To tune these parameters, you must have a good understanding of their meaning and individual impact on model. You can repeat this process with a number of well performing models.
+The objective of parameter tuning is to find the optimum value for each parameter to improve the accuracy of the model. To tune these parameters, you must have a good understanding of their meaning and individual impact on the model. You can repeat this process with a number of well-performing models.
 
-For example: In random forest, we have various parameters like max_features, number_trees, random_state, oob_score and others. Intuitive optimization of these parameter values will result in better and more accurate models.
+For example: In a random forest, we have various parameters like max_features, number_trees, random_state, oob_score and others. Intuitive optimization of these parameter values will result in better and more accurate models.
 
 #### Which of the following is not a parameter of random forest algorithm (in Scikit Learn)?
 
@@ -192,7 +192,7 @@ It is always a better idea to apply ensemble methods to improve the accuracy of 
 * They are generally more complex than traditional methods 
 * The traditional methods give you a good base level from which you can improve and draw from to create your ensembles.
 
-#### Taking average of predictions (given by different models) is an example of ensemble model?
+#### Taking the average of predictions (given by different models) is an example of ensemble model?
 
 
 *** =instructions
@@ -228,13 +228,13 @@ test_mc(1, [msg_success, msg_bad1])
 
 Till here, we have seen methods which can improve the accuracy of a model. But, it is not necessary that higher accuracy models always perform better (for unseen data points). Sometimes, the improvement in model’s accuracy can be due to over-fitting too.
 
-Here Cross-Validation helps to find the right answer of this question. Cross Validationsays, try to leave a sample on which you do not train the model and test the model on this sample before finalizing the model. This method helps us to achieve more generalized relationships. To know more about this cross validation method, you should refer article <a href="http://www.analyticsvidhya.com/blog/2015/11/improve-model-performance-cross-validation-in-python-r/"> “Improve model performance using cross validation“ </a>.
+Here Cross-Validation helps to find the right answer to this question. Cross Validation says, try to leave a sample on which you do not train the model and test the model on this sample before finalizing the model. This method helps us to achieve more generalized relationships. To know more about this cross validation method, you should refer article <a href="http://www.analyticsvidhya.com/blog/2015/11/improve-model-performance-cross-validation-in-python-r/"> “Improve model performance using cross-validation“ </a>.
 
-#### Common methods used for Cross Validation ?
+#### Common methods used for Cross-Validation ?
 
 
 ##### The Validation set Approach:
-In this approach, we reserve 50% of dataset for validation and rest 50% for model training. A major disadvantage of this approach is that we train a model on 50% of the data set only, it may be possible that we are leaving some interesting information about data i.e. higher bias.
+In this approach, we reserve 50% of the dataset for validation and rest 50% for model training. A major disadvantage of this approach is that we train a model on 50% of the dataset only, it may be possible that we are leaving some interesting information about data i.e. higher bias.
 
 ##### Leave one out cross validation (LOOCV)
 
@@ -243,7 +243,7 @@ In this approach, we reserve only one data-point of the available data set. And,
 ##### K-fold cross validation
 
 In this method, we follow below steps:
-* Randomly split your entire dataset into k”folds”.
+* Randomly split your entire dataset into k-”folds”.
 * For each k folds in your dataset, build your model on k – 1 folds of the data set. 
 * Then, test the model to check the effectiveness for kth fold and record the error you see on each of the predictions.
 * Repeat this until each of the k folds has served as the test set.
@@ -258,7 +258,7 @@ The average of your k recorded errors is called the cross-validation error and w
 - Use k=10
 
 *** =hint
-Always remember, lower value of K is more biased and hence undesirable. On the other hand, higher value of K is less biased, but can suffer from large variability. It is good to know that, smaller value of k always takes us towards validation set approach, where as higher value of k leads to LOOCV approach. Hence, it is often suggested to use k=10.
+Always remember, lower value of K is more biased and hence undesirable. On the other hand, a higher value of K is less biased; but it can suffer from large variability. It is good to know that a smaller value of k always takes us towards validation set approach, whereas the higher value of k leads to LOOCV approach. Hence, it is often suggested to use k=10.
 
 *** =pre_exercise_code
 
@@ -277,4 +277,3 @@ msg_success = "Good Job!"
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
 test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
 ```
-
