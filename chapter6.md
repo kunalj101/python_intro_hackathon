@@ -278,7 +278,7 @@ msg_success = "Good Job!"
 test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:ed0dcad240
 ## iPython / Jupyter notebook for Data Exploration
 
 The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.
