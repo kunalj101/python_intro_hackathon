@@ -417,7 +417,7 @@ success_msg("Great work!")
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
-## iPython / Jupyter notebook for Data Exploration?
+## iPython / Jupyter notebook for Data Exploration
 
 The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.
 
