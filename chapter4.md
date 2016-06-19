@@ -415,3 +415,42 @@ test_object("train['TotalIncome_log']")
 
 success_msg("Great work!")
 ```
+
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+## iPython / Jupyter notebook for Data Exploration?
+
+The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.
+
+We have shared the Jupyter notebook for your reference here
+
+### Download the jupyter notebook from <a href = "https://nbviewer.jupyter.org/github/kunalj101/python_intro_hackathon/blob/master/Data_Camp_Exploration.ipynb">here</a>. Have you downloaded the jupyter notebook?
+
+
+
+*** =instructions
+- Yes, I have
+- No, I am not able to
+- No, I don't need the notebook
+
+
+*** =hint
+Click on the link and download the Jupyter notebook. 
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg1 = "Awesome! You can proceed to model building now!"
+msg2 = "Check the link provided and download the file from there."
+msg3 = "Okay Bravo! You are ready to move ahead."
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc((1,3), [msg1, msg2, msg3]) 
+```
