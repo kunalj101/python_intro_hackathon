@@ -68,11 +68,23 @@
 	"buffers":
 	[
 		{
+			"contents": "\ntitle       : Python Libraries and data structures\ndescription : In this chapter, we will take you through the libraries we commonly use in data analysis and introduce some of the most common data structures to you.\nattachments :\n  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf\n\n--- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3\n## Create a list\n\nList is one of the most versatile data structure in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.\n\n```{python}\nCountry =['INDIA','USA','GERMANY','UK','AUSTRALIA']\n\nTemperature =[44, 28, 20, 18, 25, 45, 67]\n```\nWe just created two lists, one for Country names and other one for temperature. \n\n####Accessing individual elements of a list\n- Individual elements of a list can be accessed by writting an index number in square bracket. First index of list starts with 0 (zero) not 1.\n- A range of element can be accessed by having start index and end index but it does not return the value available at end index,\n\n*** =instructions\n- Create a list of first five odd numbers and store it in a variable odd_numbers.\n- Print second to fourth element [1, 4, 9] from squares_lis,t\n\n\n*** =hint\n- Use AV[0] to select the first element of a list AV. \n- Use AV[1:3] to select second to third element of a list AV.\n\n\n*** =pre_exercise_code\n```{python}\n# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:\n```\n\n*** =sample_code\n\n```{python}\n\n# Create a list of squared numbers\nsquares_list = [0, 1, 4, 9, 16, 25]\n\n# Now write a code to create list of first five odd numbers and store it into a variable odd_numbers\nodd_numbers=\n\n# Print first element of squares_list\nprint (squares_list[0])\n\n# Print second to fourth elements of squares_list\n\n```\n\n*** =solution\n```{python}\n\n# Create a list of squared numbers\nsquares_list = [0, 1, 4, 9, 16, 25]\n\n# Now write a code to create list of first five odd numbers and store it into a variable odd_numbers\nodd_numbers = [1, 3, 5, 7, 9]\n\n# Print first element of squares_list\nprint (squares_list[0])\n\n# Print second to fourth elements of squares_list\nprint (squares_list[1:4])\n```\n\n*** =sct\n```{python}\n# The sct section defines the Submission Correctness Tests (SCTs) used to\n# evaluate the student's response. All functions used here are defined in the \n# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki\n\n# Test for list of odd_numbers\ntest_object(\"odd_numbers\")\n\n# Check second to fourth elements\"\ntest_output_contains(\"[1, 4, 9]\", pattern = False)\nsuccess_msg(\"Great work!\")\n```\n\n--- type:NormalExercise lang:python xp:100 skills:1 key:c7f91e389f\n## Create a String\n\nStrings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Please note that Python strings are immutable, so you can not change part of strings.\n\n```{python}\nString =\" Strings elements can also be accessed using index number like list\"\n\nprint (String[0:8])\n\n#Above print command display Strings on screen.\n\n```\n\n\n*** =instructions\n\n- len function returns the lenght of string\n- Strings characters can be accessed using index number (similar like list)\n- Strings can be concatenated with other strings using '+' operator\n\n\n\n*** =hint\n\n- Use str[2] to select the third element of string str \n- Use len(str) to return the length of string\n- Use str1 + str2 to return the concatenated result of both strings str1 and str2\n\n\n\n*** =pre_exercise_code\n\n```{python}\n# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:\n```\n\n*** =sample_code\n\n```{python}\n# Create a string str\nstr1 = \"Introduction with strings\"\n\n# Now store the length of string in varible str_len \nstr_len =\n\n# Print last seven characters of strings str\n\n\nstr1 = \"I am doing a course Introduction to Hackathon using \"\nstr2 = \"Python\"\n\n# Write a code to store concatenated string of str1 and str2 into variable str3\nstr3 =\n\n```\n\n*** =solution\n\n```{python}\n\n# Create a string str\nstr1 = \"Introduction with strings\"\n\n# Now store the length of string in varible str_len \nstr_len=len(str1)\n\n# Print last seven characters of strings str\nprint (str1[18:25])\n\nstr1 = \"I am doing a course Introduction to Hackathon using \"\nstr2 = \"Python\"\n\n# Write a code to store concatenated string of str1 and str2 into variable str3\nstr3= str1 + str2\n```\n\n*** =sct\n\n```{python}\n# The sct section defines the Submission Correctness Tests (SCTs) used to\n# evaluate the student's response. All functions used here are defined in the \n# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki\n\n# Check length of strings\ntest_object(\"str_len\")\n\n# Check last seven characters\ntest_output_contains(\"strings\", pattern = False)\n\n# Check concatenated strings\"\ntest_object(\"str3\")\nsuccess_msg(\"Great work!\")\n```\n\n--- type:NormalExercise lang:python xp:100 skills:1 key:377e9324f2\n## Create a Dictionary\n\nDictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: {}.\n\n```{python}\nDICT = {'Name':'Kunal', 'Company':'Analytics Vidhya'}\n\n#Dictionary elements can be accessed by \"keys\"\n\nprint (DICT['Name'])\n\n#Above print statement will print Kunal\n\n```\n\nIn dictonary \"DICT\", Name and Company are dictionary keys where as \"Kunal\" and \"Analytics Vidhya\" are values.\n\n*** =instructions\n\n- To access dictionary elements, you can use the familiar square brackets along with the key to obtain its value\n- Dictionary can be updated by adding a new entry or a key-value pair, modifying or deleting an existing entry\n\n*** =hint\n\n- Use dict['Keys'] = new_value to update the existing value\n- Use dict.keys() to access all keys of dictionary dict\n- Use dict.values() to access all values of dictionary dict\n\n\n*** =pre_exercise_code\n\n```{python}\n# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:\n```\n\n*** =sample_code\n\n```{python}\n\n# Create a dictionary\ndict1 = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}\n\n# Update the value of Age to 18\n\n\n# Print the value of Age\n\n\n# Print all the keys of dictionary dict1\n\n\n```\n\n*** =solution\n\n```{python}\n\n# Create a dictionary\ndict1 = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}\n\n# Update the value of Age to 18\ndict1['Age'] = 18\n\n# Print the value of Age\nprint (dict1['Age'])\n\n# Print all the keys of dictionary dict\nprint (dict1.keys())\n\n```\n\n*** =sct\n\n```{python}\n# The sct section defines the Submission Correctness Tests (SCTs) used to\n# evaluate the student's response. All functions used here are defined in the \n# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki\n\n# Check value of Age\ntest_output_contains(\"18\", pattern = False)\n\n# Check keys of dictionary\ntest_output_contains(\"dict_keys(['Name', 'Age', 'Sports'])\", pattern = False)\n\nsuccess_msg(\"Great work!\")\n```\n\n--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9\n## Why python libraries are useful?\n\nLets take one step ahead in our journey to learn Python by getting acquainted with some useful libraries. The first step is obviously to learn to import them into our environment. There are several ways of doing so in Python:\n\n```{python}\nimport math as m\n\nfrom math import *\n```\n\nIn the first manner, we have defined an alias m to library math. We can now use various functions from math library (e.g. factorial) by referencing it using the alias m.factorial().\n\nIn the second manner, you have imported the entire name space in math i.e. you can directly use factorial() without referring to math.\n\nFollowing are a list of libraries, you will need for any scientific computations and data analysis:\n\n* <a href=\"http://www.numpy.org/\"> Numpy </a>\n* <a href=\"https://www.scipy.org/\"> Scipy </a>\n* <a href=\"http://pandas.pydata.org/pandas-docs/stable/\"> Pandas </a>\n* <a href=\"http://matplotlib.org/\"> Matplotlib </a>\n* <a href=\"http://scikit-learn.org/\"> Scikit Learn </a>\n\n\n\n##### Which of the following is a valid import statement for below code?\n```{python}\nprint (factorial(5))\n```\n\n*** =instructions\n- import math\n- from math import factorial\n- import math.factorial\n\n*** =hint\nPython's from statement lets you import specific attributes from a module into the current namespace.\n\n*** =pre_exercise_code\n\n\n*** =sct\n```{python}\n# The sct section defines the Submission Correctness Tests (SCTs) used to\n# evaluate the student's response. All functions used here are defined in the \n# pythonwhat Python package\n\nmsg_bad = \"Read about importing libraries in python\"\nmsg_success = \"Good Job!\"\n\n# Use test_mc() to grade multiple choice exercises. \n# Pass the correct option (Action, option 2 in the instructions) to correct.\n# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.\ntest_mc(2, [msg_bad, msg_success, msg_bad]) \n```\n\n\n--- type:NormalExercise lang:python xp:100 skills:1 key:50c9218dac\n## Why conditional statement is required?\n\nConditional statements, these are used to execute code fragments based on a condition. The most commonly used construct is if-else, with following syntax:\n\n```{python}\n\nif [condition]:\n  __execution if true__\nelse:\n  __execution if false__ \n```\n\n*** =instructions\n\n- Store the length of squares_list to square_len\n- Use the if statement to perform one action if one thing is true,or any other actions, if something else is true\n\n\n*** =hint\n\n- Use <, >, <=, >=, == and != for comparison\n- Use len(list) to return  length of string\n\n\n*** =pre_exercise_code\n\n```{python}\n# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:\n```\n\n*** =sample_code\n\n```{python}\n# Create a two integer variables a and b\na=3\nb=4\n\n# if a is greater than b print a-b else a+b\nif a > b:\n    print (a-b)\nelse:\n    print (a+b)\n\n# Create a list of squared numbers\nsquares_list = [0, 1, 4, 9, 16, 25]\n\n# Store the length of squares_list in square_len\nsquare_len = \n\n# if square_len is less than 5 then print \"Less than 5\" else \"Greater than 5\"\nif square_len < ___:\n    print (\"__________\")\nelse:\n    print (\"__________\")\n\n\n```\n\n*** =solution\n\n```{python}\n# Create a two integer variables a and b\na=3\nb=4\n\n# if a is greater than b print a-b else a+b\nif a > b:\n    print (a-b)\nelse:\n    print (a+b)\n\n# Create a list of squared numbers\nsquares_list = [0, 1, 4, 9, 16, 25]\n\n# Store the length of squares_list in square_len\nsquare_len = len(squares_list)\n\n# if square_len is less than 5 then print \"Less than 5\" else \"Greater than 5\"\nif square_len < 5:\n    print (\"Less than 5\")\nelse:\n    print (\"Greater than 5\")\n\n```\n\n*** =sct\n\n```{python}\n# The sct section defines the Submission Correctness Tests (SCTs) used to\n# evaluate the student's response. All functions used here are defined in the \n# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki\n\n# Check length of strings\ntest_object(\"square_len\")\n\n# Check last seven characters\ntest_output_contains(\"Greater than 5\", pattern = False)\n\nsuccess_msg(\"Great work!\")\n```\n\n\n--- type:NormalExercise lang:python xp:100 skills:1 key:c1b7c2fd5c\n## How iterative statement does help?\n\nComputers are often used to automate repetitive tasks. Repeating identical or similar tasks without making errors is something that computers do well. Repeated execution of a set of statements is called iteration.\n\nLike most languages, Python also has a FOR-loop which is the most widely used method for iteration. It has a simple syntax:\n\n```{python}\n\nfor i in [Python Iterable]:\n  expression(i)\n\n```\n“Python Iterable” can be a list or other advanced data structures which we will explore in later sections. Let’s take a look at a simple example, determining the factorial of a number.\n\n*** =instructions\n\n- Use list.append(<element>) to append values in a list\n- Iterate over list to access each element of list\n\n\n\n*** =hint\n\n- Use <, >, <=, >=, == and != for comparison\n- Use len(list) to return  length of string\n- % operator helps to return remainder e.g. 4 % 3 would be 1\n\n*** =pre_exercise_code\n\n```{python}\n# The pre exercise code runs code to initialize the user's workspace. You can use it for several things:\n```\n\n*** =sample_code\n\n```{python}\n# Create a list with first five numbers\nls=[]\nfor x in range(5):\n    ls.append(x)\n    \nsum=0\n# Store sum all even numbers of the list ls in sum\n\nfor x in ls: \n    if ______: \n        sum += x\n\n```\n\n*** =solution\n\n```{python}\n# Create a list with first five numbers\nls=[]\nfor x in range(5):\n    ls.append(x) # append a value to a list\n    \nsum=0\n# Store sum all even numbers of the list ls in sum\n\nfor x in ls: \n    if x%2==0: \n        sum += x\n\n```\n\n*** =sct\n\n```{python}\n# The sct section defines the Submission Correctness Tests (SCTs) used to\n# evaluate the student's response. All functions used here are defined in the \n# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki\n\n# Check length of strings\ntest_object(\"sum\")\n\nsuccess_msg(\"Great work!\")\n```\n",
 			"file": "chapter2.md",
+			"file_size": 13909,
+			"file_write_time": 131096300693332037,
 			"settings":
 			{
-				"buffer_size": 13201,
+				"buffer_size": 13384,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Analytics Vidhya\nAbout Us\nTeam\nCareers\n\n\nFor Data Scientists\nBlog\nDiscussions\nHackathons\nJobs\n",
+			"settings":
+			{
+				"buffer_size": 94,
+				"line_ending": "Windows",
+				"name": "Analytics Vidhya"
 			}
 		},
 		{
@@ -122,7 +134,7 @@
 			"file": "course.yml",
 			"settings":
 			{
-				"buffer_size": 608,
+				"buffer_size": 708,
 				"line_ending": "Windows"
 			}
 		},
@@ -130,7 +142,7 @@
 			"file": "chapter1.md",
 			"settings":
 			{
-				"buffer_size": 6200,
+				"buffer_size": 6780,
 				"line_ending": "Windows"
 			}
 		},
@@ -246,7 +258,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -255,15 +267,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13201,
+						"buffer_size": 13384,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								218,
-								218
+								1357,
+								1357
 							]
 						],
 						"settings":
@@ -271,14 +283,43 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1470.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 94,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Analytics Vidhya",
+							"default_dir": "C:\\Users\\lenovo\\python_intro_hackathon",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "chapter7.md",
 					"semi_transient": false,
 					"settings":
@@ -302,11 +343,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "chapter6.md",
 					"semi_transient": false,
 					"settings":
@@ -330,11 +371,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "chapter5.md",
 					"semi_transient": false,
 					"settings":
@@ -358,11 +399,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "chapter4.md",
 					"semi_transient": false,
 					"settings":
@@ -386,11 +427,11 @@
 						"translation.y": 2092.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "chapter3.md",
 					"semi_transient": false,
 					"settings":
@@ -414,24 +455,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "course.yml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 608,
+						"buffer_size": 708,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								101,
-								101
+								354,
+								354
 							]
 						],
 						"settings":
@@ -442,24 +483,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "chapter1.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6200,
+						"buffer_size": 6780,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5972,
-								6007
+								6780,
+								6780
 							]
 						],
 						"settings":
@@ -467,14 +508,14 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1.0,
+						"translation.y": 3532.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "README.md",
 					"semi_transient": false,
 					"settings":
@@ -498,11 +539,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 10,
 					"semi_transient": false,
 					"settings":
 					{
@@ -527,7 +568,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
