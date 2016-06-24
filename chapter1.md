@@ -187,6 +187,6 @@ print("Hello World!")
 test_object("addition2")
 
 # Check if the student printed "Hello World!"
-test_output_contains("Hello World!", pattern = False, no_output_msg="Your output wasn’t exactly what we were looking for. Did you print `“Hello World!”`?")
+test_output_contains("Hello World!", pattern = False, no_output_msg="Did you print `"Hello World!”`?")
 success_msg("Great work!")
 ```
