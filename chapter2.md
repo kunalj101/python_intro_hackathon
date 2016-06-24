@@ -258,7 +258,7 @@ print (dict1.keys())
 test_output_contains("18", pattern = False)
 
 # Check keys of dictionary
-test_output_contains("dict_keys(['Name', 'Age', 'Sports'])", pattern = False)
+test_output_contains("dict_keys(['Age', 'Name', 'Sports'])", pattern = False)
 
 success_msg("Great work!")
 ```
