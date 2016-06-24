@@ -99,10 +99,10 @@ test_col = len(test.columns)
 test_function("print", incorrect_msg = "Don't forget to print the first 5 observations of `train`!")
 
 # Test for total observation in training dataset
-test_object("train_length")
+test_object("train_length", incorrect_msg = "Don't forget to print the length of `train`!")
 
 # Test for total columns in testing dataset
-test_object("test_col")
+test_object("test_col", incorrect_msg = "Don't forget to print the total number of columns in `test`!")
 
 success_msg("Great work!")
 ```
