@@ -414,7 +414,7 @@ else:
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check length of strings
-test_object("square_len", incorrect_msg = “Have you used len function with list squares_list?")
+test_object("square_len", incorrect_msg = "Have you used len function with list squares_list?")
 
 # Check last seven characters
 test_output_contains("Greater than 5", pattern = False, no_output_msg="Have you given the right statement in True and False block of if?")
