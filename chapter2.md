@@ -169,7 +169,7 @@ str3= str1 + str2
 test_object("str_len", incorrect_msg = "Did you use len() function with str1?")
 
 # Check last seven characters
-test_output_contains("strings", pattern = False, no_output_msg="Have you used the right start and end index number?")
+test_output_contains("strings", pattern = False, no_output_msg="Have you used the right start and end index number with str1 to print last seven characters?")
 
 # Check concatenated strings"
 test_object("str3", incorrect_msg="Are you sure that you have used + sign to concatenate both strings st1 and str2")
