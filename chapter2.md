@@ -107,8 +107,7 @@ print (String[0:8])
 
 *** =hint
 
-- Use str[2] to select the third element of string str 
-- Use len(str) to return the length of string
+- Use str[0] to select the first element of string str 
 - Use str1 + str2 to return the concatenated result of both strings str1 and str2
 
 
@@ -167,13 +166,13 @@ str3= str1 + str2
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check length of strings
-test_object("str_len")
+test_object("str_len", incorrect_msg = "Did you use len() function with str1?")
 
 # Check last seven characters
-test_output_contains("strings", pattern = False)
+test_output_contains("strings", pattern = False, no_output_msg="Have you used the right start and end index number?")
 
 # Check concatenated strings"
-test_object("str3")
+test_object("str3", incorrect_msg="Are you sure that you have used + sign to concatenate both strings st1 and str2")
 success_msg("Great work!")
 ```
 
