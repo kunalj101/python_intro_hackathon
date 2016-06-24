@@ -196,13 +196,13 @@ In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "
 
 *** =instructions
 
-- Use dictinary['Key'] to access value(s) against given key and update it by assigning different value(s)
-- Use Dict.keys() to access all the keys of given dictionary Dict
+- Use dictionary['Key'] to access value(s) against given key and update it by assigning different value(s)
+- Use Dict.keys() to access all the keys of given dictionary "Dict"
 
 
 *** =hint
 
-- Use dict['Keys'] = new_value to update the existing value
+- Use dict['Key'] = new_value to update the existing value
 
 
 *** =pre_exercise_code
@@ -216,10 +216,10 @@ In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "
 ```{python}
 
 # Create a dictionary
-dict1 = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
+dict1 = { 'Age': 16, 'Name': 'Max', 'Sports': 'Cricket'}
 
 # Update the value of Age to 18
-
+dict1['Age']=
 
 # Print the value of Age
 
@@ -234,7 +234,7 @@ dict1 = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
 ```{python}
 
 # Create a dictionary
-dict1 = {'Name': 'Max', 'Age': 16, 'Sports': 'Cricket'}
+dict1 = {'Age': 16, 'Name': 'Max', 'Sports': 'Cricket'}
 
 # Update the value of Age to 18
 dict1['Age'] = 18
@@ -254,11 +254,15 @@ print (dict1.keys())
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
+#Check right value assignment to age
+test_object("dict1['Age']", incorrect_msg="Have you assigned the right value to Age?")
+
+
 # Check value of Age
-test_output_contains("18", pattern = False)
+test_output_contains("18", pattern = False, no_output_msg="Have you used the key `"Age"` with dictonary dict1")
 
 # Check keys of dictionary
-test_output_contains("dict_keys(['Age', 'Name', 'Sports'])", pattern = False)
+test_output_contains("dict_keys(['Age', 'Name', 'Sports'])", pattern = False, no_output_msg="Have you used keys() with dict to print all keys?")
 
 success_msg("Great work!")
 ```
