@@ -196,7 +196,7 @@ In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "
 
 *** =instructions
 
-- Use dictionary['Key'] to access value(s) against given key and update it by assigning different value(s)
+- Use dictionary['Key'] to access value(s) against given key
 - Use Dict.keys() to access all the keys of given dictionary "Dict"
 
 
