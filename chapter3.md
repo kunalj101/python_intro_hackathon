@@ -192,7 +192,7 @@ print (df1)
 
 # Test for describe
 #test_object("df", incorrect_msg="Did you store the numerical summary to 'df' ?")
-test_function("describe", not_called_msg = "You did not call `describe()`")
+test_function("train.describe", not_called_msg = "You did not call `describe()`")
 # Test for value_counts
 test_object("df1", incorrect_msg="Did you store the frequency table of categorical variable 'Property_Area' ?")
 
