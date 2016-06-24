@@ -191,10 +191,9 @@ print (df1)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for describe
-#test_object("df", incorrect_msg="Did you store the numerical summary to 'df' ?")
-test_function("train.describe", not_called_msg = "You did not call `describe()`")
+test_function("train.describe", not_called_msg = "Did you call the right function with train dataset to see numerical summary?")
 # Test for value_counts
-test_object("df1", incorrect_msg="Did you store the frequency table of categorical variable 'Property_Area' ?")
+test_function("train['Property_Area'].value_counts", not_called_msg = "Did you call the right function with train dataset to see frequency table of 'Property_Area'?")
 
 success_msg("Great work!")
 ```
