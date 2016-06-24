@@ -459,17 +459,19 @@ for i in [Python Iterable]:
 *** =sample_code
 
 ```{python}
-# Create a list with first five numbers
+# Create a list of first five numbers
 ls=[]
 for x in range(5):
     ls.append(x)
     
 sum=0
-# Store sum all even numbers of the list ls in sum
+# Store sum all the even numbers of the list ls in sum
 
 for x in ls: 
     if ______: 
         sum += x
+
+print (sum)
 
 ```
 
@@ -488,6 +490,8 @@ for x in ls:
     if x%2==0: 
         sum += x
 
+print (sum)
+
 ```
 
 *** =sct
@@ -498,7 +502,7 @@ for x in ls:
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check length of strings
-test_object("sum")
+test_object("sum", incorrect_msg="Are you taking sum of even numbers?")
 
 success_msg("Great work!")
 ```
