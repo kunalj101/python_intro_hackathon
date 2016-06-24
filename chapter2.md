@@ -254,10 +254,6 @@ print (dict1.keys())
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-#Check right value assignment to age
-test_object("dict1['Age']", incorrect_msg="Have you assigned the right value to Age?")
-
-
 # Check value of Age
 test_output_contains("18", pattern = False, no_output_msg="Have you used the key Age with dictonary dict1")
 
