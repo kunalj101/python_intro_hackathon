@@ -123,6 +123,9 @@ For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can loo
 
 df[column_name].value_counts()
 
+OR
+
+df.column_name.value_counts()
 ```
 
 *** =instructions
@@ -133,7 +136,7 @@ df[column_name].value_counts()
 
 *** =hint
 - Store the output of `train.describe()` in a variable df
-- Use `train['PropertyArea'].value_counts()` to look at frequency distribution
+- Use `train.PropertyArea.value_counts()` to look at frequency distribution
 
 
 *** =pre_exercise_code
