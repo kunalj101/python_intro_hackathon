@@ -191,10 +191,10 @@ print (df1)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for describe
-test_object("df")
+test_object("df", incorrect_msg="Did you store the numerical summary to 'df' ?")
 
 # Test for value_counts
-test_object("df1")
+test_object("df1", incorrect_msg="Did you store the frequency table of categorical variable 'Property_Area' ?")
 
 success_msg("Great work!")
 ```
