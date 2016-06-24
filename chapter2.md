@@ -336,7 +336,7 @@ else:
 *** =instructions
 
 - Store the length of `squares_list` to `square_len` using function `len()`
-- Coparision operators `<, >, <=, >=, ==` and `!=` help to check condition is true or false
+- Comparision operators `<, >, <=, >=, ==` and `!=` help to check condition is true or false
 
 
 *** =hint
@@ -371,7 +371,7 @@ squares_list = [0, 1, 4, 9, 16, 25]
 square_len = 
 
 # if square_len is less than 5 then print "Less than 5" else "Greater than 5"
-if square_len < ___:
+if square_len < 5:
     print ("__________")
 else:
     print ("__________")
@@ -414,10 +414,10 @@ else:
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check length of strings
-test_object("square_len")
+test_object("square_len", incorrect_msg = “Have you used len function with list squares_list?")
 
 # Check last seven characters
-test_output_contains("Greater than 5", pattern = False)
+test_output_contains("Greater than 5", pattern = False, incorrect_msg="Have you given the right statement in True and False block of if?")
 
 success_msg("Great work!")
 ```
