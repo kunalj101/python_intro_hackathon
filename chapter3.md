@@ -235,8 +235,8 @@ train.boxplot(column='ApplicantIncome', by='Gender')
 ```
 
 *** =hint
-- train['LoanAmount'].hist()
-- train.boxplot(column='LoanAmount', by = 'Gender' )
+- dataframe['columnname1'].hist()
+- train.boxplot(column='columnname2', by = 'columnname3' )
 
 
 *** =pre_exercise_code
