@@ -21,8 +21,8 @@ We just created two lists, one for Country names and another one for temperature
 - A range of element can be accessed by having start index and end index but it does not return the value available at end index. For example, Temperature[1:4] should return [28, 20, 18]
 
 *** =instructions
-- Create a list of first five odd numbers and store it in a variable odd_numbers.
-- Print second to fourth element [1, 4, 9] from squares_list,
+- Create a list of the first five odd numbers and store it in the variable odd_numbers.
+- Print second to fourth element [1, 4, 9] from squares_list
 
 
 *** =hint
@@ -75,10 +75,10 @@ print (squares_list[1:4])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for list of odd_numbers
-test_object("odd_numbers")
+test_object("odd_numbers", incorrect_msg="Check list of first five odd numbers, it should be 1, 3, 5, 7, 9")
 
 # Check second to fourth elements"
-test_output_contains("[1, 4, 9]", pattern = False)
+test_output_contains("[1, 4, 9]", pattern = False, no_output_msg="Have you given the right index number to squares_list?")
 success_msg("Great work!")
 ```
 
