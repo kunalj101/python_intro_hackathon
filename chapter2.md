@@ -75,7 +75,7 @@ print (squares_list[1:4])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for list of odd_numbers
-test_object("odd_numbers", incorrect_msg="Check list of first five odd numbers, it should be 1, 3, 5, 7, 9")
+test_object("odd_numbers", incorrect_msg="Are you sure you assigned the correct value to odd_numbers, it must be 1, 3, 5, 7, 9")
 
 # Check second to fourth elements"
 test_output_contains("[1, 4, 9]", pattern = False, no_output_msg="Have you given the right index number to squares_list?")
