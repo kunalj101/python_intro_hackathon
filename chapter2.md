@@ -219,7 +219,7 @@ In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "
 dict1 = { 'Age': 16, 'Name': 'Max', 'Sports': 'Cricket'}
 
 # Update the value of Age to 18
-dict1['Age']=
+dict1['Age'] = 18
 
 # Print the value of Age
 
