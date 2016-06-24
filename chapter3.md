@@ -164,7 +164,7 @@ df= train.________()
 print (df)
 
 # Print the unique values and their frequency of variable Property_Area
-df1=train['Property_Area'].________()
+df1=train.Property_Area.________()
 print (df1)
 
 ```
@@ -178,7 +178,7 @@ df = train.describe()
 print (df)
 
 # Print the unique values and their frequency of variable Property_Area
-df1=train['Property_Area'].value_counts()
+df1=train.Property_Area.value_counts()
 print (df1)
 
 ```
@@ -193,7 +193,7 @@ print (df1)
 # Test for describe
 test_function("train.describe", not_called_msg = "Did you call the right function with train dataset to see numerical summary?")
 # Test for value_counts
-test_function("train['Property_Area'].value_counts", not_called_msg = "Did you call the right function with train dataset to see frequency table of 'Property_Area'?")
+test_function("train.Property_Area.value_counts", not_called_msg = "Did you call the right function with train dataset to see frequency table of 'Property_Area'?")
 
 success_msg("Great work!")
 ```
