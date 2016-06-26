@@ -213,6 +213,10 @@ Let's start by plotting the histogram of ApplicantIncome using the following com
 
 train['ApplicantIncome'].hist(bins=50)
 
+Or
+
+train.ApplicantIncome.hist(bins=50)
+
 ```
 Next, we can also look at box plots to understand the distributions. Box plot for ApplicantIncome can be plotted by
 
@@ -265,7 +269,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 train['LoanAmount']._____
 
 # Plot a box plot for variable LoanAmount by variable Gender of training data set
-train.boxplot(column='LoanAmount', by = ____)
+train._______(column='LoanAmount', by = 'Gender')
 
 ```
 
@@ -276,7 +280,7 @@ train.boxplot(column='LoanAmount', by = ____)
 
 # Assumed training and testing dataset are loaded in train and test dataframe respectively
 # Plot histogram for variable LoanAmount
-train['LoanAmount'].hist()
+train.LoanAmount.hist()
 
 # Plot a box plot for variable LoanAmount by variable Gender of training data set
 train.boxplot(column='LoanAmount', by ='Gender' )
@@ -291,10 +295,10 @@ train.boxplot(column='LoanAmount', by ='Gender' )
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for evaluating histogram
-
+test_function("train.LoanAmount.hist", not_called_msg = "Did you call the right function to plot histogram?")
 
 # Test for evaluating box plot
-
+test_function("train.LoanAmount.hist", not_called_msg = "Did you call the right function for boxplot?")
 
 success_msg("Great work!")
 ```
