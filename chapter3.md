@@ -366,7 +366,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 loan_approval = train['Loan_Status'].________()['Y']
 
 # Two-way comparison: Credit History and Loan Status
-pd.________(train ["Credit_History"], train ["Loan_Status"], margins=True)
+twowaytable = pd.________(train ["Credit_History"], train ["Loan_Status"], margins=True)
 
 
 
@@ -382,7 +382,7 @@ pd.________(train ["Credit_History"], train ["Loan_Status"], margins=True)
 loan_approval = train['Loan_Status'].value_counts()['Y']
 
 # Two-way comparison: Credit_History and Loan_Status
-pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
+twowaytable = pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
 
 ```
 
