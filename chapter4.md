@@ -230,7 +230,7 @@ test['LoanAmount'].fillna(168, inplace=True)
 
 # Impute missing value of LoanAmount with 168 for test data set
 #test_object("test.LoanAmount", incorrect_msg='Did you impute missing value with 168?')
-test_data_frame("test", columns="LoanAmount", incorrect_msg='Did you impute missing value with 168?')
+test_data_frame("test", columns=["LoanAmount"], incorrect_msg='Did you impute missing value with 168?')
 success_msg("Great work!")
 ```
 
