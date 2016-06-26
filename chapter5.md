@@ -1006,7 +1006,7 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for model
-test_function("sklearn.tree.RandomForestClassifier", incorrect_msg='Have you created RandomForest object from ensemble module of sklearn?')
+test_function("sklearn.ensemble.RandomForestClassifier", incorrect_msg='Have you created RandomForest object from ensemble module of sklearn?')
 
 # Test for predicted
 test_object("predicted", incorrect_msg='Have you used .predict() method?')
