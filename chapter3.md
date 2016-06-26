@@ -398,7 +398,7 @@ test_object("loan_approval", incorrect_msg='Did you look at the frequency distri
 
 
 # Test for two-way comparison Credit_History and Loan_Status
-test_function("pd.crosstab", not_called_msg = "Did you call the right function to generate two-way table?")
+#test_function("pd.crosstab", not_called_msg = "Did you call the right function to generate two-way table?")
 
 
 success_msg("Great work!")
