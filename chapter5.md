@@ -220,16 +220,19 @@ In simple words, it predicts the probability of occurrence of an event by fittin
 
 
 *** =instructions
-Create an object of LogisticRegression
+- Import Linear model of sklearn
+- Create object of sklearn
+
 
 
 *** =hint
-Import LogisticRegression from linear_model of sklearn
+Import linear_model of sklearn
+
 
 *** =pre_exercise_code
 
 ```{python}
-from sklearn.linear_model import LogisticRegression
+import sklearn.linear_model 
 
 ```
 
@@ -237,16 +240,22 @@ from sklearn.linear_model import LogisticRegression
 
 ```{python}
 
-# Import module for Logistic regression
-from sklearn.linear_model import ______ 
+# Import linear model of sklearn
+import ______.linear_model
+
+# Create object of Logistic Regression
+model=sklearn.______.LogisticRegression()
 
 ```
 
 *** =solution
 
 ```{python}
-# Import module for Logistic regression
-from sklearn.linear_model import LogisticRegression
+# Import linear model of sklearn
+import sklearn.linear_model
+
+# Create object of Logistic Regression
+model=sklearn.linear_model.LogisticRegression()
 
 ```
 
@@ -257,8 +266,11 @@ from sklearn.linear_model import LogisticRegression
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for predictor selection
-test_import("LogisticRegression", same_as = False)
+# Test for library import
+test_import("sklearn.linear_model", same_as = False)
+
+# Test for logistic regression
+test_object("model", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
 
 success_msg("Great work!")
 ```
