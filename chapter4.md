@@ -229,7 +229,6 @@ test['LoanAmount'].fillna(168, inplace=True)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Impute missing value of LoanAmount with 168 for test data set
-#test_object("test.LoanAmount", incorrect_msg='Did you impute missing value with 168?')
 test_data_frame("test", columns=["LoanAmount"], incorrect_msg='Did you impute missing value with 168?')
 success_msg("Great work!")
 ```
@@ -247,7 +246,7 @@ train['Self_Employed'].fillna('No',inplace=True)
 ```
 
 *** =instructions
-- Impute missing values with more frequent category
+- Impute missing values with more frequent category of Gender and Credit History
 - Use value_counts() to check more frequent category of variable
 
 *** =hint
@@ -306,10 +305,10 @@ train['Credit_History'].fillna(1,inplace=True)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Impute missing value of LoanAmount with median for test data set
-test_object(“test['Gender']”)
+test_data_frame("train", columns=["Gender"], incorrect_msg='Did you impute missing value of Gender with Male?')
 
 # Impute missing value of Credit_History
-test_object(“test['Credit_History']”)
+test_data_frame("train", columns=["Credit_History"], incorrect_msg='Did you impute missing value of Credit_History with 1?')
 
 
 success_msg("Great work!")
