@@ -647,6 +647,7 @@ Ok, time for you to build your first Decision Tree model! The pre processed trai
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
+import sklearn.tree
 
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
