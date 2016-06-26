@@ -583,7 +583,7 @@ from sklearn.tree import DecisionTreeClassifier
 ```{python}
 
 # Import tree module of sklearn
-Import sklearn._____
+import sklearn._____
 
 # Create object of DecisionTreeClassifier
 model = sklearn.tree.__________()
@@ -594,7 +594,7 @@ model = sklearn.tree.__________()
 
 ```{python}
 # Import tree module of sklearn
-Import sklearn.tree
+import sklearn.tree
 
 # Create object of DecisionTreeClassifier
 model = sklearn.tree.DecisionTreeClassifier()
