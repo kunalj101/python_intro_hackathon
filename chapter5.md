@@ -848,7 +848,7 @@ model=sklearn.ensemble.RandomForestClassifier()
 test_import("sklearn.ensemble", same_as = False)
 
 # Test for logistic regression
-test_function("sklearn.tree.RandomForestClassifier", incorrect_msg='Have you created RandomForest object from ensemble module of sklearn?')
+test_function("sklearn.ensemble.RandomForestClassifier", incorrect_msg='Have you created RandomForest object from ensemble module of sklearn?')
 
 success_msg("Great work!")
 ```
