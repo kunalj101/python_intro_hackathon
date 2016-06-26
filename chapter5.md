@@ -270,7 +270,9 @@ model=sklearn.linear_model.LogisticRegression()
 test_import("sklearn.linear_model", same_as = False)
 
 # Test for logistic regression
-test_object("model", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
+#test_("model", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
+
+test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
 
 success_msg("Great work!")
 ```
