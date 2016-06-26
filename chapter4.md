@@ -110,7 +110,7 @@ Apply isnull().sum() with test dataset
 
 
 *** =hint
-Use test.isnull().sum() to check number of missing values
+Use train.isnull().sum() to check number of missing values in train data set
 
 
 
@@ -136,7 +136,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 ```{python}
 
 # Check variables have missing values in test data set
-number_missing_values_test_data = _____.isnull()._____()
+number_missing_values_test_data = test.isnull()._____()
 
 ```
 
@@ -157,7 +157,7 @@ number_missing_values_test_data = test.isnull().sum()
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check variables have missing values in test data set
-test_object("number_missing_values_test_data")
+test_object("number_missing_values_test_data", incorrect_msg='Have you count the number of missing values in each variable of test data set?')
 
 
 success_msg("Great work!")
