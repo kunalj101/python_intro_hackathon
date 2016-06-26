@@ -346,8 +346,8 @@ Now the distribution looks much closer to normal and effect of extreme values ha
 
 
 *** =hint
-- df['TotalIncome'] = df['ApplicantIncome'] + df['CoapplicantIncome']
-- df['TotalIncome_log'] = np.log(df['TotalIncome'])
+- Add both train['ApplicantIncome'] and train['CoapplicantIncome']
+- Take log of df['TotalIncome']
 
 
 *** =pre_exercise_code
@@ -407,10 +407,10 @@ train['TotalIncome_log'] = np.log(train['TotalIncome'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
-test_object("train['TotalIncome']")
+test_data_frame("train", columns=["TotalIncome"], incorrect_msg='Have you added both ApplicantIncome and CoapplicantIncome?')
 
 # Perform log transformation of TotalIncome to make it closer to normal
-test_object("train['TotalIncome_log']")
+test_data_frame("train", columns=["TotalIncome_log"], incorrect_msg='Have you taken log of TotalIncome?')
 
 success_msg("Great work!")
 ```
