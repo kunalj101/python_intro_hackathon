@@ -62,8 +62,7 @@ train['Gender'] = number.fit_transform(train['Gender'])
 ```
 
 *** =instructions
-- Import LabelEncoder 
-- Perform Label encoding for categories of variable "Married" 
+Perform Label encoding for categories of variable "Married" 
 
 
 *** =hint
@@ -94,7 +93,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 ```{python}
 
 #import module for label encoding
-from sklearn.preprocessing import ______
+from sklearn.preprocessing import LabelEncoder
 
 #train and test dataset is already loaded in the enviornment
 # Perform label encoding for Married
@@ -123,9 +122,6 @@ train['Married'] = number.fit_transform(train['Property_Area'])
 # The sct section defines the Submission Correctness Tests (SCTs) used to
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
-
-#import module for label encoding
-test_import("LabelEncoder", same_as = False)
 
 # Perform label encoding for Married
 test_data_frame("train", columns=["Married"], incorrect_msg='Have you done label encoding for variable Married?')
