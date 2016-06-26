@@ -298,7 +298,7 @@ train.boxplot(column='LoanAmount', by ='Gender' )
 test_function("train.LoanAmount.hist", not_called_msg = "Did you call the right function to plot histogram?")
 
 # Test for evaluating box plot
-test_function("train.LoanAmount.hist", not_called_msg = "Did you call the right function for boxplot?")
+test_function("train.boxplot", not_called_msg = "Did you call the right function for boxplot?")
 
 success_msg("Great work!")
 ```
