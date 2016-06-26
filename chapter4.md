@@ -183,7 +183,7 @@ Impute missing values with a specific value 168
 
 
 *** =hint
-Use test['LoanAmount'].fillna(168, inplace=True)
+Use dataframe['missingcol'].fillna(225, inplace=True) to impute missing value of column 'missingcol' with 225
 
 
 *** =pre_exercise_code
@@ -229,7 +229,7 @@ test['LoanAmount'].fillna(168, inplace=True)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Impute missing value of LoanAmount with 168 for test data set
-test_object(“test['LoanAmount']”)
+test_object(“test['LoanAmount']”, incorrect_msg='Did you impute missing value with 168?')
 
 success_msg("Great work!")
 ```
