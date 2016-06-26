@@ -125,10 +125,10 @@ train['Married'] = number.fit_transform(train['Property_Area'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 #import module for label encoding
-test_import("LabelEncoder", same_as = False, not_imported_msg='Have you imported LabelEncoder module of sklearn.preprocessing?', incorrect_as_msg='Have you imported LabelEncoder module of sklearn.preprocessing?')
+test_import("LabelEncoder", same_as = False)
 
 # Perform label encoding for Married
-test_data_frame("train", columns=["Married"], incorrect_msg='Have you done label encoding for variable Married')
+test_data_frame("train", columns=["Married"], incorrect_msg='Have you done label encoding for variable Married?')
 
 success_msg("Great work!")
 ```
