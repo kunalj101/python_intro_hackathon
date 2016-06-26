@@ -124,7 +124,7 @@ train['Married'] = number.fit_transform(train['Property_Area'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Perform label encoding for Married
-test_data_frame("train", columns=["Married"], incorrect_msg='Have you done label encoding for variable Married?')
+test_data_frame("train", columns=["Married"], incorrect_msg='Have you used write methds to perform label encoding for variable Married?')
 
 success_msg("Great work!")
 ```
@@ -224,7 +224,7 @@ Create an object of LogisticRegression
 
 
 *** =hint
-You can use from sklearn.linear_model import LogisticRegression command
+Import LogisticRegression from linear_model of sklearn
 
 *** =pre_exercise_code
 
