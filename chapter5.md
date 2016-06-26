@@ -631,14 +631,14 @@ Ok, time for you to build your first Decision Tree model! The pre processed trai
 *** =instructions
 - Store input variable in list "predictors"
 - Create a object of DecisionTreeClassifier
-- Train model on training data set (x_train, y_train)
-- Use .predict() method for prediction
-- Use to_csv() to export csv file
+- Do prediction for test data set
+- Export test prediction to csv file
 
 
 *** =hint
 - Use predictors =['Credit_History','Education','Gender'] as predictor variable
 - Use from sklearn.tree import DecisionTreeClassifier
+- Use to_csv() with dataframe to export csv file
 
 
 *** =pre_exercise_code
@@ -724,7 +724,7 @@ predicted = number.inverse_transform(predicted)
 test_modified['Loan_Status']=predicted
 
 #Output file to make submission
-test_modified._____("Submission1.csv",columns=['Loan_ID','Loan_Status'])
+test_modified.______("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 
 
 ```
@@ -734,7 +734,7 @@ test_modified._____("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 ```{python}
 #train_modified and test_modified already loaded in the workspace
 #Import module for Decision tree
-from sklearn.tree import DecisionTreeClassifier
+import sklearn.tree
 
 # Select three predictors Credit_History, Education and Gender
 predictors =['Credit_History','Education','Gender']
@@ -781,6 +781,9 @@ test_function("sklearn.tree.DecisionTreeClassifier", incorrect_msg='Have you cre
 # Test for predicted
 test_object("predicted", incorrect_msg='Have you used .predict() method?')
 
+
+# Test for csv import
+test_function("test_modified.to_csv", incorrect_msg='Have you used the right function to export a csv file?')
 
 success_msg("Great work!")
 ```
