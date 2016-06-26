@@ -229,7 +229,7 @@ train.boxplot(column='ApplicantIncome')
 
 *** =instructions
 
-- Use hist() with train['LoanAmount'] to plot histogram
+- Use hist() to plot histogram
 - Use by=categorical_variable with box plot to look at distribution by categories
 
 ```{python}
@@ -239,8 +239,8 @@ train.boxplot(column='ApplicantIncome', by='Gender')
 ```
 
 *** =hint
-- dataframe['columnname1'].hist()
-- train.boxplot(column='columnname2', by = 'columnname3' )
+- Use dataframe.columnname1.hist() to plot histogram
+- Use dataframe.boxplot(column='columnname2', by = 'columnname3' ) to have boxplot by different categories of a categorical variable
 
 
 *** =pre_exercise_code
