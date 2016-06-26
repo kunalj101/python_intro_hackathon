@@ -270,7 +270,7 @@ model=sklearn.linear_model.LogisticRegression()
 test_import("sklearn.linear_model", same_as = False)
 
 # Test for logistic regression
-test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
+test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear model module of sklearn?')
 
 success_msg("Great work!")
 ```
@@ -400,7 +400,7 @@ model.fit(x_train, y_train)
 test_object("predictors", incorrect_msg='Have you create the list of given predictors variables?')
 
 # Test for model
-test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
+test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear_model module of sklearn?')
 
 success_msg("Great work!")
 ```
@@ -612,7 +612,7 @@ model = sklearn.tree.DecisionTreeClassifier()
 test_import("sklearn.tree", same_as = False)
 
 # Test for logistic regression
-test_function("sklearn.tree.DecisionTreeClassifier", incorrect_msg='Have you created DecisionTree object from tree model of sklearn?')
+test_function("sklearn.tree.DecisionTreeClassifier", incorrect_msg='Have you created DecisionTree object from tree module of sklearn?')
 
 success_msg("Great work!")
 ```
@@ -776,7 +776,7 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 test_object("predictors", incorrect_msg='Have you create the list of given predictors variables?')
 
 # Test for model
-test_function("sklearn.tree.DecisionTreeClassifier", incorrect_msg='Have you created DecisionTree object from tree model of sklearn?')
+test_function("sklearn.tree.DecisionTreeClassifier", incorrect_msg='Have you created DecisionTree object from tree module of sklearn?')
 
 # Test for predicted
 test_object("predicted", incorrect_msg='Have you used .predict() method?')
@@ -800,33 +800,40 @@ Random Forest is a versatile machine learning method capable of performing both 
 
 
 *** =instructions
-Create a object of DecisionTreeClassifier
+- Import library sklearn.ensemble
+- Create a object of RandomForestClassifier
 
 
 *** =hint
-You can use from sklearn.ensemble import RandomForestClassifier command
+Use RandomForestClassifier() with sklearn.ensemble to create object of Random Forest
+
 
 *** =pre_exercise_code
 
 ```{python}
-from sklearn.ensemble import RandomForestClassifier
+import sklearn.ensemble
 ```
 
 *** =sample_code
 
 ```{python}
 
-# Import module for Random Forest Classifiers
-from sklearn.ensemble import ________
+# Import ensemble module from sklearn
+import sklearn.______
 
+# Create object of RandomForestClassifier
+model=sklearn.ensemble.__________
 
 ```
 
 *** =solution
 
 ```{python}
-# Import module for Random Forest classifier
-from sklearn.ensemble import RandomForestClassifier
+# Import ensemble module from sklearn
+import sklearn.ensemble
+
+# Create object of RandomForestClassifier
+model=sklearn.ensemble.RandomForestClassifier()
 
 ```
 
@@ -837,9 +844,11 @@ from sklearn.ensemble import RandomForestClassifier
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for predictor selection
-test_import("RandomForestClassifier", same_as = False)
+# Test for library import
+test_import("sklearn.ensemble", same_as = False)
 
+# Test for logistic regression
+test_function("sklearn.tree.RandomForestClassifier", incorrect_msg='Have you created RandomForest object from ensemble module of sklearn?')
 
 success_msg("Great work!")
 ```
