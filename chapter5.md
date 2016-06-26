@@ -295,11 +295,11 @@ Ok, time for you to build your first logistics regression model! The pre process
 *** =instructions
 - Store input variable in list "predictors"
 - Create an object of logistic regression
-- Train model on training data set (x_train, y_train)
+
 
 
 *** =hint
-- Use predictors =['Credit_History','Education','Gender'] as predictor variable
+Use list ['Credit_History','Education','Gender'] as predictor variable
 
 *** =pre_exercise_code
 
@@ -357,7 +357,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 
 #train_modified and test_modified already loaded in the workspace
 #Import module for Logistic regression
-from sklearn.linear_model import LogisticRegression
+import sklearn.linear_model
 
 # Select three predictors Credit_History, Education and Gender
 predictors =[____,_____,_____]
@@ -367,7 +367,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = _________
+model = ________
 model.fit(x_train, y_train)
 
 ```
@@ -376,7 +376,7 @@ model.fit(x_train, y_train)
 
 ```{python}
 # Import module for Logistic regression
-from sklearn.linear_model import LogisticRegression
+import sklearn.linear_model
 
 # Select three predictors Credit_History, Education and Gender
 predictors =['Credit_History','Education','Gender']
@@ -386,7 +386,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = LogisticRegression()
+model = sklearn.linear_model.LogisticRegression()
 model.fit(x_train, y_train)
 
 ```
@@ -399,10 +399,10 @@ model.fit(x_train, y_train)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("predictors")
+test_object("predictors", incorrect_msg='Have you create list of given predictors variables?')
 
 # Test for model
-#test_object("model")
+test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
 
 success_msg("Great work!")
 ```
