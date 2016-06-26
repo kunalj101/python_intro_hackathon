@@ -394,11 +394,11 @@ twowaytable = pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margi
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for Approved Loan in absolute numbers
-test_object("loan_approval", incorrect_msg='Did you look at the frequency distribution?')
+test_object("loan_approval", incorrect_msg='Did you look at the frequency distribution?',undefined_msg='Did you look at the frequency distribution?')
 
 
 # Test for two-way comparison Credit_History and Loan_Status
-test_object("twowaytable", incorrect_msg='Did you use the right function to generate two way table?')
+test_object("twowaytable", incorrect_msg='Did you use the right function to generate two way table?', undefined_msg='Did you use the right function to generate two way table?')
 
 
 success_msg("Great work!")
