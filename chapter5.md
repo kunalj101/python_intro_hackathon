@@ -270,8 +270,6 @@ model=sklearn.linear_model.LogisticRegression()
 test_import("sklearn.linear_model", same_as = False)
 
 # Test for logistic regression
-#test_("model", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
-
 test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
 
 success_msg("Great work!")
@@ -566,11 +564,12 @@ Decision trees are mostly used in classification problems. It works for both cat
 
 
 *** =instructions
-Create a object of DecisionTreeClassifier
+- Import tree module of sklearn
+- Create a object of DecisionTreeClassifier
 
 
 *** =hint
-You can use from sklearn.tree import DecisionTreeClassifier command
+Use DecisiontreeClassifier with sklearn.tree to create object of decision tree
 
 *** =pre_exercise_code
 
@@ -583,16 +582,22 @@ from sklearn.tree import DecisionTreeClassifier
 
 ```{python}
 
-# Import module for DecisionTreeClassifier
-from sklearn.tree import __________
+# Import tree module of sklearn
+Import sklearn._____
+
+# Create object of DecisionTreeClassifier
+model = sklearn.tree.__________()
 
 ```
 
 *** =solution
 
 ```{python}
-# Import module for Logistic regression
-from sklearn.tree import DecisionTreeClassifier
+# Import tree module of sklearn
+Import sklearn.tree
+
+# Create object of DecisionTreeClassifier
+model = sklearn.tree.DecisionTreeClassifier()
 
 ```
 
@@ -603,8 +608,11 @@ from sklearn.tree import DecisionTreeClassifier
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for predictor selection
-test_import("DecisionTreeClassifier", same_as = False)
+# Test for library import
+test_import("sklearn.tree", same_as = False)
+
+# Test for logistic regression
+test_function("sklearn.tree.DecisionTreeClassifier", incorrect_msg='Have you created DecisionTree object from tree model of sklearn?')
 
 success_msg("Great work!")
 ```
@@ -689,7 +697,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 
 #train_modified and test_modified already loaded in the workspace
 #Import module for Decision tree
-from sklearn.tree import __________
+import sklearn.tree
 
 # Select three predictors Credit_History, Education and Gender
 predictors =[____,_____,_____]
@@ -699,7 +707,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = _________
+model = sklearn._____.DecisionTreeClassifier()
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
@@ -735,7 +743,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = DecisionTreeClassifier()
+model = sklearn.tree.DecisionTreeClassifier()
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
@@ -764,13 +772,13 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("predictors")
+test_object("predictors", incorrect_msg='Have you create the list of given predictors variables?')
 
 # Test for model
-#test_object("model")
+test_function("sklearn.tree.DecisionTreeClassifier", incorrect_msg='Have you created DecisionTree object from tree model of sklearn?')
 
 # Test for predicted
-#test_object("predicted")
+test_object("predicted", incorrect_msg='Have you used .predict() method?')
 
 
 success_msg("Great work!")
