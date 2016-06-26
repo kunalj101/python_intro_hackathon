@@ -637,7 +637,7 @@ Ok, time for you to build your first Decision Tree model! The pre processed trai
 
 *** =hint
 - Use predictors =['Credit_History','Education','Gender'] as predictor variable
-- Use from sklearn.tree import DecisionTreeClassifier
+- Use DecisionTreeClassifier with sklearn.tree to create decision tree object
 - Use to_csv() with dataframe to export csv file
 
 
@@ -864,16 +864,14 @@ Ok, time for you to build your first Random Forest model! The pre processed trai
 
 
 *** =instructions
-- Store input variable in list "predictors"
 - Create a object of RandomForestClassifier
-- Train model on training data set (x_train, y_train)
-- Use .predict() method for prediction
-- Use to_csv() to export csv file
+- Do prediction for test data set
+- Export test prediction to csv file
 
 
 *** =hint
-- Use predictors =['Credit_History','Education','Gender'] as predictor variable
-- Use from sklearn.tree import RandomForestClassifier
+- Use RandomForestClassifier() with sklearn.ensemble to create a random forest object
+- Use to_csv() with dataframe to export csv file
 
 
 *** =pre_exercise_code
@@ -882,6 +880,7 @@ Ok, time for you to build your first Random Forest model! The pre processed trai
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
+import sklearn.ensemble
 
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
@@ -932,24 +931,24 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 
 #train_modified and test_modified already loaded in the workspace
 #Import module for Random Forest
-from sklearn.ensemble import __________
+import sklearn.ensemble
 
 # Select three predictors Credit_History, Education and Gender
-predictors =[____,_____,_____]
+predictors =['Credit_History','Education','Gender']
 
 # Converting predictors and outcome to numpy array
 x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = _________
+model = sklearn.ensemble._______
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
 x_test = test_modified[predictors].values
 
 #Predict Output
-predicted= model._____(x_test)
+predicted= model.______(x_test)
 
 #Reverse encoding for predicted outcome
 predicted = number.inverse_transform(predicted)
@@ -968,7 +967,7 @@ test_modified._____("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 ```{python}
 #train_modified and test_modified already loaded in the workspace
 #Import module for Random Forest 
-from sklearn.ensemble import RandomForestClassifier
+import sklearn.ensemble
 
 # Select three predictors Credit_History, Education and Gender
 predictors =['Credit_History','Education','Gender']
@@ -978,7 +977,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = RandomForestClassifier()
+model = sklearn.ensemble.RandomForestClassifier()
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
@@ -1006,17 +1005,18 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for predictor selection
-test_object("predictors")
-
 # Test for model
-#test_object("model")
+test_function("sklearn.tree.RandomForestClassifier", incorrect_msg='Have you created RandomForest object from ensemble module of sklearn?')
 
 # Test for predicted
-#test_object("predicted")
+test_object("predicted", incorrect_msg='Have you used .predict() method?')
 
+
+# Test for csv import
+test_function("test_modified.to_csv", incorrect_msg='Have you used the right function to export a csv file?')
 
 success_msg("Great work!")
+
 ```
 
 
