@@ -266,7 +266,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 # Training and Testing dataset are loaded in train and test dataframe respectively
 # Plot histogram for variable LoanAmount
-train['LoanAmount']._____
+train.LoanAmount._____
 
 # Plot a box plot for variable LoanAmount by variable Gender of training data set
 train._______(column='LoanAmount', by = 'Gender')
