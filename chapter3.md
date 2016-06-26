@@ -335,9 +335,7 @@ pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percent
 
 
 *** =hint
-- train['Loan_Status'].value_counts()['Y'] will return the loan approval rate
-
-
+train['Loan_Status'].value_counts() return the frequency by each category of categorical variable
 
 
 
@@ -396,12 +394,11 @@ pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for Approved Loan in absolute numbers
-test_object("loan_approval")
+test_object("loan_approval", incorrect_msg='Did you look at the frequency distribution?')
 
 
 # Test for two-way comparison Credit_History and Loan_Status
-
-
+test_function("pd.crosstab", not_called_msg = "Did you call the right function to generate two-way table?")
 
 
 success_msg("Great work!")
