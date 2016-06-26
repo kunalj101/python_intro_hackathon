@@ -24,7 +24,7 @@ train['Credit_History'].isnull().sum()
 
 
 *** =hint
-Use train['Self_Employed'].isnull().sum() to check number of missing values
+Use sum() with train['Self_Employed'].isnull() to check number of missing values
 
 
 
@@ -79,10 +79,10 @@ LoanAmount_have_missing_value = train['LoanAmount'].isnull().sum() > 0
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # How many missing values in variable "Self_Employed" ?
-test_object("n_missing_value_Self_Employed")
+test_object("n_missing_value_Self_Employed", incorrect_msg='Have you checked the missing values?')
 
 # Variable Loan amount has missing values or not?
-test_object("LoanAmount_have_missing_value")
+test_object("LoanAmount_have_missing_value", incorrect_msg='Have you checked the column has missing value or not?')
 
 success_msg("Great work!")
 ```
