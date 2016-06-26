@@ -569,7 +569,7 @@ Decision trees are mostly used in classification problems. It works for both cat
 
 
 *** =hint
-Use DecisiontreeClassifier with sklearn.tree to create object of decision tree
+Use DecisiontreeClassifier() with sklearn.tree to create object of decision tree
 
 *** =pre_exercise_code
 
