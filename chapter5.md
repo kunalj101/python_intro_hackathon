@@ -399,7 +399,7 @@ model.fit(x_train, y_train)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("predictors", incorrect_msg='Have you create list of given predictors variables?')
+test_object("predictors", incorrect_msg='Have you create the list of given predictors variables?')
 
 # Test for model
 test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear model of sklearn?')
@@ -424,8 +424,7 @@ Next, you need to make sure your output is in line with the submission requireme
 
 
 *** =hint
-- Use predictors =['Credit_History','Education','Gender'] as predictor variable
-- Use model.predict(x_test) for prediction of test dataset
+Use model.predict(x_test) for prediction of test dataset
 
 *** =pre_exercise_code
 
@@ -551,10 +550,10 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("predictors")
+test_object("predictors", incorrect_msg='Have you create the list of given predictors variables?')
 
 # Test for model
-test_object("predicted")
+test_object("predicted", incorrect_msg='Have you used .predict() method?')
 
 success_msg("Great work!")
 ```
