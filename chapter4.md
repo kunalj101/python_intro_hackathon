@@ -427,9 +427,8 @@ We have shared the Jupyter notebook for your reference here
 
 
 *** =instructions
-- Yes, I have
+- Yes, I have downloaded the notebook
 - No, I am not able to
-- No, I don't need the notebook
 
 
 *** =hint
@@ -446,11 +445,10 @@ Click on the link and download the Jupyter notebook.
 
 msg1 = "Awesome! You can proceed to model building now!"
 msg2 = "Check the link provided and download the file from there."
-msg3 = "Okay Bravo! You are ready to move ahead."
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc((1,3), [msg1, msg2, msg3]) 
+test_mc(1, [msg1, msg2]) 
 
 ```
