@@ -5,23 +5,23 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Create a list
+## Create a List
 
-Lists are probably the most versatile data structures in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
+Lists are probably the most versatile data structures in Python. A list can be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
 
 ```{python}
 Country =['INDIA','USA','GERMANY','UK','AUSTRALIA']
 
 Temperature =[44, 28, 20, 18, 25, 45, 67]
 ```
-We just created two lists, one for Country names and another one for temperature. 
+We just created two lists, one for Country names (strings) and another one for Temperature data (whole numbers). 
 
 ####Accessing individual elements of a list
-- Individual elements of a list can be accessed by writing an index number in square bracket. The first index of a list starts with 0 (zero) not 1. For example, Country[0] can be used to access 'INDIA'
-- A range of element can be accessed by having start index and end index but it does not return the value available at end index. For example, Temperature[1:4] should return [28, 20, 18]
+- Individual elements of a list can be accessed by writing an index number in square bracket. The first index of a list starts with 0 (zero) not 1. For example, Country[0] can be used to access the first element, 'INDIA'
+- A range of elements can be accessed by using start index and end index but it does not return the value of the end index. For example, Temperature[1:4] returns three elements, the second through fourth elements  [28, 20, 18], but not the fifth element
 
 *** =instructions
-- Create a list of the first five odd numbers and store it in the variable odd_numbers.
+- Create a list of the first five odd numbers and store it in the variable odd_numbers
 - Print second to fourth element [1, 4, 9] from squares_list
 
 
@@ -42,13 +42,13 @@ We just created two lists, one for Country names and another one for temperature
 # Create a list of squared numbers
 squares_list = [0, 1, 4, 9, 16, 25]
 
-# Now write a code to create list of first five odd numbers and store it into a variable odd_numbers
+# Now write a line of code to create a list of the first five odd numbers and store it in a variable odd_numbers
 odd_numbers=
 
-# Print first element of squares_list
+# Print the first element of squares_list
 print (squares_list[0])
 
-# Print second to fourth elements of squares_list
+# Print the second to fourth elements of squares_list
 
 ```
 
@@ -58,13 +58,13 @@ print (squares_list[0])
 # Create a list of squared numbers
 squares_list = [0, 1, 4, 9, 16, 25]
 
-# Now write a code to create list of first five odd numbers and store it into a variable odd_numbers
+# Now write a code to create list of first five odd numbers and store it in a variable odd_numbers
 odd_numbers = [1, 3, 5, 7, 9]
 
-# Print first element of squares_list
+# Print the first element of squares_list
 print (squares_list[0])
 
-# Print second to fourth elements of squares_list
+# Print the second to fourth elements of squares_list
 print (squares_list[1:4])
 ```
 
@@ -75,10 +75,10 @@ print (squares_list[1:4])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for list of odd_numbers
-test_object("odd_numbers", incorrect_msg="Are you sure you assigned the correct value to odd_numbers, it must be 1, 3, 5, 7, 9")
+test_object("odd_numbers", incorrect_msg="Are you sure you assigned the correct value to odd_numbers? It should be 1, 3, 5, 7, 9")
 
 # Check second to fourth elements"
-test_output_contains("[1, 4, 9]", pattern = False, no_output_msg="Have you given the right index number to squares_list?")
+test_output_contains("[1, 4, 9]", pattern = False, no_output_msg="Have you given the right index numbers to squares_list?")
 success_msg("Good progress! You just learnt the most versatile data structure in Python!")
 ```
 
@@ -88,7 +88,7 @@ success_msg("Good progress! You just learnt the most versatile data structure in
 Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Please note that Python strings are immutable, so you can not change part of strings.
 
 ```{python}
-String =" Strings elements can also be accessed using index number like list"
+String =" String elements can also be accessed using index number like list"
 
 print (String[0:8])
 
