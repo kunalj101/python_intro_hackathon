@@ -135,8 +135,8 @@ test_mc(1, [msg_success, msg_bad, msg_help])
 Time to get our hands dirty now. We will use Python to run a simple program!
 
 *** =instructions
-- The first line just adds 2 numbers (1 & 2).
-- Write a line of code in line 4, which adds number 3 and number 4 and assigns it to a variable addition2
+- The first line just adds two numbers (1 & 2).
+- Write a line of code in line 4, which adds the number 3 and the number 4 and assigns it to a variable addition2
 
 
 
