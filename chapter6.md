@@ -312,3 +312,52 @@ msg2 = "Check the link provided and download the file from there."
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
 test_mc(1,, [msg1, msg2]) 
 ```
+--- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:ed0dcad240
+## Thank You & Further studies
+
+Thanks for taking up this open course from <a href="http://www.analyticsvidhya.com">Analytics Vidhya </a>. We hope you enjoyed the problem solving exercises and our hackathon experience. For more such hackathons, you can always visit our <a href="http://datahack.analyticsvidhya.com"> DataHack platform.</a>
+
+###Here are a few more resources you can check out:
+
+####Practice Problems (Hackathons):
+- <a href="http://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii">Big Mart Sales Problem</a>.
+
+####All Hackathons:
+- <a href="http://datahack.analyticsvidhya.com/contest/all">All Hackathons</a>.
+
+####Tutorials
+- <a href="http://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/learning-path-data-science-python/" >Learning path in Python - Path from beginner to an expert in Data Science</a>
+- <a href = "http://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/learning-path-r-data-science/">LeaRning path in R - Path from beginner to an expert in Data Science</a>
+- <a href = "http://www.analyticsvidhya.com/blog/2015/08/common-machine-learning-algorithms/">Essentials of Machine Learning (with codes in Python & R)</a>
+- <a href = "http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/">12 useful Pandas techniques for Data Manipulation</a>
+- <a href = "http://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/">Complete guide to create a time series forecast (with codes in Python)</a>
+ 
+####<a href="http://discuss.analyticsvidhya.com">Data Science Discussions</a>
+
+
+*** =instructions
+What do you want to do next:
+- Finish the course
+- Stay on this page and explore the references
+
+
+*** =hint
+Thank You - hope you enjoyed the course. 
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg1 = "Thanks for completing the course. Looking forward to interacting with you on DataHack."
+msg2 = "No hurry! You can take your own time."
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(1,, [msg1, msg2]) 
+```
