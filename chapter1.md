@@ -7,7 +7,7 @@ description : This chapter will get you started with Python for Data Analysis. W
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
 ## Why learn Python for data analysis?
 
-Python (an interpreted language) has gathered a lot of interest recently as a choice of language for data analysis. Here are some reasons which go in favour of learning Python:
+Python (an interpreted language) has gathered a lot of interest recently as a preferred choice of language for data analysis. Here are some reasons in favour of learning Python:
 
 * It is open source – free to install and use
 * Python has awesome online community - latest algorithms come to Python in a matter of days
@@ -19,9 +19,9 @@ Python (an interpreted language) has gathered a lot of interest recently as a ch
 
 *** =instructions
 - Python is easy to learn.
-- Python is interpreted language, hence the computation times can be high compared to compiler based languages in some cases.
+- Python is an interpreted language, so computation times can be higher than compiler based languages in some cases.
 - Python has good libraries for data science.
-- It is production ready language (from web & software perspective).
+- It is a production ready language (from web & software perspective).
 
 *** =hint
 Interpreted languages are typically easier to learn, but take longer computational time than compiler based languages. 
@@ -36,7 +36,7 @@ Interpreted languages are typically easier to learn, but take longer computation
 # pythonwhat Python package
 
 msg_bad1 = "That is a good reason to learn Python! Think again"
-msg_success = "Exactly! Since Python is an interpreted language, the computation times can be on the higher side compared to other compiler based language."
+msg_success = "Exactly! Since Python is an interpreted language, the computation times can be higher compared to other compiler based languages."
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
@@ -47,7 +47,7 @@ test_mc(2, [msg_bad1, msg_success, msg_bad1, msg_bad1])
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:db5fe12eff
 ## Python 2.7 vs. Python 3.5?
 
-You will come across this question soon after you start using Python. Python has 2 popular competing versions. Both the versions have their pros and cons.
+You will come across this question soon after you start using Python. Python has 2 popular competing versions. Both versions have their pros and cons.
 
 **Benefits of Python 2.7**
 
@@ -95,7 +95,7 @@ test_mc(1, [msg_success, msg_bad1, msg_bad2])
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:2f83694db6
 ## How to install Python?
 
-While DataCamp provides an awesome interface to get you started, you will need to run a local instance of Python for any serious Data Science work. The simplest way would be to download <a href="https://www.continuum.io/downloads"> Anaconda</a>. It consists of most of the libraries you would need and removes any version conflicts.
+While DataCamp provides an awesome interface to get you started, you will need to run a local instance of Python for any serious Data Science work. The simplest way would be to download <a href="https://www.continuum.io/downloads"> Anaconda</a>. It has most of the libraries & packages you would need, and removes any version conflicts.
 I strongly recommend this for beginners. For this course, we will be using Python 3.x
 
 
@@ -136,7 +136,7 @@ Time to get our hands dirty now. We will use Python to run a simple program!
 
 *** =instructions
 - The first line just adds 2 numbers (1 & 2).
-- Write a code in line 4, which adds number 3 and number 4 and assign it to a variable addition2
+- Write a line of code in line 4, which adds number 3 and number 4 and assigns it to a variable addition2
 
 
 
@@ -154,7 +154,7 @@ Time to get our hands dirty now. We will use Python to run a simple program!
 ```{python}
 # Add 1 & 2 and assign it to addition
 addition = 1 + 2
-# Now write a code to add 3 & 4 and assign to addition2
+# Now write code to add 3 & 4 and assign it to addition2
 
 ```
 
@@ -163,7 +163,7 @@ addition = 1 + 2
 ```{python}
 # Add 1 & 2 and assign it to addition
 addition = 1 + 2
-# Now write a code to add 3 & 4 and assign to addition2
+# Now write code to add 3 & 4 and assign to addition2
 addition2 = 3 + 4
 
 ```
@@ -203,7 +203,7 @@ Now that you know how to add numbers, let us look at printing "Hello World!" in 
 # Print a message
 print("Welcome to the joint course from Analytics Vidhya and DataCamp")
 
-# Now write a code to Print "Hello World!"
+# Now write code to print "Hello World!"
 
 ```
 
