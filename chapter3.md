@@ -2,11 +2,14 @@
 ---
 title       : Exploratory analysis in Python using Pandas
 description : We start with the first step of data analysis - the exploratory data analysis.
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Who is eligible for loan?
+## Case study from our hackathon - Who is eligible for loan?
+
+###Introduction - Analytics Vidhya (AV) DataHack
+At <a href="http://www.analyticsvidhya.com">Analytics Vidhya</a>, we are building a knowledge platform for data science professionals across the globe. Among several things, we host several hackathons for our community on our <a href="http://datahack.analyticsvidhya.com>DataHack platform</a>. The case study for today's problem is one of the practice problem on our platform. You can check out the practice problem <a href="http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii"> here</a>.
+
+###The case study - Dream Housing Finance
 
 Dream Housing Finance company deals in all home loans. They have a presence across all urban, semi-urban and rural areas. Customers first apply for a home loan after that company validates the customer's eligibility. The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling online application form.  
 
