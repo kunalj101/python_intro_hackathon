@@ -117,24 +117,24 @@ success_msg("Great work! Let us look at the data more closely")
 
 You can look at a summary of numerical fields by using dataframe.describe(). It provides the count, mean, standard deviation (std), min, quartiles and max in its output.
 
-<center>
+
 ```{python}
 dataframe.describe() 
 ```
-</center>
+
 For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by the following command:
 
-<center>
+
 ```{python}
 df[column_name].value_counts()
 ```
 
-OR
+<center>OR</center>
 
 ```{python}
 df.column_name.value_counts()
 ```
-</center>
+
 *** =instructions
 
 - Use `dataframe.describe()` to understand the distribution of numerical variables 
@@ -215,15 +215,15 @@ success_msg("Great work!")
 Now that we are familiar with basic data characteristics, let us study the distribution of numerical variables. Let us start with numeric variable "ApplicantIncome".
 
 Let's start by plotting the histogram of ApplicantIncome using the following command:
-<center>
+
 ```{python}
 train['ApplicantIncome'].hist(bins=50)
 ```
-Or
+<center>Or</center>
 ```{python}
 train.ApplicantIncome.hist(bins=50)
 ```
-</center>
+
 Next, we can also look at box plots to understand the distributions. Box plot for ApplicantIncome can be plotted by
 
 
