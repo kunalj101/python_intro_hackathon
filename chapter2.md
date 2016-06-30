@@ -124,10 +124,10 @@ print (String[0:8])
 # Create a string str1
 str1 = "Introduction with strings"
 
-# Now store the length of string in variable str_len 
+# Now store the length of string str1 in variable str_len 
 str_len =
 
-# Print last seven characters of strings str1
+# Print last seven characters of string str1
 
 
 str2 = "I am doing a course Introduction to Hackathon using "
@@ -145,10 +145,10 @@ str4 =
 # Create a string str1
 str1 = "Introduction with strings"
 
-# Now store the length of string in varible str_len 
+# Now store the length of string str1 in varible str_len 
 str_len=len(str1)
 
-# Print last seven characters of strings str1
+# Print last seven characters of string str1
 print (str1[18:25])
 
 str2 = "I am doing a course Introduction to Hackathon using "
