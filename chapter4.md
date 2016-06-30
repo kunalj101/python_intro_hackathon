@@ -3,9 +3,13 @@ title       : Data Munging in Python using Pandas
 description : Pandas is at the heart of data analysis in Python. This chapter gets you started with Data Munging in Python using Pandas
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Credit History has missing value or not ?
+## The curious case of missing values
 
-There are missing values in variables. We should first identify the variables have missing value then estimate those values wisely depending on the number of missing values and the expected importance of variables. So, here our first task is to check the variable has missing values in the dataset and how many observation has missing values.
+Rarely is the data captured perfectly in real world. People might not disclose few details or those details might not be available in the first place. This data set is no different. There are missing values in variables. 
+
+We need to first find out which variables have missing values, and then see what is the best way to handle these missing values. The way to handle a missing value can depend on the number of missing values, the type of variable and the expected importance of those variables. 
+
+So, let's start by finding out whether variable "Credit_history" has missing values or not and if so, how many observations are missing.
 
 ```{python}
 
