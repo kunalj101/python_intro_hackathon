@@ -2,7 +2,7 @@
 title       : Building a Predictive model in Python
 description : We build our predictive models and make submissions to the AV DataHack platform in this section.
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:9a8fd577a9
 ## First Step of Model Building
 
 In Python, Scikit-Learn (sklearn) is the most commonly used library for model building. I encourage you to get a refresher on sklearn through this <a href="http://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/">article</a>. It has gathered a lot of interest recently for model building. There are few pre-requisite before jumping into a model building exercise:
@@ -42,7 +42,7 @@ test_mc(2, [msg_bad1, msg_success])
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:2c1cf7aa90
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:2c1cf7aa90
 ## Label categories of Gender to number
 
 Library "Scikit Learn" only works with numeric array hence, we need to label all the character variable into a numeric array. For example Variable "Gender" has two labels "Male" and "Female", here our objective is to label "Male" and "Female" to number as 1 for "Male" and 0 for "Female".
@@ -128,7 +128,7 @@ success_msg("Great work!")
 ```
 
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:ee5ed17633
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:ee5ed17633
 ## Selecting the right algorithm
 
 The basic principle behind selecting the right algorithm is to look at the dependent variable (or target variable). In this challenge "Loan Prediction", we need to classify a customer's Loan status as "Y" or "N" based on the available information about the customer. Here the dependent variable is categorical and our task is to classify the customer in two groups; eligible for the loan amount and not eligible for the loan amounts.
@@ -168,7 +168,7 @@ msg_success = "Yes! We should always treat missing value"
 test_mc(1, [msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:bd9b384210
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:bd9b384210
 ## Have you performed data preprocessing step?
 
 As I discussed, you should perform some data pre processing steps for both train and test dataset before jumping into model building exercise:
@@ -208,7 +208,7 @@ msg_success = "Great! Go ahead with modeling exercise"
 test_mc(4, [msg_bad1, msg_bad1, msg_bad1, msg_success ]) 
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:f4c3fbee79
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:f4c3fbee79
 
 ## Logistic Regression Introduction
 
@@ -273,7 +273,7 @@ test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:6eb60851bc
+--- type:NormalExercise lang:python xp:100 skills:2 key:6eb60851bc
 
 ## Build your first logistic regression model
 
@@ -405,7 +405,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:207a5629cc
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:207a5629cc
 
 ## Prediction and submit to DataHack
 
@@ -554,7 +554,7 @@ test_object("predicted", incorrect_msg='Have you used .predict() method?')
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:0f04d6b3e1
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:0f04d6b3e1
 
 ## Decision Tree Introduction
 
@@ -617,7 +617,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:dcf5c3e2c2
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 6 key:dcf5c3e2c2
 
 ## Train model and do prediction using Decision Tree
 
@@ -790,7 +790,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:ff4ced6565
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:ff4ced6565
 
 ## Random Forest Introduction
 
@@ -852,7 +852,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:f0d1f62bb1
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:f0d1f62bb1
 
 ## Train model and do prediction using Random Forest
 
@@ -1018,7 +1018,7 @@ success_msg("Great work!")
 ```
 
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:4621632d2a
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:4621632d2a
 ## Selecting important variables for model building
 
 One of the benefits of Random forest is the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the dimensionality reduction methods. Further, the model outputs the importance of the variables, which can be a very handy feature. 
