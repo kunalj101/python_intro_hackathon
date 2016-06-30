@@ -1,8 +1,7 @@
 ---
 title       : Introduction to Python for Data Analysis
 description : This chapter will get you started with Python for Data Analysis. We will cover the reasons to learn Data Science using Python, provide an overview of the Python ecosystem and get you to write your first code in Python!
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+
 
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
@@ -133,17 +132,17 @@ test_mc(1, [msg_success, msg_bad, msg_help])
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Run a few simple programs in Python
 
-Time to get our hands dirty now. We will use Python to run some simple programs!
+Time to get our hands dirty now. We will use Python to run a simple program!
 
 *** =instructions
-- The first line just adds 2 numbers (1 & 2). Write a simple program to add number 3 and number 4 and assign it to a variable addition2
-- Print "Hello World!" on the console
+- The first line just adds 2 numbers (1 & 2).
+- Write a code in line 4, which adds number 3 and number 4 and assign it to a variable addition2
+
 
 
 *** =hint
 - Think how would you write simple addition.
 - Make sure you assign the sum to the variable 'addition2'
-- Remember that the message to be printed should be enclosed in " "
 - Remember - Python is case sensitive. Check your cases and white spaces
 
 *** =pre_exercise_code
@@ -157,12 +156,6 @@ Time to get our hands dirty now. We will use Python to run some simple programs!
 addition = 1 + 2
 # Now write a code to add 3 & 4 and assign to addition2
 
-
-# Print a message
-print("Welcome to the joint course from Analytics Vidhya and DataCamp")
-
-# Now write a code to Print "Hello World!"
-
 ```
 
 
@@ -173,6 +166,49 @@ addition = 1 + 2
 # Now write a code to add 3 & 4 and assign to addition2
 addition2 = 3 + 4
 
+```
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
+
+# Check if the student typed 3 + 4
+test_object("addition2")
+success_msg("Great work! Let's print something now!")
+```
+--- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+## Printing "Hello World" in Python!
+
+Now that you know how to add numbers, let us look at printing "Hello World" in Python.
+
+*** =instructions
+
+- Print "Hello World!" on the console
+
+
+*** =hint
+- Remember that the message to be printed should be enclosed in " "
+- Remember - Python is case sensitive. Check your cases and white spaces
+
+*** =pre_exercise_code
+```{python}
+# The pre-exercise code runs code to initialize the user's workspace. You can use it for several things:
+```
+
+*** =sample_code
+```{python}
+# Print a message
+print("Welcome to the joint course from Analytics Vidhya and DataCamp")
+
+# Now write a code to Print "Hello World!"
+
+```
+
+
+*** =solution
+```{python}
 # Print a message
 print("Welcome to the joint course from Analytics Vidhya and DataCamp")
 
@@ -186,10 +222,7 @@ print("Hello World!")
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Check if the student typed 3 + 4
-test_object("addition2")
-
 # Check if the student printed "Hello World!"
 test_output_contains("Hello World!", pattern = False, no_output_msg="Did you print Hello World! ?")
-success_msg("Great work!")
+success_msg("Great work! Let's move to the next chapter")
 ```
