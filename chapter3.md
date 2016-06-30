@@ -7,7 +7,7 @@ description : We start with the first step of data analysis - the exploratory da
 ## Case study from our hackathon - Who is eligible for loan?
 
 ###Introduction - Analytics Vidhya (AV) DataHack
-At <a href="http://www.analyticsvidhya.com">Analytics Vidhya</a>, we are building a knowledge platform for data science professionals across the globe. Among several things, we host several hackathons for our community on our <a href="http://datahack.analyticsvidhya.com>DataHack platform</a>. The case study for today's problem is one of the practice problem on our platform. You can check out the practice problem <a href="http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii"> here</a>.
+At <a href="http://www.analyticsvidhya.com">Analytics Vidhya</a>, we are building a knowledge platform for data science professionals across the globe. Among several things, we host several hackathons for our community on our <a href="http://datahack.analyticsvidhya.com>DataHack platform" </a>. The case study for today's problem is one of the practice problem on our platform. You can check out the practice problem <a href="http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii"> here</a>.
 
 ###The case study - Dream Housing Finance
 
