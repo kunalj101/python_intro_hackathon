@@ -220,6 +220,7 @@ Let's start by plotting the histogram of ApplicantIncome using the following com
 train['ApplicantIncome'].hist(bins=50)
 ```
 <center>Or</center>
+
 ```{python}
 train.ApplicantIncome.hist(bins=50)
 ```
