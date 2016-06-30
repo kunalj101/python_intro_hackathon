@@ -122,6 +122,7 @@ dataframe.describe()
 ```
 For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by the following command:
 
+<center>
 ```{python}
 df[column_name].value_counts()
 ```
@@ -131,7 +132,7 @@ OR
 ```{python}
 df.column_name.value_counts()
 ```
-
+</center>
 *** =instructions
 
 - Use `dataframe.describe()` to understand the distribution of numerical variables 
