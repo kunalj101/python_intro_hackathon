@@ -621,9 +621,9 @@ success_msg("Great work!")
 
 ## Train model and do prediction using Decision Tree
 
-Let’s make first Decision Tree model. Similar to Logistic regression, here we also first select the input features, train model and finally perform prediction on test data set.
+Let’s make first Decision Tree model. Similar to Logistic regression, we first select the input features, train our model and finally perform prediction on test data set.
 
-Ok, time for you to build your first Decision Tree model! The pre processed train_modified and test_modifed data are available in your workspace.
+Ok! time for you to build your first Decision Tree model! The pre processed train_modified and test_modifed data are available in your workspace.
 
 
 *** =instructions
