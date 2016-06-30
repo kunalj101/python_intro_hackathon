@@ -179,7 +179,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:377e9324f2
 ## Create a Dictionary
 
-Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: {}.
+Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within a dictionary). A pair of braces creates an empty dictionary: {}.
 
 ```{python}
 DICT = {'Name':'Kunal', 'Company':'Analytics Vidhya'}
