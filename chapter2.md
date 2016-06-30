@@ -79,7 +79,7 @@ test_object("odd_numbers", incorrect_msg="Are you sure you assigned the correct 
 
 # Check second to fourth elements"
 test_output_contains("[1, 4, 9]", pattern = False, no_output_msg="Have you given the right index number to squares_list?")
-success_msg("Great work!")
+success_msg("Good progress! You just learnt the most versatile data structure in Python!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:c7f91e389f
