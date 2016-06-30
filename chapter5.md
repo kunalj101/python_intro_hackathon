@@ -1,8 +1,6 @@
 ---
 title       : Building a Predictive model in Python
 description : We build our predictive models and make submissions to the AV DataHack platform in this section.
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
 ## First Step of Model Building
