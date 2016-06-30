@@ -1,8 +1,6 @@
 ---
 title       : Expert advice to improve model performance
 description : This chapter will help to understand the approach of data science experts, "How they do approach a challenge ?", "How to select a right algorithm ?", "How to combine outputs of multiple algorithms ?" and "How to select the right value of model parameter also known as parameter tuning ?".
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
 ## How to approach a challenge?
