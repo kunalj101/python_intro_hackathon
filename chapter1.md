@@ -4,7 +4,7 @@ description : This chapter will get you started with Python for Data Analysis. W
 
 
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9a8fd577a9
 ## Why learn Python for data analysis?
 
 Python (an interpreted language) has gathered a lot of interest recently as a preferred choice of language for data analysis. Here are some reasons in favour of learning Python:
@@ -44,7 +44,7 @@ msg_success = "Exactly! Since Python is an interpreted language, the computation
 test_mc(2, [msg_bad1, msg_success, msg_bad1, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:db5fe12eff
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:db5fe12eff
 ## Python 2.7 vs. Python 3.5?
 
 You will come across this question soon after you start using Python. Python has 2 popular competing versions. Both versions have their pros and cons.
@@ -92,7 +92,7 @@ msg_bad2 = "Think again! One of them is better than the other in this scenario"
 test_mc(1, [msg_success, msg_bad1, msg_bad2]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:2f83694db6
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:2f83694db6
 ## How to install Python?
 
 While DataCamp provides an awesome interface to get you started, you will need to run a local instance of Python for any serious Data Science work. The simplest way would be to download <a href="https://www.continuum.io/downloads"> Anaconda</a>. An open source distribution of Python, it has most of the libraries & packages you would need, and removes any version conflicts.
@@ -129,7 +129,7 @@ msg_help = "Drop us a line at help@analyticsvidhya.com"
 test_mc(1, [msg_success, msg_bad, msg_help]) 
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+--- type:NormalExercise lang:python xp:100 skills:2 key:af2f6f90f3
 ## Run a few simple programs in Python
 
 Time to get our hands dirty now. We will use Python to run a simple program!
@@ -178,7 +178,7 @@ addition2 = 3 + 4
 test_object("addition2")
 success_msg("Great work! Let's print something now!")
 ```
---- type:NormalExercise lang:python xp:100 skills:1 key:b52d6e84c1
+--- type:NormalExercise lang:python xp:100 skills:2 key:b52d6e84c1
 ## Printing "Hello World!" in Python!
 
 Now that you know how to add numbers, let us look at printing "Hello World!" in Python.
