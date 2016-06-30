@@ -3,7 +3,7 @@ title       : Python Libraries and data structures
 description : In this chapter, we will take you through the libraries we commonly use in data analysis and introduce some of the most common data structures to you.
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+--- type:NormalExercise lang:python xp:100 skills:2 key:af2f6f90f3
 ## Create a List
 
 Lists are probably the most versatile data structures in Python. A list can be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
@@ -81,7 +81,7 @@ test_output_contains("[1, 4, 9]", pattern = False, no_output_msg="Have you given
 success_msg("Good progress! You just learnt the most versatile data structure in Python!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:c7f91e389f
+--- type:NormalExercise lang:python xp:100 skills:2 key:c7f91e389f
 ## Create a String
 
 Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Please note that Python strings are immutable, so you can not change part of strings.
@@ -175,7 +175,7 @@ test_object("str3", incorrect_msg="Are you sure that you have used + sign to con
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:377e9324f2
+--- type:NormalExercise lang:python xp:100 skills:2 key:377e9324f2
 ## Create a Dictionary
 
 Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within a dictionary). A pair of braces creates an empty dictionary: {}.
@@ -262,7 +262,7 @@ test_output_contains("dict_keys(['Age', 'Name', 'Sports'])", pattern = False, no
 success_msg("Great work!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9a8fd577a9
 ## How to use Python libraries?
 First of all - Great progress! You now know various data structures in Python.
 
@@ -320,7 +320,7 @@ test_mc(2, [msg_bad, msg_success, msg_bad])
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:50c9218dac
+--- type:NormalExercise lang:python xp:100 skills:2 key:50c9218dac
 ## Why are conditional statements required?
 
 Conditional statements are used to execute code fragments based on a given condition. The most commonly used construct is if-else, with the following syntax:
@@ -423,7 +423,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:c1b7c2fd5c
+--- type:NormalExercise lang:python xp:100 skills:2 key:c1b7c2fd5c
 ## How iterative statements help?
 
 Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making errors is something that computers do well. Repeated execution of a set of statements is called iteration.
