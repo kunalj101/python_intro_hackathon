@@ -1,8 +1,6 @@
 ---
 title       : Data Munging in Python using Pandas
 description : Pandas is at the heart of data analysis in Python. This chapter gets you started with Data Munging in Python using Pandas
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Credit History has missing value or not ?
