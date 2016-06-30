@@ -13,13 +13,15 @@ At <a href="http://www.analyticsvidhya.com">Analytics Vidhya</a>, we are buildin
 
 Dream Housing Finance company deals in all home loans. They have a presence across all urban, semi-urban and rural areas. Customers first apply for a home loan after that company validates the customer's eligibility. The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling online application form.  
 
-Let's start with loading in the training and testing set into your python environment. You will use the training set to build your model, and the test set to validate it. The data is stored on the web as CSV files; their URLs are already available as character strings in the sample code. You can load this data with the pandas.read_csv() function, it converts the data set to python dataframe. Python dataframe likes a spreadsheet or SQL table.
+Let's start with loading the training and testing set into your python environment. You will use the training set to build your model, and the test set to validate it. Both the files are stored on the web as CSV files; their URLs are already available as character strings in the sample code. 
+
+You can load this data with the pandas.read_csv() function. It converts the data set to a python dataframe. In simple words, Python dataframe can be imagined as an equivalent of a spreadsheet or a SQL table.
 
 
 *** =instructions
-- train.head(n) helps to look at top n observation
-- len(DataFrame) returns the total number of observations
-- DataFrame.columns returns the total columns heading of the data set
+- train.head(n) helps to look at top n observation of train dataframe. Use it to print top 5 observations of train.
+- len(DataFrame) returns the total number of observations. Store the number of observations in train data in variable train_length
+- DataFrame.columns returns the total columns heading of the data set. Store the number of columns in test datasetin variable test_col
 
 
 *** =hint
@@ -36,10 +38,10 @@ Let's start with loading in the training and testing set into your python enviro
 # Import library pandas
 import pandas as pd
 
-# Import training file
+# Import train file
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
-# Import testing file
+# Import test file
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
 ```
@@ -107,7 +109,7 @@ test_object("train_length", incorrect_msg = "Don't forget to store the length of
 # Test for total columns in testing dataset
 test_object("test_col", incorrect_msg = "Don't forget to store the number of columns of `test` in test_col")
 
-success_msg("Great work!")
+success_msg("Great work! Let us look at the data more closely")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:36c3190b26
