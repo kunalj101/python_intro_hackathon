@@ -335,8 +335,9 @@ Thanks for taking up this open course from <a href="http://www.analyticsvidhya.c
 ####<a href="http://discuss.analyticsvidhya.com">Data Science Discussions</a>
 
 
+###What do you want to do next:
+
 *** =instructions
-What do you want to do next:
 - Finish the course
 - Stay on this page and explore the references
 
