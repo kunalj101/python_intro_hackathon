@@ -14,7 +14,7 @@ Python (an interpreted language) has gathered a lot of interest recently as a pr
 * It is easy to learn
 * It can become a common language for data science and production of web-based analytics products
 
-####Which of the following is not a reason to learn Python for Data Analysis?
+####Which of the following is not a reason to learn Python for data analysis?
 
 
 *** =instructions
