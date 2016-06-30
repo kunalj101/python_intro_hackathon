@@ -3,7 +3,7 @@
 title       : Exploratory analysis in Python using Pandas
 description : We start with the first step of data analysis - the exploratory data analysis.
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+--- type:NormalExercise lang:python xp:100 skills:2 key:af2f6f90f3
 ## Case study - Who is eligible for loan?
 
 ###Introduction - Analytics Vidhya (AV) DataHack
@@ -112,7 +112,7 @@ test_object("test_col", incorrect_msg = "Don't forget to store the number of col
 success_msg("Great work! Let us look at the data more closely")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:36c3190b26
+--- type:NormalExercise lang:python xp:100 skills:2 key:36c3190b26
 ## Understanding the Data
 
 You can look at a summary of numerical fields by using dataframe.describe(). It provides the count, mean, standard deviation (std), min, quartiles and max in its output.
@@ -209,7 +209,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
+--- type:NormalExercise lang:python xp:100 skills:2, 4 key:85c5d3a079
 ## Understanding distribution of numerical variables
 
 Now that we are familiar with basic data characteristics, let us study the distribution of numerical variables. Let us start with numeric variable "ApplicantIncome".
@@ -308,7 +308,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:708e937aea
+--- type:NormalExercise lang:python xp:100 skills:2, 4 key:708e937aea
 ## Understanding distribution of categorical variables
 
 We have looked at the distributions of ApplicantIncome and LoanIncome, now it's time for looking at categorical variables in more details. For instance, let's see whether Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
