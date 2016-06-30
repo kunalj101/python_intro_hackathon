@@ -121,20 +121,20 @@ print (String[0:8])
 *** =sample_code
 
 ```{python}
-# Create a string str
+# Create a string str1
 str1 = "Introduction with strings"
 
 # Now store the length of string in variable str_len 
 str_len =
 
-# Print last seven characters of strings str
+# Print last seven characters of strings str1
 
 
-str1 = "I am doing a course Introduction to Hackathon using "
-str2 = "Python"
+str2 = "I am doing a course Introduction to Hackathon using "
+str3 = "Python"
 
-# Write a code to store concatenated string of str1 and str2 into variable str3
-str3 =
+# Write a code to store concatenated string of str2 and str3 into variable str4
+str4 =
 
 ```
 
@@ -142,20 +142,20 @@ str3 =
 
 ```{python}
 
-# Create a string str
+# Create a string str1
 str1 = "Introduction with strings"
 
 # Now store the length of string in varible str_len 
 str_len=len(str1)
 
-# Print last seven characters of strings str
+# Print last seven characters of strings str1
 print (str1[18:25])
 
-str1 = "I am doing a course Introduction to Hackathon using "
-str2 = "Python"
+str2 = "I am doing a course Introduction to Hackathon using "
+str3 = "Python"
 
-# Write a code to store concatenated string of str1 and str2 into variable str3
-str3= str1 + str2
+# Write a code to store concatenated string of str2 and str3 into variable str4
+str4= str2 + str3
 ```
 
 *** =sct
@@ -172,7 +172,7 @@ test_object("str_len", incorrect_msg = "Did you use len() function with str1?")
 test_output_contains("strings", pattern = False, no_output_msg="Have you used the right start and end index number with str1 to print last seven characters?")
 
 # Check concatenated strings"
-test_object("str3", incorrect_msg="Are you sure that you have used + sign to concatenate both strings st1 and str2")
+test_object("str3", incorrect_msg="Are you sure that you have used + sign to concatenate both strings st2 and str3")
 success_msg("Great work!")
 ```
 
