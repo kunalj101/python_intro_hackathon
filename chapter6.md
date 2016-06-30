@@ -304,7 +304,7 @@ Click on the link and download the Jupyter notebook.
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg1 = "Awesome! You can proceed to model building now!"
+msg1 = "Awesome! You can check out additional reference!"
 msg2 = "Check the link provided and download the file from there."
 
 # Use test_mc() to grade multiple choice exercises. 
