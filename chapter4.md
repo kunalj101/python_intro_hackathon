@@ -167,14 +167,14 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:fd3cdcb726
-## Impute missing values of LoanAmount?
+## Imputing missing values of LoanAmount
 
-There are multiple ways to fill the missing values of continuous variables, you can go with mean, median or estimate values based on other features of the data set. Here, to impute missing values of the loan amount, we would go with imputing by mean value (Mean of available values of LoanAmount).
+There are multiple ways to fill the missing values of continuous variables. You can replace them with mean, median or estimate values based on other features of the data set. 
+
+For the sake of simplicity, we would impute the missing values of LoanAmount by mean value (Mean of available values of LoanAmount).
 
 ```{python}
-
 train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
-
 ```
 
 *** =instructions
@@ -237,14 +237,14 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:ca19896cae
-## Impute missing values of SelfEmployed?
+## Impute missing values of SelfEmployed
 
-To impute missing values of Categorical variables, we look at the frequency table and impute with value has higher frequency because there is a high probability of success. For example, if you look at the distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under the category "No". Here we will replace missing values of SelfEmployed with "No".
+Similarly, to impute missing values of Categorical variables, we look at the frequency table. The simplest way is to impute with value which has highest frequency because there is a higher probability of success. 
+
+For example, if you look at the distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under the category "No". Here we will replace missing values of SelfEmployed with "No".
 
 ```{python}
-
 train['Self_Employed'].fillna('No',inplace=True)
-
 ```
 
 *** =instructions
@@ -317,25 +317,21 @@ success_msg("Great work!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:1 key:2607b0ce32
 
-## Treat extreme values of LoanAmount and ApplicantIncome?
+## Treat / Tranform extreme values of LoanAmount and ApplicantIncome
 
 Let’s analyze LoanAmount first. Since the extreme values are practically possible, i.e. some people might apply for high-value loans due to specific needs. 
 
 ```{python}
-
 train ['LoanAmount'].hist(bins=20)
-
 ```
 <center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/06/Capture_LoanAmount.png"></center>
 
 So instead of treating them as outliers, let’s try a log transformation to nullify their effect:
 
 ```{python}
-
 import numpy as np
 train ['LoanAmount_log'] = np.log(train['LoanAmount'])
 train ['LoanAmount_log'].hist(bins=20)
-
 ```
 <center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/01/7.-loan-log.png"></center>
 
