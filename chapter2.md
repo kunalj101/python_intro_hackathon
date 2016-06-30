@@ -1,8 +1,7 @@
 ---
 title       : Python Libraries and data structures
 description : In this chapter, we will take you through the libraries we commonly use in data analysis and introduce some of the most common data structures to you.
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Create a List
