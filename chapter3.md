@@ -117,9 +117,11 @@ success_msg("Great work! Let us look at the data more closely")
 
 You can look at a summary of numerical fields by using dataframe.describe(). It provides the count, mean, standard deviation (std), min, quartiles and max in its output.
 
+<center>
 ```{python}
 dataframe.describe() 
 ```
+</center>
 For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by the following command:
 
 <center>
@@ -208,28 +210,25 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
-## Understanding distribution of numerical variables?
+## Understanding distribution of numerical variables
 
 Now that we are familiar with basic data characteristics, let us study the distribution of numerical variables. Let us start with numeric variable "ApplicantIncome".
 
-Let's start by plotting the histogram of ApplicantIncome using the following commands:
-
+Let's start by plotting the histogram of ApplicantIncome using the following command:
+<center>
 ```{python}
-
 train['ApplicantIncome'].hist(bins=50)
-
-Or
-
-train.ApplicantIncome.hist(bins=50)
-
 ```
+Or
+```{python}
+train.ApplicantIncome.hist(bins=50)
+```
+</center>
 Next, we can also look at box plots to understand the distributions. Box plot for ApplicantIncome can be plotted by
 
 
 ```{python}
-
 train.boxplot(column='ApplicantIncome')
-
 ```
 
 *** =instructions
@@ -238,9 +237,7 @@ train.boxplot(column='ApplicantIncome')
 - Use by=categorical_variable with box plot to look at distribution by categories
 
 ```{python}
-
 train.boxplot(column='ApplicantIncome', by='Gender')
-
 ```
 
 *** =hint
@@ -311,14 +308,12 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:708e937aea
-## Understanding distribution of categorical variables?
+## Understanding distribution of categorical variables
 
-We have looked at the distributions of ApplicantIncome and LoanIncome, now time for categorical variables in more details. For instance, lets see that Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
+We have looked at the distributions of ApplicantIncome and LoanIncome, now it's time for looking at categorical variables in more details. For instance, let's see whether Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
 
 ```{python}
-
 pd.crosstab( train ['Gender'], train ["Loan_Status"], margins=True)
-
 ```
 Next, we can also look at proportions can be more intuitive in making some quick insights. We can do this using the apply function. You can read more about cross tab and apply functions <a href="http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/"> here</a>. 
 
