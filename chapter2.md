@@ -264,7 +264,8 @@ success_msg("Great work!")
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
-## Why python libraries are useful?
+## How to use Python libraries?
+First of all - Great progress! You now know various data structures in Python.
 
 Let's take one step ahead in our journey to learn Python by getting acquainted with some useful libraries. The first step is obviously to learn to import them into our environment. There are several ways of doing so in Python:
 
@@ -321,9 +322,9 @@ test_mc(2, [msg_bad, msg_success, msg_bad])
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:50c9218dac
-## Why conditional statement is required?
+## Why are conditional statements required?
 
-Conditional statements, these are used to execute code fragments based on a condition. The most commonly used construct is if-else, with the following syntax:
+Conditional statements are used to execute code fragments based on a given condition. The most commonly used construct is if-else, with the following syntax:
 
 ```{python}
 
@@ -337,7 +338,7 @@ else:
 
 - Store the length of `squares_list` to `square_len` using function `len()`
 - Comparision operators `<, >, <=, >=, ==` and `!=` help to check condition is true or false
-
+- Write the outcome in each branch of the following conditional code
 
 *** =hint
 
@@ -424,7 +425,7 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:c1b7c2fd5c
-## How iterative statement does help?
+## How iterative statements help?
 
 Computers are often used to automate repetitive tasks. Repeating identical or similar tasks without making errors is something that computers do well. Repeated execution of a set of statements is called iteration.
 
@@ -505,5 +506,5 @@ print (sum)
 test_object("sum", incorrect_msg="Are you taking sum of even numbers?")
 
 
-success_msg("Great work!")
+success_msg("Great work! Let's move to the next chapter")
 ```
