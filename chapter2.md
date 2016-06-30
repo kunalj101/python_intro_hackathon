@@ -7,7 +7,7 @@ attachments :
 --- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
 ## Create a list
 
-Lists are some of the most versatile data structures in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
+Lists are probably the most versatile data structures in Python. A list can simply be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
 
 ```{python}
 Country =['INDIA','USA','GERMANY','UK','AUSTRALIA']
