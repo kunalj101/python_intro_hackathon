@@ -152,7 +152,7 @@ Time to get our hands dirty now. We will use Python to run a simple program!
 
 *** =sample_code
 ```{python}
-# Add 1 & 2 and assign it to addition
+# Add 1 & 2 and assign it to addition1
 addition = 1 + 2
 # Now write code to add 3 & 4 and assign it to addition2
 
