@@ -2,7 +2,7 @@
 title       : Data Munging in Python using Pandas
 description : Pandas is at the heart of data analysis in Python. This chapter gets you started with Data Munging in Python using Pandas
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:af2f6f90f3
 ## Credit History has missing value or not ?
 
 There are missing values in variables. We should first identify the variables have missing value then estimate those values wisely depending on the number of missing values and the expected importance of variables. So, here our first task is to check the variable has missing values in the dataset and how many observation has missing values.
@@ -87,7 +87,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:4abbcb0b8d
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:4abbcb0b8d
 ## How many variables have missing values?
 
 Till now, we have checked the variable has missing value or not? Next action is to check how many variables have missing values. One way of doing this check would be to evaluate each individual variable. This would not be easy if we have hundred of columns. This action can be performed simply by using isnull() on dataframe object.
@@ -162,7 +162,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:fd3cdcb726
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:fd3cdcb726
 ## Impute missing values of LoanAmount?
 
 There are multiple ways to fill the missing values of continuous variables, you can go with mean, median or estimate values based on other features of the data set. Here, to impute missing values of the loan amount, we would go with imputing by mean value (Mean of available values of LoanAmount).
@@ -232,7 +232,7 @@ success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:ca19896cae
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:ca19896cae
 ## Impute missing values of SelfEmployed?
 
 To impute missing values of Categorical variables, we look at the frequency table and impute with value has higher frequency because there is a high probability of success. For example, if you look at the distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under the category "No". Here we will replace missing values of SelfEmployed with "No".
@@ -311,7 +311,7 @@ test_data_frame("train", columns=["Credit_History"], incorrect_msg='Did you impu
 
 success_msg("Great work!")
 ```
---- type:NormalExercise lang:python xp:100 skills:1 key:2607b0ce32
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:2607b0ce32
 
 ## Treat extreme values of LoanAmount and ApplicantIncome?
 
@@ -413,7 +413,7 @@ test_data_frame("train", columns=["TotalIncome_log"], incorrect_msg='Have you ta
 success_msg("Great work!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9a8fd577a9
 ## iPython / Jupyter notebook for Data Exploration
 
 The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.
