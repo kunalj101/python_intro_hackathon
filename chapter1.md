@@ -178,7 +178,7 @@ addition2 = 3 + 4
 test_object("addition2")
 success_msg("Great work! Let's print something now!")
 ```
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
+--- type:NormalExercise lang:python xp:100 skills:1 key:b52d6e84c1
 ## Printing "Hello World" in Python!
 
 Now that you know how to add numbers, let us look at printing "Hello World" in Python.
