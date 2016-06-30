@@ -179,9 +179,9 @@ test_object("addition2")
 success_msg("Great work! Let's print something now!")
 ```
 --- type:NormalExercise lang:python xp:100 skills:1 key:b52d6e84c1
-## Printing "Hello World" in Python!
+## Printing "Hello World!" in Python!
 
-Now that you know how to add numbers, let us look at printing "Hello World" in Python.
+Now that you know how to add numbers, let us look at printing "Hello World!" in Python.
 
 *** =instructions
 
@@ -189,8 +189,9 @@ Now that you know how to add numbers, let us look at printing "Hello World" in P
 
 
 *** =hint
-- Remember that the message to be printed should be enclosed in " "
+- Remember that the message to be printed should be enclosed in (" ")
 - Remember - Python is case sensitive. Check your cases and white spaces
+- Hope you are not missing the exclaimation mark !
 
 *** =pre_exercise_code
 ```{python}
