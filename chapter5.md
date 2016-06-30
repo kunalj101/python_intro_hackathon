@@ -5,14 +5,14 @@ description : We build our predictive models and make submissions to the AV Data
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:9a8fd577a9
 ## First Step of Model Building
 
-In Python, Scikit-Learn (sklearn) is the most commonly used library for model building. I encourage you to get a refresher on sklearn through this <a href="http://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/">article</a>. It has gathered a lot of interest recently for model building. There are few pre-requisite before jumping into a model building exercise:
+In Python, Scikit-Learn (sklearn) is the most commonly used library for building predictive / machine learning models. This <a href="http://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/">article provides a good overview of scikit-learn</a>. It has gathered a lot of interest recently for model building. There are few pre-requisite before jumping into a model building exercise:
 
 * Treat missing values
 * Treat outlier/ exponential observation
 * All inputs must be numeric array ( Requirement of scikit learn library) 
 
 
-####We can build a model without treating missing values of data set
+####Can we build a model without treating missing values of a data set?
 
 
 *** =instructions
@@ -20,7 +20,7 @@ In Python, Scikit-Learn (sklearn) is the most commonly used library for model bu
 - False
 
 *** =hint
-Missing value tratment is compulsary step of model building
+Missing value tratment is mandatory step of model building
 
 *** =pre_exercise_code
 
@@ -31,7 +31,7 @@ Missing value tratment is compulsary step of model building
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "Try again"
+msg_bad1 = "Think again - If the values are missing, how will you make a predictive model?"
 msg_success = "Yes! We should always treat missing value"
 
 # Use test_mc() to grade multiple choice exercises. 
@@ -45,7 +45,7 @@ test_mc(2, [msg_bad1, msg_success])
 --- type:NormalExercise lang:python xp:100 skills:2, 6 key:2c1cf7aa90
 ## Label categories of Gender to number
 
-Library "Scikit Learn" only works with numeric array hence, we need to label all the character variable into a numeric array. For example Variable "Gender" has two labels "Male" and "Female", here our objective is to label "Male" and "Female" to number as 1 for "Male" and 0 for "Female".
+Library "Scikit Learn" only works with numeric array. Hence, we need to label all the character variables into a numeric array. For example Variable "Gender" has two labels "Male" and "Female">. Hence, we will transform the labels to number as 1 for "Male" and 0 for "Female".
 
 "Scikit Learn" library has a module called "LabelEncoder" which helps to label character labels into numbers so first import module "LabelEncoder".
 
@@ -131,15 +131,15 @@ success_msg("Great work!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:ee5ed17633
 ## Selecting the right algorithm
 
-The basic principle behind selecting the right algorithm is to look at the dependent variable (or target variable). In this challenge "Loan Prediction", we need to classify a customer's Loan status as "Y" or "N" based on the available information about the customer. Here the dependent variable is categorical and our task is to classify the customer in two groups; eligible for the loan amount and not eligible for the loan amounts.
+The basic principle behind selecting the right algorithm is to look at the dependent variable (or target variable). In this challenge "Loan Prediction", we need to classify a customer's eligibility for Loan as "Y" or "N" based on the available information about the customer. Here the dependent variable is categorical and our task is to classify the customer in two groups; eligible for the loan amount and not eligible for the loan amount.
 
-This is a classification challenge so we will import module of classification algorithms of sklearn library, below are the few classification algorithms:
+This is a classification challenge so we will import module of classification algorithms of sklearn library. Below are some commonly used classification algorithms:
 * Logistic Regression
 * Decision Tree
 * Random Forest
 
 
-####Is this e-mail is spam or not? Is it a classification challenge or regression?
+####Whether an e-mail is spam or not? Is this problem a classification challenge or regression?
 
 
 *** =instructions
@@ -159,8 +159,8 @@ This is a classification challenge so we will import module of classification al
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "Try again"
-msg_success = "Yes! We should always treat missing value"
+msg_bad1 = "Try again. Regression challenges require you to predict a quantity, while classification challenge requires you to classify an object in groups."
+msg_success = "Correct - this is a classification challenge"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
@@ -171,14 +171,14 @@ test_mc(1, [msg_success, msg_bad1])
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:bd9b384210
 ## Have you performed data preprocessing step?
 
-As I discussed, you should perform some data pre processing steps for both train and test dataset before jumping into model building exercise:
+As discussed before, you should perform some data pre processing steps for both train and test dataset before jumping into model building exercise. Here are a few things you need to perform at the minimum:
 * Missing value imputation
 * Outlier treatment
 * Label encoding for character variables
 * Algorithm selection
 
 
-####Which of th following steps have you performed till now with both train and test data set?
+####Which of the following steps have you performed till now with both train and test data set?
 
 
 *** =instructions
@@ -188,7 +188,7 @@ As I discussed, you should perform some data pre processing steps for both train
 - All of the above
 
 *** =hint
-All steps are necessary anc could impact your model performance
+All steps are necessary and would impact your model performance
 
 *** =pre_exercise_code
 
@@ -199,7 +199,7 @@ All steps are necessary anc could impact your model performance
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "You should first perform the pre processing steps"
+msg_bad1 = "You should perform all pre processing steps before model building"
 msg_success = "Great! Go ahead with modeling exercise"
 
 # Use test_mc() to grade multiple choice exercises. 
@@ -216,22 +216,22 @@ Logistic Regression is a classification algorithm. It is used to predict a binar
 
 In simple words, it predicts the probability of occurrence of an event by fitting data to a logit function, read more about <a href="http://www.analyticsvidhya.com/blog/2015/11/beginners-guide-on-logistic-regression-in-r/"> Logistic Regression </a>. 
 
+LogisticRegression() function is part of linear_model module of sklearn and is used to create logistic regression
+
+Reference: <a href= "http://www.analyticsvidhya.com/blog/2015/10/basics-logistic-regression/">Mathematical working and implementation from scratch for Logistic regression.</a>
 
 *** =instructions
 - Import Linear model of sklearn
 - Create object of sklearn
 
 
-
 *** =hint
-Import linear_model of sklearn
-
+To import linear_model from sklearn
 
 *** =pre_exercise_code
 
 ```{python}
 import sklearn.linear_model 
-
 ```
 
 *** =sample_code
@@ -277,19 +277,19 @@ success_msg("Great work!")
 
 ## Build your first logistic regression model
 
-Let’s make our first Logistic Regression model. One way would be to take all the variables into the model but this might result in overfitting (don’t worry if you’re unaware of this terminology yet). In simple words, taking all variables might result in the model understanding complex relations specific to the data and will not generalize well.
+Let’s build our first Logistic Regression model. One way would be to take all the variables into the model, but this might result in overfitting (don’t worry if you’re unaware of this terminology yet). In simple words, taking all variables might result in the model understanding complex relations specific to the data and will not generalize well.
 
 We can easily make some intuitive hypothesis to set the ball rolling. The chances of getting a loan will be higher for:
 
 * Applicants having a credit history
-* Applicants with higher applicant and co-applicant incomes
+* Applicants with higher applicant and co-applicant income
 * Applicants with higher education level
 * Properties in urban areas with high growth perspectives
 
 Ok, time for you to build your first logistics regression model! The pre processed train_modified and test_modifed data are available in your workspace.
 
 *** =instructions
-- Store input variable in list "predictors"
+- Store input variable in a list "predictors"
 - Create an object of logistic regression
 
 
@@ -395,7 +395,7 @@ model.fit(x_train, y_train)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("predictors", incorrect_msg='Have you create the list of given predictors variables?')
+test_object("predictors", incorrect_msg='Have you created the list of given predictors variables?')
 
 # Test for model
 test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear_model module of sklearn?')
@@ -407,9 +407,9 @@ success_msg("Great work!")
 
 --- type:NormalExercise lang:python xp:100 skills:2, 6 key:207a5629cc
 
-## Prediction and submit to DataHack
+## Prediction and submission to DataHack
 
-To send a submission to DataHack you need to predict the loan approval rate for the observations in the test set using ".predict()" method with logistic regression object (model). To extract the test features we will need to create a numpy array of input features of test data set in the same way as we did when training the model for training data.
+To upload a submission to DataHack, you need to predict the loan approval rate for the observations in the test set. This can be done using ".predict()" method with logistic regression object (model). To extract the test features we will need to create a numpy array of input features of test data set in the same way as we did when training the model for training data.
 
 Next, you need to make sure your output is in line with the submission requirements of DataHack: a csv file with exactly 367 entries and two columns: Loan_ID and Loan_Status. Then create a csv file using to_csv() method from Pandas.
 
