@@ -10,10 +10,10 @@ attachments :
 
 Python (an interpreted language) has gathered a lot of interest recently as a choice of language for data analysis. Here are some reasons which go in favour of learning Python:
 
-* Open Source – free to install and use
-* Awesome online community - latest algorithms come to Python in a matter of days
-* Easy to learn
-* Can become a common language for data science and production of web-based analytics products
+* It is open source – free to install and use
+* Python has awesome online community - latest algorithms come to Python in a matter of days
+* It is easy to learn
+* It can become a common language for data science and production of web-based analytics products
 
 ####Which of the following is not a reason to learn Python for Data Analysis?
 
@@ -48,7 +48,7 @@ test_mc(2, [msg_bad1, msg_success, msg_bad1, msg_bad1])
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:db5fe12eff
 ## Python 2.7 vs. Python 3.5?
 
-You will come across this question soon after you start using Python. Both the ecosystems have their pros and cons.
+You will come across this question soon after you start using Python. Python has 2 popular competing versions. Both the versions have their pros and cons.
 
 **Benefits of Python 2.7**
 
@@ -60,6 +60,8 @@ You will come across this question soon after you start using Python. Both the e
 * Cleaner and faster
 * It is the future!
 
+You can read a more detailed answer <a href="http://discuss.analyticsvidhya.com/t/python-2-7-or-3-5-which-one-to-choose-for-data-science/7151">here</a>
+
 ####Which version of Python would you recommend if you need to use several third party libraries?
 
 
@@ -67,6 +69,7 @@ You will come across this question soon after you start using Python. Both the e
 - Python 2.7
 - Python 3.5
 - Should work on both
+
 
 *** =hint
 If you need several third party tools, you should look for a version which has higher community support and integrations.
@@ -80,7 +83,7 @@ If you need several third party tools, you should look for a version which has h
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "Python 3.5 is newer and has lesser third party packages"
+msg_bad1 = "Python 3.5 is newer and has lesser third party packages compared to Python 2.7"
 msg_success = "Python 2.7 has much higher compatibility with third party libraries."
 msg_bad2 = "Think again! One of them is better than the other in this scenario"
 
