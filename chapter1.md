@@ -95,7 +95,7 @@ test_mc(1, [msg_success, msg_bad1, msg_bad2])
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:2f83694db6
 ## How to install Python?
 
-While DataCamp provides an awesome interface to get you started, you will need to run a local instance of Python for any serious Data Science work. The simplest way would be to download <a href="https://www.continuum.io/downloads"> Anaconda</a>. It has most of the libraries & packages you would need, and removes any version conflicts.
+While DataCamp provides an awesome interface to get you started, you will need to run a local instance of Python for any serious Data Science work. The simplest way would be to download <a href="https://www.continuum.io/downloads"> Anaconda</a>. An open source distribution of Python, it has most of the libraries & packages you would need, and removes any version conflicts.
 I strongly recommend this for beginners. For this course, we will be using Python 3.x
 
 
