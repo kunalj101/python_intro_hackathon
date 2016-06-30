@@ -310,7 +310,7 @@ msg2 = "Check the link provided and download the file from there."
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1,, [msg1, msg2]) 
+test_mc(1, [msg1, msg2]) 
 ```
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:6177e4a3f3
 ## Thank You & Further studies
@@ -333,6 +333,7 @@ Thanks for taking up this open course from <a href="http://www.analyticsvidhya.c
 - <a href = "http://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/">Complete guide to create a time series forecast (with codes in Python)</a>
  
 ####<a href="http://discuss.analyticsvidhya.com">Data Science Discussions</a>
+
 
 
 ###What do you want to do next:
@@ -360,5 +361,5 @@ msg2 = "No hurry! You can take your own time."
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1,, [msg1, msg2]) 
+test_mc(1, [msg1, msg2]) 
 ```
