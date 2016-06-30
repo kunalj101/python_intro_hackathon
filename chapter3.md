@@ -116,9 +116,7 @@ success_msg("Great work!")
 You can look at a summary of numerical fields by using dataframe.describe(). It provides the count, mean, standard deviation (std), min, quartiles and max in its output.
 
 ```{python}
-
 dataframe.describe() 
-
 ```
 For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by the following command:
 
@@ -127,6 +125,7 @@ df[column_name].value_counts()
 ```
 
 OR
+
 ```{python}
 df.column_name.value_counts()
 ```
