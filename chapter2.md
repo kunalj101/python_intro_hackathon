@@ -6,7 +6,7 @@ description : In this chapter, we will introduce some of the most common data st
 --- type:NormalExercise lang:python xp:100 skills:2 key:af2f6f90f3
 ## Create a List
 
-Lists are probably the most versatile data structures in Python. A list can be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable and individual elements of a list can be changed.
+Lists are probably the most versatile data structures in Python. A list can be defined by writing a list of comma separated values in square brackets. Lists might contain items of different types. Python lists are mutable - individual elements of a list can be changed while the identity does not change.
 
 ```{python}
 Country =['INDIA','USA','GERMANY','UK','AUSTRALIA']
@@ -17,7 +17,7 @@ We just created two lists, one for Country names (strings) and another one for T
 
 ####Accessing individual elements of a list
 - Individual elements of a list can be accessed by writing an index number in square bracket. The first index of a list starts with 0 (zero) not 1. For example, Country[0] can be used to access the first element, 'INDIA'
-- A range of elements can be accessed by using start index and end index but it does not return the value of the end index. For example, Temperature[1:4] returns three elements, the second through fourth elements  [28, 20, 18], but not the fifth element
+- A range of elements can be accessed by using start index and end index but it does not return the value of the end index. For example, Temperature[1:4] returns three elements, the second through fourth elements [28, 20, 18], but not the fifth element
 
 *** =instructions
 - Create a list of the first five odd numbers and store it in the variable odd_numbers
@@ -84,10 +84,10 @@ success_msg("Good progress! You just learnt the most versatile data structure in
 --- type:NormalExercise lang:python xp:100 skills:2 key:c7f91e389f
 ## Create a String
 
-Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Please note that Python strings are immutable, so you can not change part of strings.
+Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Please note that Python strings are immutable, so you can not change the contents of a string.
 
 ```{python}
-String =" String elements can also be accessed using index number like list"
+String =" String elements can also be accessed using index numbers, just like lists"
 
 print (String[0:8])
 
@@ -98,9 +98,9 @@ print (String[0:8])
 
 *** =instructions
 
-- Use len() function to store the length of string
+- Use the len() function to store the length of string
 - Use start and end index to access the required characters, e.g. str[0:3] to return first three characters of string str
-- '+' operator is used to combine two strings
+- '+' operator is used to concatenate (combine) two strings
 
 
 
