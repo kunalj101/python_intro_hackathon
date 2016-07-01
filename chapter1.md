@@ -10,7 +10,7 @@ description : This chapter will get you started with Python for Data Analysis. W
 Python (an interpreted language) has gathered a lot of interest recently as a preferred choice of language for data analysis. Here are some reasons in favour of learning Python:
 
 * It is open source – free to install and use
-* Python has awesome online community - latest algorithms come to Python in a matter of days
+* Python has an awesome online community - latest algorithms come to Python in a matter of days
 * It is easy to learn
 * It can become a common language for data science and production of web-based analytics products
 
@@ -61,7 +61,7 @@ You will come across this question soon after you start using Python. Python has
 
 You can read a more detailed answer <a href="http://discuss.analyticsvidhya.com/t/python-2-7-or-3-5-which-one-to-choose-for-data-science/7151">here</a>
 
-####Which version of Python would you recommend if you need to use several third party libraries?
+####Which version of Python would you recommend to someone who needs to use several third party libraries?
 
 
 *** =instructions
