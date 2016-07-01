@@ -99,7 +99,7 @@ While DataCamp provides an awesome interface to get you started, you will need t
 I strongly recommend this for beginners. For this course, we will be using Python 3.x
 
 
-####Should you instal a local instance of Python on your machine to continue?
+####Should you install a local instance of Python on your machine to continue this course?
 
 
 *** =instructions
