@@ -84,7 +84,7 @@ success_msg("Good progress! You just learnt the most versatile data structure in
 --- type:NormalExercise lang:python xp:100 skills:2 key:c7f91e389f
 ## Create a String
 
-Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Please note that Python strings are immutable, so you can not change the contents of a string.
+Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Note that Python strings are immutable, so you can not change the contents of a string.
 
 ```{python}
 String =" String elements can also be accessed using index numbers, just like lists"
@@ -132,7 +132,7 @@ str_len =
 str2 = "I am doing a course Introduction to Hackathon using "
 str3 = "Python"
 
-# Write a code to store concatenated string of str2 and str3 into variable str4
+# Write a line of code to store concatenated string of str2 and str3 into variable str4
 str4 =
 
 ```
@@ -168,7 +168,7 @@ str4= str2 + str3
 test_object("str_len", incorrect_msg = "Did you use len() function with str1?")
 
 # Check last seven characters
-test_output_contains("strings", pattern = False, no_output_msg="Have you used the right start and end index number with str1 to print last seven characters?")
+test_output_contains("strings", pattern = False, no_output_msg="Have you used the right start and end index number with str1 to print the last seven characters?")
 
 # Check concatenated strings"
 test_object("str3", incorrect_msg="Are you sure that you have used + sign to concatenate both strings st2 and str3")
@@ -183,7 +183,7 @@ A Dictionary is an unordered set of key:value pairs, with the requirement that t
 ```{python}
 DICT = {'Name':'Kunal', 'Company':'Analytics Vidhya'}
 
-#Dictionary elements can be accessed by "keys"
+#Dictionary elements can be accessed by keys
 
 print (DICT['Name'])
 
@@ -264,9 +264,9 @@ success_msg("Great work!")
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9a8fd577a9
 ## How to use Python libraries?
-First of all - Great progress! You now know various data structures in Python.
+First of all - great progress! You now know some of the important data structures in Python.
 
-Let's take one step ahead in our journey to learn Python by getting acquainted with some useful libraries. The first step is obviously to learn to import them into our environment. There are several ways of doing so in Python:
+Let's take another step ahead in our journey to learn Python, by getting acquainted with some useful libraries. The first step is to learn to import them into your environment. There are several ways of doing so in Python:
 
 ```{python}
 import math as m
