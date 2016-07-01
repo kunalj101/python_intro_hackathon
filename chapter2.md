@@ -178,7 +178,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:2 key:377e9324f2
 ## Create a Dictionary
 
-Dictionary is an unordered set of key: value pairs, with the requirement that the keys are unique (within a dictionary). A pair of braces creates an empty dictionary: {}.
+A Dictionary is an unordered set of key:value pairs, with the requirement that the keys are unique (within a Dictionary). A pair of braces creates an empty dictionary: {}.
 
 ```{python}
 DICT = {'Name':'Kunal', 'Company':'Analytics Vidhya'}
@@ -187,16 +187,16 @@ DICT = {'Name':'Kunal', 'Company':'Analytics Vidhya'}
 
 print (DICT['Name'])
 
-#Above print statement will print Kunal
+#The above print statement will print Kunal
 
 ```
 
-In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "Analytics Vidhya" are values.
+In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "Analytics Vidhya" are their respective values.
 
 *** =instructions
 
-- Use dictionary['Key'] to access value(s) against given key
-- Use Dict.keys() to access all the keys of given dictionary "Dict"
+- Use the format dictionary['key'] to access value(s) of key - e.g DICT['Company'] will return "Analytics Vidhya'
+- DICT.keys() will return all the keys of given dictionary "DICT"
 
 
 *** =hint
@@ -214,7 +214,7 @@ In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "
 
 ```{python}
 
-# Create a dictionary
+# Create a dictionary dict1
 dict1 = { 'Age': 16, 'Name': 'Max', 'Sports': 'Cricket'}
 
 # Update the value of Age to 18
