@@ -60,13 +60,13 @@ train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacam
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
 # Print top 5 observation of train dataset
-
+print (train.____() )
 
 # Store total number of observation in training dataset
-train_length =
+train_length = len (_____)
 
 # Store total number of columns in testing data set
-test_col = 
+test_col = len ( test._____)
 
 ```
 
