@@ -277,11 +277,11 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
-# Impute missing value of Gender
+# Impute missing value of Gender (Male is more frequent category)
 train['Gender'].fillna(_____,inplace=True)
 
 
-# Impute missing value of Credit_History
+# Impute missing value of Credit_History ( 1 is more frequent category)
 train['Credit_History'].fillna(_____,inplace=True)
 
 ```
