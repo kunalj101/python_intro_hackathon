@@ -224,7 +224,7 @@ dict1['Age'] = 18
 
 
 # Store the keys of dictionary dict1 to dict_keys
-
+dict_keys = 
 
 ```
 
@@ -258,7 +258,7 @@ test_output_contains("18", pattern = False, no_output_msg="Have you used the key
 
 
 # Store the keys of dictionary dict1 to dict_keys
-test_object("dict_keys", incorrect_msg="Have you used keys() with dict?")
+test_object("dict_keys", incorrect_msg="Have you used keys() with dict?", undefined_msg="Have you used keys() with dict?")
 
 success_msg("Great work!")
 
