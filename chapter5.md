@@ -94,9 +94,9 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 from sklearn.preprocessing import LabelEncoder
 
 #train and test dataset is already loaded in the enviornment
-# Perform label encoding for Married
+# Perform label encoding for variable 'Married'
 number = LabelEncoder()
-train['Married'] = number.________(train['Property_Area'])
+train['Married'] = number.________(train['Married'])
 
 
 ```
@@ -111,7 +111,7 @@ from sklearn.preprocessing import LabelEncoder
 #train and test dataset is already loaded in the enviornment
 # Perform label encoding for Married
 number = LabelEncoder()
-train['Married'] = number.fit_transform(train['Property_Area'])
+train['Married'] = number.fit_transform(train['Married'])
 ```
 
 *** =sct
