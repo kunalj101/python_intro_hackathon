@@ -222,11 +222,11 @@ Reference: <a href= "http://www.analyticsvidhya.com/blog/2015/10/basics-logistic
 
 *** =instructions
 - Import Linear model of sklearn
-- Create object of sklearn
+- Create object of sklearn.linear_model.LogisticRegression
 
 
 *** =hint
-To import linear_model from sklearn
+You can import a module of a library as import library.module
 
 *** =pre_exercise_code
 
