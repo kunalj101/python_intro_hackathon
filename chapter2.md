@@ -256,8 +256,9 @@ print (dict1.keys())
 # Check value of Age
 test_output_contains("18", pattern = False, no_output_msg="Have you used the key Age with dictonary dict1")
 
+
 # Check keys of dictionary
-test_output_contains("dict_keys(['Age', 'Name', 'Sports'])", pattern=False, no_output_msg="Have you used keys() with dict to print all keys?")
+test_output_contains(/dict_keys\(\[\'\w+\'\,.\'\w+\'\,.\'\w+\'\]\)/, no_output_msg="Have you used keys() with dict to print all keys?")
 
 success_msg("Great work!")
 ```
