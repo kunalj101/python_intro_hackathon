@@ -471,7 +471,7 @@ sum=0
 # Store sum all the even numbers of the list ls in sum
 
 for x in ls: 
-    if ______: 
+    if x%2 == __: 
         sum += x
 
 print (sum)
