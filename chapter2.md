@@ -223,7 +223,7 @@ dict1['Age'] = 18
 # Print the value of Age
 
 
-# Print all the keys of dictionary dict1
+# Store the keys of dictionary dict1 to dict_keys
 
 
 ```
@@ -241,8 +241,8 @@ dict1['Age'] = 18
 # Print the value of Age
 print (dict1['Age'])
 
-# Print all the keys of dictionary dict
-print (dict1.keys())
+# Store the keys of dictionary dict1 to dict_keys
+dict_keys= dict1.keys()
 
 ```
 
@@ -257,10 +257,12 @@ print (dict1.keys())
 test_output_contains("18", pattern = False, no_output_msg="Have you used the key Age with dictonary dict1")
 
 
-# Check keys of dictionary
-test_output_contains(/dict_keys\(\[\'\w+\'\,.\'\w+\'\,.\'\w+\'\]\)/, no_output_msg="Have you used keys() with dictionary to print all keys?")
+# Store the keys of dictionary dict1 to dict_keys
+test_object("dict_keys", incorrect_msg="Have you used keys() with dict?")
 
 success_msg("Great work!")
+
+
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9a8fd577a9
