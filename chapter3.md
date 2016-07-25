@@ -2,21 +2,26 @@
 ---
 title       : Exploratory analysis in Python using Pandas
 description : We start with the first step of data analysis - the exploratory data analysis.
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Who is eligible for loan?
+--- type:NormalExercise lang:python xp:100 skills:2 key:af2f6f90f3
+## Case study - Who is eligible for loan?
+
+###Introduction - Analytics Vidhya (AV) DataHack
+At <a href="http://www.analyticsvidhya.com">Analytics Vidhya</a>, we are building a knowledge platform for data science professionals across the globe. Among several things, we host several hackathons for our community on our <a href="http://datahack.analyticsvidhya.com">DataHack platform</a>. The case study for today's problem is one of the practice problem on our platform. You can check out the practice problem <a href="http://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii"> here</a>.
+
+###The case study - Dream Housing Finance
 
 Dream Housing Finance company deals in all home loans. They have a presence across all urban, semi-urban and rural areas. Customers first apply for a home loan after that company validates the customer's eligibility. The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling online application form.  
 
-Let's start with loading in the training and testing set into your python environment. You will use the training set to build your model, and the test set to validate it. The data is stored on the web as CSV files; their URLs are already available as character strings in the sample code. You can load this data with the pandas.read_csv() function, it converts the data set to python dataframe. Python dataframe likes a spreadsheet or SQL table.
+Let's start with loading the training and testing set into your python environment. You will use the training set to build your model, and the test set to validate it. Both the files are stored on the web as CSV files; their URLs are already available as character strings in the sample code. 
+
+You can load this data with the pandas.read_csv() function. It converts the data set to a python dataframe. In simple words, Python dataframe can be imagined as an equivalent of a spreadsheet or a SQL table.
 
 
 *** =instructions
-- train.head(n) helps to look at top n observation
-- len(DataFrame) returns the total number of observations
-- DataFrame.columns returns the total columns heading of the data set
+- train.head(n) helps to look at top n observation of train dataframe. Use it to print top 5 observations of train.
+- len(DataFrame) returns the total number of observations. Store the number of observations in train data in variable train_length
+- DataFrame.columns returns the total columns heading of the data set. Store the number of columns in test datasetin variable test_col
 
 
 *** =hint
@@ -33,10 +38,10 @@ Let's start with loading in the training and testing set into your python enviro
 # Import library pandas
 import pandas as pd
 
-# Import training file
+# Import train file
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 
-# Import testing file
+# Import test file
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
 ```
@@ -54,14 +59,14 @@ train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacam
 # Import testing data as test
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
 
-# Print top 5 observation of training dataset in top5
-
+# Print top 5 observation of train dataset
+print (train.____() )
 
 # Store total number of observation in training dataset
-train_length =
+train_length = len (_____)
 
 # Store total number of columns in testing data set
-test_col = 
+test_col = len ( test._____)
 
 ```
 
@@ -99,30 +104,35 @@ test_col = len(test.columns)
 test_function("print", incorrect_msg = "Don't forget to print the first 5 observations of `train`!")
 
 # Test for total observation in training dataset
-test_object("train_length")
+test_object("train_length", incorrect_msg = "Don't forget to store the length of `train` in train_length")
 
 # Test for total columns in testing dataset
-test_object("test_col")
+test_object("test_col", incorrect_msg = "Don't forget to store the number of columns of `test` in test_col")
 
-success_msg("Great work!")
+success_msg("Great work! Let us look at the data more closely")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:36c3190b26
-## Understanding Data?
+--- type:NormalExercise lang:python xp:100 skills:2 key:36c3190b26
+## Understanding the Data
 
 You can look at a summary of numerical fields by using dataframe.describe(). It provides the count, mean, standard deviation (std), min, quartiles and max in its output.
 
+
 ```{python}
-
 dataframe.describe() 
-
 ```
+
 For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by the following command:
 
+
 ```{python}
-
 df[column_name].value_counts()
+```
 
+<center>OR</center>
+
+```{python}
+df.column_name.value_counts()
 ```
 
 *** =instructions
@@ -133,7 +143,7 @@ df[column_name].value_counts()
 
 *** =hint
 - Store the output of `train.describe()` in a variable df
-- Use `train['PropertyArea'].value_counts()` to look at frequency distribution
+- Use `train.PropertyArea.value_counts()` to look at frequency distribution
 
 
 *** =pre_exercise_code
@@ -164,7 +174,7 @@ df= train.________()
 print (df)
 
 # Print the unique values and their frequency of variable Property_Area
-df1=train['Property_Area'].________()
+df1=train.Property_Area.________()
 print (df1)
 
 ```
@@ -178,7 +188,7 @@ df = train.describe()
 print (df)
 
 # Print the unique values and their frequency of variable Property_Area
-df1=train['Property_Area'].value_counts()
+df1=train.Property_Area.value_counts()
 print (df1)
 
 ```
@@ -191,50 +201,49 @@ print (df1)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for describe
-test_object("df")
-
+test_function("train.describe", not_called_msg = "Did you call the right function with train dataset to see numerical summary?")
 # Test for value_counts
-test_object("df1")
+test_function("train.Property_Area.value_counts", not_called_msg = "Did you call the right function with train dataset to see frequency table of 'Property_Area'?")
 
 success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:85c5d3a079
-## Understanding distribution of numerical variables?
+--- type:NormalExercise lang:python xp:100 skills:2, 4 key:85c5d3a079
+## Understanding distribution of numerical variables
 
 Now that we are familiar with basic data characteristics, let us study the distribution of numerical variables. Let us start with numeric variable "ApplicantIncome".
 
-Let's start by plotting the histogram of ApplicantIncome using the following commands:
+Let's start by plotting the histogram of ApplicantIncome using the following command:
 
 ```{python}
-
 train['ApplicantIncome'].hist(bins=50)
-
 ```
+<center>Or</center>
+
+```{python}
+train.ApplicantIncome.hist(bins=50)
+```
+
 Next, we can also look at box plots to understand the distributions. Box plot for ApplicantIncome can be plotted by
 
 
 ```{python}
-
 train.boxplot(column='ApplicantIncome')
-
 ```
 
 *** =instructions
 
-- Use hist() with train['LoanAmount'] to plot histogram
+- Use hist() to plot histogram
 - Use by=categorical_variable with box plot to look at distribution by categories
 
 ```{python}
-
 train.boxplot(column='ApplicantIncome', by='Gender')
-
 ```
 
 *** =hint
-- train['LoanAmount'].hist()
-- train.boxplot(column='LoanAmount', by = 'Gender' )
+- Use dataframe.columnname1.hist() to plot histogram
+- Use dataframe.boxplot(column='columnname2', by = 'columnname3' ) to have boxplot by different categories of a categorical variable
 
 
 *** =pre_exercise_code
@@ -260,10 +269,10 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 # Training and Testing dataset are loaded in train and test dataframe respectively
 # Plot histogram for variable LoanAmount
-train['LoanAmount']._____
+train.LoanAmount._____
 
 # Plot a box plot for variable LoanAmount by variable Gender of training data set
-train.boxplot(column='LoanAmount', by = ____)
+train._______(column='LoanAmount', by = 'Gender')
 
 ```
 
@@ -274,7 +283,7 @@ train.boxplot(column='LoanAmount', by = ____)
 
 # Assumed training and testing dataset are loaded in train and test dataframe respectively
 # Plot histogram for variable LoanAmount
-train['LoanAmount'].hist()
+train.LoanAmount.hist()
 
 # Plot a box plot for variable LoanAmount by variable Gender of training data set
 train.boxplot(column='LoanAmount', by ='Gender' )
@@ -289,25 +298,23 @@ train.boxplot(column='LoanAmount', by ='Gender' )
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for evaluating histogram
-
+test_function("train.LoanAmount.hist", not_called_msg = "Did you call the right function to plot histogram?")
 
 # Test for evaluating box plot
-
+test_function("train.boxplot", not_called_msg = "Did you call the right function for boxplot?")
 
 success_msg("Great work!")
 ```
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:708e937aea
-## Understanding distribution of categorical variables?
+--- type:NormalExercise lang:python xp:100 skills:2, 4 key:708e937aea
+## Understanding distribution of categorical variables
 
-We have looked at the distributions of ApplicantIncome and LoanIncome, now time for categorical variables in more details. For instance, lets see that Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
+We have looked at the distributions of ApplicantIncome and LoanIncome, now it's time for looking at categorical variables in more details. For instance, let's see whether Gender is affecting the loan status or not. This can be tested using cross-tabulation as shown below:
 
 ```{python}
-
 pd.crosstab( train ['Gender'], train ["Loan_Status"], margins=True)
-
 ```
 Next, we can also look at proportions can be more intuitive in making some quick insights. We can do this using the apply function. You can read more about cross tab and apply functions <a href="http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/"> here</a>. 
 
@@ -329,9 +336,7 @@ pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percent
 
 
 *** =hint
-- train['Loan_Status'].value_counts()['Y'] will return the loan approval rate
-
-
+train['Loan_Status'].value_counts() return the frequency by each category of categorical variable
 
 
 
@@ -362,7 +367,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 loan_approval = train['Loan_Status'].________()['Y']
 
 # Two-way comparison: Credit History and Loan Status
-pd.________(train ["Credit_History"], train ["Loan_Status"], margins=True)
+twowaytable = pd.________(train ["Credit_History"], train ["Loan_Status"], margins=True)
 
 
 
@@ -378,7 +383,7 @@ pd.________(train ["Credit_History"], train ["Loan_Status"], margins=True)
 loan_approval = train['Loan_Status'].value_counts()['Y']
 
 # Two-way comparison: Credit_History and Loan_Status
-pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
+twowaytable = pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
 
 ```
 
@@ -390,12 +395,11 @@ pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margins=True)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for Approved Loan in absolute numbers
-test_object("loan_approval")
+test_object("loan_approval", incorrect_msg='Did you look at the frequency distribution?',undefined_msg='Did you look at the frequency distribution?')
 
 
 # Test for two-way comparison Credit_History and Loan_Status
-
-
+test_object("twowaytable", incorrect_msg='Did you use the right function to generate two way table?', undefined_msg='Did you use the right function to generate two way table?')
 
 
 success_msg("Great work!")

@@ -1,20 +1,18 @@
 ---
 title       : Building a Predictive model in Python
 description : We build our predictive models and make submissions to the AV DataHack platform in this section.
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:9a8fd577a9
 ## First Step of Model Building
 
-In Python, Scikit-Learn (sklearn) is the most commonly used library for model building. I encourage you to get a refresher on sklearn through this <a href="http://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/">article</a>. It has gathered a lot of interest recently for model building. There are few pre-requisite before jumping into a model building exercise:
+In Python, Scikit-Learn (sklearn) is the most commonly used library for building predictive / machine learning models. This <a href="http://www.analyticsvidhya.com/blog/2015/01/scikit-learn-python-machine-learning-tool/">article provides a good overview of scikit-learn</a>. It has gathered a lot of interest recently for model building. There are few pre-requisite before jumping into a model building exercise:
 
 * Treat missing values
 * Treat outlier/ exponential observation
 * All inputs must be numeric array ( Requirement of scikit learn library) 
 
 
-####We can build a model without treating missing values of data set
+####Can we build a model without treating missing values of a data set?
 
 
 *** =instructions
@@ -22,7 +20,7 @@ In Python, Scikit-Learn (sklearn) is the most commonly used library for model bu
 - False
 
 *** =hint
-Missing value tratment is compulsary step of model building
+Missing value tratment is mandatory step of model building
 
 *** =pre_exercise_code
 
@@ -33,7 +31,7 @@ Missing value tratment is compulsary step of model building
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "Try again"
+msg_bad1 = "Think again - If the values are missing, how will you make a predictive model?"
 msg_success = "Yes! We should always treat missing value"
 
 # Use test_mc() to grade multiple choice exercises. 
@@ -44,10 +42,10 @@ test_mc(2, [msg_bad1, msg_success])
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:2c1cf7aa90
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:2c1cf7aa90
 ## Label categories of Gender to number
 
-Library "Scikit Learn" only works with numeric array hence, we need to label all the character variable into a numeric array. For example Variable "Gender" has two labels "Male" and "Female", here our objective is to label "Male" and "Female" to number as 1 for "Male" and 0 for "Female".
+Library "Scikit Learn" only works with numeric array. Hence, we need to label all the character variables into a numeric array. For example Variable "Gender" has two labels "Male" and "Female". Hence, we will transform the labels to number as 1 for "Male" and 0 for "Female".
 
 "Scikit Learn" library has a module called "LabelEncoder" which helps to label character labels into numbers so first import module "LabelEncoder".
 
@@ -62,12 +60,11 @@ train['Gender'] = number.fit_transform(train['Gender'])
 ```
 
 *** =instructions
-- Import LabelEncoder 
-- Label categories of variable "Married" to number 
+Perform Label encoding for categories of variable "Married" and save it as a new variable "Married_new" in the DataFrame
 
 
 *** =hint
-Use expression train['Married'] = number.fit_transform(train['Married'])
+Use number.fit_transform() to perform label encoding
 
 
 *** =pre_exercise_code
@@ -94,12 +91,12 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 ```{python}
 
 #import module for label encoding
-from sklearn.preprocessing import ______
+from sklearn.preprocessing import LabelEncoder
 
 #train and test dataset is already loaded in the enviornment
-# Perform label encoding for Married
+# Perform label encoding for variable 'Married'
 number = LabelEncoder()
-train['Married'] = number.________(train['Property_Area'])
+train['Married'] = number.________(train['Married'])
 
 
 ```
@@ -114,7 +111,7 @@ from sklearn.preprocessing import LabelEncoder
 #train and test dataset is already loaded in the enviornment
 # Perform label encoding for Married
 number = LabelEncoder()
-train['Married'] = number.fit_transform(train['Property_Area'])
+train['Married'] = number.fit_transform(train['Married'])
 ```
 
 *** =sct
@@ -124,28 +121,25 @@ train['Married'] = number.fit_transform(train['Property_Area'])
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-#import module for label encoding
-test_import("LabelEncoder", same_as = False)
-
 # Perform label encoding for Married
-test_object(“train['Married']”)
+test_data_frame("train", columns=["Married"], incorrect_msg='Have you used write methds to perform label encoding for variable Married?')
 
 success_msg("Great work!")
 ```
 
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:ee5ed17633
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:ee5ed17633
 ## Selecting the right algorithm
 
-The basic principle behind selecting the right algorithm is to look at the dependent variable (or target variable). In this challenge "Loan Prediction", we need to classify a customer's Loan status as "Y" or "N" based on the available information about the customer. Here the dependent variable is categorical and our task is to classify the customer in two groups; eligible for the loan amount and not eligible for the loan amounts.
+The basic principle behind selecting the right algorithm is to look at the dependent variable (or target variable). In this challenge "Loan Prediction", we need to classify a customer's eligibility for Loan as "Y" or "N" based on the available information about the customer. Here the dependent variable is categorical and our task is to classify the customer in two groups; eligible for the loan amount and not eligible for the loan amount.
 
-This is a classification challenge so we will import module of classification algorithms of sklearn library, below are the few classification algorithms:
+This is a classification challenge so we will import module of classification algorithms of sklearn library. Below are some commonly used classification algorithms:
 * Logistic Regression
 * Decision Tree
 * Random Forest
 
 
-####Is this e-mail is spam or not? Is it a classification challenge or regression?
+####Whether an e-mail is spam or not? Is this problem a classification challenge or regression?
 
 
 *** =instructions
@@ -165,8 +159,8 @@ This is a classification challenge so we will import module of classification al
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "Try again"
-msg_success = "Yes! We should always treat missing value"
+msg_bad1 = "Try again. Regression challenges require you to predict a quantity, while classification challenge requires you to classify an object in groups."
+msg_success = "Correct - this is a classification challenge"
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
@@ -174,17 +168,17 @@ msg_success = "Yes! We should always treat missing value"
 test_mc(1, [msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:bd9b384210
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:bd9b384210
 ## Have you performed data preprocessing step?
 
-As I discussed, you should perform some data pre processing steps for both train and test dataset before jumping into model building exercise:
+As discussed before, you should perform some data pre processing steps for both train and test dataset before jumping into model building exercise. Here are a few things you need to perform at the minimum:
 * Missing value imputation
 * Outlier treatment
 * Label encoding for character variables
 * Algorithm selection
 
 
-####Which of th following steps have you performed till now with both train and test data set?
+####Which of the following steps have you performed till now with both train and test data set?
 
 
 *** =instructions
@@ -194,7 +188,7 @@ As I discussed, you should perform some data pre processing steps for both train
 - All of the above
 
 *** =hint
-All steps are necessary anc could impact your model performance
+All steps are necessary and would impact your model performance
 
 *** =pre_exercise_code
 
@@ -205,7 +199,7 @@ All steps are necessary anc could impact your model performance
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg_bad1 = "You should first perform the pre processing steps"
+msg_bad1 = "You should perform all pre processing steps before model building"
 msg_success = "Great! Go ahead with modeling exercise"
 
 # Use test_mc() to grade multiple choice exercises. 
@@ -214,7 +208,7 @@ msg_success = "Great! Go ahead with modeling exercise"
 test_mc(4, [msg_bad1, msg_bad1, msg_bad1, msg_success ]) 
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:f4c3fbee79
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:f4c3fbee79
 
 ## Logistic Regression Introduction
 
@@ -222,35 +216,44 @@ Logistic Regression is a classification algorithm. It is used to predict a binar
 
 In simple words, it predicts the probability of occurrence of an event by fitting data to a logit function, read more about <a href="http://www.analyticsvidhya.com/blog/2015/11/beginners-guide-on-logistic-regression-in-r/"> Logistic Regression </a>. 
 
+LogisticRegression() function is part of linear_model module of sklearn and is used to create logistic regression
+
+Reference: <a href= "http://www.analyticsvidhya.com/blog/2015/10/basics-logistic-regression/">Mathematical working and implementation from scratch for Logistic regression.</a>
 
 *** =instructions
-Create an object of LogisticRegression
+- Import Linear model of sklearn
+- Create object of sklearn.linear_model.LogisticRegression
 
 
 *** =hint
-You can use from sklearn.linear_model import LogisticRegression command
+You can import a module of a library as import library.module
 
 *** =pre_exercise_code
 
 ```{python}
-from sklearn.linear_model import LogisticRegression
-
+import sklearn.linear_model 
 ```
 
 *** =sample_code
 
 ```{python}
 
-# Import module for Logistic regression
-from sklearn.linear_model import ______ 
+# Import linear model of sklearn
+import ______.linear_model
+
+# Create object of Logistic Regression
+model=sklearn.______.LogisticRegression()
 
 ```
 
 *** =solution
 
 ```{python}
-# Import module for Logistic regression
-from sklearn.linear_model import LogisticRegression
+# Import linear model of sklearn
+import sklearn.linear_model
+
+# Create object of Logistic Regression
+model=sklearn.linear_model.LogisticRegression()
 
 ```
 
@@ -261,35 +264,38 @@ from sklearn.linear_model import LogisticRegression
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for predictor selection
-test_import("LogisticRegression", same_as = False)
+# Test for library import
+test_import("sklearn.linear_model", same_as = False)
+
+# Test for logistic regression
+test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear model module of sklearn?')
 
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:6eb60851bc
+--- type:NormalExercise lang:python xp:100 skills:2 key:6eb60851bc
 
 ## Build your first logistic regression model
 
-Let’s make our first Logistic Regression model. One way would be to take all the variables into the model but this might result in overfitting (don’t worry if you’re unaware of this terminology yet). In simple words, taking all variables might result in the model understanding complex relations specific to the data and will not generalize well.
+Let’s build our first Logistic Regression model. One way would be to take all the variables into the model, but this might result in overfitting (don’t worry if you’re unaware of this terminology yet). In simple words, taking all variables might result in the model understanding complex relations specific to the data and will not generalize well.
 
 We can easily make some intuitive hypothesis to set the ball rolling. The chances of getting a loan will be higher for:
 
 * Applicants having a credit history
-* Applicants with higher applicant and co-applicant incomes
+* Applicants with higher applicant and co-applicant income
 * Applicants with higher education level
 * Properties in urban areas with high growth perspectives
 
 Ok, time for you to build your first logistics regression model! The pre processed train_modified and test_modifed data are available in your workspace.
 
 *** =instructions
-- Store input variable in list "predictors"
+- Store input variable in a list "predictors"
 - Create an object of logistic regression
-- Train model on training data set (x_train, y_train)
+
 
 
 *** =hint
-- Use predictors =['Credit_History','Education','Gender'] as predictor variable
+Use list ['Credit_History','Education','Gender'] as predictor variable
 
 *** =pre_exercise_code
 
@@ -347,7 +353,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 
 #train_modified and test_modified already loaded in the workspace
 #Import module for Logistic regression
-from sklearn.linear_model import LogisticRegression
+import sklearn.linear_model
 
 # Select three predictors Credit_History, Education and Gender
 predictors =[____,_____,_____]
@@ -357,7 +363,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = _________
+model = sklearn.________.LogisticRegression()
 model.fit(x_train, y_train)
 
 ```
@@ -366,7 +372,7 @@ model.fit(x_train, y_train)
 
 ```{python}
 # Import module for Logistic regression
-from sklearn.linear_model import LogisticRegression
+import sklearn.linear_model
 
 # Select three predictors Credit_History, Education and Gender
 predictors =['Credit_History','Education','Gender']
@@ -376,7 +382,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = LogisticRegression()
+model = sklearn.linear_model.LogisticRegression()
 model.fit(x_train, y_train)
 
 ```
@@ -389,21 +395,21 @@ model.fit(x_train, y_train)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("predictors")
+test_object("predictors", incorrect_msg='Have you created the list of given predictors variables?')
 
 # Test for model
-#test_object("model")
+test_function("sklearn.linear_model.LogisticRegression", incorrect_msg='Have you created Logistic Regression object from linear_model module of sklearn?')
 
 success_msg("Great work!")
 ```
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:207a5629cc
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:207a5629cc
 
-## Prediction and submit to DataHack
+## Prediction and submission to DataHack
 
-To send a submission to DataHack you need to predict the loan approval rate for the observations in the test set using ".predict()" method with logistic regression object (model). To extract the test features we will need to create a numpy array of input features of test data set in the same way as we did when training the model for training data.
+To upload a submission to DataHack, you need to predict the loan approval rate for the observations in the test set. This can be done using ".predict()" method with logistic regression object (model). To extract the test features we will need to create a numpy array of input features of test data set in the same way as we did when training the model for training data.
 
 Next, you need to make sure your output is in line with the submission requirements of DataHack: a csv file with exactly 367 entries and two columns: Loan_ID and Loan_Status. Then create a csv file using to_csv() method from Pandas.
 
@@ -414,8 +420,7 @@ Next, you need to make sure your output is in line with the submission requireme
 
 
 *** =hint
-- Use predictors =['Credit_History','Education','Gender'] as predictor variable
-- Use model.predict(x_test) for prediction of test dataset
+Use model.predict(x_test) for prediction of test dataset
 
 *** =pre_exercise_code
 
@@ -541,15 +546,15 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("predictors")
+test_object("predictors", incorrect_msg='Have you create the list of given predictors variables?')
 
 # Test for model
-test_object("predicted")
+test_object("predicted", incorrect_msg='Have you used .predict() method?')
 
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:0f04d6b3e1
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:0f04d6b3e1
 
 ## Decision Tree Introduction
 
@@ -557,11 +562,12 @@ Decision trees are mostly used in classification problems. It works for both cat
 
 
 *** =instructions
-Create a object of DecisionTreeClassifier
+- Import tree module of sklearn
+- Create a object of DecisionTreeClassifier
 
 
 *** =hint
-You can use from sklearn.tree import DecisionTreeClassifier command
+Use DecisiontreeClassifier() with sklearn.tree to create object of decision tree
 
 *** =pre_exercise_code
 
@@ -574,16 +580,22 @@ from sklearn.tree import DecisionTreeClassifier
 
 ```{python}
 
-# Import module for DecisionTreeClassifier
-from sklearn.tree import __________
+# Import tree module of sklearn
+import sklearn._____
+
+# Create object of DecisionTreeClassifier
+model = sklearn.tree.__________()
 
 ```
 
 *** =solution
 
 ```{python}
-# Import module for Logistic regression
-from sklearn.tree import DecisionTreeClassifier
+# Import tree module of sklearn
+import sklearn.tree
+
+# Create object of DecisionTreeClassifier
+model = sklearn.tree.DecisionTreeClassifier()
 
 ```
 
@@ -594,34 +606,37 @@ from sklearn.tree import DecisionTreeClassifier
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for predictor selection
-test_import("DecisionTreeClassifier", same_as = False)
+# Test for library import
+test_import("sklearn.tree", same_as = False)
+
+# Test for logistic regression
+test_function("sklearn.tree.DecisionTreeClassifier", incorrect_msg='Have you created DecisionTree object from tree module of sklearn?')
 
 success_msg("Great work!")
 ```
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:dcf5c3e2c2
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 6 key:dcf5c3e2c2
 
 ## Train model and do prediction using Decision Tree
 
-Let’s make first Decision Tree model. Similar to Logistic regression, here we also first select the input features, train model and finally perform prediction on test data set.
+Let’s make first Decision Tree model. Similar to Logistic regression, we first select the input features, train our model and finally perform prediction on test data set.
 
-Ok, time for you to build your first Decision Tree model! The pre processed train_modified and test_modifed data are available in your workspace.
+Ok! time for you to build your first Decision Tree model! The pre processed train_modified and test_modifed data are available in your workspace.
 
 
 *** =instructions
 - Store input variable in list "predictors"
 - Create a object of DecisionTreeClassifier
-- Train model on training data set (x_train, y_train)
-- Use .predict() method for prediction
-- Use to_csv() to export csv file
+- Do prediction for test data set
+- Export test prediction to csv file
 
 
 *** =hint
 - Use predictors =['Credit_History','Education','Gender'] as predictor variable
-- Use from sklearn.tree import DecisionTreeClassifier
+- Use DecisionTreeClassifier with sklearn.tree to create decision tree object
+- Use to_csv() with dataframe to export csv file
 
 
 *** =pre_exercise_code
@@ -630,6 +645,7 @@ Ok, time for you to build your first Decision Tree model! The pre processed trai
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
+import sklearn.tree
 
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
@@ -680,7 +696,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 
 #train_modified and test_modified already loaded in the workspace
 #Import module for Decision tree
-from sklearn.tree import __________
+import sklearn.tree
 
 # Select three predictors Credit_History, Education and Gender
 predictors =[____,_____,_____]
@@ -690,7 +706,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = _________
+model = sklearn._____.DecisionTreeClassifier()
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
@@ -706,7 +722,7 @@ predicted = number.inverse_transform(predicted)
 test_modified['Loan_Status']=predicted
 
 #Output file to make submission
-test_modified._____("Submission1.csv",columns=['Loan_ID','Loan_Status'])
+test_modified.______("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 
 
 ```
@@ -716,7 +732,7 @@ test_modified._____("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 ```{python}
 #train_modified and test_modified already loaded in the workspace
 #Import module for Decision tree
-from sklearn.tree import DecisionTreeClassifier
+import sklearn.tree
 
 # Select three predictors Credit_History, Education and Gender
 predictors =['Credit_History','Education','Gender']
@@ -726,7 +742,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = DecisionTreeClassifier()
+model = sklearn.tree.DecisionTreeClassifier()
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
@@ -755,14 +771,17 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
-test_object("predictors")
+test_object("predictors", incorrect_msg='Have you create the list of given predictors variables?')
 
 # Test for model
-#test_object("model")
+test_function("sklearn.tree.DecisionTreeClassifier", incorrect_msg='Have you created DecisionTree object from tree module of sklearn?')
 
 # Test for predicted
-#test_object("predicted")
+test_object("predicted", incorrect_msg='Have you used .predict() method?')
 
+
+# Test for csv import
+test_function("test_modified.to_csv", incorrect_msg='Have you used the right function to export a csv file?')
 
 success_msg("Great work!")
 ```
@@ -771,7 +790,7 @@ success_msg("Great work!")
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:ff4ced6565
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:ff4ced6565
 
 ## Random Forest Introduction
 
@@ -779,33 +798,40 @@ Random Forest is a versatile machine learning method capable of performing both 
 
 
 *** =instructions
-Create a object of DecisionTreeClassifier
+- Import library sklearn.ensemble
+- Create a object of RandomForestClassifier
 
 
 *** =hint
-You can use from sklearn.ensemble import RandomForestClassifier command
+Use RandomForestClassifier() with sklearn.ensemble to create object of Random Forest
+
 
 *** =pre_exercise_code
 
 ```{python}
-from sklearn.ensemble import RandomForestClassifier
+import sklearn.ensemble
 ```
 
 *** =sample_code
 
 ```{python}
 
-# Import module for Random Forest Classifiers
-from sklearn.ensemble import ________
+# Import ensemble module from sklearn
+import sklearn.______
 
+# Create object of RandomForestClassifier
+model=sklearn.ensemble.__________
 
 ```
 
 *** =solution
 
 ```{python}
-# Import module for Random Forest classifier
-from sklearn.ensemble import RandomForestClassifier
+# Import ensemble module from sklearn
+import sklearn.ensemble
+
+# Create object of RandomForestClassifier
+model=sklearn.ensemble.RandomForestClassifier()
 
 ```
 
@@ -816,15 +842,17 @@ from sklearn.ensemble import RandomForestClassifier
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for predictor selection
-test_import("RandomForestClassifier", same_as = False)
+# Test for library import
+test_import("sklearn.ensemble", same_as = False)
 
+# Test for logistic regression
+test_function("sklearn.ensemble.RandomForestClassifier", incorrect_msg='Have you created RandomForest object from ensemble module of sklearn?')
 
 success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:f0d1f62bb1
+--- type:NormalExercise lang:python xp:100 skills:2, 6 key:f0d1f62bb1
 
 ## Train model and do prediction using Random Forest
 
@@ -834,16 +862,14 @@ Ok, time for you to build your first Random Forest model! The pre processed trai
 
 
 *** =instructions
-- Store input variable in list "predictors"
 - Create a object of RandomForestClassifier
-- Train model on training data set (x_train, y_train)
-- Use .predict() method for prediction
-- Use to_csv() to export csv file
+- Do prediction for test data set
+- Export test prediction to csv file
 
 
 *** =hint
-- Use predictors =['Credit_History','Education','Gender'] as predictor variable
-- Use from sklearn.tree import RandomForestClassifier
+- Use RandomForestClassifier() with sklearn.ensemble to create a random forest object
+- Use to_csv() with dataframe to export csv file
 
 
 *** =pre_exercise_code
@@ -852,6 +878,7 @@ Ok, time for you to build your first Random Forest model! The pre processed trai
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
+import sklearn.ensemble
 
 train = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/train.csv")
 test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp/test.csv")
@@ -902,24 +929,24 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 
 #train_modified and test_modified already loaded in the workspace
 #Import module for Random Forest
-from sklearn.ensemble import __________
+import sklearn.ensemble
 
 # Select three predictors Credit_History, Education and Gender
-predictors =[____,_____,_____]
+predictors =['Credit_History','Education','Gender']
 
 # Converting predictors and outcome to numpy array
 x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = _________
+model = sklearn.ensemble._______
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
 x_test = test_modified[predictors].values
 
 #Predict Output
-predicted= model._____(x_test)
+predicted= model.______(x_test)
 
 #Reverse encoding for predicted outcome
 predicted = number.inverse_transform(predicted)
@@ -938,7 +965,7 @@ test_modified._____("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 ```{python}
 #train_modified and test_modified already loaded in the workspace
 #Import module for Random Forest 
-from sklearn.ensemble import RandomForestClassifier
+import sklearn.ensemble
 
 # Select three predictors Credit_History, Education and Gender
 predictors =['Credit_History','Education','Gender']
@@ -948,7 +975,7 @@ x_train = train_modified[predictors].values
 y_train = train_modified['Loan_Status'].values
 
 # Model Building
-model = RandomForestClassifier()
+model = sklearn.ensemble.RandomForestClassifier()
 model.fit(x_train, y_train)
 
 # Converting predictors and outcome to numpy array
@@ -976,21 +1003,22 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
-# Test for predictor selection
-test_object("predictors")
-
 # Test for model
-#test_object("model")
+test_function("sklearn.ensemble.RandomForestClassifier", incorrect_msg='Have you created RandomForest object from ensemble module of sklearn?')
 
 # Test for predicted
-#test_object("predicted")
+test_object("predicted", incorrect_msg='Have you used .predict() method?')
 
+
+# Test for csv import
+test_function("test_modified.to_csv", incorrect_msg='Have you used the right function to export a csv file?')
 
 success_msg("Great work!")
+
 ```
 
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:4621632d2a
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:4621632d2a
 ## Selecting important variables for model building
 
 One of the benefits of Random forest is the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the dimensionality reduction methods. Further, the model outputs the importance of the variables, which can be a very handy feature. 

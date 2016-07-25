@@ -1,10 +1,8 @@
 ---
 title       : Expert advice to improve model performance
 description : This chapter will help to understand the approach of data science experts, "How they do approach a challenge ?", "How to select a right algorithm ?", "How to combine outputs of multiple algorithms ?" and "How to select the right value of model parameter also known as parameter tuning ?".
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9a8fd577a9
 ## How to approach a challenge?
 
 The model development cycle goes through various stages, starting from data collection to model building. Most of us admit that data exploration needs more attention to unleashing the hidden story of data but before exploring the data to understand relationships (in variables), It’s always recommended to perform hypothesis generation. (To know more  about hypothesis generation, refer to <a href =" http://discuss.analyticsvidhya.com/t/why-and-when-is-hypothesis-generation-important/2109"> this link</a>). 
@@ -45,7 +43,7 @@ msg_success = "Exactly! we always do Hypothesis generation before data collectio
 test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:01167ddb1f
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 4, 6 key:01167ddb1f
 ## Feature Engineering
 
 This step helps to extract more information from existing data. New information is extracted in terms of new features. These features may have a higher ability to explain the variance in the training data. Thus, giving improved model accuracy.
@@ -96,7 +94,7 @@ msg_success = "Yes! Creating a new feature out of existing ones is known as feat
 test_mc(2, [msg_bad1, msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:3c72c926e8
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 4, 6 key:3c72c926e8
 ## Feature Selection
 
 Feature Selection is a process of finding out the best subset of attributes which better explains the relationship of independent variables with target variable.
@@ -136,7 +134,7 @@ msg_success = "Yes! Creating a new feature out of existing ones is known as feat
 test_mc(1, [msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:a93345ad36
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:a93345ad36
 ## How to select the right value of model parameter?
 
 We know that machine learning algorithms are driven by parameters. These parameters majorly influence the outcome of the learning process.
@@ -178,7 +176,7 @@ msg_success = "Good Job!"
 test_mc(3, [msg_bad1, msg_bad1, msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:63b7c07abc
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:63b7c07abc
 ## Use ensemble methods to combine output of more than one models?
 
 This is the most common approach found majorly in winning solutions of Data science competitions. This technique simply combines the result of multiple weak models and produce better results. This can be achieved through many ways:
@@ -223,7 +221,7 @@ msg_success = "Good Job!"
 test_mc(1, [msg_success, msg_bad1]) 
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:60de1e0b02
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:60de1e0b02
 ## Cross validtion helps to improve your score on out of sample data set
 
 Till here, we have seen methods which can improve the accuracy of a model. But, it is not necessary that higher accuracy models always perform better (for unseen data points). Sometimes, the improvement in model’s accuracy can be due to over-fitting too.
@@ -290,9 +288,8 @@ We have shared the Jupyter notebook for your reference here
 
 
 *** =instructions
-- Yes, I have
+- Yes, I have downloaded the file
 - No, I am not able to
-- No, I don't need the notebook
 
 
 *** =hint
@@ -307,12 +304,62 @@ Click on the link and download the Jupyter notebook.
 # evaluate the student's response. All functions used here are defined in the 
 # pythonwhat Python package
 
-msg1 = "Awesome! You can proceed to model building now!"
+msg1 = "Awesome! You can check out additional reference!"
 msg2 = "Check the link provided and download the file from there."
-msg3 = "Okay Bravo! You are ready to move ahead."
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc((1,3), [msg1, msg2, msg3]) 
+test_mc(1, [msg1, msg2]) 
+```
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:6177e4a3f3
+## Thank You & Further studies
+
+Thanks for taking up this open course from <a href="http://www.analyticsvidhya.com">Analytics Vidhya </a>. We hope you enjoyed the problem solving exercises and our hackathon experience. For more such hackathons, you can always visit our <a href="http://datahack.analyticsvidhya.com"> DataHack platform.</a>
+
+###Here are a few more resources you can check out:
+
+####Practice Problems (Hackathons):
+- <a href="http://datahack.analyticsvidhya.com/contest/practice-problem-big-mart-sales-iii">Big Mart Sales Problem</a>.
+
+####All Hackathons:
+- <a href="http://datahack.analyticsvidhya.com/contest/all">All Hackathons</a>.
+
+####Tutorials
+- <a href="http://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/learning-path-data-science-python/" >Learning path in Python - Path from beginner to an expert in Data Science</a>
+- <a href = "http://www.analyticsvidhya.com/learning-paths-data-science-business-analytics-business-intelligence-big-data/learning-path-r-data-science/">LeaRning path in R - Path from beginner to an expert in Data Science</a>
+- <a href = "http://www.analyticsvidhya.com/blog/2015/08/common-machine-learning-algorithms/">Essentials of Machine Learning (with codes in Python & R)</a>
+- <a href = "http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/">12 useful Pandas techniques for Data Manipulation</a>
+- <a href = "http://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/">Complete guide to create a time series forecast (with codes in Python)</a>
+ 
+####<a href="http://discuss.analyticsvidhya.com">Data Science Discussions</a>
+
+
+
+###What do you want to do next:
+
+*** =instructions
+- Finish the course
+- Stay on this page and explore the references
+
+
+*** =hint
+Thank You - hope you enjoyed the course. 
+
+*** =pre_exercise_code
+
+
+*** =sct
+```{python}
+# The sct section defines the Submission Correctness Tests (SCTs) used to
+# evaluate the student's response. All functions used here are defined in the 
+# pythonwhat Python package
+
+msg1 = "Thanks for completing the course. Looking forward to interacting with you on DataHack."
+msg2 = "No hurry! You can take your own time."
+
+# Use test_mc() to grade multiple choice exercises. 
+# Pass the correct option (Action, option 2 in the instructions) to correct.
+# Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
+test_mc(1, [msg1, msg2]) 
 ```

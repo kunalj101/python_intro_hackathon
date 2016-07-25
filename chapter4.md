@@ -1,13 +1,15 @@
 ---
 title       : Data Munging in Python using Pandas
 description : Pandas is at the heart of data analysis in Python. This chapter gets you started with Data Munging in Python using Pandas
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
---- type:NormalExercise lang:python xp:100 skills:1 key:af2f6f90f3
-## Credit History has missing value or not ?
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:af2f6f90f3
+## The curious case of missing values
 
-There are missing values in variables. We should first identify the variables have missing value then estimate those values wisely depending on the number of missing values and the expected importance of variables. So, here our first task is to check the variable has missing values in the dataset and how many observation has missing values.
+Rarely is the data captured perfectly in real world. People might not disclose few details or those details might not be available in the first place. This data set is no different. There are missing values in variables. 
+
+We need to first find out which variables have missing values, and then see what is the best way to handle these missing values. The way to handle a missing value can depend on the number of missing values, the type of variable and the expected importance of those variables. 
+
+So, let's start by finding out whether variable "Credit_history" has missing values or not and if so, how many observations are missing.
 
 ```{python}
 
@@ -24,7 +26,7 @@ train['Credit_History'].isnull().sum()
 
 
 *** =hint
-Use train['Self_Employed'].isnull().sum() to check number of missing values
+Use sum() with train['Self_Employed'].isnull() to check number of missing values
 
 
 
@@ -79,17 +81,17 @@ LoanAmount_have_missing_value = train['LoanAmount'].isnull().sum() > 0
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # How many missing values in variable "Self_Employed" ?
-test_object("n_missing_value_Self_Employed")
+test_object("n_missing_value_Self_Employed", incorrect_msg='Have you checked the missing values?')
 
 # Variable Loan amount has missing values or not?
-test_object("LoanAmount_have_missing_value")
+test_object("LoanAmount_have_missing_value", incorrect_msg='Have you checked the column has missing value or not?')
 
 success_msg("Great work!")
 ```
 
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:4abbcb0b8d
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:4abbcb0b8d
 ## How many variables have missing values?
 
 Till now, we have checked the variable has missing value or not? Next action is to check how many variables have missing values. One way of doing this check would be to evaluate each individual variable. This would not be easy if we have hundred of columns. This action can be performed simply by using isnull() on dataframe object.
@@ -110,7 +112,7 @@ Apply isnull().sum() with test dataset
 
 
 *** =hint
-Use test.isnull().sum() to check number of missing values
+Use train.isnull().sum() to check number of missing values in train data set
 
 
 
@@ -136,7 +138,7 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 ```{python}
 
 # Check variables have missing values in test data set
-number_missing_values_test_data = _____.isnull()._____()
+number_missing_values_test_data = test.isnull()._____()
 
 ```
 
@@ -157,22 +159,22 @@ number_missing_values_test_data = test.isnull().sum()
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check variables have missing values in test data set
-test_object("number_missing_values_test_data")
+test_object("number_missing_values_test_data", incorrect_msg='Have you count the number of missing values in each variable of test data set?')
 
 
 success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:fd3cdcb726
-## Impute missing values of LoanAmount?
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:fd3cdcb726
+## Imputing missing values of LoanAmount
 
-There are multiple ways to fill the missing values of continuous variables, you can go with mean, median or estimate values based on other features of the data set. Here, to impute missing values of the loan amount, we would go with imputing by mean value (Mean of available values of LoanAmount).
+There are multiple ways to fill the missing values of continuous variables. You can replace them with mean, median or estimate values based on other features of the data set. 
+
+For the sake of simplicity, we would impute the missing values of LoanAmount by mean value (Mean of available values of LoanAmount).
 
 ```{python}
-
 train['LoanAmount'].fillna(train['LoanAmount'].mean(), inplace=True)
-
 ```
 
 *** =instructions
@@ -183,7 +185,7 @@ Impute missing values with a specific value 168
 
 
 *** =hint
-Use test['LoanAmount'].fillna(168, inplace=True)
+Use dataframe['missingcol'].fillna(225, inplace=True) to impute missing value of column 'missingcol' with 225
 
 
 *** =pre_exercise_code
@@ -229,25 +231,24 @@ test['LoanAmount'].fillna(168, inplace=True)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Impute missing value of LoanAmount with 168 for test data set
-test_object(“test['LoanAmount']”)
-
+test_data_frame("test", columns=["LoanAmount"], incorrect_msg='Did you impute missing value with 168?')
 success_msg("Great work!")
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:ca19896cae
-## Impute missing values of SelfEmployed?
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:ca19896cae
+## Impute missing values of SelfEmployed
 
-To impute missing values of Categorical variables, we look at the frequency table and impute with value has higher frequency because there is a high probability of success. For example, if you look at the distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under the category "No". Here we will replace missing values of SelfEmployed with "No".
+Similarly, to impute missing values of Categorical variables, we look at the frequency table. The simplest way is to impute with value which has highest frequency because there is a higher probability of success. 
+
+For example, if you look at the distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under the category "No". Here we will replace missing values of SelfEmployed with "No".
 
 ```{python}
-
 train['Self_Employed'].fillna('No',inplace=True)
-
 ```
 
 *** =instructions
-- Impute missing values with more frequent category
+- Impute missing values with more frequent category of Gender and Credit History
 - Use value_counts() to check more frequent category of variable
 
 *** =hint
@@ -276,11 +277,11 @@ test = pd.read_csv("https://s3-ap-southeast-1.amazonaws.com/av-datahack-datacamp
 
 ```{python}
 
-# Impute missing value of Gender
+# Impute missing value of Gender (Male is more frequent category)
 train['Gender'].fillna(_____,inplace=True)
 
 
-# Impute missing value of Credit_History
+# Impute missing value of Credit_History ( 1 is more frequent category)
 train['Credit_History'].fillna(_____,inplace=True)
 
 ```
@@ -306,35 +307,31 @@ train['Credit_History'].fillna(1,inplace=True)
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Impute missing value of LoanAmount with median for test data set
-test_object(“test['Gender']”)
+test_data_frame("train", columns=["Gender"], incorrect_msg='Did you impute missing value of Gender with Male?')
 
 # Impute missing value of Credit_History
-test_object(“test['Credit_History']”)
+test_data_frame("train", columns=["Credit_History"], incorrect_msg='Did you impute missing value of Credit_History with 1?')
 
 
 success_msg("Great work!")
 ```
---- type:NormalExercise lang:python xp:100 skills:1 key:2607b0ce32
+--- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:2607b0ce32
 
-## Treat extreme values of LoanAmount and ApplicantIncome?
+## Treat / Tranform extreme values of LoanAmount and ApplicantIncome
 
 Let’s analyze LoanAmount first. Since the extreme values are practically possible, i.e. some people might apply for high-value loans due to specific needs. 
 
 ```{python}
-
 train ['LoanAmount'].hist(bins=20)
-
 ```
 <center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/06/Capture_LoanAmount.png"></center>
 
 So instead of treating them as outliers, let’s try a log transformation to nullify their effect:
 
 ```{python}
-
 import numpy as np
 train ['LoanAmount_log'] = np.log(train['LoanAmount'])
 train ['LoanAmount_log'].hist(bins=20)
-
 ```
 <center><img src="http://www.analyticsvidhya.com/wp-content/uploads/2016/01/7.-loan-log.png"></center>
 
@@ -347,8 +344,8 @@ Now the distribution looks much closer to normal and effect of extreme values ha
 
 
 *** =hint
-- df['TotalIncome'] = df['ApplicantIncome'] + df['CoapplicantIncome']
-- df['TotalIncome_log'] = np.log(df['TotalIncome'])
+- Add both train['ApplicantIncome'] and train['CoapplicantIncome']
+- Take log of df['TotalIncome']
 
 
 *** =pre_exercise_code
@@ -377,10 +374,10 @@ train['TotalIncome'] = train['ApplicantIncome'] + train['CoapplicantIncome']
 # Training and Testing datasets are loaded in variable train and test dataframe respectively
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
-train['TotalIncome'] = 
+train['TotalIncome'] = train['ApplicantIncome'] + train[_________]
 
 # Perform log transformation of TotalIncome to make it closer to normal
-train['TotalIncome_log']=
+train['TotalIncome_log']= np.____(train['TotalIncome'])
 
 
 ```
@@ -408,15 +405,15 @@ train['TotalIncome_log'] = np.log(train['TotalIncome'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
-test_object("train['TotalIncome']")
+test_data_frame("train", columns=["TotalIncome"], incorrect_msg='Have you added both ApplicantIncome and CoapplicantIncome?')
 
 # Perform log transformation of TotalIncome to make it closer to normal
-test_object("train['TotalIncome_log']")
+test_data_frame("train", columns=["TotalIncome_log"], incorrect_msg='Have you taken log of TotalIncome?')
 
 success_msg("Great work!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:9a8fd577a9
+--- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9a8fd577a9
 ## iPython / Jupyter notebook for Data Exploration
 
 The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualizations and explanatory text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, machine learning and much more.
@@ -428,9 +425,8 @@ We have shared the Jupyter notebook for your reference here
 
 
 *** =instructions
-- Yes, I have
+- Yes, I have downloaded the notebook
 - No, I am not able to
-- No, I don't need the notebook
 
 
 *** =hint
@@ -447,10 +443,10 @@ Click on the link and download the Jupyter notebook.
 
 msg1 = "Awesome! You can proceed to model building now!"
 msg2 = "Check the link provided and download the file from there."
-msg3 = "Okay Bravo! You are ready to move ahead."
 
 # Use test_mc() to grade multiple choice exercises. 
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc((1,3), [msg1, msg2, msg3]) 
+test_mc(1, [msg1, msg2]) 
+
 ```
