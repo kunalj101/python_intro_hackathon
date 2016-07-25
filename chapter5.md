@@ -55,7 +55,7 @@ from sklearn.preprocessing import LabelEncoder
 
 number = LabelEncoder()
 
-train['Gender_new'] = number.fit_transform(train['Gender'])
+train['Gender'] = number.fit_transform(train['Gender'])
 
 ```
 
@@ -96,7 +96,7 @@ from sklearn.preprocessing import LabelEncoder
 #train and test dataset is already loaded in the enviornment
 # Perform label encoding for variable 'Married'
 number = LabelEncoder()
-train['Married_new'] = int(number.________(train['Married']))
+train['Married'] = number.________(train['Married'])
 
 
 ```
@@ -111,7 +111,7 @@ from sklearn.preprocessing import LabelEncoder
 #train and test dataset is already loaded in the enviornment
 # Perform label encoding for Married
 number = LabelEncoder()
-train['Married_new'] = int(number.fit_transform(train['Married']))
+train['Married'] = number.fit_transform(train['Married'])
 ```
 
 *** =sct
@@ -122,7 +122,7 @@ train['Married_new'] = int(number.fit_transform(train['Married']))
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Perform label encoding for Married
-test_data_frame("train", columns=["Married_new"], incorrect_msg='Have you used write methds to perform label encoding for variable Married?')
+test_data_frame("train", columns=["Married"], incorrect_msg='Have you used write methds to perform label encoding for variable Married?')
 
 success_msg("Great work!")
 ```
