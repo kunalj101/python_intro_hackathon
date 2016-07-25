@@ -45,7 +45,7 @@ test_mc(2, [msg_bad1, msg_success])
 --- type:NormalExercise lang:python xp:100 skills:2, 6 key:2c1cf7aa90
 ## Label categories of Gender to number
 
-Library "Scikit Learn" only works with numeric array. Hence, we need to label all the character variables into a numeric array. For example Variable "Gender" has two labels "Male" and "Female">. Hence, we will transform the labels to number as 1 for "Male" and 0 for "Female".
+Library "Scikit Learn" only works with numeric array. Hence, we need to label all the character variables into a numeric array. For example Variable "Gender" has two labels "Male" and "Female". Hence, we will transform the labels to number as 1 for "Male" and 0 for "Female".
 
 "Scikit Learn" library has a module called "LabelEncoder" which helps to label character labels into numbers so first import module "LabelEncoder".
 
@@ -60,7 +60,7 @@ train['Gender'] = number.fit_transform(train['Gender'])
 ```
 
 *** =instructions
-Perform Label encoding for categories of variable "Married" 
+Perform Label encoding for categories of variable "Married" and save it as a new variable "Married1" in the DataFrame
 
 
 *** =hint
@@ -96,7 +96,7 @@ from sklearn.preprocessing import LabelEncoder
 #train and test dataset is already loaded in the enviornment
 # Perform label encoding for variable 'Married'
 number = LabelEncoder()
-train['Married'] = number.________(train['Married'])
+train['Married1'] = number.________(train['Married'])
 
 
 ```
@@ -111,7 +111,7 @@ from sklearn.preprocessing import LabelEncoder
 #train and test dataset is already loaded in the enviornment
 # Perform label encoding for Married
 number = LabelEncoder()
-train['Married'] = number.fit_transform(train['Married'])
+train['Married1'] = number.fit_transform(train['Married'])
 ```
 
 *** =sct
@@ -122,7 +122,7 @@ train['Married'] = number.fit_transform(train['Married'])
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Perform label encoding for Married
-test_data_frame("train", columns=["Married"], incorrect_msg='Have you used write methds to perform label encoding for variable Married?')
+test_data_frame("train", columns=["Married1"], incorrect_msg='Have you used write methds to perform label encoding for variable Married?')
 
 success_msg("Great work!")
 ```
