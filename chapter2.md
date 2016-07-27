@@ -184,10 +184,17 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:2 key:377e9324f2
 ## Create a Dictionary
 
-A Dictionary is an unordered set of key:value pairs, with the requirement that the keys are unique (within a Dictionary). A pair of braces creates an empty dictionary: {}.
+A Dictionary is an unordered set of key:value pairs, with the requirement that the keys are unique (within a Dictionary). A few pointers about dictionary:
+
+* An empty dictionary can be created by a pair of braces: {}.
+* Dictionary elements can be accessed by dictionary keys
+* DICT.keys() will return all the keys of given dictionary "DICT"
 
 ```{python}
-DICT = {'Name':'Kunal', 'Company':'Analytics Vidhya'}
+DICT = {
+  'Name':'Kunal', 
+  'Company':'Analytics Vidhya'
+  }
 
 #Dictionary elements can be accessed by keys
 
@@ -201,9 +208,8 @@ In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "
 
 *** =instructions
 
-- Use the format dictionary['key'] to access value(s) of key - e.g DICT['Company'] will return "Analytics Vidhya'
-- DICT.keys() will return all the keys of given dictionary "DICT"
-
+- Print the value associated with key 'Age' in dictionary dict1
+- Store all the keys of dictionary dict1 in variable 'dict_keys'
 
 *** =hint
 
@@ -227,10 +233,10 @@ dict1 = { 'Age': 16, 'Name': 'Max', 'Sports': 'Cricket'}
 dict1['Age'] = 18
 
 # Print the value of Age
-
+print __________
 
 # Store the keys of dictionary dict1 to dict_keys
-dict_keys = 
+dict_keys = __________
 
 ```
 
