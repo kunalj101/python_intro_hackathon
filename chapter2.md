@@ -86,6 +86,7 @@ success_msg("Good progress! You just learnt the most versatile data structure in
 
 Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. 
 A few things to keep in mind about strings:
+
 * Strings are immutable in Python, so you can not change the content of a string.
 * Function len() can be used to get length of a string
 * You can access the elements using indexes as you do for lists
