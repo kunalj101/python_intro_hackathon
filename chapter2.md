@@ -84,7 +84,12 @@ success_msg("Good progress! You just learnt the most versatile data structure in
 --- type:NormalExercise lang:python xp:100 skills:2 key:c7f91e389f
 ## Create a String
 
-Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Note that Python strings are immutable, so you can not change the contents of a string.
+Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. 
+A few things to keep in mind about strings:
+
+* Strings are immutable in Python, so you can not change the content of a string.
+* Function len() can be used to get length of a string
+* You can access the elements using indexes as you do for lists
 
 ```{python}
 String =" String elements can also be accessed using index numbers, just like lists"
@@ -92,8 +97,9 @@ String =" String elements can also be accessed using index numbers, just like li
 print (String[0:8])
 
 #Above print command display Strings on screen.
-
 ```
+
+* You can use '+' operator to concatenate two strings
 
 
 *** =instructions
@@ -124,16 +130,16 @@ print (String[0:8])
 str1 = "Introduction with strings"
 
 # Now store the length of string str1 in variable str_len 
-str_len =
+str_len = _________
 
 # Print last seven characters of string str1
-
+print __________
 
 str2 = "I am doing a course Introduction to Hackathon using "
 str3 = "Python"
 
 # Write a line of code to store concatenated string of str2 and str3 into variable str4
-str4 =
+str4 = _________
 
 ```
 
@@ -178,10 +184,17 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:2 key:377e9324f2
 ## Create a Dictionary
 
-A Dictionary is an unordered set of key:value pairs, with the requirement that the keys are unique (within a Dictionary). A pair of braces creates an empty dictionary: {}.
+A Dictionary is an unordered set of key:value pairs, with the requirement that the keys are unique (within a Dictionary). A few pointers about dictionary:
+
+* An empty dictionary can be created by a pair of braces: {}.
+* Dictionary elements can be accessed by dictionary keys
+* DICT.keys() will return all the keys of given dictionary "DICT"
 
 ```{python}
-DICT = {'Name':'Kunal', 'Company':'Analytics Vidhya'}
+DICT = {
+  'Name':'Kunal', 
+  'Company':'Analytics Vidhya'
+  }
 
 #Dictionary elements can be accessed by keys
 
@@ -195,9 +208,8 @@ In dictionary "DICT", Name and Company are dictionary keys whereas "Kunal" and "
 
 *** =instructions
 
-- Use the format dictionary['key'] to access value(s) of key - e.g DICT['Company'] will return "Analytics Vidhya'
-- DICT.keys() will return all the keys of given dictionary "DICT"
-
+- Print the value associated with key 'Age' in dictionary dict1
+- Store all the keys of dictionary dict1 in variable 'dict_keys'
 
 *** =hint
 
@@ -221,10 +233,10 @@ dict1 = { 'Age': 16, 'Name': 'Max', 'Sports': 'Cricket'}
 dict1['Age'] = 18
 
 # Print the value of Age
-
+print __________
 
 # Store the keys of dictionary dict1 to dict_keys
-dict_keys = 
+dict_keys = __________
 
 ```
 
