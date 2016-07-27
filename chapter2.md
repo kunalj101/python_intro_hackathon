@@ -89,6 +89,7 @@ A few things to keep in mind about strings:
 * Strings are immutable in Python, so you can not change the content of a string.
 * Function len() can be used to get length of a string
 * You can access the elements using indexes as you do for lists
+
 ```{python}
 String =" String elements can also be accessed using index numbers, just like lists"
 
@@ -96,6 +97,7 @@ print (String[0:8])
 
 #Above print command display Strings on screen.
 ```
+
 * You can use '+' operator to concatenate two strings
 
 
