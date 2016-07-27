@@ -84,16 +84,19 @@ success_msg("Good progress! You just learnt the most versatile data structure in
 --- type:NormalExercise lang:python xp:100 skills:2 key:c7f91e389f
 ## Create a String
 
-Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. Note that Python strings are immutable, so you can not change the contents of a string.
-
+Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. 
+A few things to keep in mind about strings:
+* Strings are immutable in Python, so you can not change the content of a string.
+* Function len() can be used to get length of a string
+* You can access the elements using indexes as you do for lists
 ```{python}
 String =" String elements can also be accessed using index numbers, just like lists"
 
 print (String[0:8])
 
 #Above print command display Strings on screen.
-
 ```
+* You can use '+' operator to concatenate two strings
 
 
 *** =instructions
@@ -124,16 +127,16 @@ print (String[0:8])
 str1 = "Introduction with strings"
 
 # Now store the length of string str1 in variable str_len 
-str_len =
+str_len = _________
 
 # Print last seven characters of string str1
-
+print __________
 
 str2 = "I am doing a course Introduction to Hackathon using "
 str3 = "Python"
 
 # Write a line of code to store concatenated string of str2 and str3 into variable str4
-str4 =
+str4 = _________
 
 ```
 
