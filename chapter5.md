@@ -96,7 +96,7 @@ from sklearn.preprocessing import LabelEncoder
 #train and test dataset is already loaded in the enviornment
 # Perform label encoding for variable 'Married'
 number = LabelEncoder()
-train['Married'] = number.________(train['Married'])
+train['Married_new'] = number.________(train['Married'].astype(str))
 
 
 ```
@@ -109,9 +109,9 @@ train['Married'] = number.________(train['Married'])
 from sklearn.preprocessing import LabelEncoder
 
 #train and test dataset is already loaded in the enviornment
-# Perform label encoding for Married
+# Perform label encoding for variable 'Married'
 number = LabelEncoder()
-train['Married'] = number.fit_transform(train['Married'])
+train['Married_new'] = number.fit_transform(train['Married'].astype(str))
 ```
 
 *** =sct
