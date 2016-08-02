@@ -92,11 +92,11 @@ A few things to keep in mind about strings:
 * You can access the elements using indexes as you do for lists
 
 ```{python}
-String =" String elements can also be accessed using index numbers, just like lists"
+String ="String elements can also be accessed using index numbers, just like lists"
 
-print (String[0:8])
+print (String[0:7])
 
-#Above print command display Strings on screen.
+#Above print command displays "String " on screen.
 ```
 
 * You can use '+' operator to concatenate two strings
@@ -132,7 +132,8 @@ str1 = "Introduction with strings"
 # Now store the length of string str1 in variable str_len 
 str_len = _________
 
-# Print last seven characters of string str1
+str_new = "Machine Learning is awesome!"
+# Print last eight characters of string str_new (the length of str_new is 28 characters).
 print __________
 
 str2 = "I am doing a course Introduction to Hackathon using "
@@ -153,8 +154,9 @@ str1 = "Introduction with strings"
 # Now store the length of string str1 in varible str_len 
 str_len=len(str1)
 
-# Print last seven characters of string str1
-print (str1[18:25])
+str_new = "Machine Learning is awesome!"
+# Print last eight characters of string str_new (the length of str_new is 28 characters).
+print (str_new[20:28])
 
 str2 = "I am doing a course Introduction to Hackathon using "
 str3 = "Python"
@@ -174,7 +176,7 @@ str4= str2 + str3
 test_object("str_len", incorrect_msg = "Did you use len() function with str1?")
 
 # Check last seven characters
-test_output_contains("strings", pattern = False, no_output_msg="Have you used the right start and end index number with str1 to print the last seven characters?")
+test_output_contains("awesome!", pattern = False, no_output_msg="Have you used the right start and end index number with str_new to print the last eight characters?")
 
 # Check concatenated strings"
 test_object("str3", incorrect_msg="Are you sure that you have used + sign to concatenate both strings st2 and str3")
