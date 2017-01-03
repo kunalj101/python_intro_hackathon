@@ -11,9 +11,9 @@ At <a href="http://www.analyticsvidhya.com">Analytics Vidhya</a>, we are buildin
 
 ###The case study - Dream Housing Finance
 
-Dream Housing Finance company deals in all home loans. They have a presence across all urban, semi-urban and rural areas. Customers first apply for a home loan after that company validates the customer's eligibility. The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling online application form.  
+Dream Housing Finance company deals in all home loans. They have a presence across all urban, semi-urban and rural areas. Customers first apply for a home loan after that company validates the customer's eligibility. The company wants to automate the loan eligibility process (real-time) based on customer detail provided while filling online application form.
 
-Let's start with loading the training and testing set into your python environment. You will use the training set to build your model, and the test set to validate it. Both the files are stored on the web as CSV files; their URLs are already available as character strings in the sample code. 
+Let's start with loading the training and testing set into your python environment. You will use the training set to build your model, and the test set to validate it. Both the files are stored on the web as CSV files; their URLs are already available as character strings in the sample code.
 
 You can load this data with the pandas.read_csv() function. It converts the data set to a python dataframe. In simple words, Python dataframe can be imagined as an equivalent of a spreadsheet or a SQL table.
 
@@ -97,7 +97,7 @@ test_col = len(test.columns)
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for evaluating top 5 heading of dataframe
@@ -119,7 +119,7 @@ You can look at a summary of numerical fields by using dataframe.describe(). It 
 
 
 ```{python}
-dataframe.describe() 
+dataframe.describe()
 ```
 
 For the non-numeric values (e.g. Property_Area, Credit_History etc.), we can look at frequency distribution. The frequency table can be printed by the following command:
@@ -137,7 +137,7 @@ df.column_name.value_counts()
 
 *** =instructions
 
-- Use `dataframe.describe()` to understand the distribution of numerical variables 
+- Use `dataframe.describe()` to understand the distribution of numerical variables
 - Look at unique values of non-numeric values using `df[column_name].value_counts()`
 
 
@@ -197,7 +197,7 @@ print (df1)
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for describe
@@ -294,7 +294,7 @@ train.boxplot(column='LoanAmount', by ='Gender' )
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for evaluating histogram
@@ -316,7 +316,7 @@ We have looked at the distributions of ApplicantIncome and LoanIncome, now it's 
 ```{python}
 pd.crosstab( train ['Gender'], train ["Loan_Status"], margins=True)
 ```
-Next, we can also look at proportions can be more intuitive in making some quick insights. We can do this using the apply function. You can read more about cross tab and apply functions <a href="http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/"> here</a>. 
+Next, we can also look at proportions can be more intuitive in making some quick insights. We can do this using the apply function. You can read more about cross tab and apply functions <a href="http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/"> here</a>.
 
 
 ```{python}
@@ -332,7 +332,7 @@ pd.crosstab(train ["Gender"], train ["Loan_Status"], margins=True).apply(percent
 
 - Use value_counts() with train['LoanStatus'] to look at the frequency distribution
 - Use crosstab with Loan_Status and Credit_History to perform bi-variate analysis
- 
+
 
 
 *** =hint
@@ -391,7 +391,7 @@ twowaytable = pd.crosstab(train ["Credit_History"], train ["Loan_Status"], margi
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for Approved Loan in absolute numbers
