@@ -5,9 +5,9 @@ description : Pandas is at the heart of data analysis in Python. This chapter ge
 --- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:af2f6f90f3
 ## The curious case of missing values
 
-Rarely is the data captured perfectly in real world. People might not disclose few details or those details might not be available in the first place. This data set is no different. There are missing values in variables. 
+Rarely is the data captured perfectly in real world. People might not disclose few details or those details might not be available in the first place. This data set is no different. There are missing values in variables.
 
-We need to first find out which variables have missing values, and then see what is the best way to handle these missing values. The way to handle a missing value can depend on the number of missing values, the type of variable and the expected importance of those variables. 
+We need to first find out which variables have missing values, and then see what is the best way to handle these missing values. The way to handle a missing value can depend on the number of missing values, the type of variable and the expected importance of those variables.
 
 So, let's start by finding out whether variable "Credit_history" has missing values or not and if so, how many observations are missing.
 
@@ -21,7 +21,7 @@ train['Credit_History'].isnull().sum()
 * sum() used to return the number of records have missing values
 
 *** =instructions
-- Apply isnull() to check the observation has null value or not 
+- Apply isnull() to check the observation has null value or not
 - Check number of missing values is greater than 0 or not
 
 
@@ -77,7 +77,7 @@ LoanAmount_have_missing_value = train['LoanAmount'].isnull().sum() > 0
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # How many missing values in variable "Self_Employed" ?
@@ -155,7 +155,7 @@ number_missing_values_test_data = test.isnull().sum()
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check variables have missing values in test data set
@@ -169,7 +169,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:fd3cdcb726
 ## Imputing missing values of LoanAmount
 
-There are multiple ways to fill the missing values of continuous variables. You can replace them with mean, median or estimate values based on other features of the data set. 
+There are multiple ways to fill the missing values of continuous variables. You can replace them with mean, median or estimate values based on other features of the data set.
 
 For the sake of simplicity, we would impute the missing values of LoanAmount by mean value (Mean of available values of LoanAmount).
 
@@ -227,7 +227,7 @@ test['LoanAmount'].fillna(168, inplace=True)
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Impute missing value of LoanAmount with 168 for test data set
@@ -239,7 +239,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:2, 4, 8 key:ca19896cae
 ## Impute missing values of SelfEmployed
 
-Similarly, to impute missing values of Categorical variables, we look at the frequency table. The simplest way is to impute with value which has highest frequency because there is a higher probability of success. 
+Similarly, to impute missing values of Categorical variables, we look at the frequency table. The simplest way is to impute with value which has highest frequency because there is a higher probability of success.
 
 For example, if you look at the distribution of SelfEmployed 500 out of 582 which is ~86% of total values falls under the category "No". Here we will replace missing values of SelfEmployed with "No".
 
@@ -303,7 +303,7 @@ train['Credit_History'].fillna(1,inplace=True)
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Impute missing value of LoanAmount with median for test data set
@@ -319,7 +319,7 @@ success_msg("Great work!")
 
 ## Treat / Tranform extreme values of LoanAmount and ApplicantIncome
 
-Let’s analyze LoanAmount first. Since the extreme values are practically possible, i.e. some people might apply for high-value loans due to specific needs. 
+Let’s analyze LoanAmount first. Since the extreme values are practically possible, i.e. some people might apply for high-value loans due to specific needs.
 
 ```{python}
 train ['LoanAmount'].hist(bins=20)
@@ -401,7 +401,7 @@ train['TotalIncome_log'] = np.log(train['TotalIncome'])
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Add both ApplicantIncome and CoapplicantIncome to TotalIncome
@@ -422,31 +422,25 @@ We have shared the Jupyter notebook for your reference here
 
 ### Download the jupyter notebook from <a href = "https://nbviewer.jupyter.org/github/kunalj101/python_intro_hackathon/blob/master/Data_Camp_Exploration.ipynb">here</a>. Have you downloaded the jupyter notebook?
 
-
-
 *** =instructions
 - Yes, I have downloaded the notebook
 - No, I am not able to
 
-
 *** =hint
-Click on the link and download the Jupyter notebook. 
-
-*** =pre_exercise_code
-
+Click on the link and download the Jupyter notebook.
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg1 = "Awesome! You can proceed to model building now!"
 msg2 = "Check the link provided and download the file from there."
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg1, msg2]) 
+test_mc(1, [msg1, msg2])
 
 ```

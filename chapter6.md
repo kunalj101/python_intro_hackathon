@@ -5,7 +5,7 @@ description : This chapter will help to understand the approach of data science 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:9a8fd577a9
 ## How to approach a challenge?
 
-The model development cycle goes through various stages, starting from data collection to model building. Most of us admit that data exploration needs more attention to unleashing the hidden story of data but before exploring the data to understand relationships (in variables), It’s always recommended to perform hypothesis generation. (To know more  about hypothesis generation, refer to <a href =" http://discuss.analyticsvidhya.com/t/why-and-when-is-hypothesis-generation-important/2109"> this link</a>). 
+The model development cycle goes through various stages, starting from data collection to model building. Most of us admit that data exploration needs more attention to unleashing the hidden story of data but before exploring the data to understand relationships (in variables), It’s always recommended to perform hypothesis generation. (To know more  about hypothesis generation, refer to <a href =" http://discuss.analyticsvidhya.com/t/why-and-when-is-hypothesis-generation-important/2109"> this link</a>).
 
 It is important that you spend time thinking about the given problem and gaining the domain knowledge. So, how does it help?
 
@@ -25,22 +25,22 @@ At this stage, you are expected to apply structured thinking to the problem i.e.
 *** =hint
 Always perform hypothesis generation before data collection and exploration, it also helps you to collect right data
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "Think again!"
 msg_success = "Exactly! we always do Hypothesis generation before data collection and exploration"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
+test_mc(3, [msg_bad1, msg_bad1, msg_success])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 4, 6 key:01167ddb1f
@@ -53,14 +53,14 @@ Feature engineering is highly influenced by hypotheses generation. A good hypoth
 * Feature Transformation
 * Feature Creation
 
-##### Feature Transformation: 
+##### Feature Transformation:
 
 There are various scenarios where feature transformation is required:
 * Changing the scale of a variable from original scale to scale between zero and one.
 * Some algorithms works well with normally distributed data. Therefore, we must remove skewness of variable(s). There are methods like log, square root or inverse of the values to remove skewness
 * Binning of numerical variables
 
-##### Feature Creation: 
+##### Feature Creation:
 
 Deriving new variable(s) from existing variables is known as feature creation. It helps to unleash the hidden relationship of a data set. Let’s say, we want to predict the number of transactions in a store based on transaction dates. Here transaction dates may not have a direct correlation with the number of transaction, but if we look at the day of a week, it may have a higher correlation. In this case, the information about the day of the week is hidden. We need to extract it to make the model better.
 
@@ -76,22 +76,22 @@ Deriving new variable(s) from existing variables is known as feature creation. I
 *** =hint
 Creating a new variable from existing data set is known as feature creation
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "Think again!"
 msg_success = "Yes! Creating a new feature out of existing ones is known as feature creation"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(2, [msg_bad1, msg_success, msg_bad1]) 
+test_mc(2, [msg_bad1, msg_success, msg_bad1])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 4, 6 key:3c72c926e8
@@ -116,22 +116,22 @@ You can select the useful features based on various metrics like:
 *** =hint
 Variable importance table shows the importance of each variable with respect to target variable
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "Think again!"
 msg_success = "Yes! Creating a new feature out of existing ones is known as feature creation"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg_success, msg_bad1]) 
+test_mc(1, [msg_success, msg_bad1])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:a93345ad36
@@ -158,22 +158,22 @@ List of all parameters in random forest scikit learn algorithm:
 
 RandomForestClassifier(n_estimators=10, criterion='gini', max_depth=None,min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features='auto', max_leaf_nodes=None,bootstrap=True, oob_score=False, n_jobs=1, random_state=None, verbose=0, warm_start=False,class_weight=None)
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "Look at the hint to know more about parameters of random forest"
 msg_success = "Good Job!"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(3, [msg_bad1, msg_bad1, msg_success, msg_bad1]) 
+test_mc(3, [msg_bad1, msg_bad1, msg_success, msg_bad1])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:63b7c07abc
@@ -186,8 +186,8 @@ This is the most common approach found majorly in winning solutions of Data scie
 
 To know more about these methods, you can refer article <a href="http://www.analyticsvidhya.com/blog/2015/08/introduction-ensemble-learning/"> “Introduction to ensemble learning“ </a>.
 
-It is always a better idea to apply ensemble methods to improve the accuracy of your model. There are two good reasons for this: 
-* They are generally more complex than traditional methods 
+It is always a better idea to apply ensemble methods to improve the accuracy of your model. There are two good reasons for this:
+* They are generally more complex than traditional methods
 * The traditional methods give you a good base level from which you can improve and draw from to create your ensembles.
 
 #### Taking the average of predictions (given by different models) is an example of ensemble model?
@@ -203,22 +203,22 @@ We can combine output of different base models by:
 - Using maximum vote techniques
 
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "Read more about ensemble methods"
 msg_success = "Good Job!"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg_success, msg_bad1]) 
+test_mc(1, [msg_success, msg_bad1])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:60de1e0b02
@@ -242,7 +242,7 @@ In this approach, we reserve only one data-point of the available data set. And,
 
 In this method, we follow below steps:
 * Randomly split your entire dataset into k-”folds”.
-* For each k folds in your dataset, build your model on k – 1 folds of the data set. 
+* For each k folds in your dataset, build your model on k – 1 folds of the data set.
 * Then, test the model to check the effectiveness for kth fold and record the error you see on each of the predictions.
 * Repeat this until each of the k folds has served as the test set.
 
@@ -258,22 +258,22 @@ The average of your k recorded errors is called the cross-validation error and w
 *** =hint
 Always remember, lower value of K is more biased and hence undesirable. On the other hand, a higher value of K is less biased; but it can suffer from large variability. It is good to know that a smaller value of k always takes us towards validation set approach, whereas the higher value of k leads to LOOCV approach. Hence, it is often suggested to use k=10.
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "Try again! Read more about Cross Validation"
 msg_success = "Good Job!"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(3, [msg_bad1, msg_bad1, msg_success]) 
+test_mc(3, [msg_bad1, msg_bad1, msg_success])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:ed0dcad240
@@ -293,24 +293,24 @@ We have shared the Jupyter notebook for your reference here
 
 
 *** =hint
-Click on the link and download the Jupyter notebook. 
+Click on the link and download the Jupyter notebook.
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg1 = "Awesome! You can check out additional reference!"
 msg2 = "Check the link provided and download the file from there."
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg1, msg2]) 
+test_mc(1, [msg1, msg2])
 ```
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:6177e4a3f3
 ## Thank You & Further studies
@@ -331,7 +331,7 @@ Thanks for taking up this open course from <a href="http://www.analyticsvidhya.c
 - <a href = "http://www.analyticsvidhya.com/blog/2015/08/common-machine-learning-algorithms/">Essentials of Machine Learning (with codes in Python & R)</a>
 - <a href = "http://www.analyticsvidhya.com/blog/2016/01/12-pandas-techniques-python-data-manipulation/">12 useful Pandas techniques for Data Manipulation</a>
 - <a href = "http://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/">Complete guide to create a time series forecast (with codes in Python)</a>
- 
+
 ####<a href="http://discuss.analyticsvidhya.com">Data Science Discussions</a>
 
 
@@ -344,22 +344,22 @@ Thanks for taking up this open course from <a href="http://www.analyticsvidhya.c
 
 
 *** =hint
-Thank You - hope you enjoyed the course. 
+Thank You - hope you enjoyed the course.
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg1 = "Thanks for completing the course. Looking forward to interacting with you on DataHack."
 msg2 = "No hurry! You can take your own time."
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg1, msg2]) 
+test_mc(1, [msg1, msg2])
 ```

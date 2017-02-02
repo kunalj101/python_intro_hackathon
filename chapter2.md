@@ -13,7 +13,7 @@ Country =['INDIA','USA','GERMANY','UK','AUSTRALIA']
 
 Temperature =[44, 28, 20, 18, 25, 45, 67]
 ```
-We just created two lists, one for Country names (strings) and another one for Temperature data (whole numbers). 
+We just created two lists, one for Country names (strings) and another one for Temperature data (whole numbers).
 
 ####Accessing individual elements of a list
 - Individual elements of a list can be accessed by writing an index number in square bracket. The first index of a list starts with 0 (zero) not 1. For example, Country[0] can be used to access the first element, 'INDIA'
@@ -25,7 +25,7 @@ We just created two lists, one for Country names (strings) and another one for T
 
 
 *** =hint
-- Use AV[0] to select the first element of a list AV. 
+- Use AV[0] to select the first element of a list AV.
 - Use AV[1:3] to select the second to the third element of a list AV.
 
 
@@ -70,7 +70,7 @@ print (squares_list[1:4])
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for list of odd_numbers
@@ -84,7 +84,7 @@ success_msg("Good progress! You just learnt the most versatile data structure in
 --- type:NormalExercise lang:python xp:100 skills:2 key:c7f91e389f
 ## Create a String
 
-Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines. 
+Strings can simply be defined by use of single ( ‘ ), double ( ” ) or triple ( ”’ ) inverted commas. Strings enclosed in triple quotes ( ”’ ) can span over multiple lines.
 A few things to keep in mind about strings:
 
 * Strings are immutable in Python, so you can not change the content of a string.
@@ -112,7 +112,7 @@ print (String[0:7])
 
 *** =hint
 
-- Use str[0] to select the first element of string str 
+- Use str[0] to select the first element of string str
 - Use str1 + str2 to return the concatenated result of both strings str1 and str2
 
 
@@ -129,7 +129,7 @@ print (String[0:7])
 # Create a string str1
 str1 = "Introduction with strings"
 
-# Now store the length of string str1 in variable str_len 
+# Now store the length of string str1 in variable str_len
 str_len = _________
 
 str_new = "Machine Learning is awesome!"
@@ -151,7 +151,7 @@ str4 = _________
 # Create a string str1
 str1 = "Introduction with strings"
 
-# Now store the length of string str1 in varible str_len 
+# Now store the length of string str1 in varible str_len
 str_len=len(str1)
 
 str_new = "Machine Learning is awesome!"
@@ -169,7 +169,7 @@ str4= str2 + str3
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check length of strings
@@ -194,7 +194,7 @@ A Dictionary is an unordered set of key:value pairs, with the requirement that t
 
 ```{python}
 DICT = {
-  'Name':'Kunal', 
+  'Name':'Kunal',
   'Company':'Analytics Vidhya'
   }
 
@@ -264,7 +264,7 @@ dict_keys= dict1.keys()
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check value of Age
@@ -318,22 +318,19 @@ print (factorial(5))
 *** =hint
 Python's from statement lets you import specific attributes from a module into the current namespace.
 
-*** =pre_exercise_code
-
-
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad = "Read about importing libraries in python"
 msg_success = "Good Job!"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(2, [msg_bad, msg_success, msg_bad]) 
+test_mc(2, [msg_bad, msg_success, msg_bad])
 ```
 
 
@@ -347,7 +344,7 @@ Conditional statements are used to execute code fragments based on a given condi
 if [condition]:
   __execution if true__
 else:
-  __execution if false__ 
+  __execution if false__
 ```
 
 *** =instructions
@@ -385,7 +382,7 @@ else:
 squares_list = [0, 1, 4, 9, 16, 25]
 
 # Store the length of squares_list in square_len
-square_len = 
+square_len =
 
 # if square_len is less than 5 then print "Less than 5" else "Greater than 5"
 if square_len < 5:
@@ -427,7 +424,7 @@ else:
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check length of strings
@@ -480,12 +477,12 @@ for i in [Python Iterable]:
 ls=[]
 for x in range(5):
     ls.append(x)
-    
+
 sum=0
 # Store sum all the even numbers of the list ls in sum
 
-for x in ls: 
-    if x%2 == __: 
+for x in ls:
+    if x%2 == __:
         sum += x
 
 print (sum)
@@ -499,12 +496,12 @@ print (sum)
 ls=[]
 for x in range(5):
     ls.append(x) # append a value to a list
-    
+
 sum=0
 # Store sum all even numbers of the list ls in sum
 
-for x in ls: 
-    if x%2==0: 
+for x in ls:
+    if x%2==0:
         sum += x
 
 print (sum)
@@ -515,7 +512,7 @@ print (sum)
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check length of strings

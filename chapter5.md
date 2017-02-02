@@ -9,7 +9,7 @@ In Python, Scikit-Learn (sklearn) is the most commonly used library for building
 
 * Treat missing values
 * Treat outlier/ exponential observation
-* All inputs must be numeric array ( Requirement of scikit learn library) 
+* All inputs must be numeric array ( Requirement of scikit learn library)
 
 
 ####Can we build a model without treating missing values of a data set?
@@ -22,22 +22,20 @@ In Python, Scikit-Learn (sklearn) is the most commonly used library for building
 *** =hint
 Missing value tratment is mandatory step of model building
 
-*** =pre_exercise_code
-
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "Think again - If the values are missing, how will you make a predictive model?"
 msg_success = "Yes! We should always treat missing value"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(2, [msg_bad1, msg_success]) 
+test_mc(2, [msg_bad1, msg_success])
 ```
 
 
@@ -118,7 +116,7 @@ train['Married_new'] = number.fit_transform(train['Married'].astype(str))
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Perform label encoding for Married
@@ -150,22 +148,22 @@ This is a classification challenge so we will import module of classification al
 - Regression: When we model for continuous variables
 - Classification: When we model to classify in different categories
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "Try again. Regression challenges require you to predict a quantity, while classification challenge requires you to classify an object in groups."
 msg_success = "Correct - this is a classification challenge"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg_success, msg_bad1]) 
+test_mc(1, [msg_success, msg_bad1])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:bd9b384210
@@ -190,31 +188,31 @@ As discussed before, you should perform some data pre processing steps for both 
 *** =hint
 All steps are necessary and would impact your model performance
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "You should perform all pre processing steps before model building"
 msg_success = "Great! Go ahead with modeling exercise"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(4, [msg_bad1, msg_bad1, msg_bad1, msg_success ]) 
+test_mc(4, [msg_bad1, msg_bad1, msg_bad1, msg_success ])
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2, 6 key:f4c3fbee79
 
 ## Logistic Regression Introduction
 
-Logistic Regression is a classification algorithm. It is used to predict a binary outcome (1 / 0, Yes / No, True / False) given a set of independent variables. To represent binary / categorical outcome, we use dummy variables. You can also think of logistic regression as a special case of linear regression when the outcome variable is categorical, where we are using log of odds as the dependent variable. 
+Logistic Regression is a classification algorithm. It is used to predict a binary outcome (1 / 0, Yes / No, True / False) given a set of independent variables. To represent binary / categorical outcome, we use dummy variables. You can also think of logistic regression as a special case of linear regression when the outcome variable is categorical, where we are using log of odds as the dependent variable.
 
-In simple words, it predicts the probability of occurrence of an event by fitting data to a logit function, read more about <a href="http://www.analyticsvidhya.com/blog/2015/11/beginners-guide-on-logistic-regression-in-r/"> Logistic Regression </a>. 
+In simple words, it predicts the probability of occurrence of an event by fitting data to a logit function, read more about <a href="http://www.analyticsvidhya.com/blog/2015/11/beginners-guide-on-logistic-regression-in-r/"> Logistic Regression </a>.
 
 LogisticRegression() function is part of linear_model module of sklearn and is used to create logistic regression
 
@@ -231,7 +229,7 @@ You can import a module of a library as import library.module
 *** =pre_exercise_code
 
 ```{python}
-import sklearn.linear_model 
+import sklearn.linear_model
 ```
 
 *** =sample_code
@@ -261,7 +259,7 @@ model=sklearn.linear_model.LogisticRegression()
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for library import
@@ -391,7 +389,7 @@ model.fit(x_train, y_train)
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
@@ -542,7 +540,7 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
@@ -603,7 +601,7 @@ model = sklearn.tree.DecisionTreeClassifier()
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for library import
@@ -767,7 +765,7 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for predictor selection
@@ -839,7 +837,7 @@ model=sklearn.ensemble.RandomForestClassifier()
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for library import
@@ -964,7 +962,7 @@ test_modified._____("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 
 ```{python}
 #train_modified and test_modified already loaded in the workspace
-#Import module for Random Forest 
+#Import module for Random Forest
 import sklearn.ensemble
 
 # Select three predictors Credit_History, Education and Gender
@@ -1000,7 +998,7 @@ test_modified.to_csv("Submission1.csv",columns=['Loan_ID','Loan_Status'])
 
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Test for model
@@ -1021,7 +1019,7 @@ success_msg("Great work!")
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2, 6 key:4621632d2a
 ## Selecting important variables for model building
 
-One of the benefits of Random forest is the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the dimensionality reduction methods. Further, the model outputs the importance of the variables, which can be a very handy feature. 
+One of the benefits of Random forest is the power of handle large data set with higher dimensionality. It can handle thousands of input variables and identify most significant variables so it is considered as one of the dimensionality reduction methods. Further, the model outputs the importance of the variables, which can be a very handy feature.
 
 ```{python}
 
@@ -1103,7 +1101,7 @@ train_modified["Loan_Status"] = number.fit_transform(train_modified["Loan_Status
 # Import module for Random Forest classifier
 from sklearn.ensemble import RandomForestClassifier
 
-# Select three predictors Credit_History, LoanAmount and Log_TotalIncome 
+# Select three predictors Credit_History, LoanAmount and Log_TotalIncome
 predictors=['ApplicantIncome', 'CoapplicantIncome', 'Credit_History','Dependents', 'Education', 'Gender', 'LoanAmount',
             'Loan_Amount_Term', 'Married', 'Property_Area', 'Self_Employed', 'TotalIncome','Log_TotalIncome']
 
@@ -1122,14 +1120,14 @@ model.fit(x_train, y_train)
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad = "That is not correct!"
 msg_success = "You got it right!"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg_success, msg_bad, msg_bad, msg_bad]) 
+test_mc(1, [msg_success, msg_bad, msg_bad, msg_bad])
 ```

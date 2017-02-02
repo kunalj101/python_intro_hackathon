@@ -24,24 +24,21 @@ Python (an interpreted language) has gathered a lot of interest recently as a pr
 - It is a production ready language (from web & software perspective).
 
 *** =hint
-Interpreted languages are typically easier to learn, but take longer computational time than compiler based languages. 
-
-*** =pre_exercise_code
-
+Interpreted languages are typically easier to learn, but take longer computational time than compiler based languages.
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "That is a good reason to learn Python! Think again"
 msg_success = "Exactly! Since Python is an interpreted language, the computation times can be higher compared to other compiler based languages."
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(2, [msg_bad1, msg_success, msg_bad1, msg_bad1]) 
+test_mc(2, [msg_bad1, msg_success, msg_bad1, msg_bad1])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:db5fe12eff
@@ -73,23 +70,23 @@ You can read a more detailed answer <a href="http://discuss.analyticsvidhya.com/
 *** =hint
 If you need several third party tools, you should look for a version which has higher community support and integrations.
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad1 = "Python 3.5 is newer and has lesser third party packages compared to Python 2.7"
 msg_success = "Python 2.7 has much higher compatibility with third party libraries."
 msg_bad2 = "Think again! One of them is better than the other in this scenario"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg_success, msg_bad1, msg_bad2]) 
+test_mc(1, [msg_success, msg_bad1, msg_bad2])
 ```
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:2 key:2f83694db6
@@ -110,23 +107,23 @@ I strongly recommend this for beginners. For this course, we will be using Pytho
 *** =hint
 Download <a href="https://www.continuum.io/downloads"> Anaconda</a>
 
-*** =pre_exercise_code
+
 
 
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package
 
 msg_bad = "You should install a Python instance locally before going forward"
 msg_success = "Great! You are all set to go ahead"
 msg_help = "Drop us a line at help@analyticsvidhya.com"
 
-# Use test_mc() to grade multiple choice exercises. 
+# Use test_mc() to grade multiple choice exercises.
 # Pass the correct option (Action, option 2 in the instructions) to correct.
 # Pass the feedback messages, both positive and negative, to feedback_msgs in the appropriate order.
-test_mc(1, [msg_success, msg_bad, msg_help]) 
+test_mc(1, [msg_success, msg_bad, msg_help])
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:2 key:af2f6f90f3
@@ -171,7 +168,7 @@ addition2 = 3 + 4
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check if the student typed 3 + 4
@@ -220,7 +217,7 @@ print("Hello World!")
 *** =sct
 ```{python}
 # The sct section defines the Submission Correctness Tests (SCTs) used to
-# evaluate the student's response. All functions used here are defined in the 
+# evaluate the student's response. All functions used here are defined in the
 # pythonwhat Python package. Documentation can also be found at github.com/datacamp/pythonwhat/wiki
 
 # Check if the student printed "Hello World!"
